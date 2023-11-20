@@ -1,0 +1,72 @@
+﻿@using OldWorldTools.Controllers;
+@using OldWorldTools.Models.WFRPNames
+@model OldWorldTools.Models.WFRPCharacter.CharacterSheet
+
+@{
+    ViewBag.Title = "WFRP Character Generator";
+}
+
+<h2>WFRP Character Generator</h2>
+
+@*@using (Html.BeginForm("RandomiseCharacterName", "Home", FormMethod.Post))
+{
+    <div>
+        <button type="submit">Randomise Character Name</button>
+    </div>
+}*@
+
+@using (Html.BeginForm("GenerateCharacter", "Home", FormMethod.Post))
+{
+    <div>
+        <span><button type="submit" name="submitButton" value="RandomiseName">Randomise Name</button></span>
+        <div>
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div>
+            @Html.TextBoxFor(model => model.Name)
+        </div>
+    </div>
+
+    <div>
+        <span><button type="submit" name="submitButton" value="RandomiseGender">Randomise Gender</button></span>
+        <div>
+            @Html.LabelFor(model => model.Gender)
+        </div>
+        <div>
+            @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(GenderEnum))))
+        </div>
+    </div>
+
+    <div>
+        <span><button type="submit" name="submitButton" value="RandomiseSpecies">Randomise Species</button></span>
+        <div>
+            @Html.LabelFor(model => model.Species)
+        </div>
+        <div>
+            @Html.DropDownListFor(model => model.Species, new SelectList(Enum.GetValues(typeof(SpeciesEnum))), new { onchange = @"
+        var form = document.forms[0];
+        form.submit();"})
+        </div>
+    </div>
+
+    <div>
+        <span><button type="submit" name="submitButton" value="RandomiseRegion">Randomise Region</button></span>
+        <div>
+            @Html.LabelFor(model => model.Region)
+        </div>
+        <div>
+            @Html.DropDownListFor(model => model.Region, new SelectList(Model.RegionsAvailable, "Key", "Value"))
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Class)
+        @Html.TextBoxFor(model => model.Class)
+    </div>
+
+    <!-- Add other input fields as needed -->
+
+    <div>
+        <button type="submit" name="submitButton" value="Generate">Generate Character</button>
+    </div>
+}

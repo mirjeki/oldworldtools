@@ -1,0 +1,33 @@
+<Names>
+	<NameRegion Value="Reikland">
+		<NameType Value="Forename_Male">
+			<Name>Markus</Name>
+			<Name>Victor</Name>
+			<Name>Hans</Name>
+		</NameType>
+		<NameType Value="Forename_Female">
+			<Name>Adolfa</Name>
+			<Name>Henrietta</Name>
+		</NameType>
+		<NameType Value="Surname">
+			<Name>Kruber</Name>
+			<Name>Saltzpyre</Name>
+			<Name>Lutz</Name>
+			<Name>Schuttenbach</Name>
+		</NameType>
+	</NameRegion>
+		<NameRegion Value="Middenland">
+		<NameType Value="Forename_Male">
+			<Name>Boris</Name>
+			<Name>Karloff</Name>
+		</NameType>
+		<NameType Value="Forename_Female">
+			<Name>Andrea</Name>
+			<Name>Ivana</Name>
+		</NameType>
+		<NameType Value="Surname">
+			<Name>Toddbringer</Name>
+			<Name>Pankratz</Name>
+		</NameType>
+	</NameRegion>
+</Names>

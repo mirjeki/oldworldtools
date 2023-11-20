@@ -1,0 +1,35 @@
+<Names>
+	<NameRegion Value="Karak">
+		<NameType Value="Forename_Male">
+			<Name>Bardin</Name>
+			<Name>Gottri</Name>
+			<Name>Gotrek</Name>
+		</NameType>
+		<NameType Value="Forename_Female">
+			<Name>Helga</Name>
+			<Name>Henrietta</Name>
+		</NameType>
+		<NameType Value="Surname_Male">
+			<Name>Goreksson</Name>
+			<Name>Gurnisson</Name>
+		</NameType>
+		<NameType Value="Surname_Female">
+			<Name>Bardinsdottir</Name>
+			<Name>Gottrisdottir</Name>
+		</NameType>
+	</NameRegion>
+		<NameRegion Value="Imperial">
+		<NameType Value="Forename_Male">
+			<Name>Alaric</Name>
+			<Name>Alrik</Name>
+		</NameType>
+		<NameType Value="Forename_Female">
+			<Name>Sigrid</Name>
+			<Name>Kharra</Name>
+		</NameType>
+		<NameType Value="Surname">
+			<Name>Strongarm</Name>
+			<Name>Ironbeard</Name>
+		</NameType>
+	</NameRegion>
+</Names>

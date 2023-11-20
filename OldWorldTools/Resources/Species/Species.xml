@@ -1,0 +1,10 @@
+<Species>
+	<SpeciesType Value="Human">
+		<Region>Reikland</Region>
+		<Region>Middenland</Region>
+	</SpeciesType>
+	<SpeciesType Value="Dwarf">
+		<Region>Karak</Region>
+		<Region>Imperial</Region>
+	</SpeciesType>
+</Species>

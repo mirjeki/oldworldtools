@@ -1,0 +1,14 @@
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
+
+namespace OldWorldTools.Models.WFRPCharacter.DTOs
+{
+    public class SkillDTO
+    {
+        public string Name { get; set; }
+        public CharacteristicDTO LinkedCharacteristic { get; set; }
+        public bool Advanced { get; set; }
+        public bool Grouped { get; set; }
+        public string Description { get; set; }
+    }
+}
