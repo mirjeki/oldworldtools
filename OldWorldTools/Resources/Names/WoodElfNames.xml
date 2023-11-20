@@ -1,0 +1,52 @@
+<Names>
+	<NameRegion Value="Asrai">
+		<NameType Value="Forename_Male">
+			<Name>Galatharha</Name>
+			<Name>Ilthanoth</Name>
+			<Name>Maldirhan</Name>
+			<Name>Maliloc</Name>
+		</NameType>
+		<NameType Value="Forename_Female">
+			<Name>Kerathdda</Name>
+			<Name>Imolryn</Name>
+			<Name>Linawyth</Name>
+			<Name>Illaristra</Name>
+		</NameType>
+		<NameType Value="Surname">
+			<Name>of Fyr Darric</Name>
+			<Name>of Wydrioth</Name>
+			<Name>of Torgovann</Name>
+			<Name>of Cythral</Name>
+			<Name>of Cavaroc</Name>
+			<Name>of Modryn</Name>
+			<Name>of Anmyr</Name>
+			<Name>of Tirsyth</Name>
+			<Name>of Argwylon</Name>
+			<Name>of Arranoc</Name>
+			<Name>of Talsyn</Name>
+			<Name>of Atylwyth</Name>
+		</NameType>
+	</NameRegion>
+	<NameRegion Value="Eonir">
+		<NameType Value="Forename_Male">
+			<Name>Dorthanoth</Name>
+			<Name>Morallahan</Name>
+			<Name>Aesilaroth</Name>
+			<Name>Galforiannoc</Name>
+		</NameType>
+		<NameType Value="Forename_Female">
+			<Name>Ulliaenhu</Name>
+			<Name>Farrawyn</Name>
+			<Name>Elanielle</Name>
+			<Name>Kerillia</Name>
+		</NameType>
+		<NameType Value="Surname">
+			<Name>Fleetriver</Name>
+			<Name>Shadowstalker</Name>
+			<Name>Treeshaper</Name>
+			<Name>Weavewatcher</Name>
+			<Name>Willowlimb</Name>
+			<Name>Windrunner</Name>
+		</NameType>
+	</NameRegion>
+</Names>

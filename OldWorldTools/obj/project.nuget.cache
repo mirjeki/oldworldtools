@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j/f2zY9LjySEjuhZJdsLZfmK1t71aUeottkin/DKqXhOJqHF4pR1rUwTG4atK/gllS//Nrq2RtdOtzIqC8CgXg==",
+  "dgSpecHash": "Xw2pIy+lwfSHIO0bglZylEBZHqEG9JdDPnPyvEBxZy04SWytQqh0j4Io1eqOZ+yjIMJ1x7TIgqyEBm711ziVMg==",
   "success": true,
-  "projectFilePath": "C:\\Portfolio\\Full-Stack\\OldWorldTools\\OldWorldTools\\OldWorldTools.csproj",
+  "projectFilePath": "C:\\Portfolio\\Full-Stack\\old-world-tools\\oldworldtools\\OldWorldTools\\OldWorldTools.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mirje\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\mirje\\.nuget\\packages\\itext\\8.0.2\\itext.8.0.2.nupkg.sha512",

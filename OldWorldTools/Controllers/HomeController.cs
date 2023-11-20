@@ -8,6 +8,7 @@ using OldWorldTools.API;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 using OldWorldTools.Models.WFRPNames;
+using System.ComponentModel;
 
 namespace OldWorldTools.Controllers
 {
@@ -85,8 +86,8 @@ namespace OldWorldTools.Controllers
 
                     fields.TryGetValue("Name", out toSet);
                     toSet.SetValue(characterSheet.Name);
-                    //fields.TryGetValue("language", out toSet);
-                    //toSet.SetValue("English");
+                    fields.TryGetValue("Species", out toSet);
+                    toSet.SetValue(characterSheet.Species.GetAttributeOfType<DescriptionAttribute>().Description);
                     //fields.TryGetValue("experience1", out toSet);
                     //toSet.SetValue("Off");
                     //fields.TryGetValue("experience2", out toSet);
@@ -104,11 +105,23 @@ namespace OldWorldTools.Controllers
                 }
             }
         }
+    }
 
-        public static IEnumerable<SelectListItem> EnumToSelectList<T>()
+    public static class EnumHelper
+    {
+        /// <summary>
+        /// Gets an attribute on an enum field value
+        /// </summary>
+        /// <typeparam name="T">The type of the attribute you want to retrieve</typeparam>
+        /// <param name="enumVal">The enum value</param>
+        /// <returns>The attribute of type T that exists on the enum value</returns>
+        /// <example><![CDATA[string desc = myEnumVariable.GetAttributeOfType<DescriptionAttribute>().Description;]]></example>
+        public static T GetAttributeOfType<T>(this Enum enumVal) where T : System.Attribute
         {
-            return (Enum.GetValues(typeof(T)).Cast<T>().Select(
-                e => new SelectListItem() { Text = e.ToString(), Value = e.ToString() })).ToList();
+            var type = enumVal.GetType();
+            var memInfo = type.GetMember(enumVal.ToString());
+            var attributes = memInfo[0].GetCustomAttributes(typeof(T), false);
+            return (attributes.Length > 0) ? (T)attributes[0] : null;
         }
     }
 }

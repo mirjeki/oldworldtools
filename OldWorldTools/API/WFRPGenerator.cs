@@ -12,6 +12,9 @@ namespace OldWorldTools.API
     {
         public const String humanNameXMLSRC = "Resources/Names/HumanNames.xml";
         public const String dwarfNameXMLSRC = "Resources/Names/DwarfNames.xml";
+        public const String halflingNameXMLSRC = "Resources/Names/HalflingNames.xml";
+        public const String woodElfNameXMLSRC = "Resources/Names/WoodElfNames.xml";
+        public const String highElfNameXMLSRC = "Resources/Names/HighElfNames.xml";
         public const String speciesXMLSRC = "Resources/Species/Species.xml";
         static Random random = new Random();
 
@@ -126,10 +129,13 @@ namespace OldWorldTools.API
                         nameDTOList = nameDTOList.Where(w => w.Species == "Dwarf").ToList();
                         break;
                     case SpeciesEnum.Halfling:
+                        nameDTOList = nameDTOList.Where(w => w.Species == "Halfling").ToList();
                         break;
                     case SpeciesEnum.WoodElf:
+                        nameDTOList = nameDTOList.Where(w => w.Species == "WoodElf").ToList();
                         break;
                     case SpeciesEnum.HighElf:
+                        nameDTOList = nameDTOList.Where(w => w.Species == "HighElf").ToList();
                         break;
                     default:
                         break;
@@ -148,6 +154,18 @@ namespace OldWorldTools.API
                         break;
                     case RegionEnum.Imperial:
                         nameDTOList = nameDTOList.Where(w => w.Region == "Imperial").ToList();
+                        break;
+                    case RegionEnum.Moot:
+                        nameDTOList = nameDTOList.Where(w => w.Region == "Moot").ToList();
+                        break;
+                    case RegionEnum.Asur:
+                        nameDTOList = nameDTOList.Where(w => w.Region == "Asur").ToList();
+                        break;
+                    case RegionEnum.Asrai:
+                        nameDTOList = nameDTOList.Where(w => w.Region == "Asrai").ToList();
+                        break;
+                    case RegionEnum.Eonir:
+                        nameDTOList = nameDTOList.Where(w => w.Region == "Eonir").ToList();
                         break;
                     default:
                         break;
@@ -220,6 +238,45 @@ namespace OldWorldTools.API
                         foreach (var name in nameType.Names)
                         {
                             namesToAdd.Add(new NameDTO { Value = name, NameType = nameType.Value, Region = region.Value, Species = "Dwarf" });
+                        }
+                    }
+                }
+
+                NameCollection halflingNames = DeserializeXMLFileToObject<NameCollection>(halflingNameXMLSRC);
+
+                foreach (var region in halflingNames.NameRegions)
+                {
+                    foreach (var nameType in region.NameTypes)
+                    {
+                        foreach (var name in nameType.Names)
+                        {
+                            namesToAdd.Add(new NameDTO { Value = name, NameType = nameType.Value, Region = region.Value, Species = "Halfling" });
+                        }
+                    }
+                }
+
+                NameCollection woodElfNames = DeserializeXMLFileToObject<NameCollection>(woodElfNameXMLSRC);
+
+                foreach (var region in woodElfNames.NameRegions)
+                {
+                    foreach (var nameType in region.NameTypes)
+                    {
+                        foreach (var name in nameType.Names)
+                        {
+                            namesToAdd.Add(new NameDTO { Value = name, NameType = nameType.Value, Region = region.Value, Species = "WoodElf" });
+                        }
+                    }
+                }
+
+                NameCollection highElfNames = DeserializeXMLFileToObject<NameCollection>(highElfNameXMLSRC);
+
+                foreach (var region in highElfNames.NameRegions)
+                {
+                    foreach (var nameType in region.NameTypes)
+                    {
+                        foreach (var name in nameType.Names)
+                        {
+                            namesToAdd.Add(new NameDTO { Value = name, NameType = nameType.Value, Region = region.Value, Species = "HighElf" });
                         }
                     }
                 }

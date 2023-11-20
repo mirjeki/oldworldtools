@@ -1,0 +1,26 @@
+<Names>
+	<NameRegion Value="Asur">
+		<NameType Value="Forename_Male">
+			<Name>Aesanel</Name>
+			<Name>Athenil</Name>
+			<Name>Imolil</Name>
+			<Name>Malathil</Name>
+			<Name>Galthanirian</Name>
+		</NameType>
+		<NameType Value="Forename_Female">
+			<Name>Aesenelle</Name>
+			<Name>Mordiaillith</Name>
+			<Name>Elanielle</Name>
+			<Name>Morathia</Name>
+			<Name>Lindirillia</Name>
+		</NameType>
+		<NameType Value="Surname">
+			<Name>Emberfell</Name>
+			<Name>Fireborn</Name>
+			<Name>Foamheart</Name>
+			<Name>Goldenhair</Name>
+			<Name>Silverspray</Name>
+			<Name>Spellsign</Name>
+		</NameType>
+	</NameRegion>
+</Names>

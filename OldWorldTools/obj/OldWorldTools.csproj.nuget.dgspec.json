@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Portfolio\\Full-Stack\\OldWorldTools\\OldWorldTools\\OldWorldTools.csproj": {}
+    "C:\\Portfolio\\Full-Stack\\old-world-tools\\oldworldtools\\OldWorldTools\\OldWorldTools.csproj": {}
   },
   "projects": {
-    "C:\\Portfolio\\Full-Stack\\OldWorldTools\\OldWorldTools\\OldWorldTools.csproj": {
+    "C:\\Portfolio\\Full-Stack\\old-world-tools\\oldworldtools\\OldWorldTools\\OldWorldTools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Portfolio\\Full-Stack\\OldWorldTools\\OldWorldTools\\OldWorldTools.csproj",
+        "projectUniqueName": "C:\\Portfolio\\Full-Stack\\old-world-tools\\oldworldtools\\OldWorldTools\\OldWorldTools.csproj",
         "projectName": "OldWorldTools",
-        "projectPath": "C:\\Portfolio\\Full-Stack\\OldWorldTools\\OldWorldTools\\OldWorldTools.csproj",
+        "projectPath": "C:\\Portfolio\\Full-Stack\\old-world-tools\\oldworldtools\\OldWorldTools\\OldWorldTools.csproj",
         "packagesPath": "C:\\Users\\mirje\\.nuget\\packages\\",
-        "outputPath": "C:\\Portfolio\\Full-Stack\\OldWorldTools\\OldWorldTools\\obj\\",
+        "outputPath": "C:\\Portfolio\\Full-Stack\\old-world-tools\\oldworldtools\\OldWorldTools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -3,8 +3,19 @@
 		<Region>Reikland</Region>
 		<Region>Middenland</Region>
 	</SpeciesType>
+	<SpeciesType Value="Halfling">
+		<Region>Moot</Region>
+		<Region>Imperial</Region>
+	</SpeciesType>
 	<SpeciesType Value="Dwarf">
 		<Region>Karak</Region>
 		<Region>Imperial</Region>
+	</SpeciesType>
+	<SpeciesType Value="HighElf">
+		<Region>Asur</Region>
+	</SpeciesType>
+	<SpeciesType Value="WoodElf">
+		<Region>Asrai</Region>
+		<Region>Eonir</Region>
 	</SpeciesType>
 </Species>

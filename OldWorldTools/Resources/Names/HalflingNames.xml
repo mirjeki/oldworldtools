@@ -1,0 +1,46 @@
+<Names>
+	<NameRegion Value="Moot">
+		<NameType Value="Forename_Male">
+			<Name>Charlie</Name>
+			<Name>Ronald</Name>
+			<Name>Dennis</Name>
+			<Name>Johnny</Name>
+			<Name>Hollie</Name>
+		</NameType>
+		<NameType Value="Forename_Female">
+			<Name>Edith</Name>
+			<Name>Henrietta</Name>
+			<Name>Stephanie</Name>
+			<Name>Nanette</Name>
+		</NameType>
+		<NameType Value="Surname">
+			<Name>Ashfield</Name>
+			<Name>Hayfoot</Name>
+			<Name>Shortbottom</Name>
+			<Name>Rumster</Name>
+			<Name>Brandysnap</Name>
+			<Name>Thorncobble</Name>
+		</NameType>
+	</NameRegion>
+	<NameRegion Value="Imperial">
+		<NameType Value="Forename_Male">
+			<Name>Thomas 'Tommy'</Name>
+			<Name>Siegmund 'Siggy'</Name>
+			<Name>Benhur 'Benny'</Name>
+		</NameType>
+		<NameType Value="Forename_Female">
+			<Name>Jeriah 'Roi'</Name>
+			<Name>Neriah 'Aya'</Name>
+			<Name>Thomasina 'Tina'</Name>
+			<Name>Joyce 'Joy'</Name>
+		</NameType>
+		<NameType Value="Surname">
+			<Name>Ashfield</Name>
+			<Name>Hayfoot</Name>
+			<Name>Shortbottom</Name>
+			<Name>Rumster</Name>
+			<Name>Brandysnap</Name>
+			<Name>Thorncobble</Name>
+		</NameType>
+	</NameRegion>
+</Names>
