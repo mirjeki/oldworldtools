@@ -16,12 +16,14 @@ namespace OldWorldTools.API
         public const String woodElfNameXMLSRC = "Resources/Names/WoodElfNames.xml";
         public const String highElfNameXMLSRC = "Resources/Names/HighElfNames.xml";
         public const String speciesXMLSRC = "Resources/Species/Species.xml";
+        public const String careersXMLSRC = "Resources/Careers/Careers.xml";
         static Random random = new Random();
 
         public void SetupData()
         {
             ImportCharacterNames();
             ImportCharacterSpecies();
+            ImportCharacterCareers("Human");
             SetupCharacteristics();
         }
 
@@ -58,12 +60,61 @@ namespace OldWorldTools.API
                 default:
                     return SpeciesEnum.Human;
             }
-            //return RandomEnumValue<SpeciesEnum>();
+        }
+
+        public RegionEnum RandomiseRegion(Dictionary<RegionEnum, string> regionsAvailable)
+        {
+            int randomResult = random.Next(regionsAvailable.Count());
+
+            var result = regionsAvailable.ToList()[randomResult];
+
+            return result.Key;
+        }
+
+        public CareerDTO RandomiseCareer(SpeciesEnum species)
+        {
+            int diceRoll = RollD100();
+
+            var availableCareers = GetCareers(species);
+
+            foreach (var career in availableCareers)
+            {
+                if (diceRoll >= career.oddsLower && diceRoll <= career.oddsUpper)
+                {
+                    return career;
+                }
+            }
+
+            return availableCareers[0];
         }
 
         private int RollD100()
         {
             return random.Next(1, 100);
+        }
+
+        public CharacterSheet MapCareerToCharacterSheet(CareerDTO career, CharacterSheet characterSheet, TierEnum tier)
+        {
+            characterSheet.Career = career.Name;
+            characterSheet.Class = career.Class;
+
+            switch (tier)
+            {
+                case TierEnum.Tier1:
+                    characterSheet.CareerPath = career.Path1.Title;
+                    characterSheet.Status = career.Path1.Status;
+                    break;
+                case TierEnum.Tier2:
+                    break;
+                case TierEnum.Tier3:
+                    break;
+                case TierEnum.Tier4:
+                    break;
+                default:
+                    break;
+            }
+
+            return characterSheet;
         }
 
         public Dictionary<RegionEnum, string> GetAvailableRegions(SpeciesEnum species)
@@ -89,17 +140,6 @@ namespace OldWorldTools.API
             return regionsAvailable;
         }
 
-        public RegionEnum RandomiseRegion(Dictionary<RegionEnum, string> regionsAvailable)
-        {
-            int randomResult = random.Next(regionsAvailable.Count());
-
-            var result = regionsAvailable.ToList()[randomResult];
-
-            //var number = (int)((RegionEnum)Enum.Parse(typeof(RegionEnum), result.Value));
-
-            return result.Key;
-        }
-
         private List<SpeciesDTO> GetRegions(SpeciesEnum species)
         {
             using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
@@ -109,6 +149,32 @@ namespace OldWorldTools.API
                 var allSpecies = speciesDTOs.FindAll().ToList();
 
                 return speciesDTOs.FindAll().Where(w => w.SpeciesType == species.ToString()).ToList();
+            }
+        }
+
+        public SpeciesDTO GetSpeciesModifiersByRegion(RegionEnum region)
+        {
+            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            {
+                ILiteCollection<SpeciesDTO> speciesDTOs = database.GetCollection<SpeciesDTO>();
+
+                var allSpecies = speciesDTOs.FindAll().ToList();
+
+                return speciesDTOs.FindOne(f => f.Region == region.ToString());
+
+                //return speciesDTOs.FindAll().Where(w => w.SpeciesType == species.ToString()).FirstOrDefault();
+            }
+        }
+
+        public List<CareerDTO> GetCareers(SpeciesEnum species)
+        {
+            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            {
+                ILiteCollection<CareerDTO> careersDTOs = database.GetCollection<CareerDTO>($"{species.ToString()}Careers");
+
+                var allCareers = careersDTOs.FindAll().ToList();
+
+                return careersDTOs.FindAll().ToList();
             }
         }
 
@@ -295,17 +361,118 @@ namespace OldWorldTools.API
 
                 List<SpeciesDTO> speciesToAdd = new List<SpeciesDTO>();
 
-                SpeciesCollection speciesTypes = DeserializeXMLFileToObject<SpeciesCollection>(speciesXMLSRC);
+                SpeciesCollection speciesCollection = DeserializeXMLFileToObject<SpeciesCollection>(speciesXMLSRC);
 
-                foreach (var speciesType in speciesTypes.SpeciesTypes)
+                foreach (var speciesType in speciesCollection.SpeciesTypes)
                 {
-                    foreach (var region in speciesType.Regions)
+                    foreach (var region in speciesType.SpeciesRegions.Regions)
                     {
-                        speciesToAdd.Add(new SpeciesDTO { SpeciesType = speciesType.Value, Region = region});
+                        List<CharacteristicModifierDTO> characteristicModifiers = new List<CharacteristicModifierDTO>
+                        {
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.WS, Modifier = Int32.Parse(speciesType.AttributeModifiers.WS)},
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.BS, Modifier = Int32.Parse(speciesType.AttributeModifiers.BS)},
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.S, Modifier = Int32.Parse(speciesType.AttributeModifiers.S)},
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.T, Modifier = Int32.Parse(speciesType.AttributeModifiers.T)},
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.I, Modifier = Int32.Parse(speciesType.AttributeModifiers.I)},
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.Agi, Modifier = Int32.Parse(speciesType.AttributeModifiers.Agi)},
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.Dex, Modifier = Int32.Parse(speciesType.AttributeModifiers.Dex)},
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.Int, Modifier = Int32.Parse(speciesType.AttributeModifiers.Int)},
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.WP, Modifier = Int32.Parse(speciesType.AttributeModifiers.WP)},
+                            new CharacteristicModifierDTO { Characteristic = CharacteristicEnum.Fel, Modifier = Int32.Parse(speciesType.AttributeModifiers.Fel)}
+                        };
+
+                        SpeciesDTO speciesDTO = new SpeciesDTO();
+
+                        speciesDTO.SpeciesType = speciesType.Value;
+                        speciesDTO.CharacteristicsModifiers = characteristicModifiers;
+                        speciesDTO.WoundModifier = new WoundModifierDTO
+                        {
+                            AddStrengthBonus = speciesType.Wounds.SB == "True" ? true : false,
+                            ToughnessBonusMultiplier = Int32.Parse(speciesType.Wounds.TB),
+                            AddWillPowerBonus = speciesType.Wounds.WPB == "True" ? true : false
+                        };
+                        speciesDTO.Fate = Int32.Parse(speciesType.Fate);
+                        speciesDTO.Resilience = Int32.Parse(speciesType.Resilience);
+                        speciesDTO.ExtraPoints = Int32.Parse(speciesType.ExtraPoints);
+                        speciesDTO.Movement = Int32.Parse(speciesType.Movement);
+                        speciesDTO.Region = region.RegionName;
+                        speciesDTO.StartingSkills = region.StartingSkills;
+                        speciesDTO.StartingTalents = region.StartingTalents;
+
+                        speciesToAdd.Add(speciesDTO);
                     }
                 }
 
                 species.Insert(speciesToAdd);
+            }
+        }
+
+        private void ImportCharacterCareers(string speciesToImport)
+        {
+            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            {
+                ILiteCollection<CareerDTO> careers = database.GetCollection<CareerDTO>($"{speciesToImport}Careers");
+                //clear DB for fresh import
+                careers.DeleteAll();
+
+                List<CareerDTO> careersToAdd = new List<CareerDTO>();
+
+                CareerCollection careerTypes = DeserializeXMLFileToObject<CareerCollection>(careersXMLSRC);
+
+                foreach (var careerSpecies in careerTypes.CareerSpecies)
+                {
+                    if (careerSpecies.Value == speciesToImport)
+                    {
+                        foreach (var odds in careerSpecies.Odds)
+                        {
+                            careersToAdd.Add(new CareerDTO
+                            {
+                                oddsLower = odds.Lower,
+                                oddsUpper = odds.Upper,
+                                Name = odds.Career.Name,
+                                Class = odds.Career.Class,
+                                Path1 = new CareerPathDTO
+                                {
+                                    Title = odds.Career.Path1.Title,
+                                    AdvanceScheme = odds.Career.Path1.AdvanceScheme,
+                                    Status = odds.Career.Path1.Status,
+                                    Skills = odds.Career.Path1.Skills,
+                                    Talents = odds.Career.Path1.Talents,
+                                    Trappings = odds.Career.Path1.Trappings
+                                },
+                                Path2 = new CareerPathDTO
+                                {
+                                    Title = odds.Career.Path2.Title,
+                                    AdvanceScheme = odds.Career.Path2.AdvanceScheme,
+                                    Status = odds.Career.Path2.Status,
+                                    Skills = odds.Career.Path2.Skills,
+                                    Talents = odds.Career.Path2.Talents,
+                                    Trappings = odds.Career.Path2.Trappings
+                                },
+                                Path3 = new CareerPathDTO
+                                {
+                                    Title = odds.Career.Path3.Title,
+                                    AdvanceScheme = odds.Career.Path3.AdvanceScheme,
+                                    Status = odds.Career.Path3.Status,
+                                    Skills = odds.Career.Path3.Skills,
+                                    Talents = odds.Career.Path3.Talents,
+                                    Trappings = odds.Career.Path3.Trappings
+                                },
+                                Path4 = new CareerPathDTO
+                                {
+                                    Title = odds.Career.Path4.Title,
+                                    AdvanceScheme = odds.Career.Path4.AdvanceScheme,
+                                    Status = odds.Career.Path4.Status,
+                                    Skills = odds.Career.Path4.Skills,
+                                    Talents = odds.Career.Path4.Talents,
+                                    Trappings = odds.Career.Path4.Trappings
+                                }
+                            });
+                        }
+                    }
+                }
+
+                careers.Insert(careersToAdd);
             }
         }
 

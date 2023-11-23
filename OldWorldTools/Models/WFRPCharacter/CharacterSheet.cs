@@ -11,11 +11,12 @@ namespace OldWorldTools.Models.WFRPCharacter
         public GenderEnum Gender { get; set; }
         public SpeciesEnum Species { get; set; }
         public RegionEnum Region { get; set; }
-        //public SelectListItem SelectedRegion { get; set; }
-        //public IEnumerable<SelectListItem> RegionsAvailable { get; set; }
-
         public Dictionary<RegionEnum, string> RegionsAvailable { get; set; }
         public string Class { get; set; }
+        public string Career { get; set; }
+        public TierEnum Tier { get; set; }
+        public string CareerPath { get; set; }
+        public string Status { get; set; }
         public List<CharacterSkill> Skills { get; set; }
     }
 }

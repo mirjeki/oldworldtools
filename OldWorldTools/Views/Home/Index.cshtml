@@ -60,8 +60,31 @@
     </div>
 
     <div>
-        @Html.LabelFor(model => model.Class)
-        @Html.TextBoxFor(model => model.Class)
+        <span><button type="submit" name="submitButton" value="RandomiseCareer">Randomise Career</button></span>
+        <div>
+            @Html.LabelFor(model => model.Career)
+        </div>
+        <div>
+            @Html.TextBoxFor(model => model.Career)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Class)
+        </div>
+        <div>
+            @Html.TextBoxFor(model => model.Class)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.CareerPath)
+        </div>
+        <div>
+            @Html.TextBoxFor(model => model.CareerPath)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Status)
+        </div>
+        <div>
+            @Html.TextBoxFor(model => model.Status)
+        </div>
     </div>
 
     <!-- Add other input fields as needed -->

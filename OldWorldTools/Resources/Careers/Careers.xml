@@ -1,0 +1,658 @@
+<Careers>
+	<CareerSpecies Value="Human">
+		<Odds Lower="1" Upper="1">
+			<Career>
+				<Name>Apothecary</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Apothecary's Apprentice</Title>
+					<AdvanceScheme>T,Dex,Int</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>ConsumeAlcohol,Heal,Language(Classical),Lore(Chemistry),Lore(Medicine),Lore(Plants),Trade(Apothecary),Trade(Poisoner)</Skills>
+					<Talents>Concoct,Craftsman(Apothecary),Etiquette(Scholar),Read/Write</Talents>
+					<Trappings>Book(Blank),HealingDraught,LeatherJerkin,PestleAndMortar</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Science),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Criminal,Dealmaker,Etiquette(Guilder),Pharmacist</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>Bookish,MasterTradesman(Apothecary),Resistance(Poison),Savvy</Talents>
+					<Trappings>Book(Apothecary),Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Apothecary-General</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Intimidate,Ride(Horse)</Skills>
+					<Talents>AcuteSense(Taste),Coolheaded,MasterTradesman(Poisoner),Savant(Apothecary)</Talents>
+					<Trappings>CommissionPapers,LargeWorkshop</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="2" Upper="2">
+			<Career>
+				<Name>Engineer</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Endurance,Language(Classical),Lore(Engineer),Perception,Ranged(Blackpowder),Trade(Engineer)</Skills>
+					<Talents>Artistic,Gunner,Read/Write,Tinker</Talents>
+					<Trappings>Book(Engineer),HammerAndSpikes</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Drive,Dodge,Navigation,Ranged(Engineering),Research,Language(Guilder)</Skills>
+					<Talents>Craftsman(Engineer),Etiquette(Guilder),Marksman,Orientation</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int,I,T</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Language(Khazalid),Leadership,Ride(Horse),SecretSigns(Guilder)</Skills>
+					<Talents>Etiquette(Scholar),MasterTradesman(Engineer),Sniper,SuperNumerate</Talents>
+					<Trappings>Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Chartered Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int,I,T,WP</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>MagnumOpus,RapidReload,Savant(Engineering),Unshakeable</Talents>
+					<Trappings>Library(Engineer),QualityTradeTools(Engineer),LargeWorkshop(Engineer)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="3" Upper="3">
+			<Career>
+				<Name>Lawyer</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student Lawyer</Title>
+					<AdvanceScheme>I,Dex,Int</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Endurance,Haggle,Language(Classical),Lore(Law),Lore(Theology),Perception,Research</Skills>
+					<Talents>Blather,Etiquette(Scholar),Read/Write,Speedreader</Talents>
+					<Trappings>Book(Law),MagnifyingGlass</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Lawyer</Title>
+					<AdvanceScheme>I,Dex,Int,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Bribery,Charm,Gossip,Intuition,Language(Guilder),SecretSigns(Guilder)</Skills>
+					<Talents>Argumentative,Criminal,Etiquette(Guilder),Suave</Talents>
+					<Trappings>CourtRobes,GuildLicence,WritingKit</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Barrister</Title>
+					<AdvanceScheme>I,Dex,Int,Fel,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
+					<Talents>Bookish,Cat-tongued,ImpasionedZeal,Savvy</Talents>
+					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Judge</Title>
+					<AdvanceScheme>I,Dex,Int,Fel,WP,T</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Cool,Lore(Any)</Skills>
+					<Talents>CommandingPresence,Kingpin,Savant(Law),Wealthy</Talents>
+					<Trappings>Gavel,OstentatiousWig</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="4" Upper="5">
+			<Career>
+				<Name>Nun</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Novitiate</Title>
+					<AdvanceScheme>Dex,Int,Fel</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Art(Calligraphy),Cool,Endurance,Entertain(Storyteller),Gossip,Heal,Lore(Theology),Pray</Skills>
+					<Talents>Bless(Any),StoneSoup,Panhandle,Read/Write</Talents>
+					<Trappings>ReligiousSymbol,Robes</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Nun</Title>
+					<AdvanceScheme>Dex,Int,Fel,WP</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Charm,Melee(Any),Research,Trade(Brewer),Trade(Herbalist),Trade(Vintner)</Skills>
+					<Talents>Etiquette(Cultists),FieldDressing,HolyVisions,Invoke(Any)</Talents>
+					<Trappings>Book(Religion),ReligiousRelic,TradeTools(Any)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Abbess</Title>
+					<AdvanceScheme>Dex,Int,Fel,WP,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Leadership,Lore(Local),Lore(Politics),Perception</Skills>
+					<Talents>Resistance(Any),Robust,Savant(Theology),Stout-hearted</Talents>
+					<Trappings>Abbey,Library(Theology)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Prioress General</Title>
+					<AdvanceScheme>Dex,Int,Fel,WP,I,T</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>CommandingPresence,IronWill,PureSoul,Strong-minded</Talents>
+					<Trappings>ReligiousOrder</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="6" Upper="100">
+			<Career>
+				<Name>Physician</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Physician's Apprentice</Title>
+					<AdvanceScheme>Dex,Int,WP</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Bribery,Cool,Drive,Endurance,Gossip,Heal,Perception,SleightOfHand</Skills>
+					<Talents>Bookish,FieldDressing,Read/Write,StrikeToStun</Talents>
+					<Trappings>Bandages,HealingDraught</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Physician</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Charm,Haggle,Language(Guilder),Lore(Anatomy),Lore(Medicine),Trade(Barber)</Skills>
+					<Talents>Coolheaded,Criminal,Etiquette(Guilder),Surgery</Talents>
+					<Trappings>Book(Medicine),GuildLicence,TradeTools(Medicine)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Doktor</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel,I</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>ConsumeAlcohol,Intimidate,Leadership,Research</Skills>
+					<Talents>Etiquette(Scholars),Resistance(Disease),Savvy,StrikeToInjure</Talents>
+					<Trappings>Apprentice,Workshop(Medicine)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Court Physician</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel,I,Agi</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Noble),Perform(Dancing)</Skills>
+					<Talents>Etiquette(Nobles),NimbleFingered,Savant(Medicine),Strong-minded</Talents>
+					<Trappings>CourtlyAttire,LetterOfAppointment</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+	</CareerSpecies>
+	<CareerSpecies Value="Dwarf">
+		<Odds Lower="1" Upper="1">
+			<Career>
+				<Name>Apothecary</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Apothecary's Apprentice</Title>
+					<AdvanceScheme>T,Dex,Int</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>ConsumeAlcohol,Heal,Language(Classical),Lore(Chemistry),Lore(Medicine),Lore(Plants),Trade(Apothecary),Trade(Poisoner)</Skills>
+					<Talents>Concoct,Craftsman(Apothecary),Etiquette(Scholar),Read/Write</Talents>
+					<Trappings>Book(Blank),HealingDraught,LeatherJerkin,PestleAndMortar</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Science),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Criminal,Dealmaker,Etiquette(Guilder),Pharmacist</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>Bookish,MasterTradesman(Apothecary),Resistance(Poison),Savvy</Talents>
+					<Trappings>Book(Apothecary),Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Apothecary-General</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Intimidate,Ride(Horse)</Skills>
+					<Talents>AcuteSense(Taste),Coolheaded,MasterTradesman(Poisoner),Savant(Apothecary)</Talents>
+					<Trappings>CommissionPapers,LargeWorkshop</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="2" Upper="4">
+			<Career>
+				<Name>Engineer</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Endurance,Language(Classical),Lore(Engineer),Perception,Ranged(Blackpowder),Trade(Engineer)</Skills>
+					<Talents>Artistic,Gunner,Read/Write,Tinker</Talents>
+					<Trappings>Book(Engineer),HammerAndSpikes</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Drive,Dodge,Navigation,Ranged(Engineering),Research,Language(Guilder)</Skills>
+					<Talents>Craftsman(Engineer),Etiquette(Guilder),Marksman,Orientation</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int,I,T</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Language(Khazalid),Leadership,Ride(Horse),SecretSigns(Guilder)</Skills>
+					<Talents>Etiquette(Scholar),MasterTradesman(Engineer),Sniper,SuperNumerate</Talents>
+					<Trappings>Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Chartered Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int,I,T,WP</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>MagnumOpus,RapidReload,Savant(Engineering),Unshakeable</Talents>
+					<Trappings>Library(Engineer),QualityTradeTools(Engineer),LargeWorkshop(Engineer)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="5" Upper="6">
+			<Career>
+				<Name>Lawyer</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student Lawyer</Title>
+					<AdvanceScheme>I,Dex,Int</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Endurance,Haggle,Language(Classical),Lore(Law),Lore(Theology),Perception,Research</Skills>
+					<Talents>Blather,Etiquette(Scholar),Read/Write,Speedreader</Talents>
+					<Trappings>Book(Law),MagnifyingGlass</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Lawyer</Title>
+					<AdvanceScheme>I,Dex,Int,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Bribery,Charm,Gossip,Intuition,Language(Guilder),SecretSigns(Guilder)</Skills>
+					<Talents>Argumentative,Criminal,Etiquette(Guilder),Suave</Talents>
+					<Trappings>CourtRobes,GuildLicence,WritingKit</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Barrister</Title>
+					<AdvanceScheme>I,Dex,Int,Fel,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
+					<Talents>Bookish,Cat-tongued,ImpasionedZeal,Savvy</Talents>
+					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Judge</Title>
+					<AdvanceScheme>I,Dex,Int,Fel,WP,T</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Cool,Lore(Any)</Skills>
+					<Talents>CommandingPresence,Kingpin,Savant(Law),Wealthy</Talents>
+					<Trappings>Gavel,OstentatiousWig</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="7" Upper="7">
+			<Career>
+				<Name>Physician</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Physician's Apprentice</Title>
+					<AdvanceScheme>Dex,Int,WP</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Bribery,Cool,Drive,Endurance,Gossip,Heal,Perception,SleightOfHand</Skills>
+					<Talents>Bookish,FieldDressing,Read/Write,StrikeToStun</Talents>
+					<Trappings>Bandages,HealingDraught</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Physician</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Charm,Haggle,Language(Guilder),Lore(Anatomy),Lore(Medicine),Trade(Barber)</Skills>
+					<Talents>Coolheaded,Criminal,Etiquette(Guilder),Surgery</Talents>
+					<Trappings>Book(Medicine),GuildLicence,TradeTools(Medicine)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Doktor</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel,I</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>ConsumeAlcohol,Intimidate,Leadership,Research</Skills>
+					<Talents>Etiquette(Scholars),Resistance(Disease),Savvy,StrikeToInjure</Talents>
+					<Trappings>Apprentice,Workshop(Medicine)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Court Physician</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel,I,Agi</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Noble),Perform(Dancing)</Skills>
+					<Talents>Etiquette(Nobles),NimbleFingered,Savant(Medicine),Strong-minded</Talents>
+					<Trappings>CourtlyAttire,LetterOfAppointment</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+	</CareerSpecies>
+	<CareerSpecies Value="Halfling">
+		<Odds Lower="1" Upper="1">
+			<Career>
+				<Name>Apothecary</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Apothecary's Apprentice</Title>
+					<AdvanceScheme>T,Dex,Int</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>ConsumeAlcohol,Heal,Language(Classical),Lore(Chemistry),Lore(Medicine),Lore(Plants),Trade(Apothecary),Trade(Poisoner)</Skills>
+					<Talents>Concoct,Craftsman(Apothecary),Etiquette(Scholar),Read/Write</Talents>
+					<Trappings>Book(Blank),HealingDraught,LeatherJerkin,PestleAndMortar</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Science),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Criminal,Dealmaker,Etiquette(Guilder),Pharmacist</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>Bookish,MasterTradesman(Apothecary),Resistance(Poison),Savvy</Talents>
+					<Trappings>Book(Apothecary),Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Apothecary-General</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Intimidate,Ride(Horse)</Skills>
+					<Talents>AcuteSense(Taste),Coolheaded,MasterTradesman(Poisoner),Savant(Apothecary)</Talents>
+					<Trappings>CommissionPapers,LargeWorkshop</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="2" Upper="2">
+			<Career>
+				<Name>Engineer</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Endurance,Language(Classical),Lore(Engineer),Perception,Ranged(Blackpowder),Trade(Engineer)</Skills>
+					<Talents>Artistic,Gunner,Read/Write,Tinker</Talents>
+					<Trappings>Book(Engineer),HammerAndSpikes</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Drive,Dodge,Navigation,Ranged(Engineering),Research,Language(Guilder)</Skills>
+					<Talents>Craftsman(Engineer),Etiquette(Guilder),Marksman,Orientation</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int,I,T</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Language(Khazalid),Leadership,Ride(Horse),SecretSigns(Guilder)</Skills>
+					<Talents>Etiquette(Scholar),MasterTradesman(Engineer),Sniper,SuperNumerate</Talents>
+					<Trappings>Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Chartered Engineer</Title>
+					<AdvanceScheme>BS,Dex,Int,I,T,WP</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>MagnumOpus,RapidReload,Savant(Engineering),Unshakeable</Talents>
+					<Trappings>Library(Engineer),QualityTradeTools(Engineer),LargeWorkshop(Engineer)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="3" Upper="4">
+			<Career>
+				<Name>Lawyer</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student Lawyer</Title>
+					<AdvanceScheme>I,Dex,Int</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Endurance,Haggle,Language(Classical),Lore(Law),Lore(Theology),Perception,Research</Skills>
+					<Talents>Blather,Etiquette(Scholar),Read/Write,Speedreader</Talents>
+					<Trappings>Book(Law),MagnifyingGlass</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Lawyer</Title>
+					<AdvanceScheme>I,Dex,Int,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Bribery,Charm,Gossip,Intuition,Language(Guilder),SecretSigns(Guilder)</Skills>
+					<Talents>Argumentative,Criminal,Etiquette(Guilder),Suave</Talents>
+					<Trappings>CourtRobes,GuildLicence,WritingKit</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Barrister</Title>
+					<AdvanceScheme>I,Dex,Int,Fel,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
+					<Talents>Bookish,Cat-tongued,ImpasionedZeal,Savvy</Talents>
+					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Judge</Title>
+					<AdvanceScheme>I,Dex,Int,Fel,WP,T</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Cool,Lore(Any)</Skills>
+					<Talents>CommandingPresence,Kingpin,Savant(Law),Wealthy</Talents>
+					<Trappings>Gavel,OstentatiousWig</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="5" Upper="6">
+			<Career>
+				<Name>Physician</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Physician's Apprentice</Title>
+					<AdvanceScheme>Dex,Int,WP</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Bribery,Cool,Drive,Endurance,Gossip,Heal,Perception,SleightOfHand</Skills>
+					<Talents>Bookish,FieldDressing,Read/Write,StrikeToStun</Talents>
+					<Trappings>Bandages,HealingDraught</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Physician</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Charm,Haggle,Language(Guilder),Lore(Anatomy),Lore(Medicine),Trade(Barber)</Skills>
+					<Talents>Coolheaded,Criminal,Etiquette(Guilder),Surgery</Talents>
+					<Trappings>Book(Medicine),GuildLicence,TradeTools(Medicine)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Doktor</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel,I</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>ConsumeAlcohol,Intimidate,Leadership,Research</Skills>
+					<Talents>Etiquette(Scholars),Resistance(Disease),Savvy,StrikeToInjure</Talents>
+					<Trappings>Apprentice,Workshop(Medicine)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Court Physician</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel,I,Agi</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Noble),Perform(Dancing)</Skills>
+					<Talents>Etiquette(Nobles),NimbleFingered,Savant(Medicine),Strong-minded</Talents>
+					<Trappings>CourtlyAttire,LetterOfAppointment</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+	</CareerSpecies>
+	<CareerSpecies Value="HighElf">
+		<Odds Lower="1" Upper="2">
+			<Career>
+				<Name>Apothecary</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Apothecary's Apprentice</Title>
+					<AdvanceScheme>T,Dex,Int</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>ConsumeAlcohol,Heal,Language(Classical),Lore(Chemistry),Lore(Medicine),Lore(Plants),Trade(Apothecary),Trade(Poisoner)</Skills>
+					<Talents>Concoct,Craftsman(Apothecary),Etiquette(Scholar),Read/Write</Talents>
+					<Trappings>Book(Blank),HealingDraught,LeatherJerkin,PestleAndMortar</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Science),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Criminal,Dealmaker,Etiquette(Guilder),Pharmacist</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>Bookish,MasterTradesman(Apothecary),Resistance(Poison),Savvy</Talents>
+					<Trappings>Book(Apothecary),Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Apothecary-General</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Intimidate,Ride(Horse)</Skills>
+					<Talents>AcuteSense(Taste),Coolheaded,MasterTradesman(Poisoner),Savant(Apothecary)</Talents>
+					<Trappings>CommissionPapers,LargeWorkshop</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="3" Upper="6">
+			<Career>
+				<Name>Lawyer</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student Lawyer</Title>
+					<AdvanceScheme>I,Dex,Int</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Endurance,Haggle,Language(Classical),Lore(Law),Lore(Theology),Perception,Research</Skills>
+					<Talents>Blather,Etiquette(Scholar),Read/Write,Speedreader</Talents>
+					<Trappings>Book(Law),MagnifyingGlass</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Lawyer</Title>
+					<AdvanceScheme>I,Dex,Int,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Bribery,Charm,Gossip,Intuition,Language(Guilder),SecretSigns(Guilder)</Skills>
+					<Talents>Argumentative,Criminal,Etiquette(Guilder),Suave</Talents>
+					<Trappings>CourtRobes,GuildLicence,WritingKit</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Barrister</Title>
+					<AdvanceScheme>I,Dex,Int,Fel,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
+					<Talents>Bookish,Cat-tongued,ImpasionedZeal,Savvy</Talents>
+					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Judge</Title>
+					<AdvanceScheme>I,Dex,Int,Fel,WP,T</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Cool,Lore(Any)</Skills>
+					<Talents>CommandingPresence,Kingpin,Savant(Law),Wealthy</Talents>
+					<Trappings>Gavel,OstentatiousWig</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="7" Upper="8">
+			<Career>
+				<Name>Physician</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Physician's Apprentice</Title>
+					<AdvanceScheme>Dex,Int,WP</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Bribery,Cool,Drive,Endurance,Gossip,Heal,Perception,SleightOfHand</Skills>
+					<Talents>Bookish,FieldDressing,Read/Write,StrikeToStun</Talents>
+					<Trappings>Bandages,HealingDraught</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Physician</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Charm,Haggle,Language(Guilder),Lore(Anatomy),Lore(Medicine),Trade(Barber)</Skills>
+					<Talents>Coolheaded,Criminal,Etiquette(Guilder),Surgery</Talents>
+					<Trappings>Book(Medicine),GuildLicence,TradeTools(Medicine)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Doktor</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel,I</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>ConsumeAlcohol,Intimidate,Leadership,Research</Skills>
+					<Talents>Etiquette(Scholars),Resistance(Disease),Savvy,StrikeToInjure</Talents>
+					<Trappings>Apprentice,Workshop(Medicine)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Court Physician</Title>
+					<AdvanceScheme>Dex,Int,WP,Fel,I,Agi</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Noble),Perform(Dancing)</Skills>
+					<Talents>Etiquette(Nobles),NimbleFingered,Savant(Medicine),Strong-minded</Talents>
+					<Trappings>CourtlyAttire,LetterOfAppointment</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+	</CareerSpecies>
+	<CareerSpecies Value="WoodElf">
+			<Odds Lower="1" Upper="1">
+			<Career>
+				<Name>Apothecary</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Apothecary's Apprentice</Title>
+					<AdvanceScheme>T,Dex,Int</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>ConsumeAlcohol,Heal,Language(Classical),Lore(Chemistry),Lore(Medicine),Lore(Plants),Trade(Apothecary),Trade(Poisoner)</Skills>
+					<Talents>Concoct,Craftsman(Apothecary),Etiquette(Scholar),Read/Write</Talents>
+					<Trappings>Book(Blank),HealingDraught,LeatherJerkin,PestleAndMortar</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Science),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Criminal,Dealmaker,Etiquette(Guilder),Pharmacist</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Apothecary</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>Bookish,MasterTradesman(Apothecary),Resistance(Poison),Savvy</Talents>
+					<Trappings>Book(Apothecary),Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Apothecary-General</Title>
+					<AdvanceScheme>T,Dex,Int,Fel,I,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Intimidate,Ride(Horse)</Skills>
+					<Talents>AcuteSense(Taste),Coolheaded,MasterTradesman(Poisoner),Savant(Apothecary)</Talents>
+					<Trappings>CommissionPapers,LargeWorkshop</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+	</CareerSpecies>
+</Careers>

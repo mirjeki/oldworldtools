@@ -39,6 +39,8 @@ namespace OldWorldTools.Controllers
         {
             ModelState.Clear();
             characterSheet.RegionsAvailable = generator.GetAvailableRegions(characterSheet.Species);
+            var careers = generator.GetCareers(SpeciesEnum.Human);
+            var speciesModifiers = generator.GetSpeciesModifiersByRegion(characterSheet.Region);
 
             switch (submitButton)
             {
@@ -67,6 +69,12 @@ namespace OldWorldTools.Controllers
                     characterSheet.Region = generator.RandomiseRegion(characterSheet.RegionsAvailable);
                     return View("Index", characterSheet);
 
+                case "RandomiseCareer":
+                    var career = generator.RandomiseCareer(characterSheet.Species);
+                    characterSheet = generator.MapCareerToCharacterSheet(career, characterSheet, TierEnum.Tier1);
+
+                    return View("Index", characterSheet);
+
                 default:
                     break;
             }
@@ -88,6 +96,16 @@ namespace OldWorldTools.Controllers
                     toSet.SetValue(characterSheet.Name);
                     fields.TryGetValue("Species", out toSet);
                     toSet.SetValue(characterSheet.Species.GetAttributeOfType<DescriptionAttribute>().Description);
+                    fields.TryGetValue("Career", out toSet);
+                    toSet.SetValue(characterSheet.Career);
+                    fields.TryGetValue("Career Path", out toSet);
+                    toSet.SetValue(characterSheet.CareerPath);
+                    fields.TryGetValue("Career Tier", out toSet);
+                    toSet.SetValue(characterSheet.Tier.GetAttributeOfType<DescriptionAttribute>().Description);
+                    fields.TryGetValue("Status", out toSet);
+                    toSet.SetValue(characterSheet.Status);
+                    fields.TryGetValue("Class", out toSet);
+                    toSet.SetValue(characterSheet.Class);
                     //fields.TryGetValue("experience1", out toSet);
                     //toSet.SetValue("Off");
                     //fields.TryGetValue("experience2", out toSet);
