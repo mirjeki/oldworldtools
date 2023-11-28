@@ -1,0 +1,110 @@
+<Talents>
+	<Talent>
+		<Name>Accurate Shot</Name>
+		<Description>Deal Accurate Shot level in extra damage with ranged weapons</Description>
+	</Talent>
+	<Talent>
+		<Name>Acute Sense (Hearing)</Name>
+		<Description>Take Perception Tests to detect otherwise imperceptible details associated with hearing</Description>
+	</Talent>
+	<Talent>
+		<Name>Acute Sense (Smell)</Name>
+		<Description>Take Perception Tests to detect otherwise imperceptible details associated with smell</Description>
+	</Talent>
+	<Talent>
+		<Name>Acute Sense (Sight)</Name>
+		<Description>Take Perception Tests to detect otherwise imperceptible details associated with sight</Description>
+	</Talent>
+	<Talent>
+		<Name>Acute Sense (Taste)</Name>
+		<Description>Take Perception Tests to detect otherwise imperceptible details associated with taste</Description>
+	</Talent>
+	<Talent>
+		<Name>Acute Sense (Touch)</Name>
+		<Description>Take Perception Tests to detect otherwise imperceptible details associated with touch</Description>
+	</Talent>
+	<Talent>
+		<Name>Aethyric Attunement</Name>
+		<Description>Don't suffer a Miscast when rolling doubles on successful Channel Tests</Description>
+	</Talent>
+	<Talent>
+		<Name>Alley Cat</Name>
+		<Description>When using Stealh(Urban), you may reverse the dice of failed Tests</Description>
+	</Talent>
+	<Talent>
+		<Name>Ambidextrous</Name>
+		<Description>Only suffer -10 to Tests relying solely on your secondary hand, instead of -20</Description>
+	</Talent>
+	<Talent>
+		<Name>Animal Affinity</Name>
+		<Description>Unless given a compelling reason, Bestial creatures will be calm around you</Description>
+	</Talent>
+	<Talent>
+		<Name>Arcane Magic(Beasts)</Name>
+		<Description>See page 133 in the core rulebook</Description>
+	</Talent>
+	<Talent>
+		<Name>Arcane Magic(Death)</Name>
+		<Description>See page 133 in the core rulebook</Description>
+	</Talent>
+	<Talent>
+		<Name>Arcane Magic(Fire)</Name>
+		<Description>See page 133 in the core rulebook</Description>
+	</Talent>
+	<Talent>
+		<Name>Arcane Magic(Heavens)</Name>
+		<Description>See page 133 in the core rulebook</Description>
+	</Talent>
+	<Talent>
+		<Name>Arcane Magic(Metal)</Name>
+		<Description>See page 133 in the core rulebook</Description>
+	</Talent>
+	<Talent>
+		<Name>Arcane Magic(Shadow)</Name>
+		<Description>See page 133 in the core rulebook</Description>
+	</Talent>
+	<Talent>
+		<Name>Arcane Magic(Light)</Name>
+		<Description>See page 133 in the core rulebook</Description>
+	</Talent>
+	<Talent>
+		<Name>Arcane Magic(Life)</Name>
+		<Description>See page 133 in the core rulebook</Description>
+	</Talent>
+	<Talent>
+		<Name>Argumentative</Name>
+		<Description>On a successful Charm test in a debate, use units die value OR rolled SL for SL bonus</Description>
+	</Talent>
+	<Talent>
+		<Name>Artistic</Name>
+		<Description>You have a natural talent for art</Description>
+	</Talent>
+	<Talent>
+		<Name>Attractive</Name>
+		<Description>On a Successful Charm test towards someone attracted to you, use units die value OR rolled SL for SL bonus</Description>
+	</Talent>
+	<Talent>
+		<Name>Battle Rage</Name>
+		<Description>You can end your frenzy with a successful Cool Test at the end of the round</Description>
+	</Talent>
+	<Talent>
+		<Name>Beat Blade</Name>
+		<Description>Perform Melee Test, if successful your opponent gets -1 Advantage plus an additional -1 per SL</Description>
+	</Talent>
+	<Talent>
+		<Name>Beneath Notice</Name>
+		<Description>You are ignored by those of higher Status Tiers, unless acting incongruously</Description>
+	</Talent>
+	<Talent>
+		<Name>Beserk Charge</Name>
+		<Description>When Charging, gain +1 Damage per level in this talent</Description>
+	</Talent>
+	<Talent>
+		<Name>Blather</Name>
+		<Description>Attempt opposed Charm/Intelligence test. Success gives opponant Stunned condition</Description>
+	</Talent>
+	<Talent>
+		<Name>Bless</Name>
+		<Description>Able to perform Blessings</Description>
+	</Talent>
+</Talents>

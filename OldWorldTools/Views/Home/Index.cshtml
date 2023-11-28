@@ -85,6 +85,42 @@
         <div>
             @Html.TextBoxFor(model => model.Status)
         </div>
+        <table class="table" style="width:350px;">
+            <thead><h2>Talents</h2></thead>
+            @{
+                for (var i = 0; i < Model.Talents.Count(); i++)
+                {
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Times Taken</td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>@Html.TextBoxFor(model => model.Talents[i])</td>
+                        <td>1</td>
+                    </tr>
+                }
+            }
+        </table>
+        <table class="table" style="width:250px;">
+            <thead><h2>Trappings</h2></thead>
+            @{
+                for (var i = 0; i < Model.Trappings.Count(); i++)
+                {
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Enc</td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>@Html.TextBoxFor(model => model.Trappings[i])</td>
+                        <td>-</td>
+                    </tr>
+                }
+            }
+        </table>
     </div>
 
     <!-- Add other input fields as needed -->

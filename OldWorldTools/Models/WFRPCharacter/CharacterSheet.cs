@@ -18,5 +18,8 @@ namespace OldWorldTools.Models.WFRPCharacter
         public string CareerPath { get; set; }
         public string Status { get; set; }
         public List<CharacterSkill> Skills { get; set; }
+        public List<string> Talents { get; set; }
+        public List<string> Trappings { get; set; }
+        //public List<Trapping> Trappings { get; set; }
     }
 }

@@ -5,18 +5,25 @@ using System.Xml.Serialization;
 using OldWorldTools.Models.WFRPCharacter;
 using OldWorldTools.Models.WFRPCharacter.DTOs;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Text;
+using Org.BouncyCastle.Tls;
+using System.Reflection;
 
 namespace OldWorldTools.API
 {
     public class WFRPGenerator
     {
-        public const String humanNameXMLSRC = "Resources/Names/HumanNames.xml";
-        public const String dwarfNameXMLSRC = "Resources/Names/DwarfNames.xml";
-        public const String halflingNameXMLSRC = "Resources/Names/HalflingNames.xml";
-        public const String woodElfNameXMLSRC = "Resources/Names/WoodElfNames.xml";
-        public const String highElfNameXMLSRC = "Resources/Names/HighElfNames.xml";
-        public const String speciesXMLSRC = "Resources/Species/Species.xml";
-        public const String careersXMLSRC = "Resources/Careers/Careers.xml";
+        public const string humanNameXMLSRC = "Resources/Names/HumanNames.xml";
+        public const string dwarfNameXMLSRC = "Resources/Names/DwarfNames.xml";
+        public const string halflingNameXMLSRC = "Resources/Names/HalflingNames.xml";
+        public const string woodElfNameXMLSRC = "Resources/Names/WoodElfNames.xml";
+        public const string highElfNameXMLSRC = "Resources/Names/HighElfNames.xml";
+        public const string speciesXMLSRC = "Resources/Species/Species.xml";
+        public const string talentsXMLSRC = "Resources/Talents/Talents.xml";
+        public const string careersXMLSRC = "Resources/Careers/Careers.xml";
+
+        public const string characterDefinitionsDB = "Data/WFRPCharacterDefinitions.db";
+        public const string characterNamesDB = "Data/WFRPCharacterNames.db";
         static Random random = new Random();
 
         public void SetupData()
@@ -24,6 +31,9 @@ namespace OldWorldTools.API
             ImportCharacterNames();
             ImportCharacterSpecies();
             ImportCharacterCareers("Human");
+            ImportCharacterTalents();
+            var talent = GetRandomStartingTalent();
+
             SetupCharacteristics();
         }
 
@@ -103,6 +113,8 @@ namespace OldWorldTools.API
                 case TierEnum.Tier1:
                     characterSheet.CareerPath = career.Path1.Title;
                     characterSheet.Status = career.Path1.Status;
+                    characterSheet.Talents = SeparateAndFormatCSV(career.Path1.Talents);
+                    characterSheet.Trappings = SeparateAndFormatCSV(career.Path1.Trappings);
                     break;
                 case TierEnum.Tier2:
                     break;
@@ -112,6 +124,41 @@ namespace OldWorldTools.API
                     break;
                 default:
                     break;
+            }
+
+            foreach (var talent in characterSheet.Talents)
+            {
+                if (talent.Contains("?"))
+                {
+                    var options = talent.Split('?', StringSplitOptions.TrimEntries);
+                    var result = RollD100();
+
+                    if (result <= 50)
+                    {
+                        characterSheet.Talents.Add(options[0]);
+                    }
+                    else
+                    {
+                        characterSheet.Talents.Add(options[1]);
+                    }
+
+                    characterSheet.Talents.Remove(talent);
+                }
+
+                if (talent == "2 Random")
+                {
+                    characterSheet.Talents.Add(GetRandomStartingTalent());
+                    characterSheet.Talents.Add(GetRandomStartingTalent());
+                    characterSheet.Talents.Remove(talent);
+                }
+
+                if (talent == "3 Random")
+                {
+                    characterSheet.Talents.Add(GetRandomStartingTalent());
+                    characterSheet.Talents.Add(GetRandomStartingTalent());
+                    characterSheet.Talents.Add(GetRandomStartingTalent());
+                    characterSheet.Talents.Remove(talent);
+                }
             }
 
             return characterSheet;
@@ -142,7 +189,7 @@ namespace OldWorldTools.API
 
         private List<SpeciesDTO> GetRegions(SpeciesEnum species)
         {
-            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            using (var database = new LiteDatabase(characterDefinitionsDB))
             {
                 ILiteCollection<SpeciesDTO> speciesDTOs = database.GetCollection<SpeciesDTO>();
 
@@ -154,7 +201,7 @@ namespace OldWorldTools.API
 
         public SpeciesDTO GetSpeciesModifiersByRegion(RegionEnum region)
         {
-            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            using (var database = new LiteDatabase(characterDefinitionsDB))
             {
                 ILiteCollection<SpeciesDTO> speciesDTOs = database.GetCollection<SpeciesDTO>();
 
@@ -168,7 +215,7 @@ namespace OldWorldTools.API
 
         public List<CareerDTO> GetCareers(SpeciesEnum species)
         {
-            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            using (var database = new LiteDatabase(characterDefinitionsDB))
             {
                 ILiteCollection<CareerDTO> careersDTOs = database.GetCollection<CareerDTO>($"{species.ToString()}Careers");
 
@@ -180,7 +227,7 @@ namespace OldWorldTools.API
 
         private string GetRandomCharacterName(GenderEnum gender, RegionEnum region, SpeciesEnum species, NameTypeEnum nameType)
         {
-            using (var database = new LiteDatabase("Data/WFRPCharacterNames.db"))
+            using (var database = new LiteDatabase(characterNamesDB))
             {
                 ILiteCollection<NameDTO> names = database.GetCollection<NameDTO>();
 
@@ -272,9 +319,161 @@ namespace OldWorldTools.API
             }
         }
 
+        private string GetRandomStartingTalent()
+        {
+            using (var database = new LiteDatabase(characterDefinitionsDB))
+            {
+                ILiteCollection<TalentDTO> names = database.GetCollection<TalentDTO>();
+
+                List<TalentDTO> talentDTOList = names.FindAll().ToList();
+
+                int diceRoll = RollD100();
+
+                switch (diceRoll)
+                {
+                    case <= 3:
+                        return "Acute Sense (Any one)";
+                    case <= 6:
+                        return "Ambidextrous";
+                    case <= 9:
+                        return "Animal Affinity";
+                    case <= 12:
+                        return "Artistic";
+                    case <= 15:
+                        return "Attractive";
+                    case <= 18:
+                        return "Coolheaded";
+                    case <= 21:
+                        return "Craftsman (Any one)";
+                    case <= 24:
+                        return "Flee!";
+                    case <= 28:
+                        return "Hardy";
+                    case <= 31:
+                        return "Lightning Reflexes";
+                    case <= 34:
+                        return "Linguistics";
+                    case <= 38:
+                        return "Luck";
+                    case <= 41:
+                        return "Marksman";
+                    case <= 44:
+                        return "Mimic";
+                    case <= 47:
+                        return "Night Vision";
+                    case <= 50:
+                        return "Nimble Fingered";
+                    case <= 52:
+                        return "Noble Blood";
+                    case <= 55:
+                        return "Orientation";
+                    case <= 58:
+                        return "Perfect Pitch";
+                    case <= 62:
+                        return "Pure Soul";
+                    case <= 65:
+                        return "Read/Write";
+                    case <= 68:
+                        return "Resistance (Any one)";
+                    case <= 71:
+                        return "Savvy";
+                    case <= 74:
+                        return "Sharp";
+                    case <= 78:
+                        return "Sixth Sense";
+                    case <= 81:
+                        return "Strong Legs";
+                    case <= 84:
+                        return "Sturdy";
+                    case <= 87:
+                        return "Suave";
+                    case <= 91:
+                        return "Super Numerate";
+                    case <= 94:
+                        return "Very Resilient";
+                    case <= 97:
+                        return "Very Strong";
+                    case <= 100:
+                        return "Warrior Born";
+                    default:
+                        return "Acute Sense (Any one)";
+                }
+
+                //switch (diceRoll)
+                //{
+                //    case <= 3:
+                //        return talentDTOList.Where(w => w.Name.Contains("Acute Sense")).First();
+                //    case <= 6:
+                //        return talentDTOList.Where(w => w.Name.Contains("Ambidextrous")).First();
+                //    case <= 9:
+                //        return talentDTOList.Where(w => w.Name.Contains("Animal Affinity")).First();
+                //    case <= 12:
+                //        return talentDTOList.Where(w => w.Name.Contains("Artistic")).First();
+                //    case <= 15:
+                //        return talentDTOList.Where(w => w.Name.Contains("Attractive")).First();
+                //    case <= 18:
+                //        return talentDTOList.Where(w => w.Name.Contains("Coolheaded")).First();
+                //    case <= 21:
+                //        return talentDTOList.Where(w => w.Name.Contains("Craftsman")).First();
+                //    case <= 24:
+                //        return talentDTOList.Where(w => w.Name.Contains("Flee")).First();
+                //    case <= 28:
+                //        return talentDTOList.Where(w => w.Name.Contains("Hardy")).First();
+                //    case <= 31:
+                //        return talentDTOList.Where(w => w.Name.Contains("Lightning Reflexes")).First();
+                //    case <= 34:
+                //        return talentDTOList.Where(w => w.Name.Contains("Linguistics")).First();
+                //    case <= 38:
+                //        return talentDTOList.Where(w => w.Name.Contains("Luck")).First();
+                //    case <= 41:
+                //        return talentDTOList.Where(w => w.Name.Contains("Marksman")).First();
+                //    case <= 44:
+                //        return talentDTOList.Where(w => w.Name.Contains("Mimic")).First();
+                //    case <= 47:
+                //        return talentDTOList.Where(w => w.Name.Contains("Night Vision")).First();
+                //    case <= 50:
+                //        return talentDTOList.Where(w => w.Name.Contains("Nimble Fingered")).First();
+                //    case <= 52:
+                //        return talentDTOList.Where(w => w.Name.Contains("Noble Blood")).First();
+                //    case <= 55:
+                //        return talentDTOList.Where(w => w.Name.Contains("Orientation")).First();
+                //    case <= 58:
+                //        return talentDTOList.Where(w => w.Name.Contains("Perfect Pitch")).First();
+                //    case <= 62:
+                //        return talentDTOList.Where(w => w.Name.Contains("Pure Soul")).First();
+                //    case <= 65:
+                //        return talentDTOList.Where(w => w.Name.Contains("Read/Write")).First();
+                //    case <= 68:
+                //        return talentDTOList.Where(w => w.Name.Contains("Resistance")).First();
+                //    case <= 71:
+                //        return talentDTOList.Where(w => w.Name.Contains("Savvy")).First();
+                //    case <= 74:
+                //        return talentDTOList.Where(w => w.Name.Contains("Sharp")).First();
+                //    case <= 78:
+                //        return talentDTOList.Where(w => w.Name.Contains("Sixth Sense")).First();
+                //    case <= 81:
+                //        return talentDTOList.Where(w => w.Name.Contains("Strong Legs")).First();
+                //    case <= 84:
+                //        return talentDTOList.Where(w => w.Name.Contains("Sturdy")).First();
+                //    case <= 87:
+                //        return talentDTOList.Where(w => w.Name.Contains("Suave")).First();
+                //    case <= 91:
+                //        return talentDTOList.Where(w => w.Name.Contains("Super Numerate")).First();
+                //    case <= 94:
+                //        return talentDTOList.Where(w => w.Name.Contains("Very Resilient")).First();
+                //    case <= 97:
+                //        return talentDTOList.Where(w => w.Name.Contains("Very Strong")).First();
+                //    case <= 100:
+                //        return talentDTOList.Where(w => w.Name.Contains("Warrior Born")).First();
+                //    default:
+                //        return talentDTOList.Where(w => w.Name.Contains("Acute Sense")).First();
+                //}
+            }
+        }
+
         private void ImportCharacterNames()
         {
-            using (var database = new LiteDatabase("Data/WFRPCharacterNames.db"))
+            using (var database = new LiteDatabase(characterNamesDB))
             {
                 ILiteCollection<NameDTO> names = database.GetCollection<NameDTO>();
                 //clear DB for fresh import
@@ -353,7 +552,7 @@ namespace OldWorldTools.API
 
         private void ImportCharacterSpecies()
         {
-            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            using (var database = new LiteDatabase(characterDefinitionsDB))
             {
                 ILiteCollection<SpeciesDTO> species = database.GetCollection<SpeciesDTO>();
                 //clear DB for fresh import
@@ -407,9 +606,30 @@ namespace OldWorldTools.API
             }
         }
 
+        private void ImportCharacterTalents()
+        {
+            using (var database = new LiteDatabase(characterDefinitionsDB))
+            {
+                ILiteCollection<TalentDTO> talents = database.GetCollection<TalentDTO>();
+                //clear DB for fresh import
+                talents.DeleteAll();
+
+                List<TalentDTO> talentsToAdd = new List<TalentDTO>();
+
+                TalentCollection talentsCollection = DeserializeXMLFileToObject<TalentCollection>(talentsXMLSRC);
+
+                foreach (var talent in talentsCollection.Talents)
+                {
+                    talentsToAdd.Add(new TalentDTO { Name = talent.Name, Description = talent.Description });
+                }
+
+                talents.Insert(talentsToAdd);
+            }
+        }
+
         private void ImportCharacterCareers(string speciesToImport)
         {
-            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            using (var database = new LiteDatabase(characterDefinitionsDB))
             {
                 ILiteCollection<CareerDTO> careers = database.GetCollection<CareerDTO>($"{speciesToImport}Careers");
                 //clear DB for fresh import
@@ -478,7 +698,7 @@ namespace OldWorldTools.API
 
         private void ClearCharacteristics()
         {
-            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            using (var database = new LiteDatabase(characterDefinitionsDB))
             {
                 ILiteCollection<CharacteristicDTO> characteristicDTOs = database.GetCollection<CharacteristicDTO>();
 
@@ -488,7 +708,7 @@ namespace OldWorldTools.API
 
         private void SetupCharacteristics()
         {
-            using (var database = new LiteDatabase("Data/WFRPCharacterDefinitions.db"))
+            using (var database = new LiteDatabase(characterDefinitionsDB))
             {
                 ILiteCollection<CharacteristicDTO> characteristicDTOs = database.GetCollection<CharacteristicDTO>();
 
@@ -558,6 +778,37 @@ namespace OldWorldTools.API
                     }
                 }
             }
+        }
+
+
+
+        private static List<string> SeparateAndFormatCSV(string csvContents)
+        {
+            var strings = csvContents.Split(',');
+
+            List<string> result = new List<string>();
+
+            foreach (var s in strings)
+            {
+                result.Add(AddSpacesToSentence(s));
+            }
+
+            return result;
+        }
+
+        private static string AddSpacesToSentence(string text)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                return "";
+            StringBuilder newText = new StringBuilder(text.Length * 2);
+            newText.Append(text[0]);
+            for (int i = 1; i < text.Length; i++)
+            {
+                if (char.IsUpper(text[i]) && text[i - 1] != ' ')
+                    newText.Append(' ');
+                newText.Append(text[i]);
+            }
+            return newText.ToString();
         }
 
         private static T RandomEnumValue<T>()

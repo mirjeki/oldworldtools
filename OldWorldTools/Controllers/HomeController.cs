@@ -28,6 +28,8 @@ namespace OldWorldTools.Controllers
                 Region = RegionEnum.Reikland,
                 RegionsAvailable = generator.GetAvailableRegions(SpeciesEnum.Human)};
 
+            characterSheet = generator.MapCareerToCharacterSheet(generator.RandomiseCareer(SpeciesEnum.Human), characterSheet, TierEnum.Tier1);
+
             //characterSheet.RegionsAvailable = generator.GetAvailableRegions(characterSheet.Species);
             //characterSheet.SelectedRegion = new SelectListItem { Value = "Reikland", Text = "Reikland" };
 
@@ -106,6 +108,30 @@ namespace OldWorldTools.Controllers
                     toSet.SetValue(characterSheet.Status);
                     fields.TryGetValue("Class", out toSet);
                     toSet.SetValue(characterSheet.Class);
+
+                    for (int i = 0; i < characterSheet.Trappings.Count; i++)
+                    {
+                        fields.TryGetValue($"Talent NameRow{i + 1}", out toSet);
+                        toSet.SetValue(characterSheet.Talents[i]);
+                        fields.TryGetValue($"Times takenRow{i + 1}", out toSet);
+                        toSet.SetValue("1");
+
+                        if (i >= 11)
+                        {
+                            break;
+                        }
+                    }
+
+                    for (int i = 0; i < characterSheet.Trappings.Count; i++)
+                    {
+                        fields.TryGetValue($"Trappings{i+1}", out toSet);
+                        toSet.SetValue(characterSheet.Trappings[i]);
+
+                        if (i >= 11)
+                        {
+                            break;
+                        }
+                    }
                     //fields.TryGetValue("experience1", out toSet);
                     //toSet.SetValue("Off");
                     //fields.TryGetValue("experience2", out toSet);

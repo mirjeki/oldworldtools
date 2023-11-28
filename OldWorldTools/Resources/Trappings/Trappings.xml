@@ -1,0 +1,14 @@
+<Trappings>
+	<Trapping>
+		<Name>Bandages</Name>
+		<Enc>0</Enc>
+	</Trapping>
+	<Trapping>
+		<Name>Bedroll</Name>
+		<Enc>1</Enc>
+	</Trapping>
+	<Trapping>
+		<Name>Healing Draught</Name>
+		<Enc>1</Enc>
+	</Trapping>
+</Trappings>
