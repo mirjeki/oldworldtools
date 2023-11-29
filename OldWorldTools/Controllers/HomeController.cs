@@ -21,17 +21,7 @@ namespace OldWorldTools.Controllers
         public IActionResult Index()
         {
             generator.SetupData();
-            CharacterSheet characterSheet = new CharacterSheet { 
-                Name = "Enter name here...", 
-                Gender = GenderEnum.Male, 
-                Species = SpeciesEnum.Human, 
-                Region = RegionEnum.Reikland,
-                RegionsAvailable = generator.GetAvailableRegions(SpeciesEnum.Human)};
-
-            characterSheet = generator.MapCareerToCharacterSheet(generator.RandomiseCareer(SpeciesEnum.Human), characterSheet, TierEnum.Tier1);
-
-            //characterSheet.RegionsAvailable = generator.GetAvailableRegions(characterSheet.Species);
-            //characterSheet.SelectedRegion = new SelectListItem { Value = "Reikland", Text = "Reikland" };
+            CharacterSheet characterSheet = generator.GetDefaultCharacter();
 
             return View(characterSheet);
         }
@@ -77,6 +67,11 @@ namespace OldWorldTools.Controllers
 
                     return View("Index", characterSheet);
 
+                case "RandomiseCharacteristics":
+                    characterSheet.Characteristics = generator.RandomiseCharacteristics(characterSheet);
+                    //characterSheet = generator.MapCareerToCharacterSheet(career, characterSheet, TierEnum.Tier1);
+
+                    return View("Index", characterSheet);
                 default:
                     break;
             }
@@ -109,7 +104,17 @@ namespace OldWorldTools.Controllers
                     fields.TryGetValue("Class", out toSet);
                     toSet.SetValue(characterSheet.Class);
 
-                    for (int i = 0; i < characterSheet.Trappings.Count; i++)
+                    for (int i = 0; i < characterSheet.Characteristics.Count; i++)
+                    {
+                        fields.TryGetValue($"{characterSheet.Characteristics[i].ShortName.ToString()}Initial", out toSet);
+                        toSet.SetValue(characterSheet.Characteristics[i].Initial.ToString());
+                        fields.TryGetValue($"{characterSheet.Characteristics[i].ShortName.ToString()}Advance", out toSet);
+                        toSet.SetValue(characterSheet.Characteristics[i].Advances.ToString());
+                        fields.TryGetValue($"{characterSheet.Characteristics[i].ShortName.ToString()}Current", out toSet);
+                        toSet.SetValue(characterSheet.Characteristics[i].CurrentValue().ToString());
+                    }
+
+                    for (int i = 0; i < characterSheet.Talents.Count; i++)
                     {
                         fields.TryGetValue($"Talent NameRow{i + 1}", out toSet);
                         toSet.SetValue(characterSheet.Talents[i]);

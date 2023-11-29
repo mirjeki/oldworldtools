@@ -3,7 +3,7 @@
     public class Characteristic
     {
         public string Name { get; set; }
-        public string ShortName { get; set; }
+        public CharacteristicEnum ShortName { get; set; }
         public int Initial { get; set; }
         public int Advances { get; set; }
 

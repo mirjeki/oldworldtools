@@ -37,6 +37,24 @@ namespace OldWorldTools.API
             SetupCharacteristics();
         }
 
+        public CharacterSheet GetDefaultCharacter()
+        {
+            CharacterSheet characterSheet = new CharacterSheet
+            {
+                Name = "Enter name here...",
+                Gender = GenderEnum.Male,
+                Species = SpeciesEnum.Human,
+                Region = RegionEnum.Reikland,
+                RegionsAvailable = GetAvailableRegions(SpeciesEnum.Human)
+            };
+
+            characterSheet.Characteristics = GetCharacteristics();
+
+            characterSheet = MapCareerToCharacterSheet(RandomiseCareer(SpeciesEnum.Human), characterSheet, TierEnum.Tier1);
+
+            return characterSheet;
+        }
+
         public CharacterSheet RandomiseCharacterName(CharacterSheet characterSheet)
         {
             string firstName = GetRandomCharacterName(characterSheet.Gender, characterSheet.Region, characterSheet.Species, NameTypeEnum.Forename);
@@ -98,6 +116,11 @@ namespace OldWorldTools.API
             return availableCareers[0];
         }
 
+        private int RollD10()
+        {
+            return random.Next(1, 10);
+        }
+
         private int RollD100()
         {
             return random.Next(1, 100);
@@ -113,6 +136,7 @@ namespace OldWorldTools.API
                 case TierEnum.Tier1:
                     characterSheet.CareerPath = career.Path1.Title;
                     characterSheet.Status = career.Path1.Status;
+                    //randomly determine chosen talents from list
                     characterSheet.Talents = SeparateAndFormatCSV(career.Path1.Talents);
                     characterSheet.Trappings = SeparateAndFormatCSV(career.Path1.Trappings);
                     break;
@@ -187,13 +211,32 @@ namespace OldWorldTools.API
             return regionsAvailable;
         }
 
+        private List<Characteristic> GetCharacteristics()
+        {
+            using (var database = new LiteDatabase(characterDefinitionsDB))
+            {
+                ILiteCollection<CharacteristicDTO> characteristicDTOs = database.GetCollection<CharacteristicDTO>();
+
+                List<Characteristic> characteristicsToReturn = new List<Characteristic>();
+
+                var allCharacteristics = characteristicDTOs.FindAll().ToList();
+
+                foreach (var characteristic in allCharacteristics)
+                {
+                    CharacteristicEnum shortNameEnum = (CharacteristicEnum)Enum.Parse(typeof(CharacteristicEnum), characteristic.ShortName);
+                    characteristicsToReturn.Add(new Characteristic { Name = characteristic.Name, ShortName = shortNameEnum });
+                }
+
+                return characteristicsToReturn;
+                //return speciesDTOs.FindAll().Where(w => w.SpeciesType == species.ToString()).ToList();
+            }
+        }
+
         private List<SpeciesDTO> GetRegions(SpeciesEnum species)
         {
             using (var database = new LiteDatabase(characterDefinitionsDB))
             {
                 ILiteCollection<SpeciesDTO> speciesDTOs = database.GetCollection<SpeciesDTO>();
-
-                var allSpecies = speciesDTOs.FindAll().ToList();
 
                 return speciesDTOs.FindAll().Where(w => w.SpeciesType == species.ToString()).ToList();
             }
@@ -204,8 +247,6 @@ namespace OldWorldTools.API
             using (var database = new LiteDatabase(characterDefinitionsDB))
             {
                 ILiteCollection<SpeciesDTO> speciesDTOs = database.GetCollection<SpeciesDTO>();
-
-                var allSpecies = speciesDTOs.FindAll().ToList();
 
                 return speciesDTOs.FindOne(f => f.Region == region.ToString());
 
@@ -469,6 +510,19 @@ namespace OldWorldTools.API
                 //        return talentDTOList.Where(w => w.Name.Contains("Acute Sense")).First();
                 //}
             }
+        }
+
+        public List<Characteristic> RandomiseCharacteristics(CharacterSheet characterSheet)
+        {
+            List<Characteristic> characteristics = characterSheet.Characteristics;
+            var speciesModifiers = GetSpeciesModifiersByRegion(characterSheet.Region);
+
+            foreach (var characteristic in characteristics)
+            {
+                characteristic.Initial = RollD10() + RollD10() + speciesModifiers.CharacteristicsModifiers.Find(f => f.Characteristic == characteristic.ShortName).Modifier;
+            }
+
+            return characteristics;
         }
 
         private void ImportCharacterNames()

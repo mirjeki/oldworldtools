@@ -101,7 +101,7 @@
 					<AdvanceScheme>I,Dex,Int,Fel,WP</AdvanceScheme>
 					<Status>Gold 1</Status>
 					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
-					<Talents>Bookish,Cat-tongued,ImpasionedZeal,Savvy</Talents>
+					<Talents>Bookish,Cat-tongued,ImpassionedZeal,Savvy</Talents>
 					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
 				</Path3>
 				<Path4>
@@ -152,7 +152,7 @@
 				</Path4>
 			</Career>
 		</Odds>
-		<Odds Lower="6" Upper="100">
+		<Odds Lower="6" Upper="6">
 			<Career>
 				<Name>Physician</Name>
 				<Class>Academic</Class>
@@ -187,6 +187,120 @@
 					<Skills>Lore(Noble),Perform(Dancing)</Skills>
 					<Talents>Etiquette(Nobles),NimbleFingered,Savant(Medicine),Strong-minded</Talents>
 					<Trappings>CourtlyAttire,LetterOfAppointment</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="7" Upper="11">
+			<Career>
+				<Name>Priest</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Initiate</Title>
+					<AdvanceScheme>T,Agi,WP</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Athletics,Cool,Endurance,Intuition,Lore(Theology),Perception,Pray,Research</Skills>
+					<Talents>Bless(Any),HolyVisions,Read/Write,Suave</Talents>
+					<Trappings>ReligiousSymbol,Robes</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Priest</Title>
+					<AdvanceScheme>T,Agi,WP,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Entertain(Storytelling),Gossip,Heal,Intimidate,Melee(Basic)</Skills>
+					<Talents>Blather,Bookish,Etiquette(Cultists),Invoke(Any)</Talents>
+					<Trappings>Book(Religion),CeremonialRobes</Trappings>
+				</Path2>
+				<Path3>
+					<Title>High Priest</Title>
+					<AdvanceScheme>T,Agi,WP,Fel,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Art(Writing),Entertain(Speeches),Leadership,Lore(Heraldry)</Skills>
+					<Talents>AcuteSense(Any),Hatred(Any),ImpassionedZeal,Strong-minded</Talents>
+					<Trappings>QualityRobes,ReligiousRelic,SubordinatePriests,Temple</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Lector</Title>
+					<AdvanceScheme>T,Agi,WP,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Language(Any),Lore(Politics)</Skills>
+					<Talents>MasterOrator,PureSoul,Resistance(Any),Savant(Theology)</Talents>
+					<Trappings>Library(Theology),SubordinateHighPriests</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="12" Upper="13">
+			<Career>
+				<Name>Scholar</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student</Title>
+					<AdvanceScheme>T,Int,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>ConsumeAlcohol,Entertain(Storytelling),Gamble,Gossip,Haggle,Language(Classical),Lore(Any),Research</Skills>
+					<Talents>Carouser,Read/Write,Savvy,SuperNumerate</Talents>
+					<Trappings>Alcohol,Book,Opinions,WritingKit</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Scholar</Title>
+					<AdvanceScheme>T,Int,WP,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Art(Writing),Intuition,Language(Any),Lore(Any),Perception,Trade(Any)</Skills>
+					<Talents>Bookish,Etiquette(Scholars),Speedreader,Suave</Talents>
+					<Trappings>AccessToALibrary,Degree</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Fellow</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Entertain(Lecture),Intimidate,Language(Any),Lore(Any)</Skills>
+					<Talents>Linguistics,PublicSpeaker,Savant(Any),TowerOfMemories</Talents>
+					<Trappings>Mortarboard,Robes</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Professor</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel,Dex</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Entertain(Rhetoric),Lore(Any)</Skills>
+					<Talents>MagnumOpus,MasterOrator,Savant(Any),Sharp</Talents>
+					<Trappings>Study</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="14" Upper="100">
+			<Career>
+				<Name>Wizard</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Wizard's Apprentice</Title>
+					<AdvanceScheme>WS,Int,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Channelling(AnyColour),Dodge,Intuition,Language(Magick),Lore(Magic),Melee(Basic),Melee(Polearm),Perception</Skills>
+					<Talents>AethyricAttunement,PettyMagic,Read/Write,SecondSight</Talents>
+					<Trappings>Grimoire,Quarterstaff</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Wizard</Title>
+					<AdvanceScheme>WS,Int,WP,Agi</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Charm,Cool,Gossip,Intimidate,Language(Battle),Language(Any)</Skills>
+					<Talents>ArcaneMagic(AnyArcaneLore),DetectArtefact,FastHands,SixthSense</Talents>
+					<Trappings>MagicalLicence</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Wizard</Title>
+					<AdvanceScheme>WS,Int,WP,Agi,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,Evaluate,Lore(Warfare),Ride(Horse)</Skills>
+					<Talents>DualWielder,InstinctiveDiction,MagicalSense,Menacing</Talents>
+					<Trappings>Apprentice,LightWarhorse,MagicalItem</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Wizard Lord</Title>
+					<AdvanceScheme>WS,Int,WP,Agi,I,Fel</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>CombatAware,Frightening,IronWill,WarWizard</Talents>
+					<Trappings>Apprentice,Library(Magic),Workshop(Magic)</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -293,7 +407,7 @@
 					<AdvanceScheme>I,Dex,Int,Fel,WP</AdvanceScheme>
 					<Status>Gold 1</Status>
 					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
-					<Talents>Bookish,Cat-tongued,ImpasionedZeal,Savvy</Talents>
+					<Talents>Bookish,Cat-tongued,ImpassionedZeal,Savvy</Talents>
 					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
 				</Path3>
 				<Path4>
@@ -341,6 +455,82 @@
 					<Skills>Lore(Noble),Perform(Dancing)</Skills>
 					<Talents>Etiquette(Nobles),NimbleFingered,Savant(Medicine),Strong-minded</Talents>
 					<Trappings>CourtlyAttire,LetterOfAppointment</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="8" Upper="9">
+			<Career>
+				<Name>Scholar</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student</Title>
+					<AdvanceScheme>T,Int,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>ConsumeAlcohol,Entertain(Storytelling),Gamble,Gossip,Haggle,Language(Classical),Lore(Any),Research</Skills>
+					<Talents>Carouser,Read/Write,Savvy,SuperNumerate</Talents>
+					<Trappings>Alcohol,Book,Opinions,WritingKit</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Scholar</Title>
+					<AdvanceScheme>T,Int,WP,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Art(Writing),Intuition,Language(Any),Lore(Any),Perception,Trade(Any)</Skills>
+					<Talents>Bookish,Etiquette(Scholars),Speedreader,Suave</Talents>
+					<Trappings>AccessToALibrary,Degree</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Fellow</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Entertain(Lecture),Intimidate,Language(Any),Lore(Any)</Skills>
+					<Talents>Linguistics,PublicSpeaker,Savant(Any),TowerOfMemories</Talents>
+					<Trappings>Mortarboard,Robes</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Professor</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel,Dex</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Entertain(Rhetoric),Lore(Any)</Skills>
+					<Talents>MagnumOpus,MasterOrator,Savant(Any),Sharp</Talents>
+					<Trappings>Study</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="14" Upper="14">
+			<Career>
+				<Name>Wizard</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Wizard's Apprentice</Title>
+					<AdvanceScheme>WS,Int,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Channelling(AnyColour),Dodge,Intuition,Language(Magick),Lore(Magic),Melee(Basic),Melee(Polearm),Perception</Skills>
+					<Talents>AethyricAttunement,PettyMagic,Read/Write,SecondSight</Talents>
+					<Trappings>Grimoire,Quarterstaff</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Wizard</Title>
+					<AdvanceScheme>WS,Int,WP,Agi</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Charm,Cool,Gossip,Intimidate,Language(Battle),Language(Any)</Skills>
+					<Talents>ArcaneMagic(AnyArcaneLore),DetectArtefact,FastHands,SixthSense</Talents>
+					<Trappings>MagicalLicence</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Wizard</Title>
+					<AdvanceScheme>WS,Int,WP,Agi,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,Evaluate,Lore(Warfare),Ride(Horse)</Skills>
+					<Talents>DualWielder,InstinctiveDiction,MagicalSense,Menacing</Talents>
+					<Trappings>Apprentice,LightWarhorse,MagicalItem</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Wizard Lord</Title>
+					<AdvanceScheme>WS,Int,WP,Agi,I,Fel</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>CombatAware,Frightening,IronWill,WarWizard</Talents>
+					<Trappings>Apprentice,Library(Magic),Workshop(Magic)</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -447,7 +637,7 @@
 					<AdvanceScheme>I,Dex,Int,Fel,WP</AdvanceScheme>
 					<Status>Gold 1</Status>
 					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
-					<Talents>Bookish,Cat-tongued,ImpasionedZeal,Savvy</Talents>
+					<Talents>Bookish,Cat-tongued,ImpassionedZeal,Savvy</Talents>
 					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
 				</Path3>
 				<Path4>
@@ -495,6 +685,44 @@
 					<Skills>Lore(Noble),Perform(Dancing)</Skills>
 					<Talents>Etiquette(Nobles),NimbleFingered,Savant(Medicine),Strong-minded</Talents>
 					<Trappings>CourtlyAttire,LetterOfAppointment</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="7" Upper="8">
+			<Career>
+				<Name>Scholar</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student</Title>
+					<AdvanceScheme>T,Int,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>ConsumeAlcohol,Entertain(Storytelling),Gamble,Gossip,Haggle,Language(Classical),Lore(Any),Research</Skills>
+					<Talents>Carouser,Read/Write,Savvy,SuperNumerate</Talents>
+					<Trappings>Alcohol,Book,Opinions,WritingKit</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Scholar</Title>
+					<AdvanceScheme>T,Int,WP,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Art(Writing),Intuition,Language(Any),Lore(Any),Perception,Trade(Any)</Skills>
+					<Talents>Bookish,Etiquette(Scholars),Speedreader,Suave</Talents>
+					<Trappings>AccessToALibrary,Degree</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Fellow</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Entertain(Lecture),Intimidate,Language(Any),Lore(Any)</Skills>
+					<Talents>Linguistics,PublicSpeaker,Savant(Any),TowerOfMemories</Talents>
+					<Trappings>Mortarboard,Robes</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Professor</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel,Dex</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Entertain(Rhetoric),Lore(Any)</Skills>
+					<Talents>MagnumOpus,MasterOrator,Savant(Any),Sharp</Talents>
+					<Trappings>Study</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -563,7 +791,7 @@
 					<AdvanceScheme>I,Dex,Int,Fel,WP</AdvanceScheme>
 					<Status>Gold 1</Status>
 					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
-					<Talents>Bookish,Cat-tongued,ImpasionedZeal,Savvy</Talents>
+					<Talents>Bookish,Cat-tongued,ImpassionedZeal,Savvy</Talents>
 					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
 				</Path3>
 				<Path4>
@@ -614,43 +842,157 @@
 				</Path4>
 			</Career>
 		</Odds>
-	</CareerSpecies>
-	<CareerSpecies Value="WoodElf">
-			<Odds Lower="1" Upper="1">
+		<Odds Lower="9" Upper="12">
 			<Career>
-				<Name>Apothecary</Name>
+				<Name>Scholar</Name>
 				<Class>Academic</Class>
 				<Path1>
-					<Title>Apothecary's Apprentice</Title>
-					<AdvanceScheme>T,Dex,Int</AdvanceScheme>
+					<Title>Student</Title>
+					<AdvanceScheme>T,Int,WP</AdvanceScheme>
 					<Status>Brass 3</Status>
-					<Skills>ConsumeAlcohol,Heal,Language(Classical),Lore(Chemistry),Lore(Medicine),Lore(Plants),Trade(Apothecary),Trade(Poisoner)</Skills>
-					<Talents>Concoct,Craftsman(Apothecary),Etiquette(Scholar),Read/Write</Talents>
-					<Trappings>Book(Blank),HealingDraught,LeatherJerkin,PestleAndMortar</Trappings>
+					<Skills>ConsumeAlcohol,Entertain(Storytelling),Gamble,Gossip,Haggle,Language(Classical),Lore(Any),Research</Skills>
+					<Talents>Carouser,Read/Write,Savvy,SuperNumerate</Talents>
+					<Trappings>Alcohol,Book,Opinions,WritingKit</Trappings>
 				</Path1>
 				<Path2>
-					<Title>Apothecary</Title>
-					<AdvanceScheme>T,Dex,Int,Fel</AdvanceScheme>
-					<Status>Silver 1</Status>
-					<Skills>Charm,Haggle,Lore(Science),Gossip,Language(Guilder),Perception</Skills>
-					<Talents>Criminal,Dealmaker,Etiquette(Guilder),Pharmacist</Talents>
-					<Trappings>GuildLicence,TradeTools</Trappings>
+					<Title>Scholar</Title>
+					<AdvanceScheme>T,Int,WP,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Art(Writing),Intuition,Language(Any),Lore(Any),Perception,Trade(Any)</Skills>
+					<Talents>Bookish,Etiquette(Scholars),Speedreader,Suave</Talents>
+					<Trappings>AccessToALibrary,Degree</Trappings>
 				</Path2>
 				<Path3>
-					<Title>Master Apothecary</Title>
-					<AdvanceScheme>T,Dex,Int,Fel,I</AdvanceScheme>
-					<Status>Silver 3</Status>
-					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
-					<Talents>Bookish,MasterTradesman(Apothecary),Resistance(Poison),Savvy</Talents>
-					<Trappings>Book(Apothecary),Apprentice,Workshop</Trappings>
+					<Title>Fellow</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Entertain(Lecture),Intimidate,Language(Any),Lore(Any)</Skills>
+					<Talents>Linguistics,PublicSpeaker,Savant(Any),TowerOfMemories</Talents>
+					<Trappings>Mortarboard,Robes</Trappings>
 				</Path3>
 				<Path4>
-					<Title>Apothecary-General</Title>
-					<AdvanceScheme>T,Dex,Int,Fel,I,WP</AdvanceScheme>
+					<Title>Professor</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel,Dex</AdvanceScheme>
 					<Status>Gold 1</Status>
-					<Skills>Intimidate,Ride(Horse)</Skills>
-					<Talents>AcuteSense(Taste),Coolheaded,MasterTradesman(Poisoner),Savant(Apothecary)</Talents>
-					<Trappings>CommissionPapers,LargeWorkshop</Trappings>
+					<Skills>Entertain(Rhetoric),Lore(Any)</Skills>
+					<Talents>MagnumOpus,MasterOrator,Savant(Any),Sharp</Talents>
+					<Trappings>Study</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="13" Upper="16">
+			<Career>
+				<Name>Wizard</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Wizard's Apprentice</Title>
+					<AdvanceScheme>WS,Int,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Channelling(AnyColour),Dodge,Intuition,Language(Magick),Lore(Magic),Melee(Basic),Melee(Polearm),Perception</Skills>
+					<Talents>AethyricAttunement,PettyMagic,Read/Write,SecondSight</Talents>
+					<Trappings>Grimoire,Quarterstaff</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Wizard</Title>
+					<AdvanceScheme>WS,Int,WP,Agi</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Charm,Cool,Gossip,Intimidate,Language(Battle),Language(Any)</Skills>
+					<Talents>ArcaneMagic(AnyArcaneLore),DetectArtefact,FastHands,SixthSense</Talents>
+					<Trappings>MagicalLicence</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Wizard</Title>
+					<AdvanceScheme>WS,Int,WP,Agi,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,Evaluate,Lore(Warfare),Ride(Horse)</Skills>
+					<Talents>DualWielder,InstinctiveDiction,MagicalSense,Menacing</Talents>
+					<Trappings>Apprentice,LightWarhorse,MagicalItem</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Wizard Lord</Title>
+					<AdvanceScheme>WS,Int,WP,Agi,I,Fel</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>CombatAware,Frightening,IronWill,WarWizard</Talents>
+					<Trappings>Apprentice,Library(Magic),Workshop(Magic)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+	</CareerSpecies>
+	<CareerSpecies Value="WoodElf">
+		<Odds Lower="1" Upper="1">
+			<Career>
+				<Name>Scholar</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Student</Title>
+					<AdvanceScheme>T,Int,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>ConsumeAlcohol,Entertain(Storytelling),Gamble,Gossip,Haggle,Language(Classical),Lore(Any),Research</Skills>
+					<Talents>Carouser,Read/Write,Savvy,SuperNumerate</Talents>
+					<Trappings>Alcohol,Book,Opinions,WritingKit</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Scholar</Title>
+					<AdvanceScheme>T,Int,WP,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Art(Writing),Intuition,Language(Any),Lore(Any),Perception,Trade(Any)</Skills>
+					<Talents>Bookish,Etiquette(Scholars),Speedreader,Suave</Talents>
+					<Trappings>AccessToALibrary,Degree</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Fellow</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Entertain(Lecture),Intimidate,Language(Any),Lore(Any)</Skills>
+					<Talents>Linguistics,PublicSpeaker,Savant(Any),TowerOfMemories</Talents>
+					<Trappings>Mortarboard,Robes</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Professor</Title>
+					<AdvanceScheme>T,Int,WP,I,Fel,Dex</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Entertain(Rhetoric),Lore(Any)</Skills>
+					<Talents>MagnumOpus,MasterOrator,Savant(Any),Sharp</Talents>
+					<Trappings>Study</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="2" Upper="5">
+			<Career>
+				<Name>Wizard</Name>
+				<Class>Academic</Class>
+				<Path1>
+					<Title>Wizard's Apprentice</Title>
+					<AdvanceScheme>WS,Int,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Channelling(AnyColour),Dodge,Intuition,Language(Magick),Lore(Magic),Melee(Basic),Melee(Polearm),Perception</Skills>
+					<Talents>AethyricAttunement,PettyMagic,Read/Write,SecondSight</Talents>
+					<Trappings>Grimoire,Quarterstaff</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Wizard</Title>
+					<AdvanceScheme>WS,Int,WP,Agi</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Charm,Cool,Gossip,Intimidate,Language(Battle),Language(Any)</Skills>
+					<Talents>ArcaneMagic(AnyArcaneLore),DetectArtefact,FastHands,SixthSense</Talents>
+					<Trappings>MagicalLicence</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Wizard</Title>
+					<AdvanceScheme>WS,Int,WP,Agi,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,Evaluate,Lore(Warfare),Ride(Horse)</Skills>
+					<Talents>DualWielder,InstinctiveDiction,MagicalSense,Menacing</Talents>
+					<Trappings>Apprentice,LightWarhorse,MagicalItem</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Wizard Lord</Title>
+					<AdvanceScheme>WS,Int,WP,Agi,I,Fel</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>CombatAware,Frightening,IronWill,WarWizard</Talents>
+					<Trappings>Apprentice,Library(Magic),Workshop(Magic)</Trappings>
 				</Path4>
 			</Career>
 		</Odds>

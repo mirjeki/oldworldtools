@@ -58,6 +58,55 @@
             @Html.DropDownListFor(model => model.Region, new SelectList(Model.RegionsAvailable, "Key", "Value"))
         </div>
     </div>
+    <div>
+        <span><button type="submit" name="submitButton" value="RandomiseCharacteristics">Randomise Characteristics</button></span>
+        <table class="table">
+            <thead><h2>Characteristics</h2></thead>
+            <thead>
+                <tr>
+                    <td></td>
+                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                    {
+                        @*Retain characteristic definitions in form submission*@
+                        <div style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].Name)</div>
+                        <div style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].ShortName)</div>
+                        @*Retain characteristic definitions in form submission*@
+                        <td>@Model.Characteristics[i].ShortName.ToString()</td>
+                    }
+                </tr>
+                <tr>
+                    <td>Initial</td>
+                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                    {
+                        <td>
+                            @Html.TextBoxFor(model => model.Characteristics[i].Initial, new { style="width:50px;", onchange = @"
+                    var form = document.forms[0];
+                    form.submit();"})
+                        </td>
+                    }
+                </tr>
+                <tr>
+                    <td>Advances</td>
+                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                    {
+                        <td>
+                            @Html.TextBoxFor(model => model.Characteristics[i].Advances, new { style="width:50px;", onchange = @"
+                    var form = document.forms[0];
+                    form.submit();"})
+                        </td>
+                    }
+                </tr>
+                <tr>
+                    <td>Current</td>
+                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                    {
+                        <td>@Model.Characteristics[i].CurrentValue()</td>
+                    }
+                </tr>
+            </thead>
+        </table>
+    </div>
+
 
     <div>
         <span><button type="submit" name="submitButton" value="RandomiseCareer">Randomise Career</button></span>

@@ -12,6 +12,7 @@ namespace OldWorldTools.Models.WFRPCharacter
         public SpeciesEnum Species { get; set; }
         public RegionEnum Region { get; set; }
         public Dictionary<RegionEnum, string> RegionsAvailable { get; set; }
+        public List<Characteristic> Characteristics { get; set; }
         public string Class { get; set; }
         public string Career { get; set; }
         public TierEnum Tier { get; set; }
