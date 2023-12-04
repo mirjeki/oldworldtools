@@ -1,4 +1,5 @@
 ﻿using LiteDB;
+using Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OldWorldTools.Models.WFRPCharacter.DTOs;
 using OldWorldTools.Models.WFRPNames;
@@ -18,6 +19,13 @@ namespace OldWorldTools.Models.WFRPCharacter
         public TierEnum Tier { get; set; }
         public string CareerPath { get; set; }
         public string Status { get; set; }
+        public int Movement { get; set; }
+        public int Walk { get; set; }
+        public int Run { get; set; }
+        public int Fate { get; set; }
+        public int Fortune { get; set; }
+        public int Resilience { get; set; }
+        public int Resolve { get; set; }
         public List<CharacterSkill> Skills { get; set; }
         public List<string> Talents { get; set; }
         public List<string> Trappings { get; set; }

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Text;
 using Org.BouncyCastle.Tls;
 using System.Reflection;
+using System.Security;
 
 namespace OldWorldTools.API
 {
@@ -31,8 +32,11 @@ namespace OldWorldTools.API
             ImportCharacterNames();
             ImportCharacterSpecies();
             ImportCharacterCareers("Human");
+            ImportCharacterCareers("Dwarf");
+            ImportCharacterCareers("Halfling");
+            ImportCharacterCareers("HighElf");
+            ImportCharacterCareers("WoodElf");
             ImportCharacterTalents();
-            var talent = GetRandomStartingTalent();
 
             SetupCharacteristics();
         }
@@ -50,6 +54,7 @@ namespace OldWorldTools.API
 
             characterSheet.Characteristics = GetCharacteristics();
 
+            characterSheet.Characteristics = RandomiseCharacteristics(characterSheet);
             characterSheet = MapCareerToCharacterSheet(RandomiseCareer(SpeciesEnum.Human), characterSheet, TierEnum.Tier1);
 
             return characterSheet;
@@ -136,13 +141,18 @@ namespace OldWorldTools.API
                 case TierEnum.Tier1:
                     characterSheet.CareerPath = career.Path1.Title;
                     characterSheet.Status = career.Path1.Status;
-                    //randomly determine chosen talents from list
-                    characterSheet.Talents = SeparateAndFormatCSV(career.Path1.Talents);
+                    characterSheet.Talents = RandomiseStarterTalents(characterSheet.Region, SeparateAndFormatCSV(career.Path1.Talents));
+                    //characterSheet.Talents = SeparateAndFormatCSV(career.Path1.Talents);
                     characterSheet.Trappings = SeparateAndFormatCSV(career.Path1.Trappings);
                     break;
                 case TierEnum.Tier2:
                     break;
                 case TierEnum.Tier3:
+                    characterSheet.CareerPath = career.Path3.Title;
+                    characterSheet.Status = career.Path3.Status;
+                    //randomly determine chosen talents from list
+                    characterSheet.Talents = SeparateAndFormatCSV(career.Path3.Talents);
+                    characterSheet.Trappings = SeparateAndFormatCSV(career.Path3.Trappings);
                     break;
                 case TierEnum.Tier4:
                     break;
@@ -150,7 +160,38 @@ namespace OldWorldTools.API
                     break;
             }
 
-            foreach (var talent in characterSheet.Talents)
+            characterSheet = ApplyTalentModifiersToCharacterSheet(characterSheet);
+
+            foreach (var characteristic in characterSheet.Characteristics)
+            {
+                CalculateInitialCharacteristic(characteristic, characterSheet.Region);
+            }
+
+            return characterSheet;
+        }
+
+        private void ResetCharacteristicModifiers(CharacterSheet characterSheet)
+        {
+            foreach (var characteristic in characterSheet.Characteristics)
+            {
+                characteristic.OtherModifier = 0;
+            }
+        }
+
+        private List<string> RandomiseStarterTalents(RegionEnum region, List<string> pathTalents)
+        {
+            List<string> talentsToReturn = new List<string>();
+
+            var speciesTalents = GetSpeciesModifiersByRegion(region).StartingTalents;
+
+            talentsToReturn = SeparateAndFormatCSV(speciesTalents);
+
+            talentsToReturn.Add(GetUniquePathTalent(talentsToReturn, pathTalents));
+
+            List<string> talentsToRemove = new List<string>();
+            List<string> talentsToAdd = new List<string>();
+
+            foreach (var talent in talentsToReturn)
             {
                 if (talent.Contains("?"))
                 {
@@ -159,33 +200,65 @@ namespace OldWorldTools.API
 
                     if (result <= 50)
                     {
-                        characterSheet.Talents.Add(options[0]);
+                        talentsToAdd.Add(options[0]);
                     }
                     else
                     {
-                        characterSheet.Talents.Add(options[1]);
+                        talentsToAdd.Add(options[1]);
                     }
 
-                    characterSheet.Talents.Remove(talent);
+                    talentsToRemove.Add(talent);
                 }
 
                 if (talent == "2 Random")
                 {
-                    characterSheet.Talents.Add(GetRandomStartingTalent());
-                    characterSheet.Talents.Add(GetRandomStartingTalent());
-                    characterSheet.Talents.Remove(talent);
+                    talentsToAdd.Add(GetUniqueStarterTalent(talentsToReturn, talentsToAdd));
+                    talentsToAdd.Add(GetUniqueStarterTalent(talentsToReturn, talentsToAdd));
+
+                    talentsToRemove.Add(talent);
                 }
 
                 if (talent == "3 Random")
                 {
-                    characterSheet.Talents.Add(GetRandomStartingTalent());
-                    characterSheet.Talents.Add(GetRandomStartingTalent());
-                    characterSheet.Talents.Add(GetRandomStartingTalent());
-                    characterSheet.Talents.Remove(talent);
+                    talentsToAdd.Add(GetUniqueStarterTalent(talentsToReturn, talentsToAdd));
+                    talentsToAdd.Add(GetUniqueStarterTalent(talentsToReturn, talentsToAdd));
+                    talentsToAdd.Add(GetUniqueStarterTalent(talentsToReturn, talentsToAdd));
+
+                    talentsToRemove.Add(talent);
                 }
             }
 
-            return characterSheet;
+            foreach (var talent in talentsToRemove)
+            {
+                talentsToReturn.Remove(talent);
+            }
+
+            foreach (var talent in talentsToAdd)
+            {
+                talentsToReturn.Add(talent);
+            }
+
+            return talentsToReturn;
+        }
+
+        private string GetUniquePathTalent(List<string> talentsToReturn, List<string> pathTalents)
+        {
+            string newTalent = pathTalents[random.Next(pathTalents.Count)];
+            while (talentsToReturn.Contains(newTalent))
+            {
+                newTalent = pathTalents[random.Next(pathTalents.Count)];
+            }
+            return newTalent;
+        }
+
+        private string GetUniqueStarterTalent(List<string> talentsToReturn, List<string> talentsToAdd)
+        {
+            string newTalent = GetRandomStartingTalent();
+            while (talentsToReturn.Contains(newTalent) || talentsToAdd.Contains(newTalent))
+            {
+                newTalent = GetRandomStartingTalent();
+            }
+            return newTalent;
         }
 
         public Dictionary<RegionEnum, string> GetAvailableRegions(SpeciesEnum species)
@@ -200,13 +273,6 @@ namespace OldWorldTools.API
                 Enum.TryParse<RegionEnum>(region.Region, out newRegion);
                 regionsAvailable.Add(newRegion, region.Region);
             }
-
-            //IEnumerable<SelectListItem> regionsAvailable = GetRegions(species).
-            //    Select(s => new SelectListItem
-            //    {
-            //        Value = s.Region,
-            //        Text = s.Region
-            //    });
 
             return regionsAvailable;
         }
@@ -228,7 +294,6 @@ namespace OldWorldTools.API
                 }
 
                 return characteristicsToReturn;
-                //return speciesDTOs.FindAll().Where(w => w.SpeciesType == species.ToString()).ToList();
             }
         }
 
@@ -258,11 +323,19 @@ namespace OldWorldTools.API
         {
             using (var database = new LiteDatabase(characterDefinitionsDB))
             {
-                ILiteCollection<CareerDTO> careersDTOs = database.GetCollection<CareerDTO>($"{species.ToString()}Careers");
+                ILiteCollection<CareerDTO> careerDTOs = database.GetCollection<CareerDTO>($"{species.ToString()}Careers");
 
-                var allCareers = careersDTOs.FindAll().ToList();
+                return careerDTOs.FindAll().ToList();
+            }
+        }
 
-                return careersDTOs.FindAll().ToList();
+        public CareerDTO GetCareerByName(string careerName, SpeciesEnum species)
+        {
+            using (var database = new LiteDatabase(characterDefinitionsDB))
+            {
+                ILiteCollection<CareerDTO> careerDTOs = database.GetCollection<CareerDTO>($"{species.ToString()}Careers");
+
+                return careerDTOs.FindOne(f => f.Name == careerName);
             }
         }
 
@@ -362,167 +435,233 @@ namespace OldWorldTools.API
 
         private string GetRandomStartingTalent()
         {
-            using (var database = new LiteDatabase(characterDefinitionsDB))
+            int diceRoll = RollD100();
+
+            switch (diceRoll)
             {
-                ILiteCollection<TalentDTO> names = database.GetCollection<TalentDTO>();
-
-                List<TalentDTO> talentDTOList = names.FindAll().ToList();
-
-                int diceRoll = RollD100();
-
-                switch (diceRoll)
-                {
-                    case <= 3:
-                        return "Acute Sense (Any one)";
-                    case <= 6:
-                        return "Ambidextrous";
-                    case <= 9:
-                        return "Animal Affinity";
-                    case <= 12:
-                        return "Artistic";
-                    case <= 15:
-                        return "Attractive";
-                    case <= 18:
-                        return "Coolheaded";
-                    case <= 21:
-                        return "Craftsman (Any one)";
-                    case <= 24:
-                        return "Flee!";
-                    case <= 28:
-                        return "Hardy";
-                    case <= 31:
-                        return "Lightning Reflexes";
-                    case <= 34:
-                        return "Linguistics";
-                    case <= 38:
-                        return "Luck";
-                    case <= 41:
-                        return "Marksman";
-                    case <= 44:
-                        return "Mimic";
-                    case <= 47:
-                        return "Night Vision";
-                    case <= 50:
-                        return "Nimble Fingered";
-                    case <= 52:
-                        return "Noble Blood";
-                    case <= 55:
-                        return "Orientation";
-                    case <= 58:
-                        return "Perfect Pitch";
-                    case <= 62:
-                        return "Pure Soul";
-                    case <= 65:
-                        return "Read/Write";
-                    case <= 68:
-                        return "Resistance (Any one)";
-                    case <= 71:
-                        return "Savvy";
-                    case <= 74:
-                        return "Sharp";
-                    case <= 78:
-                        return "Sixth Sense";
-                    case <= 81:
-                        return "Strong Legs";
-                    case <= 84:
-                        return "Sturdy";
-                    case <= 87:
-                        return "Suave";
-                    case <= 91:
-                        return "Super Numerate";
-                    case <= 94:
-                        return "Very Resilient";
-                    case <= 97:
-                        return "Very Strong";
-                    case <= 100:
-                        return "Warrior Born";
-                    default:
-                        return "Acute Sense (Any one)";
-                }
-
-                //switch (diceRoll)
-                //{
-                //    case <= 3:
-                //        return talentDTOList.Where(w => w.Name.Contains("Acute Sense")).First();
-                //    case <= 6:
-                //        return talentDTOList.Where(w => w.Name.Contains("Ambidextrous")).First();
-                //    case <= 9:
-                //        return talentDTOList.Where(w => w.Name.Contains("Animal Affinity")).First();
-                //    case <= 12:
-                //        return talentDTOList.Where(w => w.Name.Contains("Artistic")).First();
-                //    case <= 15:
-                //        return talentDTOList.Where(w => w.Name.Contains("Attractive")).First();
-                //    case <= 18:
-                //        return talentDTOList.Where(w => w.Name.Contains("Coolheaded")).First();
-                //    case <= 21:
-                //        return talentDTOList.Where(w => w.Name.Contains("Craftsman")).First();
-                //    case <= 24:
-                //        return talentDTOList.Where(w => w.Name.Contains("Flee")).First();
-                //    case <= 28:
-                //        return talentDTOList.Where(w => w.Name.Contains("Hardy")).First();
-                //    case <= 31:
-                //        return talentDTOList.Where(w => w.Name.Contains("Lightning Reflexes")).First();
-                //    case <= 34:
-                //        return talentDTOList.Where(w => w.Name.Contains("Linguistics")).First();
-                //    case <= 38:
-                //        return talentDTOList.Where(w => w.Name.Contains("Luck")).First();
-                //    case <= 41:
-                //        return talentDTOList.Where(w => w.Name.Contains("Marksman")).First();
-                //    case <= 44:
-                //        return talentDTOList.Where(w => w.Name.Contains("Mimic")).First();
-                //    case <= 47:
-                //        return talentDTOList.Where(w => w.Name.Contains("Night Vision")).First();
-                //    case <= 50:
-                //        return talentDTOList.Where(w => w.Name.Contains("Nimble Fingered")).First();
-                //    case <= 52:
-                //        return talentDTOList.Where(w => w.Name.Contains("Noble Blood")).First();
-                //    case <= 55:
-                //        return talentDTOList.Where(w => w.Name.Contains("Orientation")).First();
-                //    case <= 58:
-                //        return talentDTOList.Where(w => w.Name.Contains("Perfect Pitch")).First();
-                //    case <= 62:
-                //        return talentDTOList.Where(w => w.Name.Contains("Pure Soul")).First();
-                //    case <= 65:
-                //        return talentDTOList.Where(w => w.Name.Contains("Read/Write")).First();
-                //    case <= 68:
-                //        return talentDTOList.Where(w => w.Name.Contains("Resistance")).First();
-                //    case <= 71:
-                //        return talentDTOList.Where(w => w.Name.Contains("Savvy")).First();
-                //    case <= 74:
-                //        return talentDTOList.Where(w => w.Name.Contains("Sharp")).First();
-                //    case <= 78:
-                //        return talentDTOList.Where(w => w.Name.Contains("Sixth Sense")).First();
-                //    case <= 81:
-                //        return talentDTOList.Where(w => w.Name.Contains("Strong Legs")).First();
-                //    case <= 84:
-                //        return talentDTOList.Where(w => w.Name.Contains("Sturdy")).First();
-                //    case <= 87:
-                //        return talentDTOList.Where(w => w.Name.Contains("Suave")).First();
-                //    case <= 91:
-                //        return talentDTOList.Where(w => w.Name.Contains("Super Numerate")).First();
-                //    case <= 94:
-                //        return talentDTOList.Where(w => w.Name.Contains("Very Resilient")).First();
-                //    case <= 97:
-                //        return talentDTOList.Where(w => w.Name.Contains("Very Strong")).First();
-                //    case <= 100:
-                //        return talentDTOList.Where(w => w.Name.Contains("Warrior Born")).First();
-                //    default:
-                //        return talentDTOList.Where(w => w.Name.Contains("Acute Sense")).First();
-                //}
+                case <= 3:
+                    return "Acute Sense (Any one)";
+                case <= 6:
+                    return "Ambidextrous";
+                case <= 9:
+                    return "Animal Affinity";
+                case <= 12:
+                    return "Artistic";
+                case <= 15:
+                    return "Attractive";
+                case <= 18:
+                    return "Coolheaded";
+                case <= 21:
+                    return "Craftsman (Any one)";
+                case <= 24:
+                    return "Flee!";
+                case <= 28:
+                    return "Hardy";
+                case <= 31:
+                    return "Lightning Reflexes";
+                case <= 34:
+                    return "Linguistics";
+                case <= 38:
+                    return "Luck";
+                case <= 41:
+                    return "Marksman";
+                case <= 44:
+                    return "Mimic";
+                case <= 47:
+                    return "Night Vision";
+                case <= 50:
+                    return "Nimble Fingered";
+                case <= 52:
+                    return "Noble Blood";
+                case <= 55:
+                    return "Orientation";
+                case <= 58:
+                    return "Perfect Pitch";
+                case <= 62:
+                    return "Pure Soul";
+                case <= 65:
+                    return "Read/Write";
+                case <= 68:
+                    return "Resistance (Any one)";
+                case <= 71:
+                    return "Savvy";
+                case <= 74:
+                    return "Sharp";
+                case <= 78:
+                    return "Sixth Sense";
+                case <= 81:
+                    return "Strong Legs";
+                case <= 84:
+                    return "Sturdy";
+                case <= 87:
+                    return "Suave";
+                case <= 91:
+                    return "Super Numerate";
+                case <= 94:
+                    return "Very Resilient";
+                case <= 97:
+                    return "Very Strong";
+                case <= 100:
+                    return "Warrior Born";
+                default:
+                    return "Acute Sense (Any one)";
             }
+
+            //using (var database = new LiteDatabase(characterDefinitionsDB))
+            //{
+            //    ILiteCollection<TalentDTO> names = database.GetCollection<TalentDTO>();
+
+            //    List<TalentDTO> talentDTOList = names.FindAll().ToList();
+
+            //    switch (diceRoll)
+            //    {
+            //        case <= 3:
+            //            return talentDTOList.Where(w => w.Name.Contains("Acute Sense")).First();
+            //        case <= 6:
+            //            return talentDTOList.Where(w => w.Name.Contains("Ambidextrous")).First();
+            //        case <= 9:
+            //            return talentDTOList.Where(w => w.Name.Contains("Animal Affinity")).First();
+            //        case <= 12:
+            //            return talentDTOList.Where(w => w.Name.Contains("Artistic")).First();
+            //        case <= 15:
+            //            return talentDTOList.Where(w => w.Name.Contains("Attractive")).First();
+            //        case <= 18:
+            //            return talentDTOList.Where(w => w.Name.Contains("Coolheaded")).First();
+            //        case <= 21:
+            //            return talentDTOList.Where(w => w.Name.Contains("Craftsman")).First();
+            //        case <= 24:
+            //            return talentDTOList.Where(w => w.Name.Contains("Flee")).First();
+            //        case <= 28:
+            //            return talentDTOList.Where(w => w.Name.Contains("Hardy")).First();
+            //        case <= 31:
+            //            return talentDTOList.Where(w => w.Name.Contains("Lightning Reflexes")).First();
+            //        case <= 34:
+            //            return talentDTOList.Where(w => w.Name.Contains("Linguistics")).First();
+            //        case <= 38:
+            //            return talentDTOList.Where(w => w.Name.Contains("Luck")).First();
+            //        case <= 41:
+            //            return talentDTOList.Where(w => w.Name.Contains("Marksman")).First();
+            //        case <= 44:
+            //            return talentDTOList.Where(w => w.Name.Contains("Mimic")).First();
+            //        case <= 47:
+            //            return talentDTOList.Where(w => w.Name.Contains("Night Vision")).First();
+            //        case <= 50:
+            //            return talentDTOList.Where(w => w.Name.Contains("Nimble Fingered")).First();
+            //        case <= 52:
+            //            return talentDTOList.Where(w => w.Name.Contains("Noble Blood")).First();
+            //        case <= 55:
+            //            return talentDTOList.Where(w => w.Name.Contains("Orientation")).First();
+            //        case <= 58:
+            //            return talentDTOList.Where(w => w.Name.Contains("Perfect Pitch")).First();
+            //        case <= 62:
+            //            return talentDTOList.Where(w => w.Name.Contains("Pure Soul")).First();
+            //        case <= 65:
+            //            return talentDTOList.Where(w => w.Name.Contains("Read/Write")).First();
+            //        case <= 68:
+            //            return talentDTOList.Where(w => w.Name.Contains("Resistance")).First();
+            //        case <= 71:
+            //            return talentDTOList.Where(w => w.Name.Contains("Savvy")).First();
+            //        case <= 74:
+            //            return talentDTOList.Where(w => w.Name.Contains("Sharp")).First();
+            //        case <= 78:
+            //            return talentDTOList.Where(w => w.Name.Contains("Sixth Sense")).First();
+            //        case <= 81:
+            //            return talentDTOList.Where(w => w.Name.Contains("Strong Legs")).First();
+            //        case <= 84:
+            //            return talentDTOList.Where(w => w.Name.Contains("Sturdy")).First();
+            //        case <= 87:
+            //            return talentDTOList.Where(w => w.Name.Contains("Suave")).First();
+            //        case <= 91:
+            //            return talentDTOList.Where(w => w.Name.Contains("Super Numerate")).First();
+            //        case <= 94:
+            //            return talentDTOList.Where(w => w.Name.Contains("Very Resilient")).First();
+            //        case <= 97:
+            //            return talentDTOList.Where(w => w.Name.Contains("Very Strong")).First();
+            //        case <= 100:
+            //            return talentDTOList.Where(w => w.Name.Contains("Warrior Born")).First();
+            //        default:
+            //            return talentDTOList.Where(w => w.Name.Contains("Acute Sense")).First();
+            //    }
+            //}
         }
 
         public List<Characteristic> RandomiseCharacteristics(CharacterSheet characterSheet)
         {
             List<Characteristic> characteristics = characterSheet.Characteristics;
-            var speciesModifiers = GetSpeciesModifiersByRegion(characterSheet.Region);
 
             foreach (var characteristic in characteristics)
             {
-                characteristic.Initial = RollD10() + RollD10() + speciesModifiers.CharacteristicsModifiers.Find(f => f.Characteristic == characteristic.ShortName).Modifier;
+                characteristic.Rolled = RollD10() + RollD10();
+
+                CalculateInitialCharacteristic(characteristic, characterSheet.Region);
             }
 
             return characteristics;
+        }
+
+        private void CalculateInitialCharacteristic(Characteristic characteristic, RegionEnum region)
+        {
+            var speciesModifiers = GetSpeciesModifiersByRegion(region);
+            characteristic.SpeciesModifier = speciesModifiers.CharacteristicsModifiers.Find(f => f.Characteristic == characteristic.ShortName).Modifier;
+            characteristic.Initial = characteristic.Rolled + characteristic.SpeciesModifier + characteristic.OtherModifier;
+        }
+
+        public CharacterSheet ApplyTalentModifiersToCharacterSheet(CharacterSheet characterSheet)
+        {
+            ResetCharacteristicModifiers(characterSheet);
+
+            foreach (var talent in characterSheet.Talents)
+            {
+                switch (talent)
+                {
+                    case "Coolheaded":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.WP).OtherModifier = 5;
+                        break;
+                    case "Fleet Footed":
+                        characterSheet.Movement += 1;
+                        break;
+                    case "Lightning Reflexes":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.Agi).OtherModifier = 5;
+                        break;
+                    case "Luck":
+                        characterSheet.Fortune += 1;
+                        break;
+                    case "Marksman":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.BS).OtherModifier = 5;
+                        break;
+                    case "Nimble Fingered":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.Dex).OtherModifier = 5;
+                        break;
+                    case "Savvy":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.Int).OtherModifier = 5;
+                        break;
+                    case "Sharp":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.I).OtherModifier = 5;
+                        break;
+                    case "Sprinter":
+                        characterSheet.Run += 1;
+                        break;
+                    case "Strong-minded":
+                        characterSheet.Resolve += 1;
+                        break;
+                    case "Suave":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.Fel).OtherModifier = 5;
+                        break;
+                    case "Very Resilient":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.T).OtherModifier = 5;
+                        break;
+                    case "Very Strong":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.S).OtherModifier = 5;
+                        break;
+                    case "Warrior Born":
+                        characterSheet.Characteristics.Find(f => f.ShortName == CharacteristicEnum.WS).OtherModifier = 5;
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            return characterSheet;
         }
 
         private void ImportCharacterNames()
@@ -858,7 +997,7 @@ namespace OldWorldTools.API
             newText.Append(text[0]);
             for (int i = 1; i < text.Length; i++)
             {
-                if (char.IsUpper(text[i]) && text[i - 1] != ' ')
+                if (char.IsUpper(text[i]) && text[i - 1] != ' ' && text[i - 1] != '(' && text[i - 1] != '/')
                     newText.Append(' ');
                 newText.Append(text[i]);
             }

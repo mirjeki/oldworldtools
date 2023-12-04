@@ -46,7 +46,7 @@
             @Html.DropDownListFor(model => model.Species, new SelectList(Enum.GetValues(typeof(SpeciesEnum))), new { onchange = @"
         var form = document.forms[0];
         form.submit();"})
-        </div>
+        </div> 
     </div>
 
     <div>
@@ -79,9 +79,54 @@
                     @for (int i = 0; i < Model.Characteristics.Count(); i++)
                     {
                         <td>
-                            @Html.TextBoxFor(model => model.Characteristics[i].Initial, new { style="width:50px;", onchange = @"
-                    var form = document.forms[0];
-                    form.submit();"})
+                            @Html.TextBoxFor(model => model.Characteristics[i].Initial, new { style="width:50px;", @readonly=true})
+                        </td>
+                    }
+                </tr>
+                <tr>
+                    <td></td>
+                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                    {
+                        <td>
+                            <p>
+                                <small>
+                                    <small><small><small>Rolled: </small></small></small>
+                                </small>
+                                <small>
+                                    <small>
+                                        <small>
+                                            <span style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].Rolled)</span>
+                                            @Html.DisplayTextFor(model => model.Characteristics[i].Rolled)
+                                        </small>
+                                    </small>
+                                </small>
+                            </p>
+                            <p>
+                                <small>
+                                    <small><small><small>Species Mod.: </small></small></small>
+                                </small>
+                                <small>
+                                    <small>
+                                        <small>
+                                            <span style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].SpeciesModifier)</span>
+                                            @Html.DisplayTextFor(model => model.Characteristics[i].SpeciesModifier)
+                                        </small>
+                                    </small>
+                                </small>
+                            </p>
+                            <p>
+                                <small>
+                                    <small><small><small>Other Mod.: </small></small></small>
+                                </small>
+                                <small>
+                                    <small>
+                                        <small>
+                                            <span style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].OtherModifier)</span>
+                                            @Html.DisplayTextFor(model => model.Characteristics[i].OtherModifier)
+                                        </small>
+                                    </small>
+                                </small>
+                            </p>
                         </td>
                     }
                 </tr>
@@ -114,25 +159,25 @@
             @Html.LabelFor(model => model.Career)
         </div>
         <div>
-            @Html.TextBoxFor(model => model.Career)
+            @Html.TextBoxFor(model => model.Career, new { @readonly = true })
         </div>
         <div>
             @Html.LabelFor(model => model.Class)
         </div>
         <div>
-            @Html.TextBoxFor(model => model.Class)
+            @Html.TextBoxFor(model => model.Class, new { @readonly = true })
         </div>
         <div>
             @Html.LabelFor(model => model.CareerPath)
         </div>
         <div>
-            @Html.TextBoxFor(model => model.CareerPath)
+            @Html.TextBoxFor(model => model.CareerPath, new { @readonly = true })
         </div>
         <div>
             @Html.LabelFor(model => model.Status)
         </div>
         <div>
-            @Html.TextBoxFor(model => model.Status)
+            @Html.TextBoxFor(model => model.Status, new { @readonly = true })
         </div>
         <table class="table" style="width:350px;">
             <thead><h2>Talents</h2></thead>
@@ -146,7 +191,7 @@
                         </tr>
                     </thead>
                     <tr>
-                        <td>@Html.TextBoxFor(model => model.Talents[i])</td>
+                        <td>@Html.TextBoxFor(model => model.Talents[i], new { @readonly = true })</td>
                         <td>1</td>
                     </tr>
                 }

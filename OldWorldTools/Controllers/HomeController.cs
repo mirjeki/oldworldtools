@@ -31,8 +31,9 @@ namespace OldWorldTools.Controllers
         {
             ModelState.Clear();
             characterSheet.RegionsAvailable = generator.GetAvailableRegions(characterSheet.Species);
-            var careers = generator.GetCareers(SpeciesEnum.Human);
-            var speciesModifiers = generator.GetSpeciesModifiersByRegion(characterSheet.Region);
+            //var careers = generator.GetCareers(characterSheet.Species);
+            //var speciesModifiers = generator.GetSpeciesModifiersByRegion(characterSheet.Region);
+            var currentCareer = generator.GetCareerByName(characterSheet.Career, characterSheet.Species);
 
             switch (submitButton)
             {
@@ -55,6 +56,9 @@ namespace OldWorldTools.Controllers
                 case "RandomiseSpecies":
                     characterSheet.Species = generator.RandomiseSpecies();
                     characterSheet.RegionsAvailable = generator.GetAvailableRegions(characterSheet.Species);
+                    characterSheet.Region = generator.RandomiseRegion(characterSheet.RegionsAvailable);
+                    currentCareer = generator.RandomiseCareer(characterSheet.Species);
+                    characterSheet = generator.MapCareerToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
                     return View("Index", characterSheet);
 
                 case "RandomiseRegion":
@@ -62,15 +66,16 @@ namespace OldWorldTools.Controllers
                     return View("Index", characterSheet);
 
                 case "RandomiseCareer":
-                    var career = generator.RandomiseCareer(characterSheet.Species);
-                    characterSheet = generator.MapCareerToCharacterSheet(career, characterSheet, TierEnum.Tier1);
+                    currentCareer = generator.RandomiseCareer(characterSheet.Species);
+                    characterSheet = generator.MapCareerToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
 
                     return View("Index", characterSheet);
-
                 case "RandomiseCharacteristics":
                     characterSheet.Characteristics = generator.RandomiseCharacteristics(characterSheet);
-                    //characterSheet = generator.MapCareerToCharacterSheet(career, characterSheet, TierEnum.Tier1);
+                    //characterSheet = generator.MapCareerToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
 
+                    return View("Index", characterSheet);
+                case "SpeciesChanged":
                     return View("Index", characterSheet);
                 default:
                     break;

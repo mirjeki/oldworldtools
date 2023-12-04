@@ -266,7 +266,7 @@
 				</Path4>
 			</Career>
 		</Odds>
-		<Odds Lower="14" Upper="100">
+		<Odds Lower="14" Upper="14">
 			<Career>
 				<Name>Wizard</Name>
 				<Class>Academic</Class>
@@ -301,6 +301,82 @@
 					<Skills>Language(Any),Lore(Any)</Skills>
 					<Talents>CombatAware,Frightening,IronWill,WarWizard</Talents>
 					<Trappings>Apprentice,Library(Magic),Workshop(Magic)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="15" Upper="15">
+			<Career>
+				<Name>Agitator</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Pamphleteer</Title>
+					<AdvanceScheme>BS,Int,Fel</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Art(Writing),Bribery,Charm,ConsumeAlcohol,Gossip,Haggle,Lore(Politics),Trade(Printing)</Skills>
+					<Talents>Blather,Gregarious,Panhandle,Read/Write</Talents>
+					<Trappings>WritingKit,HammerAndNails,PileOfLeaflets</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Agitator</Title>
+					<AdvanceScheme>BS,Int,Fel,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Cool,Dodge,Entertain(Storytelling),Gamble,Intuition,Leadership</Skills>
+					<Talents>AlleyCat,Argumentative,ImpassionedZeal,PublicSpeaker</Talents>
+					<Trappings>LeatherJack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Rabble Rouser</Title>
+					<AdvanceScheme>BS,Int,Fel,Agi,WS</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Intimidate,Melee(Brawling),Perception</Skills>
+					<Talents>Cat-tongued,DirtyFighting,Flee!,StepAside</Talents>
+					<Trappings>HandWeapon,Pamphleteer</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Demagogue</Title>
+					<AdvanceScheme>BS,Int,Fel,Agi,WS,I</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Lore(Heraldry),Ride(Horse)</Skills>
+					<Talents>Etiquette(Any),MasterOrator,Schemer,Suave</Talents>
+					<Trappings>3Pamphleteers,Patron,PrintingPress,ImpressiveHat</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="16" Upper="17">
+			<Career>
+				<Name>Artisan</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Apprentice Artisan</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Athletics,Cool,ConsumeAlcohol,Dodge,Endurance,Evaluate,Stealth(Urban),Trade(Any)</Skills>
+					<Talents>Artistic,Craftsman(Any),StrongBack,VeryStrong</Talents>
+					<Trappings>Chalk,LeatherJerkin,D10Rags</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Local),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Dealmaker,Etiquette(Guilder),NimbleFingered,Sturdy</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>AcuteSense(Taste)?AcuteSense(Touch),MasterTradesman(Any),Read/Write,Tinker</Talents>
+					<Trappings>Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Guildmaster</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,Intimidate</Skills>
+					<Talents>Briber,MagnumOpus,PublicSpeaker,Schemer</Talents>
+					<Trappings>Guild,QualityClothing</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -496,41 +572,79 @@
 				</Path4>
 			</Career>
 		</Odds>
-		<Odds Lower="14" Upper="14">
+		<Odds Lower="10" Upper="11">
 			<Career>
-				<Name>Wizard</Name>
-				<Class>Academic</Class>
+				<Name>Agitator</Name>
+				<Class>Burgher</Class>
 				<Path1>
-					<Title>Wizard's Apprentice</Title>
-					<AdvanceScheme>WS,Int,WP</AdvanceScheme>
-					<Status>Brass 3</Status>
-					<Skills>Channelling(AnyColour),Dodge,Intuition,Language(Magick),Lore(Magic),Melee(Basic),Melee(Polearm),Perception</Skills>
-					<Talents>AethyricAttunement,PettyMagic,Read/Write,SecondSight</Talents>
-					<Trappings>Grimoire,Quarterstaff</Trappings>
+					<Title>Pamphleteer</Title>
+					<AdvanceScheme>BS,Int,Fel</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Art(Writing),Bribery,Charm,ConsumeAlcohol,Gossip,Haggle,Lore(Politics),Trade(Printing)</Skills>
+					<Talents>Blather,Gregarious,Panhandle,Read/Write</Talents>
+					<Trappings>WritingKit,HammerAndNails,PileOfLeaflets</Trappings>
 				</Path1>
 				<Path2>
-					<Title>Wizard</Title>
-					<AdvanceScheme>WS,Int,WP,Agi</AdvanceScheme>
-					<Status>Silver 3</Status>
-					<Skills>Charm,Cool,Gossip,Intimidate,Language(Battle),Language(Any)</Skills>
-					<Talents>ArcaneMagic(AnyArcaneLore),DetectArtefact,FastHands,SixthSense</Talents>
-					<Trappings>MagicalLicence</Trappings>
+					<Title>Agitator</Title>
+					<AdvanceScheme>BS,Int,Fel,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Cool,Dodge,Entertain(Storytelling),Gamble,Intuition,Leadership</Skills>
+					<Talents>AlleyCat,Argumentative,ImpassionedZeal,PublicSpeaker</Talents>
+					<Trappings>LeatherJack</Trappings>
 				</Path2>
 				<Path3>
-					<Title>Master Wizard</Title>
-					<AdvanceScheme>WS,Int,WP,Agi,I</AdvanceScheme>
-					<Status>Gold 1</Status>
-					<Skills>AnimalCare,Evaluate,Lore(Warfare),Ride(Horse)</Skills>
-					<Talents>DualWielder,InstinctiveDiction,MagicalSense,Menacing</Talents>
-					<Trappings>Apprentice,LightWarhorse,MagicalItem</Trappings>
+					<Title>Rabble Rouser</Title>
+					<AdvanceScheme>BS,Int,Fel,Agi,WS</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Intimidate,Melee(Brawling),Perception</Skills>
+					<Talents>Cat-tongued,DirtyFighting,Flee!,StepAside</Talents>
+					<Trappings>HandWeapon,Pamphleteer</Trappings>
 				</Path3>
 				<Path4>
-					<Title>Wizard Lord</Title>
-					<AdvanceScheme>WS,Int,WP,Agi,I,Fel</AdvanceScheme>
-					<Status>Gold 2</Status>
-					<Skills>Language(Any),Lore(Any)</Skills>
-					<Talents>CombatAware,Frightening,IronWill,WarWizard</Talents>
-					<Trappings>Apprentice,Library(Magic),Workshop(Magic)</Trappings>
+					<Title>Demagogue</Title>
+					<AdvanceScheme>BS,Int,Fel,Agi,WS,I</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Lore(Heraldry),Ride(Horse)</Skills>
+					<Talents>Etiquette(Any),MasterOrator,Schemer,Suave</Talents>
+					<Trappings>3Pamphleteers,Patron,PrintingPress,ImpressiveHat</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="12" Upper="17">
+			<Career>
+				<Name>Artisan</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Apprentice Artisan</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Athletics,Cool,ConsumeAlcohol,Dodge,Endurance,Evaluate,Stealth(Urban),Trade(Any)</Skills>
+					<Talents>Artistic,Craftsman(Any),StrongBack,VeryStrong</Talents>
+					<Trappings>Chalk,LeatherJerkin,D10Rags</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Local),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Dealmaker,Etiquette(Guilder),NimbleFingered,Sturdy</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>AcuteSense(Taste)?AcuteSense(Touch),MasterTradesman(Any),Read/Write,Tinker</Talents>
+					<Trappings>Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Guildmaster</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,Intimidate</Skills>
+					<Talents>Briber,MagnumOpus,PublicSpeaker,Schemer</Talents>
+					<Trappings>Guild,QualityClothing</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -726,6 +840,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="9" Upper="10">
+			<Career>
+				<Name>Agitator</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Pamphleteer</Title>
+					<AdvanceScheme>BS,Int,Fel</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Art(Writing),Bribery,Charm,ConsumeAlcohol,Gossip,Haggle,Lore(Politics),Trade(Printing)</Skills>
+					<Talents>Blather,Gregarious,Panhandle,Read/Write</Talents>
+					<Trappings>WritingKit,HammerAndNails,PileOfLeaflets</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Agitator</Title>
+					<AdvanceScheme>BS,Int,Fel,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Cool,Dodge,Entertain(Storytelling),Gamble,Intuition,Leadership</Skills>
+					<Talents>AlleyCat,Argumentative,ImpassionedZeal,PublicSpeaker</Talents>
+					<Trappings>LeatherJack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Rabble Rouser</Title>
+					<AdvanceScheme>BS,Int,Fel,Agi,WS</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Intimidate,Melee(Brawling),Perception</Skills>
+					<Talents>Cat-tongued,DirtyFighting,Flee!,StepAside</Talents>
+					<Trappings>HandWeapon,Pamphleteer</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Demagogue</Title>
+					<AdvanceScheme>BS,Int,Fel,Agi,WS,I</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Lore(Heraldry),Ride(Horse)</Skills>
+					<Talents>Etiquette(Any),MasterOrator,Schemer,Suave</Talents>
+					<Trappings>3Pamphleteers,Patron,PrintingPress,ImpressiveHat</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="11" Upper="15">
+			<Career>
+				<Name>Artisan</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Apprentice Artisan</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Athletics,Cool,ConsumeAlcohol,Dodge,Endurance,Evaluate,Stealth(Urban),Trade(Any)</Skills>
+					<Talents>Artistic,Craftsman(Any),StrongBack,VeryStrong</Talents>
+					<Trappings>Chalk,LeatherJerkin,D10Rags</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Local),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Dealmaker,Etiquette(Guilder),NimbleFingered,Sturdy</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>AcuteSense(Taste)?AcuteSense(Touch),MasterTradesman(Any),Read/Write,Tinker</Talents>
+					<Trappings>Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Guildmaster</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,Intimidate</Skills>
+					<Talents>Briber,MagnumOpus,PublicSpeaker,Schemer</Talents>
+					<Trappings>Guild,QualityClothing</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -918,6 +1108,44 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="17" Upper="19">
+			<Career>
+				<Name>Artisan</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Apprentice Artisan</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Athletics,Cool,ConsumeAlcohol,Dodge,Endurance,Evaluate,Stealth(Urban),Trade(Any)</Skills>
+					<Talents>Artistic,Craftsman(Any),StrongBack,VeryStrong</Talents>
+					<Trappings>Chalk,LeatherJerkin,D10Rags</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Local),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Dealmaker,Etiquette(Guilder),NimbleFingered,Sturdy</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>AcuteSense(Taste)?AcuteSense(Touch),MasterTradesman(Any),Read/Write,Tinker</Talents>
+					<Trappings>Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Guildmaster</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,Intimidate</Skills>
+					<Talents>Briber,MagnumOpus,PublicSpeaker,Schemer</Talents>
+					<Trappings>Guild,QualityClothing</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="WoodElf">
 		<Odds Lower="1" Upper="1">
@@ -993,6 +1221,44 @@
 					<Skills>Language(Any),Lore(Any)</Skills>
 					<Talents>CombatAware,Frightening,IronWill,WarWizard</Talents>
 					<Trappings>Apprentice,Library(Magic),Workshop(Magic)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="6" Upper="10">
+			<Career>
+				<Name>Artisan</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Apprentice Artisan</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Athletics,Cool,ConsumeAlcohol,Dodge,Endurance,Evaluate,Stealth(Urban),Trade(Any)</Skills>
+					<Talents>Artistic,Craftsman(Any),StrongBack,VeryStrong</Talents>
+					<Trappings>Chalk,LeatherJerkin,D10Rags</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Haggle,Lore(Local),Gossip,Language(Guilder),Perception</Skills>
+					<Talents>Dealmaker,Etiquette(Guilder),NimbleFingered,Sturdy</Talents>
+					<Trappings>GuildLicence,TradeTools</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artisan</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Intuition,Leadership,Research,SecretSigns(Guilder)</Skills>
+					<Talents>AcuteSense(Taste)?AcuteSense(Touch),MasterTradesman(Any),Read/Write,Tinker</Talents>
+					<Trappings>Apprentice,Workshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Guildmaster</Title>
+					<AdvanceScheme>S,T,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,Intimidate</Skills>
+					<Talents>Briber,MagnumOpus,PublicSpeaker,Schemer</Talents>
+					<Trappings>Guild,QualityClothing</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
