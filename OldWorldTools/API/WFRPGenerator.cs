@@ -20,6 +20,7 @@ namespace OldWorldTools.API
         public const string woodElfNameXMLSRC = "Resources/Names/WoodElfNames.xml";
         public const string highElfNameXMLSRC = "Resources/Names/HighElfNames.xml";
         public const string speciesXMLSRC = "Resources/Species/Species.xml";
+        public const string skillsXMLSRC = "Resources/Skills/Skills.xml";
         public const string talentsXMLSRC = "Resources/Talents/Talents.xml";
         public const string careersXMLSRC = "Resources/Careers/Careers.xml";
 
@@ -36,6 +37,7 @@ namespace OldWorldTools.API
             ImportCharacterCareers("Halfling");
             ImportCharacterCareers("HighElf");
             ImportCharacterCareers("WoodElf");
+            ImportCharacterSkills();
             ImportCharacterTalents();
 
             SetupCharacteristics();
@@ -336,6 +338,16 @@ namespace OldWorldTools.API
                 ILiteCollection<CareerDTO> careerDTOs = database.GetCollection<CareerDTO>($"{species.ToString()}Careers");
 
                 return careerDTOs.FindOne(f => f.Name == careerName);
+            }
+        }
+
+        public List<SkillDTO> GetSkills()
+        {
+            using (var database = new LiteDatabase(characterDefinitionsDB))
+            {
+                ILiteCollection<SkillDTO> skillDTOs = database.GetCollection<SkillDTO>();
+
+                return skillDTOs.FindAll().ToList();
             }
         }
 
@@ -799,6 +811,77 @@ namespace OldWorldTools.API
             }
         }
 
+        private void ImportCharacterSkills()
+        {
+            using (var database = new LiteDatabase(characterDefinitionsDB))
+            {
+                ILiteCollection<SkillDTO> skills = database.GetCollection<SkillDTO>();
+                //clear DB for fresh import
+                skills.DeleteAll();
+
+                List<SkillDTO> skillsToAdd = new List<SkillDTO>();
+
+                SkillCollection skillsCollection = DeserializeXMLFileToObject<SkillCollection>(skillsXMLSRC);
+
+                foreach (var skill in skillsCollection.Skills)
+                {
+                    List<string> tags = SeparateCSV(skill.Tags);
+
+                    CharacteristicEnum linkedCharacteristic;
+
+                    switch (tags[0])
+                    {
+                        case "WS":
+                            linkedCharacteristic = CharacteristicEnum.WS;
+                            break;
+                        case "BS":
+                            linkedCharacteristic = CharacteristicEnum.BS;
+                            break;
+                        case "S":
+                            linkedCharacteristic = CharacteristicEnum.S;
+                            break;
+                        case "T":
+                            linkedCharacteristic = CharacteristicEnum.T;
+                            break;
+                        case "I":
+                            linkedCharacteristic = CharacteristicEnum.I;
+                            break;
+                        case "Agi":
+                            linkedCharacteristic = CharacteristicEnum.Agi;
+                            break;
+                        case "Dex":
+                            linkedCharacteristic = CharacteristicEnum.Dex;
+                            break;
+                        case "Int":
+                            linkedCharacteristic = CharacteristicEnum.Int;
+                            break;
+                        case "WP":
+                            linkedCharacteristic = CharacteristicEnum.WP;
+                            break;
+                        case "Fel":
+                            linkedCharacteristic = CharacteristicEnum.Fel;
+                            break;
+                        default:
+                            linkedCharacteristic = CharacteristicEnum.WS;
+                            break;
+                    }
+
+                    bool isAdvanced = tags[1] == "A" ? true : false;
+                    bool isGrouped = false;
+
+                    if (tags.Count == 3)
+                    {
+                        isGrouped = tags[2] == "G" ? true : false;
+                    }
+
+
+                    skillsToAdd.Add(new SkillDTO { Name = skill.Name, LinkedCharacteristic = linkedCharacteristic, Advanced = isAdvanced, Grouped = isGrouped });
+                }
+
+                skills.Insert(skillsToAdd);
+            }
+        }
+
         private void ImportCharacterTalents()
         {
             using (var database = new LiteDatabase(characterDefinitionsDB))
@@ -973,7 +1056,19 @@ namespace OldWorldTools.API
             }
         }
 
+        private static List<string> SeparateCSV(string csvContents)
+        {
+            var strings = csvContents.Split(',');
 
+            List<string> result = new List<string>();
+
+            foreach (var s in strings)
+            {
+                result.Add(s);
+            }
+
+            return result;
+        }
 
         private static List<string> SeparateAndFormatCSV(string csvContents)
         {

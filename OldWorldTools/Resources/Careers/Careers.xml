@@ -380,6 +380,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="18" Upper="19">
+			<Career>
+				<Name>Beggar</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Pauper</Title>
+					<AdvanceScheme>T,Agi,Fel</AdvanceScheme>
+					<Status>Brass 0</Status>
+					<Skills>Athletics,Charm,ConsumeAlcohol,Cool,Dodge,Endurance,Intuition,Stealth(Urban)</Skills>
+					<Talents>Panhandle,Resistance(Disease),StoneSoup,VeryResilient</Talents>
+					<Trappings>PoorQualityBlanket,Cup</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Beggar</Title>
+					<AdvanceScheme>T,Agi,Fel,WP</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Entertain(Acting),Entertain(Any),Gossip,Haggle,Perception,SleightOfHand</Skills>
+					<Talents>AlleyCat,BeneathNotice,Criminal,Etiquette(Criminals)</Talents>
+					<Trappings>Crutch,Bowl</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Beggar</Title>
+					<AdvanceScheme>T,Agi,Fel,WP,WS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>CharmAnimal,Leadership,Lore(Local),SecretSigns(Vagabond)</Skills>
+					<Talents>Blather,DirtyFighting,Hardy,StepAside</Talents>
+					<Trappings>DisguiseKit,HidingPlace,PauperFollower</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Beggar King</Title>
+					<AdvanceScheme>T,Agi,Fel,WP,WS,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,Intimidate</Skills>
+					<Talents>Cat-tongued,Fearless(Watchmen),Kingpin,Suave</Talents>
+					<Trappings>Lair,LargeGroupOfBeggarFollowers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="20" Upper="20">
+			<Career>
+				<Name>Investigator</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Sleuth</Title>
+					<AdvanceScheme>I,Agi,Int</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Climb,Cool,Gossip,Intuition,Perception,Stealth(Urban),Track</Skills>
+					<Talents>AlleyCat,BeneathNotice,Read/Write,Sharp</Talents>
+					<Trappings>Lantern,LampOil,Journal,QuillAndInk</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Investigator</Title>
+					<AdvanceScheme>I,Agi,Int,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>ConsumeAlcohol,Dodge,Lore(Law),Melee(Brawling),PickLock,SleightOfHand</Skills>
+					<Talents>Etiquette(Any),Savvy,Shadow,Tenacious</Talents>
+					<Trappings>LeatherJack,HandWeapon,MagnifyingGlass,Lockpick</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Investigator</Title>
+					<AdvanceScheme>I,Agi,Int,Fel,Dex</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Bribery,Evaluate,Leadership,Lore(Any)</Skills>
+					<Talents>Bookish,BreakAndEnter,SixthSense,Suave</Talents>
+					<Trappings>Assistant,Office</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Detective</Title>
+					<AdvanceScheme>I,Agi,Int,Fel,Dex,WP</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Intimidate,Lore(Any)</Skills>
+					<Talents>AcuteSense(Any),Savant(Any),Speedreader,TowerOfMemories</Talents>
+					<Trappings>NetworkOfInformants,Spyglass</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="21" Upper="21">
+			<Career>
+				<Name>Merchant</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Trader</Title>
+					<AdvanceScheme>Agi,WP,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>AnimalCare,Bribery,Charm,ConsumeAlcohol,Drive,Gamble,Gossip,Haggle</Skills>
+					<Talents>Blather,Dealmaker,Read/Write,Suave</Talents>
+					<Trappings>Abacus,MuleAndCart,CanvasTarpaulin,3D10SilverShillings</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Merchant</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Evaluate,Intuition,Language(Any),Language(Guilder),Lore(Local),Perception</Skills>
+					<Talents>Briber,Embezzle,Etiquette(Guilder),Savvy</Talents>
+					<Trappings>Riverboat?2Wagons,GuildLicence,20GoldCrowns</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Merchant</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Cool,Language(Classical),Navigation,SecretSigns(Guilder)</Skills>
+					<Talents>Cat-tongued,Etiquette(Any),Numismatics,Sharp</Talents>
+					<Trappings>TownHouseWithServants,Warehouse,100GoldCrowns</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Merchant Prince</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int,I,WS</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Any),Intimidate</Skills>
+					<Talents>IronWill,Luck,Schemer,Wealthy</Talents>
+					<Trappings>2Riverboats?4Wagons,LargeTownEstate,2Warehouses,1000GoldCrowns,QualityClothing</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Dwarf">
 		<Odds Lower="1" Upper="1">
@@ -645,6 +759,120 @@
 					<Skills>Bribery,Intimidate</Skills>
 					<Talents>Briber,MagnumOpus,PublicSpeaker,Schemer</Talents>
 					<Trappings>Guild,QualityClothing</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="18" Upper="18">
+			<Career>
+				<Name>Beggar</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Pauper</Title>
+					<AdvanceScheme>T,Agi,Fel</AdvanceScheme>
+					<Status>Brass 0</Status>
+					<Skills>Athletics,Charm,ConsumeAlcohol,Cool,Dodge,Endurance,Intuition,Stealth(Urban)</Skills>
+					<Talents>Panhandle,Resistance(Disease),StoneSoup,VeryResilient</Talents>
+					<Trappings>PoorQualityBlanket,Cup</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Beggar</Title>
+					<AdvanceScheme>T,Agi,Fel,WP</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Entertain(Acting),Entertain(Any),Gossip,Haggle,Perception,SleightOfHand</Skills>
+					<Talents>AlleyCat,BeneathNotice,Criminal,Etiquette(Criminals)</Talents>
+					<Trappings>Crutch,Bowl</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Beggar</Title>
+					<AdvanceScheme>T,Agi,Fel,WP,WS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>CharmAnimal,Leadership,Lore(Local),SecretSigns(Vagabond)</Skills>
+					<Talents>Blather,DirtyFighting,Hardy,StepAside</Talents>
+					<Trappings>DisguiseKit,HidingPlace,PauperFollower</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Beggar King</Title>
+					<AdvanceScheme>T,Agi,Fel,WP,WS,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,Intimidate</Skills>
+					<Talents>Cat-tongued,Fearless(Watchmen),Kingpin,Suave</Talents>
+					<Trappings>Lair,LargeGroupOfBeggarFollowers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="19" Upper="20">
+			<Career>
+				<Name>Investigator</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Sleuth</Title>
+					<AdvanceScheme>I,Agi,Int</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Climb,Cool,Gossip,Intuition,Perception,Stealth(Urban),Track</Skills>
+					<Talents>AlleyCat,BeneathNotice,Read/Write,Sharp</Talents>
+					<Trappings>Lantern,LampOil,Journal,QuillAndInk</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Investigator</Title>
+					<AdvanceScheme>I,Agi,Int,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>ConsumeAlcohol,Dodge,Lore(Law),Melee(Brawling),PickLock,SleightOfHand</Skills>
+					<Talents>Etiquette(Any),Savvy,Shadow,Tenacious</Talents>
+					<Trappings>LeatherJack,HandWeapon,MagnifyingGlass,Lockpick</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Investigator</Title>
+					<AdvanceScheme>I,Agi,Int,Fel,Dex</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Bribery,Evaluate,Leadership,Lore(Any)</Skills>
+					<Talents>Bookish,BreakAndEnter,SixthSense,Suave</Talents>
+					<Trappings>Assistant,Office</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Detective</Title>
+					<AdvanceScheme>I,Agi,Int,Fel,Dex,WP</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Intimidate,Lore(Any)</Skills>
+					<Talents>AcuteSense(Any),Savant(Any),Speedreader,TowerOfMemories</Talents>
+					<Trappings>NetworkOfInformants,Spyglass</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="21" Upper="24">
+			<Career>
+				<Name>Merchant</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Trader</Title>
+					<AdvanceScheme>Agi,WP,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>AnimalCare,Bribery,Charm,ConsumeAlcohol,Drive,Gamble,Gossip,Haggle</Skills>
+					<Talents>Blather,Dealmaker,Read/Write,Suave</Talents>
+					<Trappings>Abacus,MuleAndCart,CanvasTarpaulin,3D10SilverShillings</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Merchant</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Evaluate,Intuition,Language(Any),Language(Guilder),Lore(Local),Perception</Skills>
+					<Talents>Briber,Embezzle,Etiquette(Guilder),Savvy</Talents>
+					<Trappings>Riverboat?2Wagons,GuildLicence,20GoldCrowns</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Merchant</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Cool,Language(Classical),Navigation,SecretSigns(Guilder)</Skills>
+					<Talents>Cat-tongued,Etiquette(Any),Numismatics,Sharp</Talents>
+					<Trappings>TownHouseWithServants,Warehouse,100GoldCrowns</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Merchant Prince</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int,I,WS</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Any),Intimidate</Skills>
+					<Talents>IronWill,Luck,Schemer,Wealthy</Talents>
+					<Trappings>2Riverboats?4Wagons,LargeTownEstate,2Warehouses,1000GoldCrowns,QualityClothing</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -916,6 +1144,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="16" Upper="19">
+			<Career>
+				<Name>Beggar</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Pauper</Title>
+					<AdvanceScheme>T,Agi,Fel</AdvanceScheme>
+					<Status>Brass 0</Status>
+					<Skills>Athletics,Charm,ConsumeAlcohol,Cool,Dodge,Endurance,Intuition,Stealth(Urban)</Skills>
+					<Talents>Panhandle,Resistance(Disease),StoneSoup,VeryResilient</Talents>
+					<Trappings>PoorQualityBlanket,Cup</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Beggar</Title>
+					<AdvanceScheme>T,Agi,Fel,WP</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Entertain(Acting),Entertain(Any),Gossip,Haggle,Perception,SleightOfHand</Skills>
+					<Talents>AlleyCat,BeneathNotice,Criminal,Etiquette(Criminals)</Talents>
+					<Trappings>Crutch,Bowl</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Beggar</Title>
+					<AdvanceScheme>T,Agi,Fel,WP,WS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>CharmAnimal,Leadership,Lore(Local),SecretSigns(Vagabond)</Skills>
+					<Talents>Blather,DirtyFighting,Hardy,StepAside</Talents>
+					<Trappings>DisguiseKit,HidingPlace,PauperFollower</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Beggar King</Title>
+					<AdvanceScheme>T,Agi,Fel,WP,WS,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,Intimidate</Skills>
+					<Talents>Cat-tongued,Fearless(Watchmen),Kingpin,Suave</Talents>
+					<Trappings>Lair,LargeGroupOfBeggarFollowers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="20" Upper="21">
+			<Career>
+				<Name>Investigator</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Sleuth</Title>
+					<AdvanceScheme>I,Agi,Int</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Climb,Cool,Gossip,Intuition,Perception,Stealth(Urban),Track</Skills>
+					<Talents>AlleyCat,BeneathNotice,Read/Write,Sharp</Talents>
+					<Trappings>Lantern,LampOil,Journal,QuillAndInk</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Investigator</Title>
+					<AdvanceScheme>I,Agi,Int,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>ConsumeAlcohol,Dodge,Lore(Law),Melee(Brawling),PickLock,SleightOfHand</Skills>
+					<Talents>Etiquette(Any),Savvy,Shadow,Tenacious</Talents>
+					<Trappings>LeatherJack,HandWeapon,MagnifyingGlass,Lockpick</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Investigator</Title>
+					<AdvanceScheme>I,Agi,Int,Fel,Dex</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Bribery,Evaluate,Leadership,Lore(Any)</Skills>
+					<Talents>Bookish,BreakAndEnter,SixthSense,Suave</Talents>
+					<Trappings>Assistant,Office</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Detective</Title>
+					<AdvanceScheme>I,Agi,Int,Fel,Dex,WP</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Intimidate,Lore(Any)</Skills>
+					<Talents>AcuteSense(Any),Savant(Any),Speedreader,TowerOfMemories</Talents>
+					<Trappings>NetworkOfInformants,Spyglass</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="22" Upper="25">
+			<Career>
+				<Name>Merchant</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Trader</Title>
+					<AdvanceScheme>Agi,WP,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>AnimalCare,Bribery,Charm,ConsumeAlcohol,Drive,Gamble,Gossip,Haggle</Skills>
+					<Talents>Blather,Dealmaker,Read/Write,Suave</Talents>
+					<Trappings>Abacus,MuleAndCart,CanvasTarpaulin,3D10SilverShillings</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Merchant</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Evaluate,Intuition,Language(Any),Language(Guilder),Lore(Local),Perception</Skills>
+					<Talents>Briber,Embezzle,Etiquette(Guilder),Savvy</Talents>
+					<Trappings>Riverboat?2Wagons,GuildLicence,20GoldCrowns</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Merchant</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Cool,Language(Classical),Navigation,SecretSigns(Guilder)</Skills>
+					<Talents>Cat-tongued,Etiquette(Any),Numismatics,Sharp</Talents>
+					<Trappings>TownHouseWithServants,Warehouse,100GoldCrowns</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Merchant Prince</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int,I,WS</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Any),Intimidate</Skills>
+					<Talents>IronWill,Luck,Schemer,Wealthy</Talents>
+					<Trappings>2Riverboats?4Wagons,LargeTownEstate,2Warehouses,1000GoldCrowns,QualityClothing</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -1143,6 +1485,82 @@
 					<Skills>Bribery,Intimidate</Skills>
 					<Talents>Briber,MagnumOpus,PublicSpeaker,Schemer</Talents>
 					<Trappings>Guild,QualityClothing</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="20" Upper="21">
+			<Career>
+				<Name>Investigator</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Sleuth</Title>
+					<AdvanceScheme>I,Agi,Int</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Climb,Cool,Gossip,Intuition,Perception,Stealth(Urban),Track</Skills>
+					<Talents>AlleyCat,BeneathNotice,Read/Write,Sharp</Talents>
+					<Trappings>Lantern,LampOil,Journal,QuillAndInk</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Investigator</Title>
+					<AdvanceScheme>I,Agi,Int,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>ConsumeAlcohol,Dodge,Lore(Law),Melee(Brawling),PickLock,SleightOfHand</Skills>
+					<Talents>Etiquette(Any),Savvy,Shadow,Tenacious</Talents>
+					<Trappings>LeatherJack,HandWeapon,MagnifyingGlass,Lockpick</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Investigator</Title>
+					<AdvanceScheme>I,Agi,Int,Fel,Dex</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Bribery,Evaluate,Leadership,Lore(Any)</Skills>
+					<Talents>Bookish,BreakAndEnter,SixthSense,Suave</Talents>
+					<Trappings>Assistant,Office</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Detective</Title>
+					<AdvanceScheme>I,Agi,Int,Fel,Dex,WP</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Intimidate,Lore(Any)</Skills>
+					<Talents>AcuteSense(Any),Savant(Any),Speedreader,TowerOfMemories</Talents>
+					<Trappings>NetworkOfInformants,Spyglass</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="22" Upper="26">
+			<Career>
+				<Name>Merchant</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Trader</Title>
+					<AdvanceScheme>Agi,WP,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>AnimalCare,Bribery,Charm,ConsumeAlcohol,Drive,Gamble,Gossip,Haggle</Skills>
+					<Talents>Blather,Dealmaker,Read/Write,Suave</Talents>
+					<Trappings>Abacus,MuleAndCart,CanvasTarpaulin,3D10SilverShillings</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Merchant</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Evaluate,Intuition,Language(Any),Language(Guilder),Lore(Local),Perception</Skills>
+					<Talents>Briber,Embezzle,Etiquette(Guilder),Savvy</Talents>
+					<Trappings>Riverboat?2Wagons,GuildLicence,20GoldCrowns</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Merchant</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Cool,Language(Classical),Navigation,SecretSigns(Guilder)</Skills>
+					<Talents>Cat-tongued,Etiquette(Any),Numismatics,Sharp</Talents>
+					<Trappings>TownHouseWithServants,Warehouse,100GoldCrowns</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Merchant Prince</Title>
+					<AdvanceScheme>Agi,WP,Fel,Int,I,WS</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Any),Intimidate</Skills>
+					<Talents>IronWill,Luck,Schemer,Wealthy</Talents>
+					<Trappings>2Riverboats?4Wagons,LargeTownEstate,2Warehouses,1000GoldCrowns,QualityClothing</Trappings>
 				</Path4>
 			</Career>
 		</Odds>

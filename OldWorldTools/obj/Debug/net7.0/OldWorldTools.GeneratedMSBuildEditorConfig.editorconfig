@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Portfolio\Full-Stack\old-world-tools\oldworldtools\OldWorldTools
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Portfolio/Full-Stack/old-world-tools/oldworldtools/OldWorldTools/Views/Character/Skills.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcmFjdGVyXFNraWxscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Portfolio/Full-Stack/old-world-tools/oldworldtools/OldWorldTools/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
