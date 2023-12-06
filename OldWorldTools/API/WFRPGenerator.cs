@@ -9,6 +9,7 @@ using System.Text;
 using Org.BouncyCastle.Tls;
 using System.Reflection;
 using System.Security;
+using System.Linq;
 
 namespace OldWorldTools.API
 {
@@ -51,13 +52,16 @@ namespace OldWorldTools.API
                 Gender = GenderEnum.Male,
                 Species = SpeciesEnum.Human,
                 Region = RegionEnum.Reikland,
-                RegionsAvailable = GetAvailableRegions(SpeciesEnum.Human)
+                RegionsAvailable = GetAvailableRegions(SpeciesEnum.Human),
+                SpeciesSkills = new List<CharacterSkill>(),
+                CareerSkills = new List<CharacterSkill>()
             };
 
             characterSheet.Characteristics = GetCharacteristics();
 
             characterSheet.Characteristics = RandomiseCharacteristics(characterSheet);
             characterSheet = MapCareerToCharacterSheet(RandomiseCareer(SpeciesEnum.Human), characterSheet, TierEnum.Tier1);
+            characterSheet = MapSpeciesSkillsToCharacterSheet(characterSheet);
 
             return characterSheet;
         }
@@ -131,6 +135,73 @@ namespace OldWorldTools.API
         private int RollD100()
         {
             return random.Next(1, 100);
+        }
+
+        public CharacterSheet MapSpeciesSkillsToCharacterSheet(CharacterSheet characterSheet)
+        {
+            characterSheet.SpeciesSkills = new List<CharacterSkill>();
+            var allSkills = GetSkills();
+
+            var speciesModifiers = GetSpeciesModifiersByRegion(characterSheet.Region);
+
+            var speciesSkillsRaw = SeparateAndFormatCSV(speciesModifiers.StartingSkills);
+
+            List<SkillDTO> skillsAvailable = new List<SkillDTO>();
+
+            foreach (var skillName in speciesSkillsRaw)
+            {
+                var skillNameParts = skillName.Split(' ');
+
+                SkillDTO matchingSkill = allSkills.Where(w => w.Name.Contains(skillNameParts[0])).FirstOrDefault();
+
+                if (matchingSkill != null)
+                {
+                    SkillDTO skillToAdd = new SkillDTO
+                    {
+                        Name = skillName,
+                        Advanced = matchingSkill.Advanced,
+                        Grouped = matchingSkill.Grouped,
+                        LinkedCharacteristic = matchingSkill.LinkedCharacteristic
+                    };
+
+                    skillsAvailable.Add(skillToAdd);
+                }
+            }
+
+            ////As there are always more than 6 skills available for each starting species, this shouldn't go outside the range of the index
+
+            //add 3 skills at 5 adv
+            for (int i = 0; i < 3; i++)
+            {
+                int randomNum = random.Next(3);
+
+                characterSheet.SpeciesSkills.Add
+                    (new CharacterSkill
+                    {
+                        Advances = 5,
+                        Skill = skillsAvailable[randomNum],
+                        CharacteristicValue = characterSheet.Characteristics.Where(w => w.ShortName == skillsAvailable[randomNum].LinkedCharacteristic).First().CurrentValue()
+                    });
+
+                skillsAvailable.RemoveAt(randomNum);
+            }
+
+            //add 3 skills at 3 adv
+            for (int i = 0; i < 3; i++)
+            {
+                int randomNum = random.Next(3);
+                characterSheet.SpeciesSkills.Add
+                    (new CharacterSkill
+                    {
+                        Advances = 3,
+                        Skill = skillsAvailable[randomNum],
+                        CharacteristicValue = characterSheet.Characteristics.Where(w => w.ShortName == skillsAvailable[randomNum].LinkedCharacteristic).First().CurrentValue()
+                    });
+
+                skillsAvailable.RemoveAt(randomNum);
+            }
+
+            return characterSheet;
         }
 
         public CharacterSheet MapCareerToCharacterSheet(CareerDTO career, CharacterSheet characterSheet, TierEnum tier)
@@ -1092,7 +1163,7 @@ namespace OldWorldTools.API
             newText.Append(text[0]);
             for (int i = 1; i < text.Length; i++)
             {
-                if (char.IsUpper(text[i]) && text[i - 1] != ' ' && text[i - 1] != '(' && text[i - 1] != '/')
+                if (char.IsUpper(text[i]) && text[i - 1] != ' ' && text[i - 1] != '(' && text[i - 1] != '/' || text[i] == '(')
                     newText.Append(' ');
                 newText.Append(text[i]);
             }

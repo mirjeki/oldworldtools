@@ -33,7 +33,7 @@ namespace OldWorldTools.Controllers
             characterSheet.RegionsAvailable = generator.GetAvailableRegions(characterSheet.Species);
             //var careers = generator.GetCareers(characterSheet.Species);
             //var speciesModifiers = generator.GetSpeciesModifiersByRegion(characterSheet.Region);
-            var skills = generator.GetSkills();
+            //var skills = generator.GetSkills();
             var currentCareer = generator.GetCareerByName(characterSheet.Career, characterSheet.Species);
 
             switch (submitButton)
@@ -69,6 +69,10 @@ namespace OldWorldTools.Controllers
                 case "RandomiseCharacteristics":
                     characterSheet.Characteristics = generator.RandomiseCharacteristics(characterSheet);
                     //characterSheet = generator.MapCareerToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
+
+                    return View("Index", characterSheet);
+                case "RandomiseSkills":
+                    characterSheet = generator.MapSpeciesSkillsToCharacterSheet(characterSheet);
 
                     return View("Index", characterSheet);
                 default:

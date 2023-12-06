@@ -217,6 +217,38 @@
         </table>
     </div>
 
+    <div>
+        <span><button type="submit" name="submitButton" value="RandomiseSkills">Randomise Skills</button></span>
+        <table class="table" style="width:600px;">
+            <thead><h2>Skills</h2></thead>
+            @{
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Characteristic</td>
+                        <td>Characteristic Value</td>
+                        <td>Advances</td>
+                        <td>Total</td>
+                    </tr>
+                </thead>
+                for (var i = 0; i < Model.SpeciesSkills.Count(); i++)
+                {
+                    <tr>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.SpeciesSkills[i].Skill.Name)</span>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.SpeciesSkills[i].Skill.LinkedCharacteristic)</span>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.SpeciesSkills[i].CharacteristicValue)</span>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.SpeciesSkills[i].Advances)</span>
+                        <td>@Html.DisplayTextFor(model => model.SpeciesSkills[i].Skill.Name)</td>
+                        <td>@Html.DisplayTextFor(model => model.SpeciesSkills[i].Skill.LinkedCharacteristic)</td>
+                        <td>@Html.DisplayTextFor(model => model.SpeciesSkills[i].CharacteristicValue)</td>
+                        <td>@Html.DisplayTextFor(model => model.SpeciesSkills[i].Advances)</td>
+                        <td>@Model.SpeciesSkills[i].CurrentTotal()</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+
     <!-- Add other input fields as needed -->
 
     <div>

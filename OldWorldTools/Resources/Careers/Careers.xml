@@ -494,6 +494,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="22" Upper="23">
+			<Career>
+				<Name>Rat Catcher</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Rat Hunter</Title>
+					<AdvanceScheme>WS,BS,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,AnimalTraining(Dog),CharmAnimal,ConsumeAlcohol,Endurance,Melee(Basic),Ranged(Sling),Stealth(Underground?Urban)</Skills>
+					<Talents>NightVision,Resistance(Disease),StrikeMightyBlow,StrikeToStun</Talents>
+					<Trappings>SlingWithAmmunition,Sack,SmallButViciousDog</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Rat Catcher</Title>
+					<AdvanceScheme>WS,BS,WP,T</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Gossip,Haggle,Lore(Poison),Perception,SetTrap</Skills>
+					<Talents>EnclosedFighter,Etiquette(Guilder),Fearless(Rats),VeryResilient</Talents>
+					<Trappings>AnimalTraps,PoleForDeadRats</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Sewer Jack</Title>
+					<AdvanceScheme>WS,BS,WP,T,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Climb,Cool,Dodge,Ranged(CrossbowPistol)</Skills>
+					<Talents>Hardy,Stout-hearted,StrongLegs,TunnelRat</Talents>
+					<Trappings>DavrichLantern,HandWeapon,LeatherJack</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Exterminator</Title>
+					<AdvanceScheme>WS,BS,WP,T,I,S</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Leadership,Track</Skills>
+					<Talents>Fearless(Skaven),Menacing,Robust,Strong-minded</Talents>
+					<Trappings>Assistant,LargeAndViciousDog,SackOfPoisonedBait(10DosesOfHeartkill)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="24" Upper="26">
+			<Career>
+				<Name>Townsman</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Clerk</Title>
+					<AdvanceScheme>Agi,Int,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Climb,ConsumeAlcohol,Drive,Dodge,Gamble,Gossip,Haggle</Skills>
+					<Talents>AlleyCat,BeneathNotice,Etiquette(Servants),Sturdy</Talents>
+					<Trappings>Lodgings,SturdyBoots</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Townsman</Title>
+					<AdvanceScheme>Agi,Int,Fel,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,Evaluate,Intuition,Lore(Local),Melee(Brawling),Play(Any)</Skills>
+					<Talents>Dealmaker,Embezzle,Etiquette(Any),Gregarious</Talents>
+					<Trappings>ModestTownhouse,Servant,QuillAndInk</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Town Councillor</Title>
+					<AdvanceScheme>Agi,Int,Fel,I,Dex</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Cool,Lore(Law),Perception,Research</Skills>
+					<Talents>Briber,PublicSpeaker,Read/Write,Supportive</Talents>
+					<Trappings>CoachAndDriver,Townhouse</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Burgomeister</Title>
+					<AdvanceScheme>Agi,Int,Fel,I,Dex,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Politics),Intimidate</Skills>
+					<Talents>CommandingPresence,MasterOrator,Schemer,Suave</Talents>
+					<Trappings>ChainsOfOffice,CoachAndFootman,QualityClothing,LargeTownhouseWithGardensAndServants</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="27" Upper="27">
+			<Career>
+				<Name>Watchman</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Watch Recruit</Title>
+					<AdvanceScheme>WS,S,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Climb,ConsumeAlcohol,Dodge,Endurance,Gamble,Melee(Any),Perception</Skills>
+					<Talents>Drilled,Hardy,StrikeToStun,Tenacious</Talents>
+					<Trappings>HandWeapon,LeatherJack,Uniform</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Watchman</Title>
+					<AdvanceScheme>WS,S,Fel,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Cool,Gossip,Intimidate,Intuition,Lore(Local)</Skills>
+					<Talents>BreakAndEnter,Criminal,NightVision,Sprinter</Talents>
+					<Trappings>LanternAndPole,LampOil,CopperBadge</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Watch Sergeant</Title>
+					<AdvanceScheme>WS,S,Fel,WP,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Entertain(Storytelling),Haggle,Leadership,Lore(Law)</Skills>
+					<Talents>Disarm,Etiquette(Soldiers),Fearless(Criminals),NoseForTrouble</Talents>
+					<Trappings>Breastplate,Helm,SymbolOfRank</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Watch Captain</Title>
+					<AdvanceScheme>WS,S,Fel,WP,I,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Politics),Ride(Horse)</Skills>
+					<Talents>PublicSpeaker,Robust,Kingpin,Schemer</Talents>
+					<Trappings>RidingHorseWithSaddleAndTack,QualityHat,QualityHandWeapon,QualitySymbolOfRank</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Dwarf">
 		<Odds Lower="1" Upper="1">
@@ -873,6 +987,120 @@
 					<Skills>Lore(Any),Intimidate</Skills>
 					<Talents>IronWill,Luck,Schemer,Wealthy</Talents>
 					<Trappings>2Riverboats?4Wagons,LargeTownEstate,2Warehouses,1000GoldCrowns,QualityClothing</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="25" Upper="25">
+			<Career>
+				<Name>Rat Catcher</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Rat Hunter</Title>
+					<AdvanceScheme>WS,BS,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,AnimalTraining(Dog),CharmAnimal,ConsumeAlcohol,Endurance,Melee(Basic),Ranged(Sling),Stealth(Underground?Urban)</Skills>
+					<Talents>NightVision,Resistance(Disease),StrikeMightyBlow,StrikeToStun</Talents>
+					<Trappings>SlingWithAmmunition,Sack,SmallButViciousDog</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Rat Catcher</Title>
+					<AdvanceScheme>WS,BS,WP,T</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Gossip,Haggle,Lore(Poison),Perception,SetTrap</Skills>
+					<Talents>EnclosedFighter,Etiquette(Guilder),Fearless(Rats),VeryResilient</Talents>
+					<Trappings>AnimalTraps,PoleForDeadRats</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Sewer Jack</Title>
+					<AdvanceScheme>WS,BS,WP,T,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Climb,Cool,Dodge,Ranged(CrossbowPistol)</Skills>
+					<Talents>Hardy,Stout-hearted,StrongLegs,TunnelRat</Talents>
+					<Trappings>DavrichLantern,HandWeapon,LeatherJack</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Exterminator</Title>
+					<AdvanceScheme>WS,BS,WP,T,I,S</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Leadership,Track</Skills>
+					<Talents>Fearless(Skaven),Menacing,Robust,Strong-minded</Talents>
+					<Trappings>Assistant,LargeAndViciousDog,SackOfPoisonedBait(10DosesOfHeartkill)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="26" Upper="31">
+			<Career>
+				<Name>Townsman</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Clerk</Title>
+					<AdvanceScheme>Agi,Int,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Climb,ConsumeAlcohol,Drive,Dodge,Gamble,Gossip,Haggle</Skills>
+					<Talents>AlleyCat,BeneathNotice,Etiquette(Servants),Sturdy</Talents>
+					<Trappings>Lodgings,SturdyBoots</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Townsman</Title>
+					<AdvanceScheme>Agi,Int,Fel,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,Evaluate,Intuition,Lore(Local),Melee(Brawling),Play(Any)</Skills>
+					<Talents>Dealmaker,Embezzle,Etiquette(Any),Gregarious</Talents>
+					<Trappings>ModestTownhouse,Servant,QuillAndInk</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Town Councillor</Title>
+					<AdvanceScheme>Agi,Int,Fel,I,Dex</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Cool,Lore(Law),Perception,Research</Skills>
+					<Talents>Briber,PublicSpeaker,Read/Write,Supportive</Talents>
+					<Trappings>CoachAndDriver,Townhouse</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Burgomeister</Title>
+					<AdvanceScheme>Agi,Int,Fel,I,Dex,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Politics),Intimidate</Skills>
+					<Talents>CommandingPresence,MasterOrator,Schemer,Suave</Talents>
+					<Trappings>ChainsOfOffice,CoachAndFootman,QualityClothing,LargeTownhouseWithGardensAndServants</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="32" Upper="34">
+			<Career>
+				<Name>Watchman</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Watch Recruit</Title>
+					<AdvanceScheme>WS,S,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Climb,ConsumeAlcohol,Dodge,Endurance,Gamble,Melee(Any),Perception</Skills>
+					<Talents>Drilled,Hardy,StrikeToStun,Tenacious</Talents>
+					<Trappings>HandWeapon,LeatherJack,Uniform</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Watchman</Title>
+					<AdvanceScheme>WS,S,Fel,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Cool,Gossip,Intimidate,Intuition,Lore(Local)</Skills>
+					<Talents>BreakAndEnter,Criminal,NightVision,Sprinter</Talents>
+					<Trappings>LanternAndPole,LampOil,CopperBadge</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Watch Sergeant</Title>
+					<AdvanceScheme>WS,S,Fel,WP,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Entertain(Storytelling),Haggle,Leadership,Lore(Law)</Skills>
+					<Talents>Disarm,Etiquette(Soldiers),Fearless(Criminals),NoseForTrouble</Talents>
+					<Trappings>Breastplate,Helm,SymbolOfRank</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Watch Captain</Title>
+					<AdvanceScheme>WS,S,Fel,WP,I,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Politics),Ride(Horse)</Skills>
+					<Talents>PublicSpeaker,Robust,Kingpin,Schemer</Talents>
+					<Trappings>RidingHorseWithSaddleAndTack,QualityHat,QualityHandWeapon,QualitySymbolOfRank</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -1258,6 +1486,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="26" Upper="28">
+			<Career>
+				<Name>Rat Catcher</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Rat Hunter</Title>
+					<AdvanceScheme>WS,BS,WP</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,AnimalTraining(Dog),CharmAnimal,ConsumeAlcohol,Endurance,Melee(Basic),Ranged(Sling),Stealth(Underground?Urban)</Skills>
+					<Talents>NightVision,Resistance(Disease),StrikeMightyBlow,StrikeToStun</Talents>
+					<Trappings>SlingWithAmmunition,Sack,SmallButViciousDog</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Rat Catcher</Title>
+					<AdvanceScheme>WS,BS,WP,T</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Gossip,Haggle,Lore(Poison),Perception,SetTrap</Skills>
+					<Talents>EnclosedFighter,Etiquette(Guilder),Fearless(Rats),VeryResilient</Talents>
+					<Trappings>AnimalTraps,PoleForDeadRats</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Sewer Jack</Title>
+					<AdvanceScheme>WS,BS,WP,T,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Climb,Cool,Dodge,Ranged(CrossbowPistol)</Skills>
+					<Talents>Hardy,Stout-hearted,StrongLegs,TunnelRat</Talents>
+					<Trappings>DavrichLantern,HandWeapon,LeatherJack</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Exterminator</Title>
+					<AdvanceScheme>WS,BS,WP,T,I,S</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Leadership,Track</Skills>
+					<Talents>Fearless(Skaven),Menacing,Robust,Strong-minded</Talents>
+					<Trappings>Assistant,LargeAndViciousDog,SackOfPoisonedBait(10DosesOfHeartkill)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="29" Upper="31">
+			<Career>
+				<Name>Townsman</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Clerk</Title>
+					<AdvanceScheme>Agi,Int,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Climb,ConsumeAlcohol,Drive,Dodge,Gamble,Gossip,Haggle</Skills>
+					<Talents>AlleyCat,BeneathNotice,Etiquette(Servants),Sturdy</Talents>
+					<Trappings>Lodgings,SturdyBoots</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Townsman</Title>
+					<AdvanceScheme>Agi,Int,Fel,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,Evaluate,Intuition,Lore(Local),Melee(Brawling),Play(Any)</Skills>
+					<Talents>Dealmaker,Embezzle,Etiquette(Any),Gregarious</Talents>
+					<Trappings>ModestTownhouse,Servant,QuillAndInk</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Town Councillor</Title>
+					<AdvanceScheme>Agi,Int,Fel,I,Dex</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Cool,Lore(Law),Perception,Research</Skills>
+					<Talents>Briber,PublicSpeaker,Read/Write,Supportive</Talents>
+					<Trappings>CoachAndDriver,Townhouse</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Burgomeister</Title>
+					<AdvanceScheme>Agi,Int,Fel,I,Dex,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Politics),Intimidate</Skills>
+					<Talents>CommandingPresence,MasterOrator,Schemer,Suave</Talents>
+					<Trappings>ChainsOfOffice,CoachAndFootman,QualityClothing,LargeTownhouseWithGardensAndServants</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="32" Upper="33">
+			<Career>
+				<Name>Watchman</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Watch Recruit</Title>
+					<AdvanceScheme>WS,S,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Climb,ConsumeAlcohol,Dodge,Endurance,Gamble,Melee(Any),Perception</Skills>
+					<Talents>Drilled,Hardy,StrikeToStun,Tenacious</Talents>
+					<Trappings>HandWeapon,LeatherJack,Uniform</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Watchman</Title>
+					<AdvanceScheme>WS,S,Fel,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Cool,Gossip,Intimidate,Intuition,Lore(Local)</Skills>
+					<Talents>BreakAndEnter,Criminal,NightVision,Sprinter</Talents>
+					<Trappings>LanternAndPole,LampOil,CopperBadge</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Watch Sergeant</Title>
+					<AdvanceScheme>WS,S,Fel,WP,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Entertain(Storytelling),Haggle,Leadership,Lore(Law)</Skills>
+					<Talents>Disarm,Etiquette(Soldiers),Fearless(Criminals),NoseForTrouble</Talents>
+					<Trappings>Breastplate,Helm,SymbolOfRank</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Watch Captain</Title>
+					<AdvanceScheme>WS,S,Fel,WP,I,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Politics),Ride(Horse)</Skills>
+					<Talents>PublicSpeaker,Robust,Kingpin,Schemer</Talents>
+					<Trappings>RidingHorseWithSaddleAndTack,QualityHat,QualityHandWeapon,QualitySymbolOfRank</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -1561,6 +1903,82 @@
 					<Skills>Lore(Any),Intimidate</Skills>
 					<Talents>IronWill,Luck,Schemer,Wealthy</Talents>
 					<Trappings>2Riverboats?4Wagons,LargeTownEstate,2Warehouses,1000GoldCrowns,QualityClothing</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="27" Upper="28">
+			<Career>
+				<Name>Townsman</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Clerk</Title>
+					<AdvanceScheme>Agi,Int,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Climb,ConsumeAlcohol,Drive,Dodge,Gamble,Gossip,Haggle</Skills>
+					<Talents>AlleyCat,BeneathNotice,Etiquette(Servants),Sturdy</Talents>
+					<Trappings>Lodgings,SturdyBoots</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Townsman</Title>
+					<AdvanceScheme>Agi,Int,Fel,I</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,Evaluate,Intuition,Lore(Local),Melee(Brawling),Play(Any)</Skills>
+					<Talents>Dealmaker,Embezzle,Etiquette(Any),Gregarious</Talents>
+					<Trappings>ModestTownhouse,Servant,QuillAndInk</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Town Councillor</Title>
+					<AdvanceScheme>Agi,Int,Fel,I,Dex</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Cool,Lore(Law),Perception,Research</Skills>
+					<Talents>Briber,PublicSpeaker,Read/Write,Supportive</Talents>
+					<Trappings>CoachAndDriver,Townhouse</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Burgomeister</Title>
+					<AdvanceScheme>Agi,Int,Fel,I,Dex,WP</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Politics),Intimidate</Skills>
+					<Talents>CommandingPresence,MasterOrator,Schemer,Suave</Talents>
+					<Trappings>ChainsOfOffice,CoachAndFootman,QualityClothing,LargeTownhouseWithGardensAndServants</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="29" Upper="29">
+			<Career>
+				<Name>Watchman</Name>
+				<Class>Burgher</Class>
+				<Path1>
+					<Title>Watch Recruit</Title>
+					<AdvanceScheme>WS,S,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Climb,ConsumeAlcohol,Dodge,Endurance,Gamble,Melee(Any),Perception</Skills>
+					<Talents>Drilled,Hardy,StrikeToStun,Tenacious</Talents>
+					<Trappings>HandWeapon,LeatherJack,Uniform</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Watchman</Title>
+					<AdvanceScheme>WS,S,Fel,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Charm,Cool,Gossip,Intimidate,Intuition,Lore(Local)</Skills>
+					<Talents>BreakAndEnter,Criminal,NightVision,Sprinter</Talents>
+					<Trappings>LanternAndPole,LampOil,CopperBadge</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Watch Sergeant</Title>
+					<AdvanceScheme>WS,S,Fel,WP,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Entertain(Storytelling),Haggle,Leadership,Lore(Law)</Skills>
+					<Talents>Disarm,Etiquette(Soldiers),Fearless(Criminals),NoseForTrouble</Talents>
+					<Trappings>Breastplate,Helm,SymbolOfRank</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Watch Captain</Title>
+					<AdvanceScheme>WS,S,Fel,WP,I,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Lore(Politics),Ride(Horse)</Skills>
+					<Talents>PublicSpeaker,Robust,Kingpin,Schemer</Talents>
+					<Trappings>RidingHorseWithSaddleAndTack,QualityHat,QualityHandWeapon,QualitySymbolOfRank</Trappings>
 				</Path4>
 			</Career>
 		</Odds>

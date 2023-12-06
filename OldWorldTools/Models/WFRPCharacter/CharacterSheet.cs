@@ -26,7 +26,8 @@ namespace OldWorldTools.Models.WFRPCharacter
         public int Fortune { get; set; }
         public int Resilience { get; set; }
         public int Resolve { get; set; }
-        //public List<CharacterSkill> Skills { get; set; }
+        public List<CharacterSkill> SpeciesSkills { get; set; }
+        public List<CharacterSkill> CareerSkills { get; set; }
         public List<string> Talents { get; set; }
         public List<string> Trappings { get; set; }
         //public List<Trapping> Trappings { get; set; }
