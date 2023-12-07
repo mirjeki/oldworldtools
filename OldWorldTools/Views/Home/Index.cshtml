@@ -234,6 +234,8 @@
                 for (var i = 0; i < Model.SpeciesSkills.Count(); i++)
                 {
                     <tr>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.SpeciesSkills[i].Skill.Advanced)</span>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.SpeciesSkills[i].Skill.Grouped)</span>
                         <span style="display:none;">@Html.TextBoxFor(model => model.SpeciesSkills[i].Skill.Name)</span>
                         <span style="display:none;">@Html.TextBoxFor(model => model.SpeciesSkills[i].Skill.LinkedCharacteristic)</span>
                         <span style="display:none;">@Html.TextBoxFor(model => model.SpeciesSkills[i].CharacteristicValue)</span>
@@ -243,6 +245,22 @@
                         <td>@Html.DisplayTextFor(model => model.SpeciesSkills[i].CharacteristicValue)</td>
                         <td>@Html.DisplayTextFor(model => model.SpeciesSkills[i].Advances)</td>
                         <td>@Model.SpeciesSkills[i].CurrentTotal()</td>
+                    </tr>
+                }
+                for (var i = 0; i < Model.CareerSkills.Count(); i++)
+                {
+                    <tr>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.CareerSkills[i].Skill.Advanced)</span>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.CareerSkills[i].Skill.Grouped)</span>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.CareerSkills[i].Skill.Name)</span>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.CareerSkills[i].Skill.LinkedCharacteristic)</span>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.CareerSkills[i].CharacteristicValue)</span>
+                        <span style="display:none;">@Html.TextBoxFor(model => model.CareerSkills[i].Advances)</span>
+                        <td>@Html.DisplayTextFor(model => model.CareerSkills[i].Skill.Name)</td>
+                        <td>@Html.DisplayTextFor(model => model.CareerSkills[i].Skill.LinkedCharacteristic)</td>
+                        <td>@Html.DisplayTextFor(model => model.CareerSkills[i].CharacteristicValue)</td>
+                        <td>@Html.DisplayTextFor(model => model.CareerSkills[i].Advances)</td>
+                        <td>@Model.CareerSkills[i].CurrentTotal()</td>
                     </tr>
                 }
             }

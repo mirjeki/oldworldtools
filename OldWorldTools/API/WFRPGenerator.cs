@@ -10,6 +10,7 @@ using Org.BouncyCastle.Tls;
 using System.Reflection;
 using System.Security;
 using System.Linq;
+using iText.StyledXmlParser.Jsoup.Parser;
 
 namespace OldWorldTools.API
 {
@@ -48,7 +49,7 @@ namespace OldWorldTools.API
         {
             CharacterSheet characterSheet = new CharacterSheet
             {
-                Name = "Enter name here...",
+                Name = "Herr Kartoffeln",
                 Gender = GenderEnum.Male,
                 Species = SpeciesEnum.Human,
                 Region = RegionEnum.Reikland,
@@ -62,6 +63,8 @@ namespace OldWorldTools.API
             characterSheet.Characteristics = RandomiseCharacteristics(characterSheet);
             characterSheet = MapCareerToCharacterSheet(RandomiseCareer(SpeciesEnum.Human), characterSheet, TierEnum.Tier1);
             characterSheet = MapSpeciesSkillsToCharacterSheet(characterSheet);
+            var currentCareer = GetCareerByName(characterSheet.Career, characterSheet.Species);
+            characterSheet = MapCareerSkillsToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
 
             return characterSheet;
         }
@@ -173,7 +176,7 @@ namespace OldWorldTools.API
             //add 3 skills at 5 adv
             for (int i = 0; i < 3; i++)
             {
-                int randomNum = random.Next(3);
+                int randomNum = random.Next(skillsAvailable.Count);
 
                 characterSheet.SpeciesSkills.Add
                     (new CharacterSkill
@@ -189,7 +192,7 @@ namespace OldWorldTools.API
             //add 3 skills at 3 adv
             for (int i = 0; i < 3; i++)
             {
-                int randomNum = random.Next(3);
+                int randomNum = random.Next(skillsAvailable.Count);
                 characterSheet.SpeciesSkills.Add
                     (new CharacterSkill
                     {
@@ -199,6 +202,101 @@ namespace OldWorldTools.API
                     });
 
                 skillsAvailable.RemoveAt(randomNum);
+            }
+
+            return characterSheet;
+        }
+
+        public CharacterSheet MapCareerSkillsToCharacterSheet(CareerDTO career, CharacterSheet characterSheet, TierEnum tier)
+        {
+            switch (tier)
+            {
+                case TierEnum.Tier1:
+                    return DetermineFirstLevelCareerSkills(career, characterSheet);
+                case TierEnum.Tier2:
+                    break;
+                case TierEnum.Tier3:
+                    break;
+                case TierEnum.Tier4:
+                    break;
+                default:
+                    break;
+            }
+
+            return DetermineFirstLevelCareerSkills(career, characterSheet);
+        }
+
+        private CharacterSheet DetermineFirstLevelCareerSkills(CareerDTO career, CharacterSheet characterSheet)
+        {
+            int skillPoints = 40;
+
+            characterSheet.CareerSkills = new List<CharacterSkill>();
+            var allSkills = GetSkills();
+
+            var careerSkillsRaw = SeparateAndFormatCSV(career.Path1.Skills);
+
+            List<SkillDTO> skillsAvailable = new List<SkillDTO>();
+
+            foreach (var skillName in careerSkillsRaw)
+            {
+                var skillNameParts = skillName.Split(' ');
+
+                SkillDTO matchingSkill = allSkills.Where(w => w.Name.Contains(skillNameParts[0])).FirstOrDefault();
+
+                if (matchingSkill != null)
+                {
+                    SkillDTO skillToAdd = new SkillDTO
+                    {
+                        Name = skillName,
+                        Advanced = matchingSkill.Advanced,
+                        Grouped = matchingSkill.Grouped,
+                        LinkedCharacteristic = matchingSkill.LinkedCharacteristic
+                    };
+
+                    skillsAvailable.Add(skillToAdd);
+                }
+            }
+
+            while (skillPoints > 0)
+            {
+                int randomSkill = random.Next(skillsAvailable.Count);
+
+                int randomSkillPointAllocation;
+
+                if (skillsAvailable.Count == 1)
+                {
+                    randomSkillPointAllocation = skillPoints;
+                }
+                else if (skillPoints > 10)
+                {
+                    randomSkillPointAllocation = random.Next(5, 10);
+                }
+                else
+                {
+                    randomSkillPointAllocation = random.Next(1, skillPoints);
+                }
+
+                var skill = skillsAvailable[randomSkill];
+
+                var matchingSpeciesSkill = characterSheet.SpeciesSkills.Where(w => w.Skill.Name == skill.Name).FirstOrDefault();
+
+                if (matchingSpeciesSkill != null)
+                {
+                    characterSheet.SpeciesSkills.Where(f => f.Skill == matchingSpeciesSkill.Skill).First().Advances += randomSkillPointAllocation;
+                }
+                else
+                {
+                    characterSheet.CareerSkills.Add
+                        (new CharacterSkill
+                        {
+                            Advances = randomSkillPointAllocation,
+                            Skill = skill,
+                            CharacteristicValue = characterSheet.Characteristics.Where(w => w.ShortName == skill.LinkedCharacteristic).First().CurrentValue()
+                        });
+                }
+
+                skillsAvailable.RemoveAt(randomSkill);
+                skillPoints -= randomSkillPointAllocation;
             }
 
             return characterSheet;
@@ -215,8 +313,7 @@ namespace OldWorldTools.API
                     characterSheet.CareerPath = career.Path1.Title;
                     characterSheet.Status = career.Path1.Status;
                     characterSheet.Talents = RandomiseStarterTalents(characterSheet.Region, SeparateAndFormatCSV(career.Path1.Talents));
-                    //characterSheet.Talents = SeparateAndFormatCSV(career.Path1.Talents);
-                    characterSheet.Trappings = SeparateAndFormatCSV(career.Path1.Trappings);
+                    characterSheet.Trappings = DetermineChoices(SeparateAndFormatCSV(career.Path1.Trappings));
                     break;
                 case TierEnum.Tier2:
                     break;
@@ -225,7 +322,7 @@ namespace OldWorldTools.API
                     characterSheet.Status = career.Path3.Status;
                     //randomly determine chosen talents from list
                     characterSheet.Talents = SeparateAndFormatCSV(career.Path3.Talents);
-                    characterSheet.Trappings = SeparateAndFormatCSV(career.Path3.Trappings);
+                    characterSheet.Trappings = DetermineChoices(SeparateAndFormatCSV(career.Path3.Trappings));
                     break;
                 case TierEnum.Tier4:
                     break;
@@ -241,6 +338,29 @@ namespace OldWorldTools.API
             }
 
             return characterSheet;
+        }
+
+        private List<string> DetermineChoices(List<string> list)
+        {
+            List<string> itemsToReturn = new List<string>();
+
+            foreach (var item in list)
+            {
+                if (item.Contains("?"))
+                {
+                    var options = item.Split('?', StringSplitOptions.TrimEntries);
+
+                    int randomOption = random.Next(options.Length);
+
+                    itemsToReturn.Add(options[randomOption]);
+                }
+                else
+                {
+                    itemsToReturn.Add(item);
+                }
+            }
+
+            return itemsToReturn;
         }
 
         private void ResetCharacteristicModifiers(CharacterSheet characterSheet)
@@ -269,16 +389,10 @@ namespace OldWorldTools.API
                 if (talent.Contains("?"))
                 {
                     var options = talent.Split('?', StringSplitOptions.TrimEntries);
-                    var result = RollD100();
 
-                    if (result <= 50)
-                    {
-                        talentsToAdd.Add(options[0]);
-                    }
-                    else
-                    {
-                        talentsToAdd.Add(options[1]);
-                    }
+                    int randomOption = random.Next(options.Length);
+
+                    talentsToAdd.Add(options[randomOption]);
 
                     talentsToRemove.Add(talent);
                 }

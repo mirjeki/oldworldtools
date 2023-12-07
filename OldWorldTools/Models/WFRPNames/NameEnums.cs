@@ -24,10 +24,10 @@ namespace OldWorldTools.Models.WFRPNames
         Dwarf,
         [Description("Halfling")]
         Halfling,
-        [Description("Wood Elf")]
-        WoodElf,
         [Description("High Elf")]
-        HighElf
+        HighElf,
+        [Description("Wood Elf")]
+        WoodElf
     }
 
     public enum GenderEnum

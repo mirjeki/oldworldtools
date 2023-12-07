@@ -608,6 +608,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="28" Upper="28">
+			<Career>
+				<Name>Advisor</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Aide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,ConsumeAlcohol,Endurance,Gossip,Haggle,Language(Classical),Lore(Politics),Perception</Skills>
+					<Talents>BeneathNotice,Etiquette(Any),Gregarious,Read/Write</Talents>
+					<Trappings>WritingKit</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Advisor</Title>
+					<AdvanceScheme>T,I,Agi,Fel</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Charm,Cool,Evaluate,Gamble,Intuition,Lore(Local)</Skills>
+					<Talents>Blather,Criminal,Schemer,Supportive</Talents>
+					<Trappings>Livery</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Counsellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Entertain(Storytelling),Leadership,Language(Any),Lore(Any)</Skills>
+					<Talents>Argumentative,Briber,Carouser,Cat-tongued</Talents>
+					<Trappings>QualityClothing,Aide</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Chancellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int,WP</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Heraldry),Ride(Horse)</Skills>
+					<Talents>CommandingPresence,Embezzle,Kingpin,Suave</Talents>
+					<Trappings>RidingHorseWithSaddleAndHarness,QualityCourtlyGarb,StaffOfAdvisorsAndAides</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="29" Upper="29">
+			<Career>
+				<Name>Artist</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Apprentice Artist</Title>
+					<AdvanceScheme>S,I,Dex</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Art(Any),Cool,ConsumeAlcohol,Evaluate,Endurance,Gossip,Perception,Stealth(Urban)</Skills>
+					<Talents>Artistic,Sharp,StrongBack,Tenacious</Talents>
+					<Trappings>Brush?Chisel?QuillPen</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Gamble,Haggle,Intuition,Language(Classical),Trade(ArtSupplies)</Skills>
+					<Talents>Carouser,Criminal,Gregarious,NimbleFingered</Talents>
+					<Trappings>SlingBagContainingTradeTools(Artist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Leadership,Lore(Art),Lore(Heraldry)</Skills>
+					<Talents>AcuteSense(Any),Dealmaker,Etiquette(Any),NoseForTrouble</Talents>
+					<Trappings>Apprentice,Patron,Workshop(Artist)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Maestro</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Research,Ride(Horse)</Skills>
+					<Talents>Ambidextrous,Kingpin,MagnumOpus,Read/Write</Talents>
+					<Trappings>LargeWorkshop(Artist),Library(Art),3Apprentices</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="30" Upper="30">
+			<Career>
+				<Name>Duellist</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Fencer</Title>
+					<AdvanceScheme>WS,I,Agi</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Athletics,Dodge,Endurance,Heal,Intuition,Language(Classical),Melee(Any),Perception</Skills>
+					<Talents>BeatBlade,Distract,Feint,StepAside</Talents>
+					<Trappings>HandWeapon?Rapier,SlingBagContainingClothingAnd1D10Bandages</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Deullist</Title>
+					<AdvanceScheme>WS,I,Agi,BS</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Cool,Gamble,Melee(Parry),Ranged(Blackpowder),Trade(Gunsmith)</Skills>
+					<Talents>CombatReflexes,Etiquette(Any),FastShot,Reversal</Talents>
+					<Trappings>MainGauche?Sword-breaker,PistolWithGunpowderAndAmmunition</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Duelmaster</Title>
+					<AdvanceScheme>WS,I,Agi,BS,S</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Intimidate,Leadership,Melee(Basic),Perform(Acrobatics)</Skills>
+					<Talents>Ambidextrous,Disarm,DualWielder,Riposte</Talents>
+					<Trappings>QualityRapier,HandWeapon,TrustySecond,2WoodenTrainingSwords</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Judicial Champion</Title>
+					<AdvanceScheme>WS,I,Agi,BS,S,WP</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Law),Melee(Any)</Skills>
+					<Talents>CombatMaster,Menacing,ReactionStrike,StrikeToInjure</Talents>
+					<Trappings>2QualityWeapons</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Dwarf">
 		<Odds Lower="1" Upper="1">
@@ -1101,6 +1215,120 @@
 					<Skills>Lore(Politics),Ride(Horse)</Skills>
 					<Talents>PublicSpeaker,Robust,Kingpin,Schemer</Talents>
 					<Trappings>RidingHorseWithSaddleAndTack,QualityHat,QualityHandWeapon,QualitySymbolOfRank</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="35" Upper="36">
+			<Career>
+				<Name>Advisor</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Aide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,ConsumeAlcohol,Endurance,Gossip,Haggle,Language(Classical),Lore(Politics),Perception</Skills>
+					<Talents>BeneathNotice,Etiquette(Any),Gregarious,Read/Write</Talents>
+					<Trappings>WritingKit</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Advisor</Title>
+					<AdvanceScheme>T,I,Agi,Fel</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Charm,Cool,Evaluate,Gamble,Intuition,Lore(Local)</Skills>
+					<Talents>Blather,Criminal,Schemer,Supportive</Talents>
+					<Trappings>Livery</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Counsellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Entertain(Storytelling),Leadership,Language(Any),Lore(Any)</Skills>
+					<Talents>Argumentative,Briber,Carouser,Cat-tongued</Talents>
+					<Trappings>QualityClothing,Aide</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Chancellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int,WP</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Heraldry),Ride(Horse)</Skills>
+					<Talents>CommandingPresence,Embezzle,Kingpin,Suave</Talents>
+					<Trappings>RidingHorseWithSaddleAndHarness,QualityCourtlyGarb,StaffOfAdvisorsAndAides</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="37" Upper="37">
+			<Career>
+				<Name>Artist</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Apprentice Artist</Title>
+					<AdvanceScheme>S,I,Dex</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Art(Any),Cool,ConsumeAlcohol,Evaluate,Endurance,Gossip,Perception,Stealth(Urban)</Skills>
+					<Talents>Artistic,Sharp,StrongBack,Tenacious</Talents>
+					<Trappings>Brush?Chisel?QuillPen</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Gamble,Haggle,Intuition,Language(Classical),Trade(ArtSupplies)</Skills>
+					<Talents>Carouser,Criminal,Gregarious,NimbleFingered</Talents>
+					<Trappings>SlingBagContainingTradeTools(Artist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Leadership,Lore(Art),Lore(Heraldry)</Skills>
+					<Talents>AcuteSense(Any),Dealmaker,Etiquette(Any),NoseForTrouble</Talents>
+					<Trappings>Apprentice,Patron,Workshop(Artist)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Maestro</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Research,Ride(Horse)</Skills>
+					<Talents>Ambidextrous,Kingpin,MagnumOpus,Read/Write</Talents>
+					<Trappings>LargeWorkshop(Artist),Library(Art),3Apprentices</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="38" Upper="38">
+			<Career>
+				<Name>Duellist</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Fencer</Title>
+					<AdvanceScheme>WS,I,Agi</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Athletics,Dodge,Endurance,Heal,Intuition,Language(Classical),Melee(Any),Perception</Skills>
+					<Talents>BeatBlade,Distract,Feint,StepAside</Talents>
+					<Trappings>HandWeapon?Rapier,SlingBagContainingClothingAnd1D10Bandages</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Deullist</Title>
+					<AdvanceScheme>WS,I,Agi,BS</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Cool,Gamble,Melee(Parry),Ranged(Blackpowder),Trade(Gunsmith)</Skills>
+					<Talents>CombatReflexes,Etiquette(Any),FastShot,Reversal</Talents>
+					<Trappings>MainGauche?Sword-breaker,PistolWithGunpowderAndAmmunition</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Duelmaster</Title>
+					<AdvanceScheme>WS,I,Agi,BS,S</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Intimidate,Leadership,Melee(Basic),Perform(Acrobatics)</Skills>
+					<Talents>Ambidextrous,Disarm,DualWielder,Riposte</Talents>
+					<Trappings>QualityRapier,HandWeapon,TrustySecond,2WoodenTrainingSwords</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Judicial Champion</Title>
+					<AdvanceScheme>WS,I,Agi,BS,S,WP</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Law),Melee(Any)</Skills>
+					<Talents>CombatMaster,Menacing,ReactionStrike,StrikeToInjure</Talents>
+					<Trappings>2QualityWeapons</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -1600,6 +1828,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="34" Upper="34">
+			<Career>
+				<Name>Advisor</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Aide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,ConsumeAlcohol,Endurance,Gossip,Haggle,Language(Classical),Lore(Politics),Perception</Skills>
+					<Talents>BeneathNotice,Etiquette(Any),Gregarious,Read/Write</Talents>
+					<Trappings>WritingKit</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Advisor</Title>
+					<AdvanceScheme>T,I,Agi,Fel</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Charm,Cool,Evaluate,Gamble,Intuition,Lore(Local)</Skills>
+					<Talents>Blather,Criminal,Schemer,Supportive</Talents>
+					<Trappings>Livery</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Counsellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Entertain(Storytelling),Leadership,Language(Any),Lore(Any)</Skills>
+					<Talents>Argumentative,Briber,Carouser,Cat-tongued</Talents>
+					<Trappings>QualityClothing,Aide</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Chancellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int,WP</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Heraldry),Ride(Horse)</Skills>
+					<Talents>CommandingPresence,Embezzle,Kingpin,Suave</Talents>
+					<Trappings>RidingHorseWithSaddleAndHarness,QualityCourtlyGarb,StaffOfAdvisorsAndAides</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="35" Upper="36">
+			<Career>
+				<Name>Artist</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Apprentice Artist</Title>
+					<AdvanceScheme>S,I,Dex</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Art(Any),Cool,ConsumeAlcohol,Evaluate,Endurance,Gossip,Perception,Stealth(Urban)</Skills>
+					<Talents>Artistic,Sharp,StrongBack,Tenacious</Talents>
+					<Trappings>Brush?Chisel?QuillPen</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Gamble,Haggle,Intuition,Language(Classical),Trade(ArtSupplies)</Skills>
+					<Talents>Carouser,Criminal,Gregarious,NimbleFingered</Talents>
+					<Trappings>SlingBagContainingTradeTools(Artist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Leadership,Lore(Art),Lore(Heraldry)</Skills>
+					<Talents>AcuteSense(Any),Dealmaker,Etiquette(Any),NoseForTrouble</Talents>
+					<Trappings>Apprentice,Patron,Workshop(Artist)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Maestro</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Research,Ride(Horse)</Skills>
+					<Talents>Ambidextrous,Kingpin,MagnumOpus,Read/Write</Talents>
+					<Trappings>LargeWorkshop(Artist),Library(Art),3Apprentices</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -1982,6 +2286,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="30" Upper="31">
+			<Career>
+				<Name>Advisor</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Aide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,ConsumeAlcohol,Endurance,Gossip,Haggle,Language(Classical),Lore(Politics),Perception</Skills>
+					<Talents>BeneathNotice,Etiquette(Any),Gregarious,Read/Write</Talents>
+					<Trappings>WritingKit</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Advisor</Title>
+					<AdvanceScheme>T,I,Agi,Fel</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Charm,Cool,Evaluate,Gamble,Intuition,Lore(Local)</Skills>
+					<Talents>Blather,Criminal,Schemer,Supportive</Talents>
+					<Trappings>Livery</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Counsellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Entertain(Storytelling),Leadership,Language(Any),Lore(Any)</Skills>
+					<Talents>Argumentative,Briber,Carouser,Cat-tongued</Talents>
+					<Trappings>QualityClothing,Aide</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Chancellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int,WP</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Heraldry),Ride(Horse)</Skills>
+					<Talents>CommandingPresence,Embezzle,Kingpin,Suave</Talents>
+					<Trappings>RidingHorseWithSaddleAndHarness,QualityCourtlyGarb,StaffOfAdvisorsAndAides</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="32" Upper="32">
+			<Career>
+				<Name>Artist</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Apprentice Artist</Title>
+					<AdvanceScheme>S,I,Dex</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Art(Any),Cool,ConsumeAlcohol,Evaluate,Endurance,Gossip,Perception,Stealth(Urban)</Skills>
+					<Talents>Artistic,Sharp,StrongBack,Tenacious</Talents>
+					<Trappings>Brush?Chisel?QuillPen</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Gamble,Haggle,Intuition,Language(Classical),Trade(ArtSupplies)</Skills>
+					<Talents>Carouser,Criminal,Gregarious,NimbleFingered</Talents>
+					<Trappings>SlingBagContainingTradeTools(Artist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Leadership,Lore(Art),Lore(Heraldry)</Skills>
+					<Talents>AcuteSense(Any),Dealmaker,Etiquette(Any),NoseForTrouble</Talents>
+					<Trappings>Apprentice,Patron,Workshop(Artist)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Maestro</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Research,Ride(Horse)</Skills>
+					<Talents>Ambidextrous,Kingpin,MagnumOpus,Read/Write</Talents>
+					<Trappings>LargeWorkshop(Artist),Library(Art),3Apprentices</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="33" Upper="34">
+			<Career>
+				<Name>Duellist</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Fencer</Title>
+					<AdvanceScheme>WS,I,Agi</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Athletics,Dodge,Endurance,Heal,Intuition,Language(Classical),Melee(Any),Perception</Skills>
+					<Talents>BeatBlade,Distract,Feint,StepAside</Talents>
+					<Trappings>HandWeapon?Rapier,SlingBagContainingClothingAnd1D10Bandages</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Deullist</Title>
+					<AdvanceScheme>WS,I,Agi,BS</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Cool,Gamble,Melee(Parry),Ranged(Blackpowder),Trade(Gunsmith)</Skills>
+					<Talents>CombatReflexes,Etiquette(Any),FastShot,Reversal</Talents>
+					<Trappings>MainGauche?Sword-breaker,PistolWithGunpowderAndAmmunition</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Duelmaster</Title>
+					<AdvanceScheme>WS,I,Agi,BS,S</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Intimidate,Leadership,Melee(Basic),Perform(Acrobatics)</Skills>
+					<Talents>Ambidextrous,Disarm,DualWielder,Riposte</Talents>
+					<Trappings>QualityRapier,HandWeapon,TrustySecond,2WoodenTrainingSwords</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Judicial Champion</Title>
+					<AdvanceScheme>WS,I,Agi,BS,S,WP</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Law),Melee(Any)</Skills>
+					<Talents>CombatMaster,Menacing,ReactionStrike,StrikeToInjure</Talents>
+					<Trappings>2QualityWeapons</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="WoodElf">
 		<Odds Lower="1" Upper="1">
@@ -2095,6 +2513,82 @@
 					<Skills>Bribery,Intimidate</Skills>
 					<Talents>Briber,MagnumOpus,PublicSpeaker,Schemer</Talents>
 					<Trappings>Guild,QualityClothing</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="11" Upper="14">
+			<Career>
+				<Name>Advisor</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Aide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Bribery,ConsumeAlcohol,Endurance,Gossip,Haggle,Language(Classical),Lore(Politics),Perception</Skills>
+					<Talents>BeneathNotice,Etiquette(Any),Gregarious,Read/Write</Talents>
+					<Trappings>WritingKit</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Advisor</Title>
+					<AdvanceScheme>T,I,Agi,Fel</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Charm,Cool,Evaluate,Gamble,Intuition,Lore(Local)</Skills>
+					<Talents>Blather,Criminal,Schemer,Supportive</Talents>
+					<Trappings>Livery</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Counsellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Entertain(Storytelling),Leadership,Language(Any),Lore(Any)</Skills>
+					<Talents>Argumentative,Briber,Carouser,Cat-tongued</Talents>
+					<Trappings>QualityClothing,Aide</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Chancellor</Title>
+					<AdvanceScheme>T,I,Agi,Fel,Int,WP</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Lore(Heraldry),Ride(Horse)</Skills>
+					<Talents>CommandingPresence,Embezzle,Kingpin,Suave</Talents>
+					<Trappings>RidingHorseWithSaddleAndHarness,QualityCourtlyGarb,StaffOfAdvisorsAndAides</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="15" Upper="100">
+			<Career>
+				<Name>Artist</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Apprentice Artist</Title>
+					<AdvanceScheme>S,I,Dex</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Art(Any),Cool,ConsumeAlcohol,Evaluate,Endurance,Gossip,Perception,Stealth(Urban)</Skills>
+					<Talents>Artistic,Sharp,StrongBack,Tenacious</Talents>
+					<Trappings>Brush?Chisel?QuillPen</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Gamble,Haggle,Intuition,Language(Classical),Trade(ArtSupplies)</Skills>
+					<Talents>Carouser,Criminal,Gregarious,NimbleFingered</Talents>
+					<Trappings>SlingBagContainingTradeTools(Artist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Artist</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Leadership,Lore(Art),Lore(Heraldry)</Skills>
+					<Talents>AcuteSense(Any),Dealmaker,Etiquette(Any),NoseForTrouble</Talents>
+					<Trappings>Apprentice,Patron,Workshop(Artist)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Maestro</Title>
+					<AdvanceScheme>S,I,Dex,Fel,WP,Int</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Research,Ride(Horse)</Skills>
+					<Talents>Ambidextrous,Kingpin,MagnumOpus,Read/Write</Talents>
+					<Trappings>LargeWorkshop(Artist),Library(Art),3Apprentices</Trappings>
 				</Path4>
 			</Career>
 		</Odds>

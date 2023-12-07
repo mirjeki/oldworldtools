@@ -6,7 +6,6 @@
         public string Region { get; set; }
         public List<CharacteristicModifierDTO> CharacteristicsModifiers { get; set; }
         public WoundModifierDTO WoundModifier { get; set; }
-
         public int Fate { get; set; }
         public int Resilience { get; set; }
         public int ExtraPoints { get; set; }
