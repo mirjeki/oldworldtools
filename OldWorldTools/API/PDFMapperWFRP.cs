@@ -38,6 +38,25 @@ namespace OldWorldTools.API
                     fields.TryGetValue("Class", out toSet);
                     toSet.SetValue(characterSheet.Class);
 
+                    fields.TryGetValue("Fate", out toSet);
+                    toSet.SetValue(characterSheet.Fate.ToString());
+                    fields.TryGetValue("Fortune", out toSet);
+                    toSet.SetValue(characterSheet.Fortune.ToString());
+
+                    fields.TryGetValue("ResilienceRow1", out toSet);
+                    toSet.SetValue(characterSheet.Resilience.ToString());
+                    fields.TryGetValue("ResolveRow1", out toSet);
+                    toSet.SetValue(characterSheet.Resolve.ToString());
+                    fields.TryGetValue("MotivationRow1", out toSet);
+                    toSet.SetValue(characterSheet.Motivation);
+
+                    fields.TryGetValue("Movement", out toSet);
+                    toSet.SetValue(characterSheet.Movement.ToString());
+                    fields.TryGetValue("Walk", out toSet);
+                    toSet.SetValue(characterSheet.Walk.ToString());
+                    fields.TryGetValue("Run", out toSet);
+                    toSet.SetValue(characterSheet.Run.ToString());
+
                     for (int i = 0; i < characterSheet.Characteristics.Count; i++)
                     {
                         fields.TryGetValue($"{characterSheet.Characteristics[i].ShortName.ToString()}Initial", out toSet);
@@ -52,6 +71,8 @@ namespace OldWorldTools.API
 
                     foreach (var skill in characterSheet.SpeciesSkills)
                     {
+                        //the MapSkill method will increase the advSkillRow (as well as apply it to the field reference within the method)
+
                         advSkillRow = MapSkill(fields, skill, toSet, advSkillRow);
                     }
 
@@ -135,7 +156,7 @@ namespace OldWorldTools.API
                         toSet.SetValue(characterSkill.CurrentTotal().ToString());
                         break;
                     case "Melee":
-                        if (nameParts.Length > 1 && !nameParts[1].Contains("Melee"))
+                        if (nameParts.Length > 1 && !nameParts[1].Contains("Basic"))
                         {
                             fields.TryGetValue($"{nameParts[0]}Group", out toSet);
                             toSet.SetValue(nameParts[1]);

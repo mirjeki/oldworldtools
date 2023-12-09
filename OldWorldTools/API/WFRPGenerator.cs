@@ -24,9 +24,11 @@ namespace OldWorldTools.API
         public const string speciesXMLSRC = "Resources/Species/Species.xml";
         public const string skillsXMLSRC = "Resources/Skills/Skills.xml";
         public const string talentsXMLSRC = "Resources/Talents/Talents.xml";
+        public const string motivationsXMLSRC = "Resources/Motivations/Motivations.xml";
         public const string careersXMLSRC = "Resources/Careers/Careers.xml";
 
         public const string characterDefinitionsDB = "Data/WFRPCharacterDefinitions.db";
+        public const string characterFluffDB = "Data/WFRPCharacterFluff.db";
         public const string characterNamesDB = "Data/WFRPCharacterNames.db";
         static Random random = new Random();
 
@@ -41,6 +43,7 @@ namespace OldWorldTools.API
             ImportCharacterCareers("WoodElf");
             ImportCharacterSkills();
             ImportCharacterTalents();
+            ImportCharacterMotivations();
 
             SetupCharacteristics();
         }
@@ -59,6 +62,7 @@ namespace OldWorldTools.API
             };
 
             characterSheet.Characteristics = GetCharacteristics();
+            characterSheet.Motivation = RandomiseMotivation();
 
             characterSheet.Characteristics = RandomiseCharacteristics(characterSheet);
             characterSheet = MapCareerToCharacterSheet(RandomiseCareer(SpeciesEnum.Human), characterSheet, TierEnum.Tier1);
@@ -67,6 +71,13 @@ namespace OldWorldTools.API
             characterSheet = MapCareerSkillsToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
 
             return characterSheet;
+        }
+
+        public string RandomiseMotivation()
+        {
+            var motivations = GetMotivations();
+
+            return motivations[random.Next(0, motivations.Count)].Name;
         }
 
         public CharacterSheet RandomiseCharacterName(CharacterSheet characterSheet)
@@ -146,6 +157,16 @@ namespace OldWorldTools.API
             var allSkills = GetSkills();
 
             var speciesModifiers = GetSpeciesModifiersByRegion(characterSheet.Region);
+
+            characterSheet.Movement = speciesModifiers.Movement;
+            characterSheet.Walk = characterSheet.Movement * 2;
+            characterSheet.Run = characterSheet.Movement * 4;
+
+            characterSheet.Fate = speciesModifiers.Fate;
+            characterSheet.Fortune = characterSheet.Fate;
+
+            characterSheet.Resilience = speciesModifiers.Resilience;
+            characterSheet.Resolve = characterSheet.Resilience;
 
             var speciesSkillsRaw = SeparateAndFormatCSV(speciesModifiers.StartingSkills);
 
@@ -533,6 +554,16 @@ namespace OldWorldTools.API
                 ILiteCollection<SkillDTO> skillDTOs = database.GetCollection<SkillDTO>();
 
                 return skillDTOs.FindAll().ToList();
+            }
+        }
+
+        public List<MotivationDTO> GetMotivations()
+        {
+            using (var database = new LiteDatabase(characterFluffDB))
+            {
+                ILiteCollection<MotivationDTO> motivations = database.GetCollection<MotivationDTO>();
+
+                return motivations.FindAll().ToList();
             }
         }
 
@@ -1085,6 +1116,27 @@ namespace OldWorldTools.API
                 }
 
                 talents.Insert(talentsToAdd);
+            }
+        }
+
+        private void ImportCharacterMotivations()
+        {
+            using (var database = new LiteDatabase(characterFluffDB))
+            {
+                ILiteCollection<MotivationDTO> motivations = database.GetCollection<MotivationDTO>();
+                //clear DB for fresh import
+                motivations.DeleteAll();
+
+                List<MotivationDTO> motivationsToAdd = new List<MotivationDTO>();
+
+                MotivationCollection motivationsCollection = DeserializeXMLFileToObject<MotivationCollection>(motivationsXMLSRC);
+
+                foreach (var motivation in motivationsCollection.Motivations)
+                {
+                    motivationsToAdd.Add(new MotivationDTO { Name = motivation });
+                }
+
+                motivations.Insert(motivationsToAdd);
             }
         }
 

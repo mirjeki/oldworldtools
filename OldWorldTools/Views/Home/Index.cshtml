@@ -18,12 +18,33 @@
 @using (Html.BeginForm("GenerateCharacter", "Home", FormMethod.Post))
 {
     <div>
+        @*Hidden fields for values which aren't shown on page*@
+        <span style="display:none;">@Html.TextBoxFor(model => model.Movement)</span>
+        <span style="display:none;">@Html.TextBoxFor(model => model.Walk)</span>
+        <span style="display:none;">@Html.TextBoxFor(model => model.Run)</span>
+        <span style="display:none;">@Html.TextBoxFor(model => model.Fate)</span>
+        <span style="display:none;">@Html.TextBoxFor(model => model.Fortune)</span>
+        <span style="display:none;">@Html.TextBoxFor(model => model.Resilience)</span>
+        <span style="display:none;">@Html.TextBoxFor(model => model.Resolve)</span>
+        @*Hidden fields for values which aren't shown on page*@
+    </div>
+    <div>
         <span><button type="submit" name="submitButton" value="RandomiseName">Randomise Name</button></span>
         <div>
             @Html.LabelFor(model => model.Name)
         </div>
         <div>
             @Html.TextBoxFor(model => model.Name, new { style="width:250px;" })
+        </div>
+    </div>
+
+    <div>
+        <span><button type="submit" name="submitButton" value="RandomiseMotivation">Randomise Motivation</button></span>
+        <div>
+            @Html.LabelFor(model => model.Motivation)
+        </div>
+        <div>
+            @Html.TextBoxFor(model => model.Motivation, new { style="width:250px;" })
         </div>
     </div>
 

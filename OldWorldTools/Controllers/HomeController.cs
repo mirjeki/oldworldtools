@@ -47,6 +47,10 @@ namespace OldWorldTools.Controllers
                     characterSheet = generator.RandomiseCharacterName(characterSheet);
 
                     return View("Index", characterSheet);
+                case "RandomiseMotivation":
+                    characterSheet.Motivation = generator.RandomiseMotivation();
+
+                    return View("Index", characterSheet);
                 case "RandomiseGender":
                     characterSheet.Gender = generator.RandomiseGender();
 

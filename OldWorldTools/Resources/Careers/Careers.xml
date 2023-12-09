@@ -697,7 +697,7 @@
 					<Trappings>HandWeapon?Rapier,SlingBagContainingClothingAnd1D10Bandages</Trappings>
 				</Path1>
 				<Path2>
-					<Title>Deullist</Title>
+					<Title>Duellist</Title>
 					<AdvanceScheme>WS,I,Agi,BS</AdvanceScheme>
 					<Status>Silver 5</Status>
 					<Skills>Charm,Cool,Gamble,Melee(Parry),Ranged(Blackpowder),Trade(Gunsmith)</Skills>
@@ -719,6 +719,120 @@
 					<Skills>Lore(Law),Melee(Any)</Skills>
 					<Talents>CombatMaster,Menacing,ReactionStrike,StrikeToInjure</Talents>
 					<Trappings>2QualityWeapons</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="31" Upper="31">
+			<Career>
+				<Name>Envoy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Herald</Title>
+					<AdvanceScheme>T,Agi,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Athletics,Charm,Drive,Dodge,Endurance,Intuition,Ride(Horse),Row</Skills>
+					<Talents>Blather,Etiquette(Nobles),Read/Write,Suave</Talents>
+					<Trappings>LeatherJack,Livery,ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Envoy</Title>
+					<AdvanceScheme>T,Agi,Fel,Int</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Art(Writing),Bribery,Cool,Gossip,Haggle,Lore(Politics)</Skills>
+					<Talents>Attractive,Cat-tongued,Etiquette(Any),SeasonedTraveller</Talents>
+					<Trappings>QuillAndInk,10SheetsOfParchment</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Diplomat</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Intimidate,Language(Any),Leadership,Navigation</Skills>
+					<Talents>Carouser,Dealmaker,Gregarious,Schemer</Talents>
+					<Trappings>Aide,QualityClothing,Map</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Ambassador</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I,WP</AdvanceScheme>
+					<Status>Gold 5</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>Briber,CommandingPresence,NobleBlood,Savvy</Talents>
+					<Trappings>Aide,BestQualityCourtlyClothing,StaffOfDiplomats,Herald</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="32" Upper="32">
+			<Career>
+				<Name>Noble</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Scion</Title>
+					<AdvanceScheme>WS,I,Dex</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,ConsumeAlcohol,Gamble,Intimidate,Leadership,Lore(Heraldry),Melee(Fencing),Play(Any)</Skills>
+					<Talents>Etiquette(Nobles),Luck,NobleBlood,Read/Write</Talents>
+					<Trappings>CourtlyGarb,Foil?HandMirror,JewelleryWorth3D10GoldCoins,PersonalServant</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Noble</Title>
+					<AdvanceScheme>WS,I,Dex,Fel</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Charm,Gossip,Language(Classical),Lore(Local),Ride(Horse),Melee(Parry)</Skills>
+					<Talents>Attractive,Briber,Carouser,Suave</Talents>
+					<Trappings>4HouseholdServants,QualityCourtlyGarb,CourtlyGarb,RidingHorseWithSaddleAndHarness?Coach,MainGauche?QualityCloak,JewelleryWorth50GoldCrowns</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Magnate</Title>
+					<AdvanceScheme>WS,I,Dex,Fel,Int</AdvanceScheme>
+					<Status>Gold 5</Status>
+					<Skills>Language(Any),Intuition,Lore(Politics),Perception</Skills>
+					<Talents>Coolheaded,Dealmaker,PublicSpeaker,Schemer</Talents>
+					<Trappings>2SetsOfQualityCourtlyGarb,200GoldCrowns,Fiefdom,JewelleryWorth200GoldCrowns,SignetRing</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Noble Lord</Title>
+					<AdvanceScheme>WS,I,Dex,Fel,Int,WP</AdvanceScheme>
+					<Status>Gold 7</Status>
+					<Skills>Lore(Any),Track</Skills>
+					<Talents>CommandingPresence,IronWill,Warleader,Wealthy</Talents>
+					<Trappings>4SetsOfBestQualityCourtlyGarb,QualityFoil?HandMirror,500GoldCrowns,JewelleryWorth500GoldCrowns,Province</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="33" Upper="35">
+			<Career>
+				<Name>Servant</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Menial</Title>
+					<AdvanceScheme>S,T,Agi</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Athletics,Climb,Drive,Dodge,Endurance,Intuition,Perception,Stealth(Any)</Skills>
+					<Talents>BeneathNotice,StrongBack,Strong-minded,Sturdy</Talents>
+					<Trappings>FloorBrush</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Servant</Title>
+					<AdvanceScheme>S,T,Agi,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,ConsumeAlcohol,Evaluate,Gamble,Gossip,Haggle</Skills>
+					<Talents>Etiquette(Servants),Shadow,Tenacious,Well-prepared</Talents>
+					<Trappings>Livery</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Attendant</Title>
+					<AdvanceScheme>S,T,Agi,I,Int</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Cool,Intimidate,Lore(Local)</Skills>
+					<Talents>Embezzle,Resistance(Poison),Suave,Supportive</Talents>
+					<Trappings>QualityLivery,StormLantern,Tinderbox,LampOil</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Steward</Title>
+					<AdvanceScheme>S,T,Agi,I,Int,Fel</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Leadership,Melee(Basic)</Skills>
+					<Talents>Etiquette(Any),Numismatics,Read/Write,Savvy</Talents>
+					<Trappings>HandWeapon,FineClothing,Servant</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -1307,7 +1421,7 @@
 					<Trappings>HandWeapon?Rapier,SlingBagContainingClothingAnd1D10Bandages</Trappings>
 				</Path1>
 				<Path2>
-					<Title>Deullist</Title>
+					<Title>Duellist</Title>
 					<AdvanceScheme>WS,I,Agi,BS</AdvanceScheme>
 					<Status>Silver 5</Status>
 					<Skills>Charm,Cool,Gamble,Melee(Parry),Ranged(Blackpowder),Trade(Gunsmith)</Skills>
@@ -1329,6 +1443,120 @@
 					<Skills>Lore(Law),Melee(Any)</Skills>
 					<Talents>CombatMaster,Menacing,ReactionStrike,StrikeToInjure</Talents>
 					<Trappings>2QualityWeapons</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="39" Upper="40">
+			<Career>
+				<Name>Envoy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Herald</Title>
+					<AdvanceScheme>T,Agi,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Athletics,Charm,Drive,Dodge,Endurance,Intuition,Ride(Horse),Row</Skills>
+					<Talents>Blather,Etiquette(Nobles),Read/Write,Suave</Talents>
+					<Trappings>LeatherJack,Livery,ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Envoy</Title>
+					<AdvanceScheme>T,Agi,Fel,Int</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Art(Writing),Bribery,Cool,Gossip,Haggle,Lore(Politics)</Skills>
+					<Talents>Attractive,Cat-tongued,Etiquette(Any),SeasonedTraveller</Talents>
+					<Trappings>QuillAndInk,10SheetsOfParchment</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Diplomat</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Intimidate,Language(Any),Leadership,Navigation</Skills>
+					<Talents>Carouser,Dealmaker,Gregarious,Schemer</Talents>
+					<Trappings>Aide,QualityClothing,Map</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Ambassador</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I,WP</AdvanceScheme>
+					<Status>Gold 5</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>Briber,CommandingPresence,NobleBlood,Savvy</Talents>
+					<Trappings>Aide,BestQualityCourtlyClothing,StaffOfDiplomats,Herald</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="41" Upper="41">
+			<Career>
+				<Name>Noble</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Scion</Title>
+					<AdvanceScheme>WS,I,Dex</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,ConsumeAlcohol,Gamble,Intimidate,Leadership,Lore(Heraldry),Melee(Fencing),Play(Any)</Skills>
+					<Talents>Etiquette(Nobles),Luck,NobleBlood,Read/Write</Talents>
+					<Trappings>CourtlyGarb,Foil?HandMirror,JewelleryWorth3D10GoldCoins,PersonalServant</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Noble</Title>
+					<AdvanceScheme>WS,I,Dex,Fel</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Charm,Gossip,Language(Classical),Lore(Local),Ride(Horse),Melee(Parry)</Skills>
+					<Talents>Attractive,Briber,Carouser,Suave</Talents>
+					<Trappings>4HouseholdServants,QualityCourtlyGarb,CourtlyGarb,RidingHorseWithSaddleAndHarness?Coach,MainGauche?QualityCloak,JewelleryWorth50GoldCrowns</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Magnate</Title>
+					<AdvanceScheme>WS,I,Dex,Fel,Int</AdvanceScheme>
+					<Status>Gold 5</Status>
+					<Skills>Language(Any),Intuition,Lore(Politics),Perception</Skills>
+					<Talents>Coolheaded,Dealmaker,PublicSpeaker,Schemer</Talents>
+					<Trappings>2SetsOfQualityCourtlyGarb,200GoldCrowns,Fiefdom,JewelleryWorth200GoldCrowns,SignetRing</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Noble Lord</Title>
+					<AdvanceScheme>WS,I,Dex,Fel,Int,WP</AdvanceScheme>
+					<Status>Gold 7</Status>
+					<Skills>Lore(Any),Track</Skills>
+					<Talents>CommandingPresence,IronWill,Warleader,Wealthy</Talents>
+					<Trappings>4SetsOfBestQualityCourtlyGarb,QualityFoil?HandMirror,500GoldCrowns,JewelleryWorth500GoldCrowns,Province</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="42" Upper="42">
+			<Career>
+				<Name>Servant</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Menial</Title>
+					<AdvanceScheme>S,T,Agi</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Athletics,Climb,Drive,Dodge,Endurance,Intuition,Perception,Stealth(Any)</Skills>
+					<Talents>BeneathNotice,StrongBack,Strong-minded,Sturdy</Talents>
+					<Trappings>FloorBrush</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Servant</Title>
+					<AdvanceScheme>S,T,Agi,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,ConsumeAlcohol,Evaluate,Gamble,Gossip,Haggle</Skills>
+					<Talents>Etiquette(Servants),Shadow,Tenacious,Well-prepared</Talents>
+					<Trappings>Livery</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Attendant</Title>
+					<AdvanceScheme>S,T,Agi,I,Int</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Cool,Intimidate,Lore(Local)</Skills>
+					<Talents>Embezzle,Resistance(Poison),Suave,Supportive</Talents>
+					<Trappings>QualityLivery,StormLantern,Tinderbox,LampOil</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Steward</Title>
+					<AdvanceScheme>S,T,Agi,I,Int,Fel</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Leadership,Melee(Basic)</Skills>
+					<Talents>Etiquette(Any),Numismatics,Read/Write,Savvy</Talents>
+					<Trappings>HandWeapon,FineClothing,Servant</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -1904,6 +2132,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="37" Upper="37">
+			<Career>
+				<Name>Envoy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Herald</Title>
+					<AdvanceScheme>T,Agi,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Athletics,Charm,Drive,Dodge,Endurance,Intuition,Ride(Horse),Row</Skills>
+					<Talents>Blather,Etiquette(Nobles),Read/Write,Suave</Talents>
+					<Trappings>LeatherJack,Livery,ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Envoy</Title>
+					<AdvanceScheme>T,Agi,Fel,Int</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Art(Writing),Bribery,Cool,Gossip,Haggle,Lore(Politics)</Skills>
+					<Talents>Attractive,Cat-tongued,Etiquette(Any),SeasonedTraveller</Talents>
+					<Trappings>QuillAndInk,10SheetsOfParchment</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Diplomat</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Intimidate,Language(Any),Leadership,Navigation</Skills>
+					<Talents>Carouser,Dealmaker,Gregarious,Schemer</Talents>
+					<Trappings>Aide,QualityClothing,Map</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Ambassador</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I,WP</AdvanceScheme>
+					<Status>Gold 5</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>Briber,CommandingPresence,NobleBlood,Savvy</Talents>
+					<Trappings>Aide,BestQualityCourtlyClothing,StaffOfDiplomats,Herald</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="38" Upper="43">
+			<Career>
+				<Name>Servant</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Menial</Title>
+					<AdvanceScheme>S,T,Agi</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Athletics,Climb,Drive,Dodge,Endurance,Intuition,Perception,Stealth(Any)</Skills>
+					<Talents>BeneathNotice,StrongBack,Strong-minded,Sturdy</Talents>
+					<Trappings>FloorBrush</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Servant</Title>
+					<AdvanceScheme>S,T,Agi,I</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,ConsumeAlcohol,Evaluate,Gamble,Gossip,Haggle</Skills>
+					<Talents>Etiquette(Servants),Shadow,Tenacious,Well-prepared</Talents>
+					<Trappings>Livery</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Attendant</Title>
+					<AdvanceScheme>S,T,Agi,I,Int</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Cool,Intimidate,Lore(Local)</Skills>
+					<Talents>Embezzle,Resistance(Poison),Suave,Supportive</Talents>
+					<Trappings>QualityLivery,StormLantern,Tinderbox,LampOil</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Steward</Title>
+					<AdvanceScheme>S,T,Agi,I,Int,Fel</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Leadership,Melee(Basic)</Skills>
+					<Talents>Etiquette(Any),Numismatics,Read/Write,Savvy</Talents>
+					<Trappings>HandWeapon,FineClothing,Servant</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -2375,7 +2679,7 @@
 					<Trappings>HandWeapon?Rapier,SlingBagContainingClothingAnd1D10Bandages</Trappings>
 				</Path1>
 				<Path2>
-					<Title>Deullist</Title>
+					<Title>Duellist</Title>
 					<AdvanceScheme>WS,I,Agi,BS</AdvanceScheme>
 					<Status>Silver 5</Status>
 					<Skills>Charm,Cool,Gamble,Melee(Parry),Ranged(Blackpowder),Trade(Gunsmith)</Skills>
@@ -2397,6 +2701,82 @@
 					<Skills>Lore(Law),Melee(Any)</Skills>
 					<Talents>CombatMaster,Menacing,ReactionStrike,StrikeToInjure</Talents>
 					<Trappings>2QualityWeapons</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="35" Upper="37">
+			<Career>
+				<Name>Envoy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Herald</Title>
+					<AdvanceScheme>T,Agi,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Athletics,Charm,Drive,Dodge,Endurance,Intuition,Ride(Horse),Row</Skills>
+					<Talents>Blather,Etiquette(Nobles),Read/Write,Suave</Talents>
+					<Trappings>LeatherJack,Livery,ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Envoy</Title>
+					<AdvanceScheme>T,Agi,Fel,Int</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Art(Writing),Bribery,Cool,Gossip,Haggle,Lore(Politics)</Skills>
+					<Talents>Attractive,Cat-tongued,Etiquette(Any),SeasonedTraveller</Talents>
+					<Trappings>QuillAndInk,10SheetsOfParchment</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Diplomat</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Intimidate,Language(Any),Leadership,Navigation</Skills>
+					<Talents>Carouser,Dealmaker,Gregarious,Schemer</Talents>
+					<Trappings>Aide,QualityClothing,Map</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Ambassador</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I,WP</AdvanceScheme>
+					<Status>Gold 5</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>Briber,CommandingPresence,NobleBlood,Savvy</Talents>
+					<Trappings>Aide,BestQualityCourtlyClothing,StaffOfDiplomats,Herald</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="38" Upper="40">
+			<Career>
+				<Name>Noble</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Scion</Title>
+					<AdvanceScheme>WS,I,Dex</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,ConsumeAlcohol,Gamble,Intimidate,Leadership,Lore(Heraldry),Melee(Fencing),Play(Any)</Skills>
+					<Talents>Etiquette(Nobles),Luck,NobleBlood,Read/Write</Talents>
+					<Trappings>CourtlyGarb,Foil?HandMirror,JewelleryWorth3D10GoldCoins,PersonalServant</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Noble</Title>
+					<AdvanceScheme>WS,I,Dex,Fel</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Charm,Gossip,Language(Classical),Lore(Local),Ride(Horse),Melee(Parry)</Skills>
+					<Talents>Attractive,Briber,Carouser,Suave</Talents>
+					<Trappings>4HouseholdServants,QualityCourtlyGarb,CourtlyGarb,RidingHorseWithSaddleAndHarness?Coach,MainGauche?QualityCloak,JewelleryWorth50GoldCrowns</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Magnate</Title>
+					<AdvanceScheme>WS,I,Dex,Fel,Int</AdvanceScheme>
+					<Status>Gold 5</Status>
+					<Skills>Language(Any),Intuition,Lore(Politics),Perception</Skills>
+					<Talents>Coolheaded,Dealmaker,PublicSpeaker,Schemer</Talents>
+					<Trappings>2SetsOfQualityCourtlyGarb,200GoldCrowns,Fiefdom,JewelleryWorth200GoldCrowns,SignetRing</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Noble Lord</Title>
+					<AdvanceScheme>WS,I,Dex,Fel,Int,WP</AdvanceScheme>
+					<Status>Gold 7</Status>
+					<Skills>Lore(Any),Track</Skills>
+					<Talents>CommandingPresence,IronWill,Warleader,Wealthy</Talents>
+					<Trappings>4SetsOfBestQualityCourtlyGarb,QualityFoil?HandMirror,500GoldCrowns,JewelleryWorth500GoldCrowns,Province</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
@@ -2554,7 +2934,7 @@
 				</Path4>
 			</Career>
 		</Odds>
-		<Odds Lower="15" Upper="100">
+		<Odds Lower="15" Upper="18">
 			<Career>
 				<Name>Artist</Name>
 				<Class>Courtier</Class>
@@ -2589,6 +2969,82 @@
 					<Skills>Research,Ride(Horse)</Skills>
 					<Talents>Ambidextrous,Kingpin,MagnumOpus,Read/Write</Talents>
 					<Trappings>LargeWorkshop(Artist),Library(Art),3Apprentices</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="19" Upper="25">
+			<Career>
+				<Name>Envoy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Herald</Title>
+					<AdvanceScheme>T,Agi,Fel</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Athletics,Charm,Drive,Dodge,Endurance,Intuition,Ride(Horse),Row</Skills>
+					<Talents>Blather,Etiquette(Nobles),Read/Write,Suave</Talents>
+					<Trappings>LeatherJack,Livery,ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Envoy</Title>
+					<AdvanceScheme>T,Agi,Fel,Int</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Art(Writing),Bribery,Cool,Gossip,Haggle,Lore(Politics)</Skills>
+					<Talents>Attractive,Cat-tongued,Etiquette(Any),SeasonedTraveller</Talents>
+					<Trappings>QuillAndInk,10SheetsOfParchment</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Diplomat</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I</AdvanceScheme>
+					<Status>Gold 2</Status>
+					<Skills>Intimidate,Language(Any),Leadership,Navigation</Skills>
+					<Talents>Carouser,Dealmaker,Gregarious,Schemer</Talents>
+					<Trappings>Aide,QualityClothing,Map</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Ambassador</Title>
+					<AdvanceScheme>T,Agi,Fel,Int,I,WP</AdvanceScheme>
+					<Status>Gold 5</Status>
+					<Skills>Language(Any),Lore(Any)</Skills>
+					<Talents>Briber,CommandingPresence,NobleBlood,Savvy</Talents>
+					<Trappings>Aide,BestQualityCourtlyClothing,StaffOfDiplomats,Herald</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="26" Upper="31">
+			<Career>
+				<Name>Noble</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Scion</Title>
+					<AdvanceScheme>WS,I,Dex</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,ConsumeAlcohol,Gamble,Intimidate,Leadership,Lore(Heraldry),Melee(Fencing),Play(Any)</Skills>
+					<Talents>Etiquette(Nobles),Luck,NobleBlood,Read/Write</Talents>
+					<Trappings>CourtlyGarb,Foil?HandMirror,JewelleryWorth3D10GoldCoins,PersonalServant</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Noble</Title>
+					<AdvanceScheme>WS,I,Dex,Fel</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Charm,Gossip,Language(Classical),Lore(Local),Ride(Horse),Melee(Parry)</Skills>
+					<Talents>Attractive,Briber,Carouser,Suave</Talents>
+					<Trappings>4HouseholdServants,QualityCourtlyGarb,CourtlyGarb,RidingHorseWithSaddleAndHarness?Coach,MainGauche?QualityCloak,JewelleryWorth50GoldCrowns</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Magnate</Title>
+					<AdvanceScheme>WS,I,Dex,Fel,Int</AdvanceScheme>
+					<Status>Gold 5</Status>
+					<Skills>Language(Any),Intuition,Lore(Politics),Perception</Skills>
+					<Talents>Coolheaded,Dealmaker,PublicSpeaker,Schemer</Talents>
+					<Trappings>2SetsOfQualityCourtlyGarb,200GoldCrowns,Fiefdom,JewelleryWorth200GoldCrowns,SignetRing</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Noble Lord</Title>
+					<AdvanceScheme>WS,I,Dex,Fel,Int,WP</AdvanceScheme>
+					<Status>Gold 7</Status>
+					<Skills>Lore(Any),Track</Skills>
+					<Talents>CommandingPresence,IronWill,Warleader,Wealthy</Talents>
+					<Trappings>4SetsOfBestQualityCourtlyGarb,QualityFoil?HandMirror,500GoldCrowns,JewelleryWorth500GoldCrowns,Province</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
