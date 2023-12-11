@@ -25,6 +25,8 @@ namespace OldWorldTools.API
         public const string skillsXMLSRC = "Resources/Skills/Skills.xml";
         public const string talentsXMLSRC = "Resources/Talents/Talents.xml";
         public const string motivationsXMLSRC = "Resources/Motivations/Motivations.xml";
+        public const string shortTermAmbitionsXMLSRC = "Resources/Ambitions/ShortTermAmbitions.xml";
+        public const string longTermAmbitionsXMLSRC = "Resources/Ambitions/LongTermAmbitions.xml";
         public const string careersXMLSRC = "Resources/Careers/Careers.xml";
 
         public const string characterDefinitionsDB = "Data/WFRPCharacterDefinitions.db";
@@ -44,6 +46,8 @@ namespace OldWorldTools.API
             ImportCharacterSkills();
             ImportCharacterTalents();
             ImportCharacterMotivations();
+            ImportCharacterShortTermAmbitions();
+            ImportCharacterLongTermAmbitions();
 
             SetupCharacteristics();
         }
@@ -63,6 +67,8 @@ namespace OldWorldTools.API
 
             characterSheet.Characteristics = GetCharacteristics();
             characterSheet.Motivation = RandomiseMotivation();
+            characterSheet.ShortTermAmbition = RandomiseShortTermAmbition();
+            characterSheet.LongTermAmbition = RandomiseLongTermAmbition();
 
             characterSheet.Characteristics = RandomiseCharacteristics(characterSheet);
             characterSheet = MapCareerToCharacterSheet(RandomiseCareer(SpeciesEnum.Human), characterSheet, TierEnum.Tier1);
@@ -78,6 +84,20 @@ namespace OldWorldTools.API
             var motivations = GetMotivations();
 
             return motivations[random.Next(0, motivations.Count)].Name;
+        }
+
+        public string RandomiseShortTermAmbition()
+        {
+            var ambitions = GetShortTermAmbitions();
+
+            return ambitions[random.Next(0, ambitions.Count)].Description;
+        }
+
+        public string RandomiseLongTermAmbition()
+        {
+            var ambitions = GetLongTermAmbitions();
+
+            return ambitions[random.Next(0, ambitions.Count)].Description;
         }
 
         public CharacterSheet RandomiseCharacterName(CharacterSheet characterSheet)
@@ -564,6 +584,26 @@ namespace OldWorldTools.API
                 ILiteCollection<MotivationDTO> motivations = database.GetCollection<MotivationDTO>();
 
                 return motivations.FindAll().ToList();
+            }
+        }
+
+        public List<AmbitionDTO> GetShortTermAmbitions()
+        {
+            using (var database = new LiteDatabase(characterFluffDB))
+            {
+                ILiteCollection<AmbitionDTO> ambitions = database.GetCollection<AmbitionDTO>("ShortTermAmbitions");
+
+                return ambitions.FindAll().ToList();
+            }
+        }
+
+        public List<AmbitionDTO> GetLongTermAmbitions()
+        {
+            using (var database = new LiteDatabase(characterFluffDB))
+            {
+                ILiteCollection<AmbitionDTO> ambitions = database.GetCollection<AmbitionDTO>("LongTermAmbitions");
+
+                return ambitions.FindAll().ToList();
             }
         }
 
@@ -1137,6 +1177,48 @@ namespace OldWorldTools.API
                 }
 
                 motivations.Insert(motivationsToAdd);
+            }
+        }
+
+        private void ImportCharacterShortTermAmbitions()
+        {
+            using (var database = new LiteDatabase(characterFluffDB))
+            {
+                ILiteCollection<AmbitionDTO> ambitions = database.GetCollection<AmbitionDTO>("ShortTermAmbitions");
+                //clear DB for fresh import
+                ambitions.DeleteAll();
+
+                List<AmbitionDTO> ambitionsToAdd = new List<AmbitionDTO>();
+
+                AmbitionCollection ambitionsCollection = DeserializeXMLFileToObject<AmbitionCollection>(shortTermAmbitionsXMLSRC);
+
+                foreach (var ambition in ambitionsCollection.Ambitions)
+                {
+                    ambitionsToAdd.Add(new AmbitionDTO { Description = ambition });
+                }
+
+                ambitions.Insert(ambitionsToAdd);
+            }
+        }
+
+        private void ImportCharacterLongTermAmbitions()
+        {
+            using (var database = new LiteDatabase(characterFluffDB))
+            {
+                ILiteCollection<AmbitionDTO> ambitions = database.GetCollection<AmbitionDTO>("LongTermAmbitions");
+                //clear DB for fresh import
+                ambitions.DeleteAll();
+
+                List<AmbitionDTO> ambitionsToAdd = new List<AmbitionDTO>();
+
+                AmbitionCollection ambitionsCollection = DeserializeXMLFileToObject<AmbitionCollection>(longTermAmbitionsXMLSRC);
+
+                foreach (var ambition in ambitionsCollection.Ambitions)
+                {
+                    ambitionsToAdd.Add(new AmbitionDTO { Description = ambition });
+                }
+
+                ambitions.Insert(ambitionsToAdd);
             }
         }
 

@@ -49,6 +49,26 @@
     </div>
 
     <div>
+        <span><button type="submit" name="submitButton" value="RandomiseShortTermAmbition">Randomise Short Term Ambition</button></span>
+        <div>
+            @Html.LabelFor(model => model.ShortTermAmbition)
+        </div>
+        <div>
+            @Html.TextBoxFor(model => model.ShortTermAmbition, new { style="width:250px;" })
+        </div>
+    </div>
+
+    <div>
+        <span><button type="submit" name="submitButton" value="RandomiseLongTermAmbition">Randomise Long Term Ambition</button></span>
+        <div>
+            @Html.LabelFor(model => model.LongTermAmbition)
+        </div>
+        <div>
+            @Html.TextBoxFor(model => model.LongTermAmbition, new { style="width:250px;" })
+        </div>
+    </div>
+
+    <div>
         <span><button type="submit" name="submitButton" value="RandomiseGender">Randomise Gender</button></span>
         <div>
             @Html.LabelFor(model => model.Gender)

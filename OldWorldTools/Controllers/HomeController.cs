@@ -51,6 +51,14 @@ namespace OldWorldTools.Controllers
                     characterSheet.Motivation = generator.RandomiseMotivation();
 
                     return View("Index", characterSheet);
+                case "RandomiseShortTermAmbition":
+                    characterSheet.ShortTermAmbition = generator.RandomiseShortTermAmbition();
+
+                    return View("Index", characterSheet);
+                case "RandomiseLongTermAmbition":
+                    characterSheet.LongTermAmbition = generator.RandomiseLongTermAmbition();
+
+                    return View("Index", characterSheet);
                 case "RandomiseGender":
                     characterSheet.Gender = generator.RandomiseGender();
 

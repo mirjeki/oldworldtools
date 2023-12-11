@@ -50,6 +50,12 @@ namespace OldWorldTools.API
                     fields.TryGetValue("MotivationRow1", out toSet);
                     toSet.SetValue(characterSheet.Motivation);
 
+                    fields.TryGetValue("AmbitionsShortTerm", out toSet);
+                    toSet.SetValue(characterSheet.ShortTermAmbition);
+
+                    fields.TryGetValue("AmbitionsLongTerm", out toSet);
+                    toSet.SetValue(characterSheet.LongTermAmbition);
+
                     fields.TryGetValue("Movement", out toSet);
                     toSet.SetValue(characterSheet.Movement.ToString());
                     fields.TryGetValue("Walk", out toSet);

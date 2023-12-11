@@ -836,6 +836,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="36" Upper="36">
+			<Career>
+				<Name>Spy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Informer</Title>
+					<AdvanceScheme>Agi,WP,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Bribery,Charm,Cool,Gamble,Gossip,Haggle,Perception,Stealth(Any)</Skills>
+					<Talents>Blather,Carouser,Gregarious,Shadow</Talents>
+					<Trappings>CharcoalStick,SlingBagContaining2DifferentSetsOfClothingAndHoodedCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Spy</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Entertain(Act),Intuition,Melee(Basic),SecretSigns(Any),SleightOfHand</Skills>
+					<Talents>Etiquette(Any),LipReading,Read/Write,SecretIdentity</Talents>
+					<Trappings>Informer,HandWeapon,DisguiseKit,RingOfInformers,Telescope</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Agent</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,AnimalTraining(Pigeon),Language(Any),Leadership</Skills>
+					<Talents>Attractive,Cat-tongued,MasterOfDisguise,Mimic</Talents>
+					<Trappings>Book(Cryptography),RingOfSpiesAndInformers,LoftOfHomingPigeons,QuillAndInk</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Spymaster</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I,Int</AdvanceScheme>
+					<Status>Gold 4</Status>
+					<Skills>Lore(Any),Research</Skills>
+					<Talents>Briber,Schemer,Suave,TowerOfMemories</Talents>
+					<Trappings>OfficeAndStaff,LargeSpyRingOfAgents,Spies,Informers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="37" Upper="37">
+			<Career>
+				<Name>Warden</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Custodian</Title>
+					<AdvanceScheme>S,T,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Athletics,CharmAnimal,ConsumeAlcohol,Cool,Endurance,Intuition,Lore(Local),Perception</Skills>
+					<Talents>Menacing,NightVision,Sharp,StrikeToStun</Talents>
+					<Trappings>Keys,Lantern,LampOil,Livery</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Warden</Title>
+					<AdvanceScheme>S,T,WP,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,Melee(Basic),OutdoorSurvival,Ranged(Bow),Ride(Horse),Swim</Skills>
+					<Talents>AnimalAffinity,Etiquette(Servants),Strider(Any),Rover</Talents>
+					<Trappings>HandWeapon?BowWith10Arrows,RidingHorseWithSaddleAndHarness,LeatherJack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Seneschal</Title>
+					<AdvanceScheme>S,T,WP,WS,Fel</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,Charm,Gossip,Leadership</Skills>
+					<Talents>Embezzle,Numismatics,Read/Write,Supportive</Talents>
+					<Trappings>Breastplate,CeremonialStaffOfOffice,StaffOfWardensAndCustodians</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Governor</Title>
+					<AdvanceScheme>S,T,WP,WS,Fel,Int</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Evaluate,Language(Any)</Skills>
+					<Talents>CommandingPresence,Etiquette(Any),Savant(Local),Suave</Talents>
+					<Trappings>Aide,GovernorsResidence,Servant</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Dwarf">
 		<Odds Lower="1" Upper="1">
@@ -1560,6 +1636,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="43" Upper="43">
+			<Career>
+				<Name>Spy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Informer</Title>
+					<AdvanceScheme>Agi,WP,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Bribery,Charm,Cool,Gamble,Gossip,Haggle,Perception,Stealth(Any)</Skills>
+					<Talents>Blather,Carouser,Gregarious,Shadow</Talents>
+					<Trappings>CharcoalStick,SlingBagContaining2DifferentSetsOfClothingAndHoodedCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Spy</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Entertain(Act),Intuition,Melee(Basic),SecretSigns(Any),SleightOfHand</Skills>
+					<Talents>Etiquette(Any),LipReading,Read/Write,SecretIdentity</Talents>
+					<Trappings>Informer,HandWeapon,DisguiseKit,RingOfInformers,Telescope</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Agent</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,AnimalTraining(Pigeon),Language(Any),Leadership</Skills>
+					<Talents>Attractive,Cat-tongued,MasterOfDisguise,Mimic</Talents>
+					<Trappings>Book(Cryptography),RingOfSpiesAndInformers,LoftOfHomingPigeons,QuillAndInk</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Spymaster</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I,Int</AdvanceScheme>
+					<Status>Gold 4</Status>
+					<Skills>Lore(Any),Research</Skills>
+					<Talents>Briber,Schemer,Suave,TowerOfMemories</Talents>
+					<Trappings>OfficeAndStaff,LargeSpyRingOfAgents,Spies,Informers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="44" Upper="45">
+			<Career>
+				<Name>Warden</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Custodian</Title>
+					<AdvanceScheme>S,T,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Athletics,CharmAnimal,ConsumeAlcohol,Cool,Endurance,Intuition,Lore(Local),Perception</Skills>
+					<Talents>Menacing,NightVision,Sharp,StrikeToStun</Talents>
+					<Trappings>Keys,Lantern,LampOil,Livery</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Warden</Title>
+					<AdvanceScheme>S,T,WP,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,Melee(Basic),OutdoorSurvival,Ranged(Bow),Ride(Horse),Swim</Skills>
+					<Talents>AnimalAffinity,Etiquette(Servants),Strider(Any),Rover</Talents>
+					<Trappings>HandWeapon?BowWith10Arrows,RidingHorseWithSaddleAndHarness,LeatherJack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Seneschal</Title>
+					<AdvanceScheme>S,T,WP,WS,Fel</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,Charm,Gossip,Leadership</Skills>
+					<Talents>Embezzle,Numismatics,Read/Write,Supportive</Talents>
+					<Trappings>Breastplate,CeremonialStaffOfOffice,StaffOfWardensAndCustodians</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Governor</Title>
+					<AdvanceScheme>S,T,WP,WS,Fel,Int</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Evaluate,Language(Any)</Skills>
+					<Talents>CommandingPresence,Etiquette(Any),Savant(Local),Suave</Talents>
+					<Trappings>Aide,GovernorsResidence,Servant</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Halfling">
 		<Odds Lower="1" Upper="1">
@@ -2208,6 +2360,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="44" Upper="44">
+			<Career>
+				<Name>Spy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Informer</Title>
+					<AdvanceScheme>Agi,WP,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Bribery,Charm,Cool,Gamble,Gossip,Haggle,Perception,Stealth(Any)</Skills>
+					<Talents>Blather,Carouser,Gregarious,Shadow</Talents>
+					<Trappings>CharcoalStick,SlingBagContaining2DifferentSetsOfClothingAndHoodedCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Spy</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Entertain(Act),Intuition,Melee(Basic),SecretSigns(Any),SleightOfHand</Skills>
+					<Talents>Etiquette(Any),LipReading,Read/Write,SecretIdentity</Talents>
+					<Trappings>Informer,HandWeapon,DisguiseKit,RingOfInformers,Telescope</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Agent</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,AnimalTraining(Pigeon),Language(Any),Leadership</Skills>
+					<Talents>Attractive,Cat-tongued,MasterOfDisguise,Mimic</Talents>
+					<Trappings>Book(Cryptography),RingOfSpiesAndInformers,LoftOfHomingPigeons,QuillAndInk</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Spymaster</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I,Int</AdvanceScheme>
+					<Status>Gold 4</Status>
+					<Skills>Lore(Any),Research</Skills>
+					<Talents>Briber,Schemer,Suave,TowerOfMemories</Talents>
+					<Trappings>OfficeAndStaff,LargeSpyRingOfAgents,Spies,Informers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="45" Upper="46">
+			<Career>
+				<Name>Warden</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Custodian</Title>
+					<AdvanceScheme>S,T,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Athletics,CharmAnimal,ConsumeAlcohol,Cool,Endurance,Intuition,Lore(Local),Perception</Skills>
+					<Talents>Menacing,NightVision,Sharp,StrikeToStun</Talents>
+					<Trappings>Keys,Lantern,LampOil,Livery</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Warden</Title>
+					<AdvanceScheme>S,T,WP,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,Melee(Basic),OutdoorSurvival,Ranged(Bow),Ride(Horse),Swim</Skills>
+					<Talents>AnimalAffinity,Etiquette(Servants),Strider(Any),Rover</Talents>
+					<Trappings>HandWeapon?BowWith10Arrows,RidingHorseWithSaddleAndHarness,LeatherJack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Seneschal</Title>
+					<AdvanceScheme>S,T,WP,WS,Fel</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,Charm,Gossip,Leadership</Skills>
+					<Talents>Embezzle,Numismatics,Read/Write,Supportive</Talents>
+					<Trappings>Breastplate,CeremonialStaffOfOffice,StaffOfWardensAndCustodians</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Governor</Title>
+					<AdvanceScheme>S,T,WP,WS,Fel,Int</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Evaluate,Language(Any)</Skills>
+					<Talents>CommandingPresence,Etiquette(Any),Savant(Local),Suave</Talents>
+					<Trappings>Aide,GovernorsResidence,Servant</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -2780,6 +3008,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="41" Upper="43">
+			<Career>
+				<Name>Spy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Informer</Title>
+					<AdvanceScheme>Agi,WP,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Bribery,Charm,Cool,Gamble,Gossip,Haggle,Perception,Stealth(Any)</Skills>
+					<Talents>Blather,Carouser,Gregarious,Shadow</Talents>
+					<Trappings>CharcoalStick,SlingBagContaining2DifferentSetsOfClothingAndHoodedCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Spy</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Entertain(Act),Intuition,Melee(Basic),SecretSigns(Any),SleightOfHand</Skills>
+					<Talents>Etiquette(Any),LipReading,Read/Write,SecretIdentity</Talents>
+					<Trappings>Informer,HandWeapon,DisguiseKit,RingOfInformers,Telescope</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Agent</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,AnimalTraining(Pigeon),Language(Any),Leadership</Skills>
+					<Talents>Attractive,Cat-tongued,MasterOfDisguise,Mimic</Talents>
+					<Trappings>Book(Cryptography),RingOfSpiesAndInformers,LoftOfHomingPigeons,QuillAndInk</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Spymaster</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I,Int</AdvanceScheme>
+					<Status>Gold 4</Status>
+					<Skills>Lore(Any),Research</Skills>
+					<Talents>Briber,Schemer,Suave,TowerOfMemories</Talents>
+					<Trappings>OfficeAndStaff,LargeSpyRingOfAgents,Spies,Informers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="44" Upper="45">
+			<Career>
+				<Name>Warden</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Custodian</Title>
+					<AdvanceScheme>S,T,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Athletics,CharmAnimal,ConsumeAlcohol,Cool,Endurance,Intuition,Lore(Local),Perception</Skills>
+					<Talents>Menacing,NightVision,Sharp,StrikeToStun</Talents>
+					<Trappings>Keys,Lantern,LampOil,Livery</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Warden</Title>
+					<AdvanceScheme>S,T,WP,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,Melee(Basic),OutdoorSurvival,Ranged(Bow),Ride(Horse),Swim</Skills>
+					<Talents>AnimalAffinity,Etiquette(Servants),Strider(Any),Rover</Talents>
+					<Trappings>HandWeapon?BowWith10Arrows,RidingHorseWithSaddleAndHarness,LeatherJack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Seneschal</Title>
+					<AdvanceScheme>S,T,WP,WS,Fel</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Bribery,Charm,Gossip,Leadership</Skills>
+					<Talents>Embezzle,Numismatics,Read/Write,Supportive</Talents>
+					<Trappings>Breastplate,CeremonialStaffOfOffice,StaffOfWardensAndCustodians</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Governor</Title>
+					<AdvanceScheme>S,T,WP,WS,Fel,Int</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Evaluate,Language(Any)</Skills>
+					<Talents>CommandingPresence,Etiquette(Any),Savant(Local),Suave</Talents>
+					<Trappings>Aide,GovernorsResidence,Servant</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="WoodElf">
 		<Odds Lower="1" Upper="1">
@@ -3045,6 +3349,44 @@
 					<Skills>Lore(Any),Track</Skills>
 					<Talents>CommandingPresence,IronWill,Warleader,Wealthy</Talents>
 					<Trappings>4SetsOfBestQualityCourtlyGarb,QualityFoil?HandMirror,500GoldCrowns,JewelleryWorth500GoldCrowns,Province</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="32" Upper="35">
+			<Career>
+				<Name>Spy</Name>
+				<Class>Courtier</Class>
+				<Path1>
+					<Title>Informer</Title>
+					<AdvanceScheme>Agi,WP,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Bribery,Charm,Cool,Gamble,Gossip,Haggle,Perception,Stealth(Any)</Skills>
+					<Talents>Blather,Carouser,Gregarious,Shadow</Talents>
+					<Trappings>CharcoalStick,SlingBagContaining2DifferentSetsOfClothingAndHoodedCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Spy</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Climb,Entertain(Act),Intuition,Melee(Basic),SecretSigns(Any),SleightOfHand</Skills>
+					<Talents>Etiquette(Any),LipReading,Read/Write,SecretIdentity</Talents>
+					<Trappings>Informer,HandWeapon,DisguiseKit,RingOfInformers,Telescope</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Agent</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,AnimalTraining(Pigeon),Language(Any),Leadership</Skills>
+					<Talents>Attractive,Cat-tongued,MasterOfDisguise,Mimic</Talents>
+					<Trappings>Book(Cryptography),RingOfSpiesAndInformers,LoftOfHomingPigeons,QuillAndInk</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Spymaster</Title>
+					<AdvanceScheme>Agi,WP,Fel,WS,I,Int</AdvanceScheme>
+					<Status>Gold 4</Status>
+					<Skills>Lore(Any),Research</Skills>
+					<Talents>Briber,Schemer,Suave,TowerOfMemories</Talents>
+					<Trappings>OfficeAndStaff,LargeSpyRingOfAgents,Spies,Informers</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
