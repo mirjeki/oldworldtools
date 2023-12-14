@@ -10,6 +10,11 @@
         public int OtherModifier { get; set; }
         public int Advances { get; set; }
 
+        public int CurrentBonus()
+        {
+            return (CurrentValue() / 10) % 10;
+        }
+
         public int CurrentValue()
         {
             return Initial + Advances;

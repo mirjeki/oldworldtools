@@ -912,6 +912,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="38" Upper="38">
+			<Career>
+				<Name>Bailiff</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Tax Collector</Title>
+					<AdvanceScheme>WS,I,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Cool,Dodge,Endurance,Gossip,Haggle,Intimidate,Melee(Basic),Perception</Skills>
+					<Talents>Embezzle,Numismatics,StrongBack,Tenacious</Talents>
+					<Trappings>HandWeapon,SmallLockBox</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Bailiff</Title>
+					<AdvanceScheme>WS,I,WP,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Bribery,Charm,Evaluate,Intuition,Leadership,Lore(Local)</Skills>
+					<Talents>BreakAndEnter,Criminal,PublicSpeaker,StrikeToStun</Talents>
+					<Trappings>LeatherJack,3TaxCollectors</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Reeve</Title>
+					<AdvanceScheme>WS,I,WP,Fel,Agi</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,Lore(Heraldry),Navigation,Ride(Horse)</Skills>
+					<Talents>Kingpin,Menacing,NoseForTrouble,Read/Write</Talents>
+					<Trappings>HorseWithSaddleAndTack,Breastplate,Bailiff</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Magistrate</Title>
+					<AdvanceScheme>WS,I,WP,Fel,Agi,Int</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Language(Classical),Lore(Law)</Skills>
+					<Talents>CommandingPresence,IronWill,Savvy,Schemer</Talents>
+					<Trappings>Library(Law),QualityRobes,SealOfOffice</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="39" Upper="39">
+			<Career>
+				<Name>Hedge Witch</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Hedge Apprentice</Title>
+					<AdvanceScheme>T,I,Dex</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Channelling,Endurance,Intuition,Language(Magick),Lore(Folklore),Lore(Herbs),OutdoorSurvival,Perception</Skills>
+					<Talents>FastHands,PettyMagic,Rover,Strider(Woodlands)</Talents>
+					<Trappings>1D10LuckyCharms,Quarterstaff,Backpack</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Hedge Witch</Title>
+					<AdvanceScheme>T,I,Dex,Int</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Cool,Gossip,Heal,Lore(Local),Trade(Charms),Trade(Herbalist)</Skills>
+					<Talents>AethyricAttunement,AnimalAffinity,ArcaneMagic(Hedgecraft),SixthSense</Talents>
+					<Trappings>AntitoxinKit,HealingPoultice,TradeTools(Herbalist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Hedge Master</Title>
+					<AdvanceScheme>T,I,Dex,Int,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Haggle,Lore(Genealogy),Lore(Magic),Lore(Spirits)</Skills>
+					<Talents>Craftsman(Herbalist),MagicalSense,PureSoul,Resistance(Disease)</Talents>
+					<Trappings>IsolatedHut,Apprentice</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Hedgewise</Title>
+					<AdvanceScheme>T,I,Dex,Int,Fel,WP</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Intimidate,Pray</Skills>
+					<Talents>AcuteSense(Any),MasterCraftsman(Herbalist),NightVision,Strong-minded</Talents>
+					<Trappings>AssortmentOfAnimalSkulls,CeremonialCloakAndGarland</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="40" Upper="40">
+			<Career>
+				<Name>Herbalist</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Herb Gatherer</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Lore(Herbs),OutdoorSurvival,Perception,Swim,Trade(Herbalist)</Skills>
+					<Talents>AcuteSense(Taste),Orientation,Rover,Strider(Any)</Talents>
+					<Trappings>Boots,Cloak,SlingBagContainingAssortmentOfHerbs</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Herbalist</Title>
+					<AdvanceScheme>T,I,Agi,Dex</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Gossip,Haggle,Heal,Lore(Local)</Skills>
+					<Talents>Dealmaker,NimbleFingered,Sharp,Sturdy</Talents>
+					<Trappings>HandWeapon(Sickle),HealingPoultice,TradeTools(Herbalist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Herb Master</Title>
+					<AdvanceScheme>T,I,Agi,Dex,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Intuition,Leadership,Lore(Medicine),Trade(Poisons)</Skills>
+					<Talents>Craftsman(Herbalist),FieldDressing,Hardy,Savvy</Talents>
+					<Trappings>HerbGatherer,3HealingPoultices,HealingDraught,Workshop(Herbalist)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Herbwise</Title>
+					<AdvanceScheme>T,I,Agi,Dex,Fel,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Drive,Navigation</Skills>
+					<Talents>Concoct,MasterTradesman(Herbalist),Resistance(Poison),Savant(Herbs)</Talents>
+					<Trappings>PonyAndCart</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Dwarf">
 		<Odds Lower="1" Upper="1">
@@ -1712,6 +1826,44 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="46" Upper="47">
+			<Career>
+				<Name>Bailiff</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Tax Collector</Title>
+					<AdvanceScheme>WS,I,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Cool,Dodge,Endurance,Gossip,Haggle,Intimidate,Melee(Basic),Perception</Skills>
+					<Talents>Embezzle,Numismatics,StrongBack,Tenacious</Talents>
+					<Trappings>HandWeapon,SmallLockBox</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Bailiff</Title>
+					<AdvanceScheme>WS,I,WP,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Bribery,Charm,Evaluate,Intuition,Leadership,Lore(Local)</Skills>
+					<Talents>BreakAndEnter,Criminal,PublicSpeaker,StrikeToStun</Talents>
+					<Trappings>LeatherJack,3TaxCollectors</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Reeve</Title>
+					<AdvanceScheme>WS,I,WP,Fel,Agi</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,Lore(Heraldry),Navigation,Ride(Horse)</Skills>
+					<Talents>Kingpin,Menacing,NoseForTrouble,Read/Write</Talents>
+					<Trappings>HorseWithSaddleAndTack,Breastplate,Bailiff</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Magistrate</Title>
+					<AdvanceScheme>WS,I,WP,Fel,Agi,Int</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Language(Classical),Lore(Law)</Skills>
+					<Talents>CommandingPresence,IronWill,Savvy,Schemer</Talents>
+					<Trappings>Library(Law),QualityRobes,SealOfOffice</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Halfling">
 		<Odds Lower="1" Upper="1">
@@ -2436,6 +2588,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="47" Upper="47">
+			<Career>
+				<Name>Bailiff</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Tax Collector</Title>
+					<AdvanceScheme>WS,I,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Cool,Dodge,Endurance,Gossip,Haggle,Intimidate,Melee(Basic),Perception</Skills>
+					<Talents>Embezzle,Numismatics,StrongBack,Tenacious</Talents>
+					<Trappings>HandWeapon,SmallLockBox</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Bailiff</Title>
+					<AdvanceScheme>WS,I,WP,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Bribery,Charm,Evaluate,Intuition,Leadership,Lore(Local)</Skills>
+					<Talents>BreakAndEnter,Criminal,PublicSpeaker,StrikeToStun</Talents>
+					<Trappings>LeatherJack,3TaxCollectors</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Reeve</Title>
+					<AdvanceScheme>WS,I,WP,Fel,Agi</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>AnimalCare,Lore(Heraldry),Navigation,Ride(Horse)</Skills>
+					<Talents>Kingpin,Menacing,NoseForTrouble,Read/Write</Talents>
+					<Trappings>HorseWithSaddleAndTack,Breastplate,Bailiff</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Magistrate</Title>
+					<AdvanceScheme>WS,I,WP,Fel,Agi,Int</AdvanceScheme>
+					<Status>Gold 3</Status>
+					<Skills>Language(Classical),Lore(Law)</Skills>
+					<Talents>CommandingPresence,IronWill,Savvy,Schemer</Talents>
+					<Trappings>Library(Law),QualityRobes,SealOfOffice</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="48" Upper="50">
+			<Career>
+				<Name>Herbalist</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Herb Gatherer</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Lore(Herbs),OutdoorSurvival,Perception,Swim,Trade(Herbalist)</Skills>
+					<Talents>AcuteSense(Taste),Orientation,Rover,Strider(Any)</Talents>
+					<Trappings>Boots,Cloak,SlingBagContainingAssortmentOfHerbs</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Herbalist</Title>
+					<AdvanceScheme>T,I,Agi,Dex</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Gossip,Haggle,Heal,Lore(Local)</Skills>
+					<Talents>Dealmaker,NimbleFingered,Sharp,Sturdy</Talents>
+					<Trappings>HandWeapon(Sickle),HealingPoultice,TradeTools(Herbalist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Herb Master</Title>
+					<AdvanceScheme>T,I,Agi,Dex,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Intuition,Leadership,Lore(Medicine),Trade(Poisons)</Skills>
+					<Talents>Craftsman(Herbalist),FieldDressing,Hardy,Savvy</Talents>
+					<Trappings>HerbGatherer,3HealingPoultices,HealingDraught,Workshop(Herbalist)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Herbwise</Title>
+					<AdvanceScheme>T,I,Agi,Dex,Fel,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Drive,Navigation</Skills>
+					<Talents>Concoct,MasterTradesman(Herbalist),Resistance(Poison),Savant(Herbs)</Talents>
+					<Trappings>PonyAndCart</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -3084,6 +3312,44 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="46" Upper="47">
+			<Career>
+				<Name>Herbalist</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Herb Gatherer</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Lore(Herbs),OutdoorSurvival,Perception,Swim,Trade(Herbalist)</Skills>
+					<Talents>AcuteSense(Taste),Orientation,Rover,Strider(Any)</Talents>
+					<Trappings>Boots,Cloak,SlingBagContainingAssortmentOfHerbs</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Herbalist</Title>
+					<AdvanceScheme>T,I,Agi,Dex</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Gossip,Haggle,Heal,Lore(Local)</Skills>
+					<Talents>Dealmaker,NimbleFingered,Sharp,Sturdy</Talents>
+					<Trappings>HandWeapon(Sickle),HealingPoultice,TradeTools(Herbalist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Herb Master</Title>
+					<AdvanceScheme>T,I,Agi,Dex,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Intuition,Leadership,Lore(Medicine),Trade(Poisons)</Skills>
+					<Talents>Craftsman(Herbalist),FieldDressing,Hardy,Savvy</Talents>
+					<Trappings>HerbGatherer,3HealingPoultices,HealingDraught,Workshop(Herbalist)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Herbwise</Title>
+					<AdvanceScheme>T,I,Agi,Dex,Fel,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Drive,Navigation</Skills>
+					<Talents>Concoct,MasterTradesman(Herbalist),Resistance(Poison),Savant(Herbs)</Talents>
+					<Trappings>PonyAndCart</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="WoodElf">
 		<Odds Lower="1" Upper="1">
@@ -3387,6 +3653,44 @@
 					<Skills>Lore(Any),Research</Skills>
 					<Talents>Briber,Schemer,Suave,TowerOfMemories</Talents>
 					<Trappings>OfficeAndStaff,LargeSpyRingOfAgents,Spies,Informers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="36" Upper="42">
+			<Career>
+				<Name>Herbalist</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Herb Gatherer</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Lore(Herbs),OutdoorSurvival,Perception,Swim,Trade(Herbalist)</Skills>
+					<Talents>AcuteSense(Taste),Orientation,Rover,Strider(Any)</Talents>
+					<Trappings>Boots,Cloak,SlingBagContainingAssortmentOfHerbs</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Herbalist</Title>
+					<AdvanceScheme>T,I,Agi,Dex</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>ConsumeAlcohol,Cool,Gossip,Haggle,Heal,Lore(Local)</Skills>
+					<Talents>Dealmaker,NimbleFingered,Sharp,Sturdy</Talents>
+					<Trappings>HandWeapon(Sickle),HealingPoultice,TradeTools(Herbalist)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Herb Master</Title>
+					<AdvanceScheme>T,I,Agi,Dex,Fel</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Intuition,Leadership,Lore(Medicine),Trade(Poisons)</Skills>
+					<Talents>Craftsman(Herbalist),FieldDressing,Hardy,Savvy</Talents>
+					<Trappings>HerbGatherer,3HealingPoultices,HealingDraught,Workshop(Herbalist)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Herbwise</Title>
+					<AdvanceScheme>T,I,Agi,Dex,Fel,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Drive,Navigation</Skills>
+					<Talents>Concoct,MasterTradesman(Herbalist),Resistance(Poison),Savant(Herbs)</Talents>
+					<Trappings>PonyAndCart</Trappings>
 				</Path4>
 			</Career>
 		</Odds>

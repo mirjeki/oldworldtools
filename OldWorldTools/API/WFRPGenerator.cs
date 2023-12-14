@@ -111,7 +111,7 @@ namespace OldWorldTools.API
 
         public GenderEnum RandomiseGender()
         {
-            return RandomEnumValue<GenderEnum>();
+            return HelperMethods.RandomEnumValue<GenderEnum>();
         }
 
         public SpeciesEnum RandomiseSpecies()
@@ -188,7 +188,7 @@ namespace OldWorldTools.API
             characterSheet.Resilience = speciesModifiers.Resilience;
             characterSheet.Resolve = characterSheet.Resilience;
 
-            var speciesSkillsRaw = SeparateAndFormatCSV(speciesModifiers.StartingSkills);
+            var speciesSkillsRaw = HelperMethods.SeparateAndFormatCSV(speciesModifiers.StartingSkills);
 
             List<SkillDTO> skillsAvailable = new List<SkillDTO>();
 
@@ -274,7 +274,7 @@ namespace OldWorldTools.API
             characterSheet.CareerSkills = new List<CharacterSkill>();
             var allSkills = GetSkills();
 
-            var careerSkillsRaw = SeparateAndFormatCSV(career.Path1.Skills);
+            var careerSkillsRaw = HelperMethods.SeparateAndFormatCSV(career.Path1.Skills);
 
             List<SkillDTO> skillsAvailable = new List<SkillDTO>();
 
@@ -353,8 +353,8 @@ namespace OldWorldTools.API
                 case TierEnum.Tier1:
                     characterSheet.CareerPath = career.Path1.Title;
                     characterSheet.Status = career.Path1.Status;
-                    characterSheet.Talents = RandomiseStarterTalents(characterSheet.Region, SeparateAndFormatCSV(career.Path1.Talents));
-                    characterSheet.Trappings = DetermineChoices(SeparateAndFormatCSV(career.Path1.Trappings));
+                    characterSheet.Talents = RandomiseStarterTalents(characterSheet.Region, HelperMethods.SeparateAndFormatCSV(career.Path1.Talents));
+                    characterSheet.Trappings = DetermineChoices(HelperMethods.SeparateAndFormatCSV(career.Path1.Trappings));
                     break;
                 case TierEnum.Tier2:
                     break;
@@ -362,8 +362,8 @@ namespace OldWorldTools.API
                     characterSheet.CareerPath = career.Path3.Title;
                     characterSheet.Status = career.Path3.Status;
                     //randomly determine chosen talents from list
-                    characterSheet.Talents = SeparateAndFormatCSV(career.Path3.Talents);
-                    characterSheet.Trappings = DetermineChoices(SeparateAndFormatCSV(career.Path3.Trappings));
+                    characterSheet.Talents = HelperMethods.SeparateAndFormatCSV(career.Path3.Talents);
+                    characterSheet.Trappings = DetermineChoices(HelperMethods.SeparateAndFormatCSV(career.Path3.Trappings));
                     break;
                 case TierEnum.Tier4:
                     break;
@@ -418,7 +418,7 @@ namespace OldWorldTools.API
 
             var speciesTalents = GetSpeciesModifiersByRegion(region).StartingTalents;
 
-            talentsToReturn = SeparateAndFormatCSV(speciesTalents);
+            talentsToReturn = HelperMethods.SeparateAndFormatCSV(speciesTalents);
 
             talentsToReturn.Add(GetUniquePathTalent(talentsToReturn, pathTalents));
 
@@ -942,7 +942,7 @@ namespace OldWorldTools.API
 
                 List<NameDTO> namesToAdd = new List<NameDTO>();
 
-                NameCollection humanNames = DeserializeXMLFileToObject<NameCollection>(humanNameXMLSRC);
+                NameCollection humanNames = HelperMethods.DeserializeXMLFileToObject<NameCollection>(humanNameXMLSRC);
 
                 foreach (var region in humanNames.NameRegions)
                 {
@@ -955,7 +955,7 @@ namespace OldWorldTools.API
                     }
                 }
 
-                NameCollection dwarfNames = DeserializeXMLFileToObject<NameCollection>(dwarfNameXMLSRC);
+                NameCollection dwarfNames = HelperMethods.DeserializeXMLFileToObject<NameCollection>(dwarfNameXMLSRC);
 
                 foreach (var region in dwarfNames.NameRegions)
                 {
@@ -968,7 +968,7 @@ namespace OldWorldTools.API
                     }
                 }
 
-                NameCollection halflingNames = DeserializeXMLFileToObject<NameCollection>(halflingNameXMLSRC);
+                NameCollection halflingNames = HelperMethods.DeserializeXMLFileToObject<NameCollection>(halflingNameXMLSRC);
 
                 foreach (var region in halflingNames.NameRegions)
                 {
@@ -981,7 +981,7 @@ namespace OldWorldTools.API
                     }
                 }
 
-                NameCollection woodElfNames = DeserializeXMLFileToObject<NameCollection>(woodElfNameXMLSRC);
+                NameCollection woodElfNames = HelperMethods.DeserializeXMLFileToObject<NameCollection>(woodElfNameXMLSRC);
 
                 foreach (var region in woodElfNames.NameRegions)
                 {
@@ -994,7 +994,7 @@ namespace OldWorldTools.API
                     }
                 }
 
-                NameCollection highElfNames = DeserializeXMLFileToObject<NameCollection>(highElfNameXMLSRC);
+                NameCollection highElfNames = HelperMethods.DeserializeXMLFileToObject<NameCollection>(highElfNameXMLSRC);
 
                 foreach (var region in highElfNames.NameRegions)
                 {
@@ -1021,7 +1021,7 @@ namespace OldWorldTools.API
 
                 List<SpeciesDTO> speciesToAdd = new List<SpeciesDTO>();
 
-                SpeciesCollection speciesCollection = DeserializeXMLFileToObject<SpeciesCollection>(speciesXMLSRC);
+                SpeciesCollection speciesCollection = HelperMethods.DeserializeXMLFileToObject<SpeciesCollection>(speciesXMLSRC);
 
                 foreach (var speciesType in speciesCollection.SpeciesTypes)
                 {
@@ -1077,11 +1077,11 @@ namespace OldWorldTools.API
 
                 List<SkillDTO> skillsToAdd = new List<SkillDTO>();
 
-                SkillCollection skillsCollection = DeserializeXMLFileToObject<SkillCollection>(skillsXMLSRC);
+                SkillCollection skillsCollection = HelperMethods.DeserializeXMLFileToObject<SkillCollection>(skillsXMLSRC);
 
                 foreach (var skill in skillsCollection.Skills)
                 {
-                    List<string> tags = SeparateCSV(skill.Tags);
+                    List<string> tags = HelperMethods.SeparateCSV(skill.Tags);
 
                     CharacteristicEnum linkedCharacteristic;
 
@@ -1148,7 +1148,7 @@ namespace OldWorldTools.API
 
                 List<TalentDTO> talentsToAdd = new List<TalentDTO>();
 
-                TalentCollection talentsCollection = DeserializeXMLFileToObject<TalentCollection>(talentsXMLSRC);
+                TalentCollection talentsCollection = HelperMethods.DeserializeXMLFileToObject<TalentCollection>(talentsXMLSRC);
 
                 foreach (var talent in talentsCollection.Talents)
                 {
@@ -1169,7 +1169,7 @@ namespace OldWorldTools.API
 
                 List<MotivationDTO> motivationsToAdd = new List<MotivationDTO>();
 
-                MotivationCollection motivationsCollection = DeserializeXMLFileToObject<MotivationCollection>(motivationsXMLSRC);
+                MotivationCollection motivationsCollection = HelperMethods.DeserializeXMLFileToObject<MotivationCollection>(motivationsXMLSRC);
 
                 foreach (var motivation in motivationsCollection.Motivations)
                 {
@@ -1190,7 +1190,7 @@ namespace OldWorldTools.API
 
                 List<AmbitionDTO> ambitionsToAdd = new List<AmbitionDTO>();
 
-                AmbitionCollection ambitionsCollection = DeserializeXMLFileToObject<AmbitionCollection>(shortTermAmbitionsXMLSRC);
+                AmbitionCollection ambitionsCollection = HelperMethods.DeserializeXMLFileToObject<AmbitionCollection>(shortTermAmbitionsXMLSRC);
 
                 foreach (var ambition in ambitionsCollection.Ambitions)
                 {
@@ -1211,7 +1211,7 @@ namespace OldWorldTools.API
 
                 List<AmbitionDTO> ambitionsToAdd = new List<AmbitionDTO>();
 
-                AmbitionCollection ambitionsCollection = DeserializeXMLFileToObject<AmbitionCollection>(longTermAmbitionsXMLSRC);
+                AmbitionCollection ambitionsCollection = HelperMethods.DeserializeXMLFileToObject<AmbitionCollection>(longTermAmbitionsXMLSRC);
 
                 foreach (var ambition in ambitionsCollection.Ambitions)
                 {
@@ -1232,7 +1232,7 @@ namespace OldWorldTools.API
 
                 List<CareerDTO> careersToAdd = new List<CareerDTO>();
 
-                CareerCollection careerTypes = DeserializeXMLFileToObject<CareerCollection>(careersXMLSRC);
+                CareerCollection careerTypes = HelperMethods.DeserializeXMLFileToObject<CareerCollection>(careersXMLSRC);
 
                 foreach (var careerSpecies in careerTypes.CareerSpecies)
                 {
@@ -1373,73 +1373,6 @@ namespace OldWorldTools.API
                     }
                 }
             }
-        }
-
-        private static List<string> SeparateCSV(string csvContents)
-        {
-            var strings = csvContents.Split(',');
-
-            List<string> result = new List<string>();
-
-            foreach (var s in strings)
-            {
-                result.Add(s);
-            }
-
-            return result;
-        }
-
-        private static List<string> SeparateAndFormatCSV(string csvContents)
-        {
-            var strings = csvContents.Split(',');
-
-            List<string> result = new List<string>();
-
-            foreach (var s in strings)
-            {
-                result.Add(AddSpacesToSentence(s));
-            }
-
-            return result;
-        }
-
-        private static string AddSpacesToSentence(string text)
-        {
-            if (string.IsNullOrWhiteSpace(text))
-                return "";
-            StringBuilder newText = new StringBuilder(text.Length * 2);
-            newText.Append(text[0]);
-            for (int i = 1; i < text.Length; i++)
-            {
-                if (char.IsUpper(text[i]) && text[i - 1] != ' ' && text[i - 1] != '(' && text[i - 1] != '/' || text[i] == '(')
-                    newText.Append(' ');
-                newText.Append(text[i]);
-            }
-            return newText.ToString();
-        }
-
-        private static T RandomEnumValue<T>()
-        {
-            var v = Enum.GetValues(typeof(T));
-            return (T)v.GetValue(random.Next(v.Length));
-        }
-
-        private static T DeserializeXMLFileToObject<T>(string XmlFilename)
-        {
-            T returnObject = default(T);
-            if (string.IsNullOrEmpty(XmlFilename)) return default(T);
-
-            try
-            {
-                StreamReader xmlStream = new StreamReader(XmlFilename);
-                XmlSerializer serializer = new XmlSerializer(typeof(T));
-                returnObject = (T)serializer.Deserialize(xmlStream);
-            }
-            catch (Exception ex)
-            {
-                //handle exceptions!
-            }
-            return returnObject;
         }
     }
 }

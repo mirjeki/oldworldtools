@@ -15,6 +15,10 @@ namespace OldWorldTools.API
 
         public Byte[] GeneratePdf(CharacterSheet characterSheet)
         {
+            int StrengthBonus = characterSheet.Characteristics.Where(w => w.ShortName == CharacteristicEnum.S).First().CurrentBonus();
+            int ToughnessBonus = characterSheet.Characteristics.Where(w => w.ShortName == CharacteristicEnum.T).First().CurrentBonus();
+            int WillPowerBonus = characterSheet.Characteristics.Where(w => w.ShortName == CharacteristicEnum.WP).First().CurrentBonus();
+
             using (ByteArrayOutputStream baos = new ByteArrayOutputStream())
             {
                 using (PdfDocument pdf = new PdfDocument(new PdfReader(charSheetSRC), new PdfWriter(baos)))
@@ -110,6 +114,39 @@ namespace OldWorldTools.API
                             break;
                         }
                     }
+
+                    //Corruption & Mutation
+                    fields.TryGetValue($"CThreshold", out toSet);
+                    toSet.SetValue((ToughnessBonus + WillPowerBonus).ToString());
+                    fields.TryGetValue($"PLimit", out toSet);
+                    toSet.SetValue((ToughnessBonus).ToString());
+                    fields.TryGetValue($"MLimit", out toSet);
+                    toSet.SetValue((WillPowerBonus).ToString());
+
+                    //Wounds
+                    fields.TryGetValue($"SBField", out toSet);
+                    toSet.SetValue((StrengthBonus).ToString());
+                    fields.TryGetValue($"TBx2", out toSet);
+                    toSet.SetValue((ToughnessBonus * 2).ToString());
+                    fields.TryGetValue($"WPBField", out toSet);
+                    toSet.SetValue((WillPowerBonus).ToString());
+
+
+                    if (characterSheet.Talents.Contains("Hardy"))
+                    {
+                        fields.TryGetValue($"HardyField", out toSet);
+                        toSet.SetValue((ToughnessBonus).ToString());
+                        fields.TryGetValue($"Wounds", out toSet);
+                        toSet.SetValue((StrengthBonus + (ToughnessBonus * 2) + WillPowerBonus + ToughnessBonus).ToString());
+                    }
+                    else
+                    {
+                        fields.TryGetValue($"HardyField", out toSet);
+                        toSet.SetValue(0.ToString());
+                        fields.TryGetValue($"Wounds", out toSet);
+                        toSet.SetValue((StrengthBonus + (ToughnessBonus * 2) + WillPowerBonus).ToString());
+                    }
+
 
                     pdf.Close();
 

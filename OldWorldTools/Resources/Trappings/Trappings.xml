@@ -2,13 +2,21 @@
 	<Trapping>
 		<Name>Bandages</Name>
 		<Enc>0</Enc>
+		<Type></Type>
 	</Trapping>
 	<Trapping>
 		<Name>Bedroll</Name>
 		<Enc>1</Enc>
+		<Type></Type>
 	</Trapping>
 	<Trapping>
 		<Name>Healing Draught</Name>
 		<Enc>1</Enc>
+		<Type></Type>
+	</Trapping>
+	<Trapping>
+		<Name>Hand Weapon</Name>
+		<Enc>2</Enc>
+		<Type>Weapon</Type>
 	</Trapping>
 </Trappings>
