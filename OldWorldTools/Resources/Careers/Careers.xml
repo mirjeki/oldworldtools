@@ -10,7 +10,7 @@
 					<Status>Brass 3</Status>
 					<Skills>ConsumeAlcohol,Heal,Language(Classical),Lore(Chemistry),Lore(Medicine),Lore(Plants),Trade(Apothecary),Trade(Poisoner)</Skills>
 					<Talents>Concoct,Craftsman(Apothecary),Etiquette(Scholar),Read/Write</Talents>
-					<Trappings>Book(Blank),HealingDraught,MailCoat,LeatherJerkin,PestleAndMortar</Trappings>
+					<Trappings>Book(Blank),HealingDraught,LeatherJerkin,PestleAndMortar</Trappings>
 				</Path1>
 				<Path2>
 					<Title>Apothecary</Title>
