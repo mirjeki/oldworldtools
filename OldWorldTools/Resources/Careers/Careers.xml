@@ -10,7 +10,7 @@
 					<Status>Brass 3</Status>
 					<Skills>ConsumeAlcohol,Heal,Language(Classical),Lore(Chemistry),Lore(Medicine),Lore(Plants),Trade(Apothecary),Trade(Poisoner)</Skills>
 					<Talents>Concoct,Craftsman(Apothecary),Etiquette(Scholar),Read/Write</Talents>
-					<Trappings>Book(Blank),HealingDraught,LeatherJerkin,PestleAndMortar</Trappings>
+					<Trappings>Book(Blank),HealingDraught,MailCoat,LeatherJerkin,PestleAndMortar</Trappings>
 				</Path1>
 				<Path2>
 					<Title>Apothecary</Title>
@@ -1026,6 +1026,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="41" Upper="42">
+			<Career>
+				<Name>Hunter</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Trapper</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Lore(Beasts),OutdoorSurvival,Perception,Ranged(Sling),SetTrap</Skills>
+					<Talents>Hardy,Rover,Strider(Any),Trapper</Talents>
+					<Trappings>SelectionOfAnimalTraps,HandWeapon,SlingWith10StoneBullets,SturdyBootsAndCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Hunter</Title>
+					<AdvanceScheme>S,T,Dex,BS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Cool,Intuition,Melee(Basic),Ranged(Bow),SecretSigns(Hunter),Stealth(Rural)</Skills>
+					<Talents>AccurateShot,FastShot,HuntersEye,Marksman</Talents>
+					<Trappings>BowWith10Arrows</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Tracker</Title>
+					<AdvanceScheme>S,T,Dex,BS,I</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Navigation,Ride(Horse),Swim,Track</Skills>
+					<Talents>AcuteSense(Any),DeadeyeShot,Fearless(Animals),Sharpshooter</Talents>
+					<Trappings>Backpack,Bedroll,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Huntsmaster</Title>
+					<AdvanceScheme>S,T,Dex,BS,I,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any)</Skills>
+					<Talents>Fearless(Monsters),Robust,Sniper,SureShot</Talents>
+					<Trappings>RidingHorseWithSaddleAndTack,KennelOfHuntingDogs</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="43" Upper="43">
+			<Career>
+				<Name>Miner</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Prospector</Title>
+					<AdvanceScheme>S,T,WP</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Cool,Endurance,Intuition,Lore(Local),Melee(Two-handed),OutdoorSurvival,Perception,Swim</Skills>
+					<Talents>Rover,Strider(Rocky),Sturdy,Tenacious</Talents>
+					<Trappings>CharcoalStick,CrudeMap,Pan,Spade</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Miner</Title>
+					<AdvanceScheme>S,T,WP,WS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Climb,ConsumeAlcohol,Evaluate,Melee(Basic),SecretSigns(Miner),Trade(Explosives)</Skills>
+					<Talents>NightVision,StrikeMightyBlow,StrongBack,VeryStrong</Talents>
+					<Trappings>DavrichLantern,HandWeapon(Pick),LampOil,LeatherJack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Miner</Title>
+					<AdvanceScheme>S,T,WP,WS,I</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Gossip,Lore(Geology),Stealth(Underground),Trade(Engineer)</Skills>
+					<Talents>CarefulStrike,Craftsman(Explosives),Tinker,TunnelRat</Talents>
+					<Trappings>GreatWeapon(Two-handedPick),Helmet,TradeTools(Engineer)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Mine Foreman</Title>
+					<AdvanceScheme>S,T,WP,WS,I,Fel</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Charm,Leadership</Skills>
+					<Talents>Argumentative,Strong-minded,Embezzle,Read/Write</Talents>
+					<Trappings>CrewOfMiners,WritingKit</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="44" Upper="44">
+			<Career>
+				<Name>Mystic</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>FortuneTeller</Title>
+					<AdvanceScheme>I,Dex,Fel</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Charm,Entertain(FortuneTelling),Dodge,Gossip,Haggle,Intuition,Perception,SleightOfHand</Skills>
+					<Talents>Attractive,Luck,SecondSight,Suave</Talents>
+					<Trappings>DeckOfCardsOrDice,CheapJewellery</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Mystic</Title>
+					<AdvanceScheme>I,Dex,Fel,WP</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Bribery,Cool,Entertain(Prophecy),Evaluate,Intimidate,Lore(Astrology)</Skills>
+					<Talents>DetectArtefact,HolyVisions,SixthSense,Well-prepared</Talents>
+					<Trappings>SelectionOfAmulets</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Sage</Title>
+					<AdvanceScheme>I,Dex,Fel,WP,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Art(Writing),CharmAnimal,Entertain(Storytelling),Language(Any)</Skills>
+					<Talents>NoseForTrouble,PettyMagic,Read/Write,Witch!</Talents>
+					<Trappings>TradeTools(Writing)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Seer</Title>
+					<AdvanceScheme>I,Dex,Fel,WP,Agi,Int</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Lore(Prophecy),Channelling(Azyr)</Skills>
+					<Talents>ArcaneMagic(Celestial),MagicalSense,Menacing,Strong-minded</Talents>
+					<Trappings>TradeTools(Astrology)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Dwarf">
 		<Odds Lower="1" Upper="1">
@@ -1864,6 +1978,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="48" Upper="49">
+			<Career>
+				<Name>Hunter</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Trapper</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Lore(Beasts),OutdoorSurvival,Perception,Ranged(Sling),SetTrap</Skills>
+					<Talents>Hardy,Rover,Strider(Any),Trapper</Talents>
+					<Trappings>SelectionOfAnimalTraps,HandWeapon,SlingWith10StoneBullets,SturdyBootsAndCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Hunter</Title>
+					<AdvanceScheme>S,T,Dex,BS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Cool,Intuition,Melee(Basic),Ranged(Bow),SecretSigns(Hunter),Stealth(Rural)</Skills>
+					<Talents>AccurateShot,FastShot,HuntersEye,Marksman</Talents>
+					<Trappings>BowWith10Arrows</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Tracker</Title>
+					<AdvanceScheme>S,T,Dex,BS,I</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Navigation,Ride(Horse),Swim,Track</Skills>
+					<Talents>AcuteSense(Any),DeadeyeShot,Fearless(Animals),Sharpshooter</Talents>
+					<Trappings>Backpack,Bedroll,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Huntsmaster</Title>
+					<AdvanceScheme>S,T,Dex,BS,I,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any)</Skills>
+					<Talents>Fearless(Monsters),Robust,Sniper,SureShot</Talents>
+					<Trappings>RidingHorseWithSaddleAndTack,KennelOfHuntingDogs</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="50" Upper="54">
+			<Career>
+				<Name>Miner</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Prospector</Title>
+					<AdvanceScheme>S,T,WP</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Cool,Endurance,Intuition,Lore(Local),Melee(Two-handed),OutdoorSurvival,Perception,Swim</Skills>
+					<Talents>Rover,Strider(Rocky),Sturdy,Tenacious</Talents>
+					<Trappings>CharcoalStick,CrudeMap,Pan,Spade</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Miner</Title>
+					<AdvanceScheme>S,T,WP,WS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Climb,ConsumeAlcohol,Evaluate,Melee(Basic),SecretSigns(Miner),Trade(Explosives)</Skills>
+					<Talents>NightVision,StrikeMightyBlow,StrongBack,VeryStrong</Talents>
+					<Trappings>DavrichLantern,HandWeapon(Pick),LampOil,LeatherJack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Miner</Title>
+					<AdvanceScheme>S,T,WP,WS,I</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Gossip,Lore(Geology),Stealth(Underground),Trade(Engineer)</Skills>
+					<Talents>CarefulStrike,Craftsman(Explosives),Tinker,TunnelRat</Talents>
+					<Trappings>GreatWeapon(Two-handedPick),Helmet,TradeTools(Engineer)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Mine Foreman</Title>
+					<AdvanceScheme>S,T,WP,WS,I,Fel</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Charm,Leadership</Skills>
+					<Talents>Argumentative,Strong-minded,Embezzle,Read/Write</Talents>
+					<Trappings>CrewOfMiners,WritingKit</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Halfling">
 		<Odds Lower="1" Upper="1">
@@ -2664,6 +2854,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="51" Upper="52">
+			<Career>
+				<Name>Hunter</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Trapper</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Lore(Beasts),OutdoorSurvival,Perception,Ranged(Sling),SetTrap</Skills>
+					<Talents>Hardy,Rover,Strider(Any),Trapper</Talents>
+					<Trappings>SelectionOfAnimalTraps,HandWeapon,SlingWith10StoneBullets,SturdyBootsAndCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Hunter</Title>
+					<AdvanceScheme>S,T,Dex,BS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Cool,Intuition,Melee(Basic),Ranged(Bow),SecretSigns(Hunter),Stealth(Rural)</Skills>
+					<Talents>AccurateShot,FastShot,HuntersEye,Marksman</Talents>
+					<Trappings>BowWith10Arrows</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Tracker</Title>
+					<AdvanceScheme>S,T,Dex,BS,I</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Navigation,Ride(Horse),Swim,Track</Skills>
+					<Talents>AcuteSense(Any),DeadeyeShot,Fearless(Animals),Sharpshooter</Talents>
+					<Trappings>Backpack,Bedroll,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Huntsmaster</Title>
+					<AdvanceScheme>S,T,Dex,BS,I,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any)</Skills>
+					<Talents>Fearless(Monsters),Robust,Sniper,SureShot</Talents>
+					<Trappings>RidingHorseWithSaddleAndTack,KennelOfHuntingDogs</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="53" Upper="53">
+			<Career>
+				<Name>Miner</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Prospector</Title>
+					<AdvanceScheme>S,T,WP</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Cool,Endurance,Intuition,Lore(Local),Melee(Two-handed),OutdoorSurvival,Perception,Swim</Skills>
+					<Talents>Rover,Strider(Rocky),Sturdy,Tenacious</Talents>
+					<Trappings>CharcoalStick,CrudeMap,Pan,Spade</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Miner</Title>
+					<AdvanceScheme>S,T,WP,WS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Climb,ConsumeAlcohol,Evaluate,Melee(Basic),SecretSigns(Miner),Trade(Explosives)</Skills>
+					<Talents>NightVision,StrikeMightyBlow,StrongBack,VeryStrong</Talents>
+					<Trappings>DavrichLantern,HandWeapon(Pick),LampOil,LeatherJack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Miner</Title>
+					<AdvanceScheme>S,T,WP,WS,I</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Gossip,Lore(Geology),Stealth(Underground),Trade(Engineer)</Skills>
+					<Talents>CarefulStrike,Craftsman(Explosives),Tinker,TunnelRat</Talents>
+					<Trappings>GreatWeapon(Two-handedPick),Helmet,TradeTools(Engineer)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Mine Foreman</Title>
+					<AdvanceScheme>S,T,WP,WS,I,Fel</AdvanceScheme>
+					<Status>Silver 4</Status>
+					<Skills>Charm,Leadership</Skills>
+					<Talents>Argumentative,Strong-minded,Embezzle,Read/Write</Talents>
+					<Trappings>CrewOfMiners,WritingKit</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -3350,6 +3616,44 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="48" Upper="50">
+			<Career>
+				<Name>Hunter</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Trapper</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Lore(Beasts),OutdoorSurvival,Perception,Ranged(Sling),SetTrap</Skills>
+					<Talents>Hardy,Rover,Strider(Any),Trapper</Talents>
+					<Trappings>SelectionOfAnimalTraps,HandWeapon,SlingWith10StoneBullets,SturdyBootsAndCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Hunter</Title>
+					<AdvanceScheme>S,T,Dex,BS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Cool,Intuition,Melee(Basic),Ranged(Bow),SecretSigns(Hunter),Stealth(Rural)</Skills>
+					<Talents>AccurateShot,FastShot,HuntersEye,Marksman</Talents>
+					<Trappings>BowWith10Arrows</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Tracker</Title>
+					<AdvanceScheme>S,T,Dex,BS,I</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Navigation,Ride(Horse),Swim,Track</Skills>
+					<Talents>AcuteSense(Any),DeadeyeShot,Fearless(Animals),Sharpshooter</Talents>
+					<Trappings>Backpack,Bedroll,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Huntsmaster</Title>
+					<AdvanceScheme>S,T,Dex,BS,I,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any)</Skills>
+					<Talents>Fearless(Monsters),Robust,Sniper,SureShot</Talents>
+					<Trappings>RidingHorseWithSaddleAndTack,KennelOfHuntingDogs</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="WoodElf">
 		<Odds Lower="1" Upper="1">
@@ -3691,6 +3995,82 @@
 					<Skills>Drive,Navigation</Skills>
 					<Talents>Concoct,MasterTradesman(Herbalist),Resistance(Poison),Savant(Herbs)</Talents>
 					<Trappings>PonyAndCart</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="43" Upper="52">
+			<Career>
+				<Name>Hunter</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Trapper</Title>
+					<AdvanceScheme>S,T,Dex</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Lore(Beasts),OutdoorSurvival,Perception,Ranged(Sling),SetTrap</Skills>
+					<Talents>Hardy,Rover,Strider(Any),Trapper</Talents>
+					<Trappings>SelectionOfAnimalTraps,HandWeapon,SlingWith10StoneBullets,SturdyBootsAndCloak</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Hunter</Title>
+					<AdvanceScheme>S,T,Dex,BS</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Cool,Intuition,Melee(Basic),Ranged(Bow),SecretSigns(Hunter),Stealth(Rural)</Skills>
+					<Talents>AccurateShot,FastShot,HuntersEye,Marksman</Talents>
+					<Trappings>BowWith10Arrows</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Tracker</Title>
+					<AdvanceScheme>S,T,Dex,BS,I</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Navigation,Ride(Horse),Swim,Track</Skills>
+					<Talents>AcuteSense(Any),DeadeyeShot,Fearless(Animals),Sharpshooter</Talents>
+					<Trappings>Backpack,Bedroll,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Huntsmaster</Title>
+					<AdvanceScheme>S,T,Dex,BS,I,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any)</Skills>
+					<Talents>Fearless(Monsters),Robust,Sniper,SureShot</Talents>
+					<Trappings>RidingHorseWithSaddleAndTack,KennelOfHuntingDogs</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="53" Upper="57">
+			<Career>
+				<Name>Mystic</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>FortuneTeller</Title>
+					<AdvanceScheme>I,Dex,Fel</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Charm,Entertain(FortuneTelling),Dodge,Gossip,Haggle,Intuition,Perception,SleightOfHand</Skills>
+					<Talents>Attractive,Luck,SecondSight,Suave</Talents>
+					<Trappings>DeckOfCardsOrDice,CheapJewellery</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Mystic</Title>
+					<AdvanceScheme>I,Dex,Fel,WP</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>Bribery,Cool,Entertain(Prophecy),Evaluate,Intimidate,Lore(Astrology)</Skills>
+					<Talents>DetectArtefact,HolyVisions,SixthSense,Well-prepared</Talents>
+					<Trappings>SelectionOfAmulets</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Sage</Title>
+					<AdvanceScheme>I,Dex,Fel,WP,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Art(Writing),CharmAnimal,Entertain(Storytelling),Language(Any)</Skills>
+					<Talents>NoseForTrouble,PettyMagic,Read/Write,Witch!</Talents>
+					<Trappings>TradeTools(Writing)</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Seer</Title>
+					<AdvanceScheme>I,Dex,Fel,WP,Agi,Int</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Lore(Prophecy),Channelling(Azyr)</Skills>
+					<Talents>ArcaneMagic(Celestial),MagicalSense,Menacing,Strong-minded</Talents>
+					<Trappings>TradeTools(Astrology)</Trappings>
 				</Path4>
 			</Career>
 		</Odds>

@@ -4,6 +4,7 @@ using iText.IO.Source;
 using iText.Kernel.Pdf;
 using OldWorldTools.Models.WFRPCharacter;
 using System.ComponentModel;
+using Microsoft.Extensions.ObjectPool;
 
 namespace OldWorldTools.API
 {
@@ -81,7 +82,7 @@ namespace OldWorldTools.API
 
                     foreach (var skill in characterSheet.SpeciesSkills)
                     {
-                        //the MapSkill method will increase the advSkillRow (as well as apply it to the field reference within the method)
+                        //the MapSkill method will increase the advSkillRow
 
                         advSkillRow = MapSkill(fields, skill, toSet, advSkillRow);
                     }
@@ -104,10 +105,142 @@ namespace OldWorldTools.API
                         }
                     }
 
+                    var trappingsList = generator.GetTrappings();
+                    int armourItems = 0;
+
                     for (int i = 0; i < characterSheet.Trappings.Count; i++)
                     {
                         fields.TryGetValue($"Trappings{i + 1}", out toSet);
                         toSet.SetValue(characterSheet.Trappings[i]);
+
+                        var matchedTrapping = trappingsList.Where(w => w.Name == characterSheet.Trappings[i]).FirstOrDefault();
+
+                        if (matchedTrapping != null)
+                        {
+                            fields.TryGetValue($"TrappingEncRow{i + 1}", out toSet);
+                            toSet.SetValue(matchedTrapping.Enc);
+
+                            if (matchedTrapping.Properties != null)
+                            {
+                                if (matchedTrapping.Properties.Contains("Armour"))
+                                {
+                                    var properties = HelperMethods.SeparateCSV(matchedTrapping.Properties);
+                                    bool affectsArms = false;
+                                    bool affectsLegs = false;
+                                    bool affectsBody = false;
+                                    bool affectsHead = false;
+                                    int armourValue = 0;
+
+                                    string qualities = "";
+                                    string locations = "";
+
+                                    foreach (var property in properties)
+                                    {
+                                        switch (property)
+                                        {
+                                            case "AP1":
+                                                armourValue = 1;
+                                                break;
+                                            case "AP2":
+                                                armourValue = 2;
+                                                break;
+                                            case "A":
+                                                affectsArms = true;
+                                                locations += "Arms ";
+                                                break;
+                                            case "B":
+                                                affectsBody = true;
+                                                locations += $"Body ";
+                                                break;
+                                            case "L":
+                                                affectsLegs = true;
+                                                locations += $"Legs ";
+                                                break;
+                                            case "H":
+                                                affectsHead = true;
+                                                locations += $"Head ";
+                                                break;
+                                            case "Armour":
+                                                break;
+                                            default:
+                                                qualities += $"{property} ";
+                                                break;
+                                        }
+                                    }
+
+                                    int currentValue;
+
+                                    if (affectsHead)
+                                    {
+                                        fields.TryGetValue($"Head", out toSet);
+                                        Int32.TryParse(toSet.GetValueAsString(), out currentValue);
+                                        if (currentValue <= armourValue)
+                                        {
+                                            //only write if current armour's value is higher than currently applied armour
+                                            toSet.SetValue(armourValue.ToString());
+                                        }
+                                    }
+                                    if (affectsBody)
+                                    {
+                                        fields.TryGetValue($"Body", out toSet);
+                                        Int32.TryParse(toSet.GetValueAsString(), out currentValue);
+                                        if (currentValue <= armourValue)
+                                        {
+                                            //only write if current armour's value is higher than currently applied armour
+                                            toSet.SetValue(armourValue.ToString());
+                                        }
+                                    }
+                                    if (affectsArms)
+                                    {
+                                        fields.TryGetValue($"LArm", out toSet);
+                                        Int32.TryParse(toSet.GetValueAsString(), out currentValue);
+                                        if (currentValue <= armourValue)
+                                        {
+                                            //only write if current armour's value is higher than currently applied armour
+                                            toSet.SetValue(armourValue.ToString());
+                                        }
+
+                                        fields.TryGetValue($"RArm", out toSet);
+                                        Int32.TryParse(toSet.GetValueAsString(), out currentValue);
+                                        if (currentValue <= armourValue)
+                                        {
+                                            //only write if current armour's value is higher than currently applied armour
+                                            toSet.SetValue(armourValue.ToString());
+                                        }
+                                    }
+                                    if (affectsLegs)
+                                    {
+                                        fields.TryGetValue($"LLeg", out toSet);
+                                        Int32.TryParse(toSet.GetValueAsString(), out currentValue);
+                                        if (currentValue <= armourValue)
+                                        {
+                                            //only write if current armour's value is higher than currently applied armour
+                                            toSet.SetValue(armourValue.ToString());
+                                        }
+
+                                        fields.TryGetValue($"RLeg", out toSet);
+                                        Int32.TryParse(toSet.GetValueAsString(), out currentValue);
+                                        if (currentValue <= armourValue)
+                                        {
+                                            //only write if current armour's value is higher than currently applied armour
+                                            toSet.SetValue(armourValue.ToString());
+                                        }
+                                    }
+
+                                    fields.TryGetValue($"ArmorNameRow{armourItems + 1}", out toSet);
+                                    toSet.SetValue(matchedTrapping.Name);
+                                    fields.TryGetValue($"LocationsRow{armourItems + 1}", out toSet);
+                                    toSet.SetValue(locations);
+                                    fields.TryGetValue($"ArmorEncRow{armourItems + 1}", out toSet);
+                                    toSet.SetValue(matchedTrapping.Enc);
+                                    fields.TryGetValue($"APRow{armourItems + 1}", out toSet);
+                                    toSet.SetValue(armourValue.ToString());
+                                    fields.TryGetValue($"QualitiesRow{armourItems + 1}", out toSet);
+                                    toSet.SetValue(qualities);
+                                    armourItems++;
+                                }
+                            }
+                        }
 
                         if (i >= 11)
                         {

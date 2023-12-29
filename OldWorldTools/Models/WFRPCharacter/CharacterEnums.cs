@@ -2,7 +2,20 @@
 
 namespace OldWorldTools.Models.WFRPCharacter
 {
-public enum TierEnum
+    public enum CharacteristicEnum
+    {
+        WS,
+        BS,
+        S,
+        T,
+        I,
+        Agi,
+        Dex,
+        Int,
+        WP,
+        Fel
+    }
+    public enum TierEnum
     {
         [Description("Tier 1")]
         Tier1,

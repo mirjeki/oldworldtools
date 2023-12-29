@@ -4,5 +4,6 @@
     {
         public string Name { get; set; }
         public string Enc { get; set; }
+        public string Properties { get; set; }
     }
 }

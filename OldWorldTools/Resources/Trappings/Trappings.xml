@@ -2,21 +2,46 @@
 	<Trapping>
 		<Name>Bandages</Name>
 		<Enc>0</Enc>
-		<Type></Type>
+		<Properties></Properties>
 	</Trapping>
 	<Trapping>
 		<Name>Bedroll</Name>
 		<Enc>1</Enc>
-		<Type></Type>
+		<Properties></Properties>
 	</Trapping>
 	<Trapping>
 		<Name>Healing Draught</Name>
 		<Enc>1</Enc>
-		<Type></Type>
+		<Properties></Properties>
 	</Trapping>
 	<Trapping>
 		<Name>Hand Weapon</Name>
-		<Enc>2</Enc>
-		<Type>Weapon</Type>
+		<Enc>1</Enc>
+		<Properties>Weapon,A,SB+4</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Shield(Buckler)</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,P,SB+1,Shield1,Defensive,Undamaging</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Leather Jack</Name>
+		<Enc>1</Enc>
+		<Properties>Armour,A,B,AP1</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Leather Jerkin</Name>
+		<Enc>1</Enc>
+		<Properties>Armour,B,AP1</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Mail Coat</Name>
+		<Enc>3</Enc>
+		<Properties>Armour,A,B,AP2,Flexible</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Breastplate</Name>
+		<Enc>3</Enc>
+		<Properties>Armour,B,AP2,Impenetrable,Weakpoints</Properties>
 	</Trapping>
 </Trappings>

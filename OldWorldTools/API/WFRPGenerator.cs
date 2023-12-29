@@ -24,6 +24,7 @@ namespace OldWorldTools.API
         public const string speciesXMLSRC = "Resources/Species/Species.xml";
         public const string skillsXMLSRC = "Resources/Skills/Skills.xml";
         public const string talentsXMLSRC = "Resources/Talents/Talents.xml";
+        public const string trappingsXMLSRC = "Resources/Trappings/Trappings.xml";
         public const string motivationsXMLSRC = "Resources/Motivations/Motivations.xml";
         public const string shortTermAmbitionsXMLSRC = "Resources/Ambitions/ShortTermAmbitions.xml";
         public const string longTermAmbitionsXMLSRC = "Resources/Ambitions/LongTermAmbitions.xml";
@@ -45,6 +46,7 @@ namespace OldWorldTools.API
             ImportCharacterCareers("WoodElf");
             ImportCharacterSkills();
             ImportCharacterTalents();
+            ImportCharacterTrappings();
             ImportCharacterMotivations();
             ImportCharacterShortTermAmbitions();
             ImportCharacterLongTermAmbitions();
@@ -574,6 +576,16 @@ namespace OldWorldTools.API
                 ILiteCollection<SkillDTO> skillDTOs = database.GetCollection<SkillDTO>();
 
                 return skillDTOs.FindAll().ToList();
+            }
+        }
+
+        public List<TrappingDTO> GetTrappings()
+        {
+            using (var database = new LiteDatabase(characterDefinitionsDB))
+            {
+                ILiteCollection<TrappingDTO> trappingDTOs = database.GetCollection<TrappingDTO>();
+
+                return trappingDTOs.FindAll().ToList();
             }
         }
 
@@ -1156,6 +1168,27 @@ namespace OldWorldTools.API
                 }
 
                 talents.Insert(talentsToAdd);
+            }
+        }
+
+        private void ImportCharacterTrappings()
+        {
+            using (var database = new LiteDatabase(characterDefinitionsDB))
+            {
+                ILiteCollection<TrappingDTO> trappings = database.GetCollection<TrappingDTO>();
+                //clear DB for fresh import
+                trappings.DeleteAll();
+
+                List<TrappingDTO> trappingsToAdd = new List<TrappingDTO>();
+
+                TrappingsCollection trappingsCollection = HelperMethods.DeserializeXMLFileToObject<TrappingsCollection>(trappingsXMLSRC);
+
+                foreach (var trapping in trappingsCollection.Trappings)
+                {
+                    trappingsToAdd.Add(new TrappingDTO { Name = trapping.Name, Enc = trapping.Enc, Properties = trapping.Properties });
+                }
+
+                trappings.Insert(trappingsToAdd);
             }
         }
 
