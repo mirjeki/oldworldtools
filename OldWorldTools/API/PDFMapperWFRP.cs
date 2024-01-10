@@ -5,6 +5,7 @@ using iText.Kernel.Pdf;
 using OldWorldTools.Models.WFRPCharacter;
 using System.ComponentModel;
 using Microsoft.Extensions.ObjectPool;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 
 namespace OldWorldTools.API
 {
@@ -107,6 +108,10 @@ namespace OldWorldTools.API
 
                     var trappingsList = generator.GetTrappings();
                     int armourItems = 0;
+                    int weaponItems = 0;
+                    int weaponsEnc = 0;
+                    int armoursEnc = 0;
+                    int trappingsEnc = 0;
 
                     for (int i = 0; i < characterSheet.Trappings.Count; i++)
                     {
@@ -119,6 +124,10 @@ namespace OldWorldTools.API
                         {
                             fields.TryGetValue($"TrappingEncRow{i + 1}", out toSet);
                             toSet.SetValue(matchedTrapping.Enc);
+                            if (Int32.TryParse(matchedTrapping.Enc, out int trappingEnc))
+                            {
+                                trappingsEnc += trappingEnc;
+                            }
 
                             if (matchedTrapping.Properties != null)
                             {
@@ -237,7 +246,145 @@ namespace OldWorldTools.API
                                     toSet.SetValue(armourValue.ToString());
                                     fields.TryGetValue($"QualitiesRow{armourItems + 1}", out toSet);
                                     toSet.SetValue(qualities);
+                                    if (Int32.TryParse(matchedTrapping.Enc, out int armourEnc))
+                                    {
+                                        armoursEnc += armourEnc;
+                                        trappingsEnc -= armourEnc;
+                                    }
                                     armourItems++;
+                                }
+                                if (matchedTrapping.Properties.Contains("Weapon"))
+                                {
+                                    var properties = HelperMethods.SeparateCSV(matchedTrapping.Properties);
+                                    bool includesStrengthBonus = false;
+                                    int damageBonus = 0;
+
+                                    string qualities = "";
+
+                                    foreach (var property in properties)
+                                    {
+                                        switch (property)
+                                        {
+                                            case "Basic":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Cavalry":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Fencing":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Brawling":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Flail":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Parry":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Polearm":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Two-handed":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Blackpowder":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Bow":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Crossbow":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Engineer":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Explosives":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Sling":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "Throwing":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case "A":
+                                                fields.TryGetValue($"RangeReachRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue("Average");
+                                                break;
+                                            case "V":
+                                                fields.TryGetValue($"RangeReachRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue("Varies");
+                                                break;
+                                            case "VS":
+                                                fields.TryGetValue($"RangeReachRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue("Very Short");
+                                                break;
+                                            case "P":
+                                                fields.TryGetValue($"RangeReachRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue("Personal");
+                                                break;
+                                            case "L":
+                                                fields.TryGetValue($"RangeReachRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue("Long");
+                                                break;
+                                            case "VL":
+                                                fields.TryGetValue($"RangeReachRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue("Very Long");
+                                                break;
+                                            case "S":
+                                                fields.TryGetValue($"RangeReachRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue("Short");
+                                                break;
+                                            case "M":
+                                                fields.TryGetValue($"RangeReachRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue("Massive");
+                                                break;
+                                            case string a when a.Contains("+"):
+                                                fields.TryGetValue($"DamageRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
+                                            case string a when a.Contains("Range"):
+                                                fields.TryGetValue($"RangeReachRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property.Replace("Range",string.Empty));
+                                                break;
+                                            case "Weapon":
+                                                break;
+                                            default:
+                                                qualities += $"{property} ";
+                                                break;
+                                        }
+                                    }
+
+                                    fields.TryGetValue($"WeaponsNameRow{armourItems + 1}", out toSet);
+                                    toSet.SetValue(matchedTrapping.Name);
+                                    fields.TryGetValue($"EncRow{armourItems + 1}", out toSet);
+                                    toSet.SetValue(matchedTrapping.Enc);
+                                    fields.TryGetValue($"WeaponsQualitiesRow{armourItems + 1}", out toSet);
+                                    toSet.SetValue(qualities);
+                                    if (Int32.TryParse(matchedTrapping.Enc, out int weaponEnc))
+                                    {
+                                        weaponsEnc += weaponEnc;
+                                        trappingsEnc -= weaponEnc;
+                                    }
+                                    weaponItems++;
                                 }
                             }
                         }
@@ -263,6 +410,56 @@ namespace OldWorldTools.API
                     toSet.SetValue((ToughnessBonus * 2).ToString());
                     fields.TryGetValue($"WPBField", out toSet);
                     toSet.SetValue((WillPowerBonus).ToString());
+
+                    //Wealth
+
+                    switch (characterSheet.Status)
+                    {
+                        case string a when a.Contains("Brass"):
+                            string trimmedBrassValue = a.Replace("Brass ", string.Empty);
+                            int pennies = 0;
+                            if (Int32.TryParse(trimmedBrassValue, out int brassValue))
+                            {
+                                pennies = (HelperMethods.RollD10() + HelperMethods.RollD10()) * brassValue;
+                            }
+                            fields.TryGetValue($"WEALTHd", out toSet);
+                            toSet.SetValue(pennies.ToString());
+                            break;
+                        case string a when a.Contains("Silver"):
+                            string trimmedSilverValue = a.Replace("Silver ", string.Empty);
+                            int shillings = 0;
+                            if (Int32.TryParse(trimmedSilverValue, out int silverValue))
+                            {
+                                shillings = (HelperMethods.RollD10()) * silverValue;
+                            }
+                            fields.TryGetValue($"WEALTHSS", out toSet);
+                            toSet.SetValue(shillings.ToString());
+                            break;
+                        case string a when a.Contains("Gold"):
+                            string trimmedGoldValue = a.Replace("Gold ", string.Empty);
+                            int crowns = 0;
+                            if (Int32.TryParse(trimmedGoldValue, out int goldValue))
+                            {
+                                crowns = goldValue;
+                            }
+                            fields.TryGetValue($"WEALTHGC", out toSet);
+                            toSet.SetValue(crowns.ToString());
+                            break;
+                        default:
+                            break;
+                    }
+
+                    //Encumbrance
+                    fields.TryGetValue($"EncumbWeapons", out toSet);
+                    toSet.SetValue((weaponsEnc).ToString());
+                    fields.TryGetValue($"EncumbArmour", out toSet);
+                    toSet.SetValue((armoursEnc).ToString());
+                    fields.TryGetValue($"EncumbTrappings", out toSet);
+                    toSet.SetValue((trappingsEnc).ToString());
+                    fields.TryGetValue($"Total Max Enc", out toSet);
+                    toSet.SetValue((StrengthBonus + ToughnessBonus).ToString());
+                    fields.TryGetValue($"Total", out toSet);
+                    toSet.SetValue((weaponsEnc + armoursEnc + trappingsEnc).ToString());
 
 
                     if (characterSheet.Talents.Contains("Hardy"))

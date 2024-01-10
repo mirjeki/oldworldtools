@@ -118,7 +118,7 @@ namespace OldWorldTools.API
 
         public SpeciesEnum RandomiseSpecies()
         {
-            int diceRoll = RollD100();
+            int diceRoll = HelperMethods.RollD100();
 
             switch (diceRoll)
             {
@@ -148,7 +148,7 @@ namespace OldWorldTools.API
 
         public CareerDTO RandomiseCareer(SpeciesEnum species)
         {
-            int diceRoll = RollD100();
+            int diceRoll = HelperMethods.RollD100();
 
             var availableCareers = GetCareers(species);
 
@@ -161,16 +161,6 @@ namespace OldWorldTools.API
             }
 
             return availableCareers[0];
-        }
-
-        private int RollD10()
-        {
-            return random.Next(1, 10);
-        }
-
-        private int RollD100()
-        {
-            return random.Next(1, 100);
         }
 
         public CharacterSheet MapSpeciesSkillsToCharacterSheet(CharacterSheet characterSheet)
@@ -715,7 +705,7 @@ namespace OldWorldTools.API
 
         private string GetRandomStartingTalent()
         {
-            int diceRoll = RollD100();
+            int diceRoll = HelperMethods.RollD100();
 
             switch (diceRoll)
             {
@@ -871,7 +861,7 @@ namespace OldWorldTools.API
 
             foreach (var characteristic in characteristics)
             {
-                characteristic.Rolled = RollD10() + RollD10();
+                characteristic.Rolled = HelperMethods.RollD10() + HelperMethods.RollD10();
 
                 CalculateInitialCharacteristic(characteristic, characterSheet.Region);
             }

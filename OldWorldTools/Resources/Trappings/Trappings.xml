@@ -17,12 +17,17 @@
 	<Trapping>
 		<Name>Hand Weapon</Name>
 		<Enc>1</Enc>
-		<Properties>Weapon,A,SB+4</Properties>
+		<Properties>Weapon,Basic,A,SB+4</Properties>
 	</Trapping>
 	<Trapping>
-		<Name>Shield(Buckler)</Name>
+		<Name>Shield (Buckler)</Name>
 		<Enc>0</Enc>
-		<Properties>Weapon,P,SB+1,Shield1,Defensive,Undamaging</Properties>
+		<Properties>Weapon,Basic,P,SB+1,Shield1,Defensive,Undamaging</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Blunderbuss</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Blackpowder,Range20,+8,Blast3,Dangerous,Reload2</Properties>
 	</Trapping>
 	<Trapping>
 		<Name>Leather Jack</Name>

@@ -10,7 +10,15 @@ namespace OldWorldTools.API
     public static class HelperMethods
     {
         static Random random = new Random();
+        public static int RollD10()
+        {
+            return random.Next(1, 10);
+        }
 
+        public static int RollD100()
+        {
+            return random.Next(1, 100);
+        }
         public static List<string> SeparateCSV(string csvContents)
         {
             var strings = csvContents.Split(',');
