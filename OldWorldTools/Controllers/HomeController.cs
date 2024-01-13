@@ -75,6 +75,8 @@ namespace OldWorldTools.Controllers
                 case "RandomiseCareer":
                     currentCareer = generator.RandomiseCareer(characterSheet.Species);
                     characterSheet = generator.MapCareerToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
+                    characterSheet = generator.MapSpeciesSkillsToCharacterSheet(characterSheet);
+                    characterSheet = generator.MapCareerSkillsToCharacterSheet(currentCareer, characterSheet, characterSheet.Tier);
 
                     return View("Index", characterSheet);
                 case "RandomiseCharacteristics":

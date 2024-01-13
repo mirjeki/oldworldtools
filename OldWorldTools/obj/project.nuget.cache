@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Xw2pIy+lwfSHIO0bglZylEBZHqEG9JdDPnPyvEBxZy04SWytQqh0j4Io1eqOZ+yjIMJ1x7TIgqyEBm711ziVMg==",
+  "dgSpecHash": "T7tv5BFtjI0KHpHhYCG+81RWUFNpv9M1x65KOOCMm3XDXegVdNLd6Vl1dAkUJmkLMVF7YFYRFjtVlnPCD6IOuA==",
   "success": true,
   "projectFilePath": "C:\\Portfolio\\Full-Stack\\old-world-tools\\oldworldtools\\OldWorldTools\\OldWorldTools.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mirje\\.nuget\\packages\\bootstrap\\5.3.2\\bootstrap.5.3.2.nupkg.sha512",
     "C:\\Users\\mirje\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\mirje\\.nuget\\packages\\itext\\8.0.2\\itext.8.0.2.nupkg.sha512",
     "C:\\Users\\mirje\\.nuget\\packages\\itext.bouncy-castle-adapter\\8.0.2\\itext.bouncy-castle-adapter.8.0.2.nupkg.sha512",

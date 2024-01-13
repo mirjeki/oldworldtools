@@ -28,236 +28,236 @@
         <span style="display:none;">@Html.TextBoxFor(model => model.Resolve)</span>
         @*Hidden fields for values which aren't shown on page*@
     </div>
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseName">Randomise Name</button></span>
-        <div>
-            @Html.LabelFor(model => model.Name)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => model.Name, new { style="width:250px;" })
-        </div>
-    </div>
-
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseMotivation">Randomise Motivation</button></span>
-        <div>
-            @Html.LabelFor(model => model.Motivation)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => model.Motivation, new { style="width:250px;" })
-        </div>
-    </div>
-
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseShortTermAmbition">Randomise Short Term Ambition</button></span>
-        <div>
-            @Html.LabelFor(model => model.ShortTermAmbition)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => model.ShortTermAmbition, new { style="width:250px;" })
-        </div>
-    </div>
-
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseLongTermAmbition">Randomise Long Term Ambition</button></span>
-        <div>
-            @Html.LabelFor(model => model.LongTermAmbition)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => model.LongTermAmbition, new { style="width:250px;" })
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col-md-3">
+                <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseName">Randomise Name</button></span>
+                <div class="col-md-12 mt-2">
+                    @Html.LabelFor(model => model.Name):
+                    @Html.TextBoxFor(model => model.Name, new { style="width:150px;" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseGender">Randomise Gender</button></span>
+                <div class="col-md-12 mt-2">
+                    @Html.LabelFor(model => model.Gender):
+                    @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(GenderEnum))))
+                </div>
+            </div>
+            <div class="col-md-3">
+                <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseSpecies">Randomise Species</button></span>
+                <div class="col-md-12 mt-2">
+                    @Html.LabelFor(model => model.Species):
+                    @Html.DropDownListFor(model => model.Species, new SelectList(Enum.GetValues(typeof(SpeciesEnum))), new { onchange = @"
+                var form = document.forms[0];
+                form.submit();"})
+                </div>
+            </div>
+            <div class="col-md-3">
+                <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseRegion">Randomise Region</button></span>
+                <div class="col-md-12 mt-2">
+                    @Html.LabelFor(model => model.Region):
+                    @Html.DropDownListFor(model => model.Region, new SelectList(Model.RegionsAvailable, "Key", "Value"))
+                </div>
+            </div>
         </div>
     </div>
 
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseGender">Randomise Gender</button></span>
-        <div>
-            @Html.LabelFor(model => model.Gender)
-        </div>
-        <div>
-            @Html.DropDownListFor(model => model.Gender, new SelectList(Enum.GetValues(typeof(GenderEnum))))
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseMotivation">Randomise Motivation</button></span>
+                <div class="col-md-12 mt-2">
+                    @Html.LabelFor(model => model.Motivation):
+                    @Html.TextBoxFor(model => model.Motivation, new { style="width:250px;" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseShortTermAmbition">Randomise Short Term Ambition</button></span>
+                <div class="col-md-12 mt-2">
+                    Short Term Ambition:
+                    @Html.TextBoxFor(model => model.ShortTermAmbition, new { style="width:250px;" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseLongTermAmbition">Randomise Long Term Ambition</button></span>
+                <div class="col-md-12 mt-2">
+                    Long Term Ambition:
+                    @Html.TextBoxFor(model => model.LongTermAmbition, new { style="width:250px;" })
+                </div>
+            </div>
         </div>
     </div>
 
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseSpecies">Randomise Species</button></span>
+    <div class="container mb-3 mt-5">
         <div>
-            @Html.LabelFor(model => model.Species)
-        </div>
-        <div>
-            @Html.DropDownListFor(model => model.Species, new SelectList(Enum.GetValues(typeof(SpeciesEnum))), new { onchange = @"
-        var form = document.forms[0];
-        form.submit();"})
-        </div> 
-    </div>
-
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseRegion">Randomise Region</button></span>
-        <div>
-            @Html.LabelFor(model => model.Region)
-        </div>
-        <div>
-            @Html.DropDownListFor(model => model.Region, new SelectList(Model.RegionsAvailable, "Key", "Value"))
-        </div>
-    </div>
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseCharacteristics">Randomise Characteristics</button></span>
-        <table class="table">
-            <thead><h2>Characteristics</h2></thead>
-            <thead>
-                <tr>
-                    <td></td>
-                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
-                    {
-                        @*Retain characteristic definitions in form submission*@
-                        <div style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].Name)</div>
-                        <div style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].ShortName)</div>
-                        @*Retain characteristic definitions in form submission*@
-                        <td>@Model.Characteristics[i].ShortName.ToString()</td>
-                    }
-                </tr>
-                <tr>
-                    <td>Initial</td>
-                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
-                    {
-                        <td>
-                            @Html.TextBoxFor(model => model.Characteristics[i].Initial, new { style="width:50px;", @readonly=true})
-                        </td>
-                    }
-                </tr>
-                <tr>
-                    <td></td>
-                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
-                    {
-                        <td>
-                            <p>
-                                <small>
-                                    <small><small><small>Rolled: </small></small></small>
-                                </small>
-                                <small>
-                                    <small>
-                                        <small>
-                                            <span style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].Rolled)</span>
-                                            @Html.DisplayTextFor(model => model.Characteristics[i].Rolled)
-                                        </small>
-                                    </small>
-                                </small>
-                            </p>
-                            <p>
-                                <small>
-                                    <small><small><small>Species Mod.: </small></small></small>
-                                </small>
-                                <small>
-                                    <small>
-                                        <small>
-                                            <span style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].SpeciesModifier)</span>
-                                            @Html.DisplayTextFor(model => model.Characteristics[i].SpeciesModifier)
-                                        </small>
-                                    </small>
-                                </small>
-                            </p>
-                            <p>
-                                <small>
-                                    <small><small><small>Other Mod.: </small></small></small>
-                                </small>
-                                <small>
-                                    <small>
-                                        <small>
-                                            <span style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].OtherModifier)</span>
-                                            @Html.DisplayTextFor(model => model.Characteristics[i].OtherModifier)
-                                        </small>
-                                    </small>
-                                </small>
-                            </p>
-                        </td>
-                    }
-                </tr>
-                <tr>
-                    <td>Advances</td>
-                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
-                    {
-                        <td>
-                            @Html.TextBoxFor(model => model.Characteristics[i].Advances, new { style="width:50px;", onchange = @"
-                    var form = document.forms[0];
-                    form.submit();"})
-                        </td>
-                    }
-                </tr>
-                <tr>
-                    <td>Current</td>
-                    @for (int i = 0; i < Model.Characteristics.Count(); i++)
-                    {
-                        <td>@Model.Characteristics[i].CurrentValue()</td>
-                    }
-                </tr>
-            </thead>
-        </table>
-    </div>
-
-
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseCareer">Randomise Career</button></span>
-        <div>
-            @Html.LabelFor(model => model.Career)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => model.Career, new { @readonly = true })
-        </div>
-        <div>
-            @Html.LabelFor(model => model.Class)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => model.Class, new { @readonly = true })
-        </div>
-        <div>
-            @Html.LabelFor(model => model.CareerPath)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => model.CareerPath, new { @readonly = true })
-        </div>
-        <div>
-            @Html.LabelFor(model => model.Status)
-        </div>
-        <div>
-            @Html.TextBoxFor(model => model.Status, new { @readonly = true })
-        </div>
-        <table class="table" style="width:350px;">
-            <thead><h2>Talents</h2></thead>
-            @{
-                for (var i = 0; i < Model.Talents.Count(); i++)
-                {
-                    <thead>
-                        <tr>
-                            <td>Name</td>
-                            <td>Times Taken</td>
-                        </tr>
-                    </thead>
+            <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseCharacteristics">Randomise Characteristics</button></span>
+            <table class="table">
+                <thead><h2>Characteristics</h2></thead>
+                <thead>
                     <tr>
-                        <td>@Html.TextBoxFor(model => model.Talents[i], new { @readonly = true })</td>
-                        <td>1</td>
+                        <td></td>
+                        @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                        {
+                            @*Retain characteristic definitions in form submission*@
+                            <div style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].Name)</div>
+                            <div style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].ShortName)</div>
+                            @*Retain characteristic definitions in form submission*@
+                            <td>@Model.Characteristics[i].ShortName.ToString()</td>
+                        }
                     </tr>
-                }
-            }
-        </table>
-        <table class="table" style="width:250px;">
-            <thead><h2>Trappings</h2></thead>
-            @{
-                for (var i = 0; i < Model.Trappings.Count(); i++)
-                {
-                    <thead>
-                        <tr>
-                            <td>Name</td>
-                        </tr>
-                    </thead>
                     <tr>
-                        <td>@Html.TextBoxFor(model => model.Trappings[i])</td>
+                        <td>Initial</td>
+                        @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                        {
+                            <td>
+                                @Html.TextBoxFor(model => model.Characteristics[i].Initial, new { style="width:50px;", @readonly=true})
+                            </td>
+                        }
                     </tr>
-                }
-            }
-        </table>
+                    <tr>
+                        <td></td>
+                        @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                        {
+                            <td>
+                                <p>
+                                    <small>
+                                        <small><small><small>Rolled: </small></small></small>
+                                    </small>
+                                    <small>
+                                        <small>
+                                            <small>
+                                                <span style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].Rolled)</span>
+                                                @Html.DisplayTextFor(model => model.Characteristics[i].Rolled)
+                                            </small>
+                                        </small>
+                                    </small>
+                                </p>
+                                <p>
+                                    <small>
+                                        <small><small><small>Species Mod.: </small></small></small>
+                                    </small>
+                                    <small>
+                                        <small>
+                                            <small>
+                                                <span style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].SpeciesModifier)</span>
+                                                @Html.DisplayTextFor(model => model.Characteristics[i].SpeciesModifier)
+                                            </small>
+                                        </small>
+                                    </small>
+                                </p>
+                                <p>
+                                    <small>
+                                        <small><small><small>Other Mod.: </small></small></small>
+                                    </small>
+                                    <small>
+                                        <small>
+                                            <small>
+                                                <span style="display:none;">@Html.TextBoxFor(model => model.Characteristics[i].OtherModifier)</span>
+                                                @Html.DisplayTextFor(model => model.Characteristics[i].OtherModifier)
+                                            </small>
+                                        </small>
+                                    </small>
+                                </p>
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <td>Advances</td>
+                        @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                        {
+                            <td>
+                                @Html.TextBoxFor(model => model.Characteristics[i].Advances, new { style="width:50px;", onchange = @"
+                        var form = document.forms[0];
+                        form.submit();"})
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <td>Current</td>
+                        @for (int i = 0; i < Model.Characteristics.Count(); i++)
+                        {
+                            <td>@Model.Characteristics[i].CurrentValue()</td>
+                        }
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </div>
 
-    <div>
-        <span><button type="submit" name="submitButton" value="RandomiseSkills">Randomise Skills</button></span>
+    <div class="container mb-3 mt-5">
+        <div class="row">
+            <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseCareer">Randomise Career</button></span>
+            <div class="col-md-4">
+                <h2>Class & Career</h2>
+                <div>
+                    @Html.LabelFor(model => model.Career)
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.Career, new { @readonly = true })
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.Class)
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.Class, new { @readonly = true })
+                </div>
+                <div>
+                    Career Path
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.CareerPath, new { @readonly = true })
+                </div>
+                <div>
+                    @Html.LabelFor(model => model.Status)
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.Status, new { @readonly = true })
+                </div>
+            </div>
+            <div class="col-md-4">
+                <table class="table" style="width:350px;">
+                    <thead><h2>Talents</h2></thead>
+                    @{
+                        for (var i = 0; i < Model.Talents.Count(); i++)
+                        {
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Times Taken</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>@Html.TextBoxFor(model => model.Talents[i], new { @readonly = true })</td>
+                                <td>1</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+            <div class="col-md-4">
+                <table class="table" style="width:250px;">
+                    <thead><h2>Trappings</h2></thead>
+                    @{
+                        for (var i = 0; i < Model.Trappings.Count(); i++)
+                        {
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>@Html.TextBoxFor(model => model.Trappings[i])</td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-3 mt-5">
+        <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseSkills">Randomise Skills</button></span>
         <table class="table" style="width:600px;">
             <thead><h2>Skills</h2></thead>
             @{
@@ -309,6 +309,6 @@
     <!-- Add other input fields as needed -->
 
     <div>
-        <button type="submit" name="submitButton" value="Generate">Generate Character</button>
+        <button class="btn btn-success" type="submit" name="submitButton" value="Generate">Generate Character</button>
     </div>
 }

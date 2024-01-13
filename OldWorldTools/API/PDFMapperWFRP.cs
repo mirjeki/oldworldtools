@@ -461,7 +461,6 @@ namespace OldWorldTools.API
                     fields.TryGetValue($"Total", out toSet);
                     toSet.SetValue((weaponsEnc + armoursEnc + trappingsEnc).ToString());
 
-
                     if (characterSheet.Talents.Contains("Hardy"))
                     {
                         fields.TryGetValue($"HardyField", out toSet);
