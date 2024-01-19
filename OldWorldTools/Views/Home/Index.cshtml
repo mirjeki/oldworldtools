@@ -1,19 +1,12 @@
 ﻿@using OldWorldTools.Controllers;
-@using OldWorldTools.Models.WFRPNames
+@using OldWorldTools.Models.WFRPNames;
 @model OldWorldTools.Models.WFRPCharacter.CharacterSheet
 
 @{
     ViewBag.Title = "WFRP Character Generator";
+    var pageScroll = ViewData["PageScroll"] as string;
 }
-
 <h2>WFRP Character Generator</h2>
-
-@*@using (Html.BeginForm("RandomiseCharacterName", "Home", FormMethod.Post))
-{
-    <div>
-        <button type="submit">Randomise Character Name</button>
-    </div>
-}*@
 
 @using (Html.BeginForm("GenerateCharacter", "Home", FormMethod.Post))
 {
@@ -89,7 +82,7 @@
         </div>
     </div>
 
-    <div class="container mb-3 mt-5">
+    <div id="characteristics" class="container mb-3 mt-5">
         <div>
             <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseCharacteristics">Randomise Characteristics</button></span>
             <table class="table">
@@ -185,7 +178,7 @@
         </div>
     </div>
 
-    <div class="container mb-3 mt-5">
+    <div id="career" class="container mb-3 mt-5">
         <div class="row">
             <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseCareer">Randomise Career</button></span>
             <div class="col-md-4">
@@ -256,7 +249,7 @@
         </div>
     </div>
 
-    <div class="container mb-3 mt-5">
+    <div id="skills" class="container mb-3 mt-5">
         <span><button class="btn btn-success" type="submit" name="submitButton" value="RandomiseSkills">Randomise Skills</button></span>
         <table class="table" style="width:600px;">
             <thead><h2>Skills</h2></thead>
@@ -311,4 +304,21 @@
     <div>
         <button class="btn btn-success" type="submit" name="submitButton" value="Generate">Generate Character</button>
     </div>
+}
+
+@if (!string.IsNullOrEmpty(pageScroll))
+{
+    <script>
+        document.getElementById('@pageScroll').scrollIntoView({
+            behavior: 'instant'
+        });
+    </script>
+}else
+{
+    <script>
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    </script>
 }

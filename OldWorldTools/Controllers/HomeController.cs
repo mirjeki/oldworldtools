@@ -37,12 +37,6 @@ namespace OldWorldTools.Controllers
 
             switch (submitButton)
             {
-                case "Generate":
-                    var pdfBytes = mapperWFRP.GeneratePdf(characterSheet);
-                    string characterNameTrimmed = characterSheet.Name.Replace(" ", string.Empty);
-
-                    // Return the PDF as a file download
-                    return File(pdfBytes, "application/pdf", $"WFRP_Char_{characterNameTrimmed}.pdf");
                 case "RandomiseName":
                     characterSheet = generator.RandomiseCharacterName(characterSheet);
 
@@ -72,23 +66,32 @@ namespace OldWorldTools.Controllers
                     characterSheet.Region = generator.RandomiseRegion(characterSheet.RegionsAvailable);
 
                     return View("Index", characterSheet);
+                case "RandomiseCharacteristics":
+                    characterSheet.Characteristics = generator.RandomiseCharacteristics(characterSheet);
+                    //characterSheet = generator.MapCareerToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
+
+                    ViewData["PageScroll"] = "characteristics";
+                    return View("Index", characterSheet);
                 case "RandomiseCareer":
                     currentCareer = generator.RandomiseCareer(characterSheet.Species);
                     characterSheet = generator.MapCareerToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
                     characterSheet = generator.MapSpeciesSkillsToCharacterSheet(characterSheet);
                     characterSheet = generator.MapCareerSkillsToCharacterSheet(currentCareer, characterSheet, characterSheet.Tier);
 
-                    return View("Index", characterSheet);
-                case "RandomiseCharacteristics":
-                    characterSheet.Characteristics = generator.RandomiseCharacteristics(characterSheet);
-                    //characterSheet = generator.MapCareerToCharacterSheet(currentCareer, characterSheet, TierEnum.Tier1);
-
+                    ViewData["PageScroll"] = "career";
                     return View("Index", characterSheet);
                 case "RandomiseSkills":
                     characterSheet = generator.MapSpeciesSkillsToCharacterSheet(characterSheet);
                     characterSheet = generator.MapCareerSkillsToCharacterSheet(currentCareer, characterSheet, characterSheet.Tier);
 
+                    ViewData["PageScroll"] = "skills";
                     return View("Index", characterSheet);
+                case "Generate":
+                    var pdfBytes = mapperWFRP.GeneratePdf(characterSheet);
+                    string characterNameTrimmed = characterSheet.Name.Replace(" ", string.Empty);
+
+                    // Return the PDF as a file download
+                    return File(pdfBytes, "application/pdf", $"WFRP_Char_{characterNameTrimmed}.pdf");
                 default:
                     break;
             }
