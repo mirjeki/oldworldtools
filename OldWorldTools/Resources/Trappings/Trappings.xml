@@ -20,14 +20,259 @@
 		<Properties>Weapon,Basic,A,SB+4</Properties>
 	</Trapping>
 	<Trapping>
+		<Name>Improvised Weapon</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Basic,Undamaging,SB+1</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Dagger</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Basic,VS,SB+2</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Knife</Name>
+		<Enc></Enc>
+		<Properties>Weapon,Basic,Undamaging,VS,SB+1</Properties>
+	</Trapping>
+	<Trapping>
 		<Name>Shield (Buckler)</Name>
 		<Enc>0</Enc>
 		<Properties>Weapon,Basic,P,SB+1,Shield1,Defensive,Undamaging</Properties>
 	</Trapping>
 	<Trapping>
+		<Name>Shield</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Basic,VS,SB+2,Shield2,Defensive,Undamaging</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Shield (Large)</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Basic,VS,SB+3,Shield3,Defensive,Undamaging</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Cavalry Hammer</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Cavalry,L,SB+5,Pummel</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Lance</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Cavalry,VL,SB+6,Impact,Impale</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Foil</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Fencing,M,SB+3,Fast,Impale,Precise,Undamaging</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Rapier</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Fencing,L,SB+4,Fast,Impale</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Unarmed</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Brawling,P,SB+0,Undamaging</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Knuckledusters</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Brawling,P,SB+2</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Grain Flail</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Flail,A,SB+3,Distract,Imprecise,Wrap</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Flail</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Flail,A,SB+5,Distract,Wrap</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Military Flail</Name>
+		<Enc>2</Enc>
+		<Properties>Weapon,Flail,L,SB+6,Distract,Impact,Tiring,Wrap</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Main Gauche</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Parry,VS,SB+2,Defensive</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Swordbreaker</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Parry,S,SB+3,Defensive,Trap-blade</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Halberd</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Polearm,L,SB+4,Defensive,Hack,Impale</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Spear</Name>
+		<Enc>2</Enc>
+		<Properties>Weapon,Polearm,VL,SB+4,Impale</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Pike</Name>
+		<Enc>4</Enc>
+		<Properties>Weapon,Polearm,M,SB+4,Impale</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Quarter Staff</Name>
+		<Enc>2</Enc>
+		<Properties>Weapon,Polearm,L,SB+4,Defensive,Pummel</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Bastard Sword</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Two-Handed,L,SB+5,Defensive,Damaging</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Great Axe</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Two-Handed,L,SB+6,Hack,Impact,Tiring</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Pick</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Two-Handed,A,SB+5,Damaging,Impale,Slow</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Warhammer</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Two-Handed,A,SB+6,Damaging,Pummel,Slow</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Zweihänder</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Two-Handed,L,SB+5,Damaging,Hack</Properties>
+	</Trapping>
+	<Trapping>
 		<Name>Blunderbuss</Name>
 		<Enc>1</Enc>
 		<Properties>Weapon,Blackpowder,Range20,+8,Blast3,Dangerous,Reload2</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Hochland Long Rifle</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Blackpowder,Range100,+9,Accurate,Precise,Reload4</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Handgun</Name>
+		<Enc>2</Enc>
+		<Properties>Weapon,Blackpowder,Range50,+9,Dangerous,Reload3</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Pistol</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Blackpowder,Range20,+8,Pistol,Reload1</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Elf Bow</Name>
+		<Enc>2</Enc>
+		<Properties>Weapon,Bow,Range150,SB+4,Damaging,Precise</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Longbow</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Bow,Range100,SB+4,Damaging</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Bow</Name>
+		<Enc>2</Enc>
+		<Properties>Weapon,Bow,Range50,SB+3</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Shortbow</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Bow,Range20,SB+2</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Crossbow Pistol</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Crossbow,Range10,+7,Pistol</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Heavy Crossbow</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Crossbow,Range100,+9,Damaging,Reload2</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Crossbow</Name>
+		<Enc>2</Enc>
+		<Properties>Weapon,Crossbow,Range60,+9,Reload1</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Repeater Handgun</Name>
+		<Enc>3</Enc>
+		<Properties>Weapon,Engineering,Range30,+9,Dangerous,Reload5,Repeater4</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Repeater Pistol</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Engineering,Range10,+8,Dangerous,Pistol,Reload4,Repeater4</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Lasso</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Entangling,RangeSBx2,Entangle</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Whip</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Entangling,Range6,SB+2,Entangle</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Bomb</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Explosives,RangeSB,+12,Blast5,Dangerous,Impact</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Incendiary</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Explosives,RangeSB,DamageSpecial,Blast4,Dangerous</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Sling</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Sling,Range60,+6</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Staff Sling</Name>
+		<Enc>2</Enc>
+		<Properties>Weapon,Sling,Range100,+7</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Bolas</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Throwing,RangeSBx3,SB+0,Entangle</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Dart</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Throwing,RangeSBx2,SB+1,Impale</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Javelin</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Throwing,RangeSBx3,SB+3,Impale</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Rock</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Throwing,RangeSBx3,SB+0,Impale</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Throwing Axe</Name>
+		<Enc>1</Enc>
+		<Properties>Weapon,Throwing,RangeSBx2,SB+3,Hack</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Throwing Knife</Name>
+		<Enc>0</Enc>
+		<Properties>Weapon,Throwing,RangeSBx2,SB+2</Properties>
 	</Trapping>
 	<Trapping>
 		<Name>Leather Jack</Name>
@@ -40,13 +285,64 @@
 		<Properties>Armour,B,AP1</Properties>
 	</Trapping>
 	<Trapping>
+		<Name>Leather Leggings</Name>
+		<Enc>1</Enc>
+		<Properties>Armour,L,AP1</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Leather Skullcap</Name>
+		<Enc>0</Enc>
+		<Properties>Armour,H,AP1,Partial</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Breastplate (Leather)</Name>
+		<Enc>2</Enc>
+		<Properties>Armour,B,AP2,Weakpoints</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Mail Chausses</Name>
+		<Enc>3</Enc>
+		<Properties>Armour,L,AP2,Flexible</Properties>
+	</Trapping>
+	<Trapping>
 		<Name>Mail Coat</Name>
 		<Enc>3</Enc>
 		<Properties>Armour,A,B,AP2,Flexible</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Mail Coif</Name>
+		<Enc>2</Enc>
+		<Properties>Armour,H,AP2,-10%Perception,Flexible,Partial</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Mail Shirt</Name>
+		<Enc>2</Enc>
+		<Properties>Armour,B,AP2,Flexible</Properties>
 	</Trapping>
 	<Trapping>
 		<Name>Breastplate</Name>
 		<Enc>3</Enc>
 		<Properties>Armour,B,AP2,Impenetrable,Weakpoints</Properties>
 	</Trapping>
+	<Trapping>
+		<Name>Open Helm</Name>
+		<Enc>1</Enc>
+		<Properties>Armour,H,AP2,-10%Perception,Partial</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Bracers</Name>
+		<Enc>3</Enc>
+		<Properties>Armour,A,AP2,Impenetrable,Weakpoints</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Plate Leggings</Name>
+		<Enc>3</Enc>
+		<Properties>Armour,L,AP2,-10Stealth,Impenetrable,Weakpoints</Properties>
+	</Trapping>
+	<Trapping>
+		<Name>Helm</Name>
+		<Enc>2</Enc>
+		<Properties>Armour,H,AP2,-20%Perception,Impenetrable,Weakpoints</Properties>
+	</Trapping>
+
 </Trappings>

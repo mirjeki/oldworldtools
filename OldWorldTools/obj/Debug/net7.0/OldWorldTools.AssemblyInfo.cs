@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OldWorldTools")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50df2bc45a60d40442e86f45cd2f28f1827aeb49")]
 [assembly: System.Reflection.AssemblyProductAttribute("OldWorldTools")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OldWorldTools")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

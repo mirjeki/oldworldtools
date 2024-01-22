@@ -1140,6 +1140,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="45" Upper="45">
+			<Career>
+				<Name>Scout</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Guide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Gossip,Lore(Local),Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>Orientation,Rover,Sharp,Strider(Any)</Talents>
+					<Trappings>HandWeapon,LeatherJack,SturdyBootsAndCloak,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Scout</Title>
+					<AdvanceScheme>T,I,Agi,BS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Athletics,Navigation,Ranged(Bow),Ride(Horse),Stealth(Rural),Track</Skills>
+					<Talents>CombatAware,NightVision,NoseForTrouble,SeasonedTraveller</Talents>
+					<Trappings>BowWith10Arrows,MailShirt</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Pathfinder</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Haggle,SecretSigns(Hunter),Swim</Skills>
+					<Talents>AcuteSense(Sight),SixthSense,StrongLegs,VeryResilient</Talents>
+					<Trappings>Map,RidingHorseWithSaddleAndTack,SaddleBagsWith2WeeksRations,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Explorer</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int,Dex</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Language(Any),Trade(Cartographer)</Skills>
+					<Talents>Hardy,Linguistics,Savant(Local),Tenacious</Talents>
+					<Trappings>SelectionOfMaps,TradeTools(Cartographer)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="46" Upper="50">
+			<Career>
+				<Name>Villager</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Peasant</Title>
+					<AdvanceScheme>S,T,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>AnimalCare,Athletics,ConsumeAlcohol,Endurance,Gossip,Melee(Brawling),Lore(Local),OutdoorSurvival</Skills>
+					<Talents>Rover,StrongBack,Strong-minded,StoneSoup</Talents>
+					<Trappings>Nothing</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Villager</Title>
+					<AdvanceScheme>S,T,Agi,WS</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Dodge,Drive,Entertain(Storytelling),Haggle,Melee(Basic),Trade(Any)</Skills>
+					<Talents>AnimalAffinity,Hardy,Tenacious,VeryStrong</Talents>
+					<Trappings>LeatherJerkin,HandWeapon(Axe),TradeTools(AsTrade)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Councillor</Title>
+					<AdvanceScheme>S,T,Agi,WS,Fel</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Bribery,Charm,Intimidate,Leadership</Skills>
+					<Talents>Craftsman(Any),Dealmaker,Stout-hearted,VeryResilient</Talents>
+					<Trappings>MuleAndCart,VillageHomeAndWorkshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Village Elder</Title>
+					<AdvanceScheme>S,T,Agi,WS,Fel,Int</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Intuition,Lore(History)</Skills>
+					<Talents>MasterTradesman(Any),NimbleFingered,PublicSpeaker,Savant(Local)</Talents>
+					<Trappings>TheRespectOfTheVillage</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="51" Upper="51">
+			<Career>
+				<Name>Bounty Hunter</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Thief-taker</Title>
+					<AdvanceScheme>WS,T,Agi</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Bribery,Charm,Gossip,Haggle,Intuition,Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>BreakAndEnter,Shadow,StrikeToStun,Suave</Talents>
+					<Trappings>HandWeapon,LeatherJerkin,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Athletics,Endurance,Intimidate,Ranged(Crossbow),Ranged(Entangling),Track</Skills>
+					<Talents>Marksman,Relentless,SeasonedTraveller,StrongBack</Talents>
+					<Trappings>CrossbowAnd10Bolts,LeatherSkullcap,Manacles,Net,WarrantPapers</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>AnimalCare,Climb,Ride(Horse),Swim</Skills>
+					<Talents>AccurateShot,CarefulStrike,DualWielder,Sprinter</Talents>
+					<Trappings>MailShirt,RidingHorseWithSaddle</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Bounty Hunter General</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Lore(Law)</Skills>
+					<Talents>DeadeyeShot,Fearless(Bounties),Hardy,SureShot</Talents>
+					<Trappings>DraughtHorseAndCart,MailShirt,4PairsOfManacles</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Dwarf">
 		<Odds Lower="1" Upper="1">
@@ -2054,6 +2168,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="55" Upper="55">
+			<Career>
+				<Name>Scout</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Guide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Gossip,Lore(Local),Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>Orientation,Rover,Sharp,Strider(Any)</Talents>
+					<Trappings>HandWeapon,LeatherJack,SturdyBootsAndCloak,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Scout</Title>
+					<AdvanceScheme>T,I,Agi,BS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Athletics,Navigation,Ranged(Bow),Ride(Horse),Stealth(Rural),Track</Skills>
+					<Talents>CombatAware,NightVision,NoseForTrouble,SeasonedTraveller</Talents>
+					<Trappings>BowWith10Arrows,MailShirt</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Pathfinder</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Haggle,SecretSigns(Hunter),Swim</Skills>
+					<Talents>AcuteSense(Sight),SixthSense,StrongLegs,VeryResilient</Talents>
+					<Trappings>Map,RidingHorseWithSaddleAndTack,SaddleBagsWith2WeeksRations,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Explorer</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int,Dex</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Language(Any),Trade(Cartographer)</Skills>
+					<Talents>Hardy,Linguistics,Savant(Local),Tenacious</Talents>
+					<Trappings>SelectionOfMaps,TradeTools(Cartographer)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="56" Upper="56">
+			<Career>
+				<Name>Villager</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Peasant</Title>
+					<AdvanceScheme>S,T,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>AnimalCare,Athletics,ConsumeAlcohol,Endurance,Gossip,Melee(Brawling),Lore(Local),OutdoorSurvival</Skills>
+					<Talents>Rover,StrongBack,Strong-minded,StoneSoup</Talents>
+					<Trappings>Nothing</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Villager</Title>
+					<AdvanceScheme>S,T,Agi,WS</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Dodge,Drive,Entertain(Storytelling),Haggle,Melee(Basic),Trade(Any)</Skills>
+					<Talents>AnimalAffinity,Hardy,Tenacious,VeryStrong</Talents>
+					<Trappings>LeatherJerkin,HandWeapon(Axe),TradeTools(AsTrade)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Councillor</Title>
+					<AdvanceScheme>S,T,Agi,WS,Fel</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Bribery,Charm,Intimidate,Leadership</Skills>
+					<Talents>Craftsman(Any),Dealmaker,Stout-hearted,VeryResilient</Talents>
+					<Trappings>MuleAndCart,VillageHomeAndWorkshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Village Elder</Title>
+					<AdvanceScheme>S,T,Agi,WS,Fel,Int</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Intuition,Lore(History)</Skills>
+					<Talents>MasterTradesman(Any),NimbleFingered,PublicSpeaker,Savant(Local)</Talents>
+					<Trappings>TheRespectOfTheVillage</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="57" Upper="60">
+			<Career>
+				<Name>Bounty Hunter</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Thief-taker</Title>
+					<AdvanceScheme>WS,T,Agi</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Bribery,Charm,Gossip,Haggle,Intuition,Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>BreakAndEnter,Shadow,StrikeToStun,Suave</Talents>
+					<Trappings>HandWeapon,LeatherJerkin,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Athletics,Endurance,Intimidate,Ranged(Crossbow),Ranged(Entangling),Track</Skills>
+					<Talents>Marksman,Relentless,SeasonedTraveller,StrongBack</Talents>
+					<Trappings>CrossbowAnd10Bolts,LeatherSkullcap,Manacles,Net,WarrantPapers</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>AnimalCare,Climb,Ride(Horse),Swim</Skills>
+					<Talents>AccurateShot,CarefulStrike,DualWielder,Sprinter</Talents>
+					<Trappings>MailShirt,RidingHorseWithSaddle</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Bounty Hunter General</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Lore(Law)</Skills>
+					<Talents>DeadeyeShot,Fearless(Bounties),Hardy,SureShot</Talents>
+					<Trappings>DraughtHorseAndCart,MailShirt,4PairsOfManacles</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Halfling">
 		<Odds Lower="1" Upper="1">
@@ -2930,6 +3158,120 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="54" Upper="54">
+			<Career>
+				<Name>Scout</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Guide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Gossip,Lore(Local),Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>Orientation,Rover,Sharp,Strider(Any)</Talents>
+					<Trappings>HandWeapon,LeatherJack,SturdyBootsAndCloak,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Scout</Title>
+					<AdvanceScheme>T,I,Agi,BS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Athletics,Navigation,Ranged(Bow),Ride(Horse),Stealth(Rural),Track</Skills>
+					<Talents>CombatAware,NightVision,NoseForTrouble,SeasonedTraveller</Talents>
+					<Trappings>BowWith10Arrows,MailShirt</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Pathfinder</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Haggle,SecretSigns(Hunter),Swim</Skills>
+					<Talents>AcuteSense(Sight),SixthSense,StrongLegs,VeryResilient</Talents>
+					<Trappings>Map,RidingHorseWithSaddleAndTack,SaddleBagsWith2WeeksRations,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Explorer</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int,Dex</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Language(Any),Trade(Cartographer)</Skills>
+					<Talents>Hardy,Linguistics,Savant(Local),Tenacious</Talents>
+					<Trappings>SelectionOfMaps,TradeTools(Cartographer)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="55" Upper="57">
+			<Career>
+				<Name>Villager</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Peasant</Title>
+					<AdvanceScheme>S,T,Agi</AdvanceScheme>
+					<Status>Brass 2</Status>
+					<Skills>AnimalCare,Athletics,ConsumeAlcohol,Endurance,Gossip,Melee(Brawling),Lore(Local),OutdoorSurvival</Skills>
+					<Talents>Rover,StrongBack,Strong-minded,StoneSoup</Talents>
+					<Trappings>Nothing</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Villager</Title>
+					<AdvanceScheme>S,T,Agi,WS</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Dodge,Drive,Entertain(Storytelling),Haggle,Melee(Basic),Trade(Any)</Skills>
+					<Talents>AnimalAffinity,Hardy,Tenacious,VeryStrong</Talents>
+					<Trappings>LeatherJerkin,HandWeapon(Axe),TradeTools(AsTrade)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Councillor</Title>
+					<AdvanceScheme>S,T,Agi,WS,Fel</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>Bribery,Charm,Intimidate,Leadership</Skills>
+					<Talents>Craftsman(Any),Dealmaker,Stout-hearted,VeryResilient</Talents>
+					<Trappings>MuleAndCart,VillageHomeAndWorkshop</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Village Elder</Title>
+					<AdvanceScheme>S,T,Agi,WS,Fel,Int</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>Intuition,Lore(History)</Skills>
+					<Talents>MasterTradesman(Any),NimbleFingered,PublicSpeaker,Savant(Local)</Talents>
+					<Trappings>TheRespectOfTheVillage</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="58" Upper="58">
+			<Career>
+				<Name>Bounty Hunter</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Thief-taker</Title>
+					<AdvanceScheme>WS,T,Agi</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Bribery,Charm,Gossip,Haggle,Intuition,Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>BreakAndEnter,Shadow,StrikeToStun,Suave</Talents>
+					<Trappings>HandWeapon,LeatherJerkin,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Athletics,Endurance,Intimidate,Ranged(Crossbow),Ranged(Entangling),Track</Skills>
+					<Talents>Marksman,Relentless,SeasonedTraveller,StrongBack</Talents>
+					<Trappings>CrossbowAnd10Bolts,LeatherSkullcap,Manacles,Net,WarrantPapers</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>AnimalCare,Climb,Ride(Horse),Swim</Skills>
+					<Talents>AccurateShot,CarefulStrike,DualWielder,Sprinter</Talents>
+					<Trappings>MailShirt,RidingHorseWithSaddle</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Bounty Hunter General</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Lore(Law)</Skills>
+					<Talents>DeadeyeShot,Fearless(Bounties),Hardy,SureShot</Talents>
+					<Trappings>DraughtHorseAndCart,MailShirt,4PairsOfManacles</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -3654,6 +3996,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="51" Upper="56">
+			<Career>
+				<Name>Scout</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Guide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Gossip,Lore(Local),Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>Orientation,Rover,Sharp,Strider(Any)</Talents>
+					<Trappings>HandWeapon,LeatherJack,SturdyBootsAndCloak,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Scout</Title>
+					<AdvanceScheme>T,I,Agi,BS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Athletics,Navigation,Ranged(Bow),Ride(Horse),Stealth(Rural),Track</Skills>
+					<Talents>CombatAware,NightVision,NoseForTrouble,SeasonedTraveller</Talents>
+					<Trappings>BowWith10Arrows,MailShirt</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Pathfinder</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Haggle,SecretSigns(Hunter),Swim</Skills>
+					<Talents>AcuteSense(Sight),SixthSense,StrongLegs,VeryResilient</Talents>
+					<Trappings>Map,RidingHorseWithSaddleAndTack,SaddleBagsWith2WeeksRations,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Explorer</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int,Dex</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Language(Any),Trade(Cartographer)</Skills>
+					<Talents>Hardy,Linguistics,Savant(Local),Tenacious</Talents>
+					<Trappings>SelectionOfMaps,TradeTools(Cartographer)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="57" Upper="59">
+			<Career>
+				<Name>Bounty Hunter</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Thief-taker</Title>
+					<AdvanceScheme>WS,T,Agi</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Bribery,Charm,Gossip,Haggle,Intuition,Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>BreakAndEnter,Shadow,StrikeToStun,Suave</Talents>
+					<Trappings>HandWeapon,LeatherJerkin,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Athletics,Endurance,Intimidate,Ranged(Crossbow),Ranged(Entangling),Track</Skills>
+					<Talents>Marksman,Relentless,SeasonedTraveller,StrongBack</Talents>
+					<Trappings>CrossbowAnd10Bolts,LeatherSkullcap,Manacles,Net,WarrantPapers</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>AnimalCare,Climb,Ride(Horse),Swim</Skills>
+					<Talents>AccurateShot,CarefulStrike,DualWielder,Sprinter</Talents>
+					<Trappings>MailShirt,RidingHorseWithSaddle</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Bounty Hunter General</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Lore(Law)</Skills>
+					<Talents>DeadeyeShot,Fearless(Bounties),Hardy,SureShot</Talents>
+					<Trappings>DraughtHorseAndCart,MailShirt,4PairsOfManacles</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="WoodElf">
 		<Odds Lower="1" Upper="1">
@@ -4071,6 +4489,82 @@
 					<Skills>Lore(Prophecy),Channelling(Azyr)</Skills>
 					<Talents>ArcaneMagic(Celestial),MagicalSense,Menacing,Strong-minded</Talents>
 					<Trappings>TradeTools(Astrology)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="58" Upper="68">
+			<Career>
+				<Name>Scout</Name>
+				<Class>Peasant</Class>
+				<Path1>
+					<Title>Guide</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>CharmAnimal,Climb,Endurance,Gossip,Lore(Local),Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>Orientation,Rover,Sharp,Strider(Any)</Talents>
+					<Trappings>HandWeapon,LeatherJack,SturdyBootsAndCloak,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Scout</Title>
+					<AdvanceScheme>T,I,Agi,BS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Athletics,Navigation,Ranged(Bow),Ride(Horse),Stealth(Rural),Track</Skills>
+					<Talents>CombatAware,NightVision,NoseForTrouble,SeasonedTraveller</Talents>
+					<Trappings>BowWith10Arrows,MailShirt</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Pathfinder</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Haggle,SecretSigns(Hunter),Swim</Skills>
+					<Talents>AcuteSense(Sight),SixthSense,StrongLegs,VeryResilient</Talents>
+					<Trappings>Map,RidingHorseWithSaddleAndTack,SaddleBagsWith2WeeksRations,Tent</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Explorer</Title>
+					<AdvanceScheme>T,I,Agi,BS,Int,Dex</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Language(Any),Trade(Cartographer)</Skills>
+					<Talents>Hardy,Linguistics,Savant(Local),Tenacious</Talents>
+					<Trappings>SelectionOfMaps,TradeTools(Cartographer)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="69" Upper="70">
+			<Career>
+				<Name>Bounty Hunter</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Thief-taker</Title>
+					<AdvanceScheme>WS,T,Agi</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Bribery,Charm,Gossip,Haggle,Intuition,Melee(Basic),OutdoorSurvival,Perception</Skills>
+					<Talents>BreakAndEnter,Shadow,StrikeToStun,Suave</Talents>
+					<Trappings>HandWeapon,LeatherJerkin,Rope</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Athletics,Endurance,Intimidate,Ranged(Crossbow),Ranged(Entangling),Track</Skills>
+					<Talents>Marksman,Relentless,SeasonedTraveller,StrongBack</Talents>
+					<Trappings>CrossbowAnd10Bolts,LeatherSkullcap,Manacles,Net,WarrantPapers</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Bounty Hunter</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>AnimalCare,Climb,Ride(Horse),Swim</Skills>
+					<Talents>AccurateShot,CarefulStrike,DualWielder,Sprinter</Talents>
+					<Trappings>MailShirt,RidingHorseWithSaddle</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Bounty Hunter General</Title>
+					<AdvanceScheme>WS,T,Agi,BS,S,Int</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Lore(Law)</Skills>
+					<Talents>DeadeyeShot,Fearless(Bounties),Hardy,SureShot</Talents>
+					<Trappings>DraughtHorseAndCart,MailShirt,4PairsOfManacles</Trappings>
 				</Path4>
 			</Career>
 		</Odds>

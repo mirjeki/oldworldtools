@@ -1276,7 +1276,7 @@ namespace OldWorldTools.API
                                     Status = odds.Career.Path1.Status,
                                     Skills = odds.Career.Path1.Skills,
                                     Talents = odds.Career.Path1.Talents,
-                                    Trappings = odds.Career.Path1.Trappings
+                                    Trappings = odds.Career.Path1.Trappings ?? String.Empty
                                 },
                                 Path2 = new CareerPathDTO
                                 {

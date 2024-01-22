@@ -313,6 +313,10 @@ namespace OldWorldTools.API
                                                 fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
                                                 toSet.SetValue(property);
                                                 break;
+                                            case "Entangling":
+                                                fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
+                                                toSet.SetValue(property);
+                                                break;
                                             case "Explosives":
                                                 fields.TryGetValue($"GroupRow{weaponItems + 1}", out toSet);
                                                 toSet.SetValue(property);
@@ -373,11 +377,11 @@ namespace OldWorldTools.API
                                         }
                                     }
 
-                                    fields.TryGetValue($"WeaponsNameRow{armourItems + 1}", out toSet);
+                                    fields.TryGetValue($"WeaponsNameRow{weaponItems + 1}", out toSet);
                                     toSet.SetValue(matchedTrapping.Name);
-                                    fields.TryGetValue($"EncRow{armourItems + 1}", out toSet);
+                                    fields.TryGetValue($"EncRow{weaponItems + 1}", out toSet);
                                     toSet.SetValue(matchedTrapping.Enc);
-                                    fields.TryGetValue($"WeaponsQualitiesRow{armourItems + 1}", out toSet);
+                                    fields.TryGetValue($"WeaponsQualitiesRow{weaponItems + 1}", out toSet);
                                     toSet.SetValue(qualities);
                                     if (Int32.TryParse(matchedTrapping.Enc, out int weaponEnc))
                                     {

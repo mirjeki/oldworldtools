@@ -21,13 +21,15 @@ namespace OldWorldTools.API
         }
         public static List<string> SeparateCSV(string csvContents)
         {
-            var strings = csvContents.Split(',');
-
             List<string> result = new List<string>();
-
-            foreach (var s in strings)
+            if (csvContents != null)
             {
-                result.Add(s);
+                var strings = csvContents.Split(',');
+
+                foreach (var s in strings)
+                {
+                    result.Add(s);
+                }
             }
 
             return result;
@@ -35,13 +37,15 @@ namespace OldWorldTools.API
 
         public static List<string> SeparateAndFormatCSV(string csvContents)
         {
-            var strings = csvContents.Split(',');
-
             List<string> result = new List<string>();
-
-            foreach (var s in strings)
+            if (csvContents != null)
             {
-                result.Add(AddSpacesToSentence(s));
+                var strings = csvContents.Split(',');
+
+                foreach (var s in strings)
+                {
+                    result.Add(AddSpacesToSentence(s));
+                }
             }
 
             return result;
@@ -55,7 +59,7 @@ namespace OldWorldTools.API
             newText.Append(text[0]);
             for (int i = 1; i < text.Length; i++)
             {
-                if (char.IsUpper(text[i]) && text[i - 1] != ' ' && text[i - 1] != '(' && text[i - 1] != '/' || text[i] == '(')
+                if (char.IsUpper(text[i]) && text[i - 1] != ' ' && text[i - 1] != '(' && text[i - 1] != '/' || text[i] == '('|| (Char.IsNumber(text[i]) && !Char.IsNumber(text[i - 1]) && text[i - 1] != 'D'))
                     newText.Append(' ');
                 newText.Append(text[i]);
             }

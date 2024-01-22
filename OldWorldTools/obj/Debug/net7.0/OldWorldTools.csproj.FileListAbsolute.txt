@@ -96,3 +96,4 @@ C:\Portfolio\Full-Stack\old-world-tools\oldworldtools\OldWorldTools\obj\Debug\ne
 C:\Portfolio\Full-Stack\old-world-tools\oldworldtools\OldWorldTools\obj\Debug\net7.0\OldWorldTools.pdb
 C:\Portfolio\Full-Stack\old-world-tools\oldworldtools\OldWorldTools\obj\Debug\net7.0\OldWorldTools.genruntimeconfig.cache
 C:\Portfolio\Full-Stack\old-world-tools\oldworldtools\OldWorldTools\obj\Debug\net7.0\ref\OldWorldTools.dll
+C:\Portfolio\Full-Stack\old-world-tools\oldworldtools\OldWorldTools\obj\Debug\net7.0\OldWorldTools.sourcelink.json
