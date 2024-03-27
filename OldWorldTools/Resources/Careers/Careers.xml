@@ -102,7 +102,7 @@
 					<Status>Gold 1</Status>
 					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
 					<Talents>Bookish,Cat-tongued,ImpassionedZeal,Savvy</Talents>
-					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
+					<Trappings>Office,Assistant(Student?Servant)</Trappings>
 				</Path3>
 				<Path4>
 					<Title>Judge</Title>
@@ -1254,6 +1254,196 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="52" Upper="52">
+			<Career>
+				<Name>Coachman</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Postilion</Title>
+					<AdvanceScheme>BS,T,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,CharmAnimal,Climb,Drive,Endurance,Perception,Ranged(Entangling),Ride(Horse)</Skills>
+					<Talents>AnimalAffinity,SeasonedTraveller,Trick-Riding,Tenacious</Talents>
+					<Trappings>WarmCoatAndGloves,Whip</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Coachman</Title>
+					<AdvanceScheme>BS,T,WP,Agi</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>ConsumeAlcohol,Gossip,Intuition,Lore(Local),Navigation,Ranged(Blackpowder)</Skills>
+					<Talents>Coolheaded,CrackTheWhip,Gunner,Strong-minded</Talents>
+					<Trappings>BlunderbussWith10Shots,CoachHorn,LeatherJack,Hat</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Coach Master</Title>
+					<AdvanceScheme>BS,T,WP,Agi,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalTraining(Horse),Intimidate,Language(Any),Lore(Routes)</Skills>
+					<Talents>AccurateShot,Dealmaker,Fearless(Outlaws),NoseForTrouble</Talents>
+					<Trappings>MailShirt,Pistol,QualityCloak</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Route Master</Title>
+					<AdvanceScheme>BS,T,WP,Agi,WS,I</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Leadership</Skills>
+					<Talents>Fearless(Beastmen),Marksman,Orientation,RapidReload</Talents>
+					<Trappings>FleetOfCoachesAndHorses,Maps</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="53" Upper="54">
+			<Career>
+				<Name>Entertainer</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Busker</Title>
+					<AdvanceScheme>Agi,Dex,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Charm,Entertain(Any),Gossip,Haggle,Perform(Any),Play(Any),SleightOfHand</Skills>
+					<Talents>Attractive,Mimic,PublicSpeaker,Suave</Talents>
+					<Trappings>Bowl,Instrument</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Entertainer</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Entertain(Any),Ride(Any),Melee(Basic),Perform(Any),Play(Any),Ranged(Throwing)</Skills>
+					<Talents>Contortionist,JumpUp,Sharpshooter,Trick-Riding</Talents>
+					<Trappings>Costume,Instrument,SelectionOfScripts,ThrowingWeapons</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Troubadour</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any),Art(Writing),Language(Any)</Skills>
+					<Talents>Blather,MasterOfDisguise,PerfectPitch,Read/Write</Talents>
+					<Trappings>TrainedAnimal,WritingKit</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Troupe Leader</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS,T</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Leadership</Skills>
+					<Talents>Dealmaker,Etiquette(Any),SeasonedTraveller,Sharp</Talents>
+					<Trappings>DraughtHorsesAndWagon(Stage),WardrobeOfCostumesAndProps,TroupeOfEntertainers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="55" Upper="56">
+			<Career>
+				<Name>Flagellant</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Zealot</Title>
+					<AdvanceScheme>WS,S,T</AdvanceScheme>
+					<Status>Brass 0</Status>
+					<Skills>Dodge,Endurance,Heal,Intimidate,Intuition,Lore(Sigmar),Melee(Flail),OutdoorSurvival</Skills>
+					<Talents>BerserkCharge,Frenzy,Read/Write,StoneSoup</Talents>
+					<Trappings>Flail,TatteredRobes</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Flagellant</Title>
+					<AdvanceScheme>WS,S,T,WP</AdvanceScheme>
+					<Status>Brass 0</Status>
+					<Skills>Art(Icons),Athletics,Cool,Language(Classical),Lore(TheEmpire),Ranged(Sling)</Skills>
+					<Talents>Hardy,Hatred(Heretics),Flagellant,Implacable</Talents>
+					<Trappings>Placard,ReligiousSymbol,Sling</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Penitent</Title>
+					<AdvanceScheme>WS,S,T,WP,I</AdvanceScheme>
+					<Status>Brass 0</Status>
+					<Skills>Charm,Language(Any),Lore(Theology),Perception</Skills>
+					<Talents>FieldDressing,FuriousAssault,Menacing,SeasonedTraveller</Talents>
+					<Trappings>ReligiousRelic</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Prophet of Doom</Title>
+					<AdvanceScheme>WS,S,T,WP,I,Fel</AdvanceScheme>
+					<Status>Brass 0</Status>
+					<Skills>Entertain(Speeches),Leadership</Skills>
+					<Talents>BattleRage,Fearless(Heretics),Frightening,ImpassionedZeal</Talents>
+					<Trappings>Book(Religion),Followers(IncludingPenitentsFlagellantsAndZealots)</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="57" Upper="57">
+			<Career>
+				<Name>Messenger</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Runner</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Climb,Dodge,Endurance,Gossip,Navigation,Perception,Melee(Brawling)</Skills>
+					<Talents>Flee!,FleetFooted,Sprinter,StepAside</Talents>
+					<Trappings>ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Messenger</Title>
+					<AdvanceScheme>T,I,Agi,WS</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Charm,Cool,Lore(Local),Melee(Basic),Ride(Horse)</Skills>
+					<Talents>CrackTheWhip,Criminal,Orientation,SeasonedTraveller</Talents>
+					<Trappings>HandWeapon,LeatherJack,RidingHorseWithSaddleAndTack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Courier</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>CharmAnimal,Bribery,ConsumeAlcohol,OutdoorSurvival</Skills>
+					<Talents>NoseForTrouble,Relentless,Tenacious,Trick-Riding</Talents>
+					<Trappings>Backpack,SaddleBags,Shield</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Courier-Captain</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Intimidate,Leadership</Skills>
+					<Talents>Dealmaker,Hatred(Outlaws),Kingpin,VeryResilient</Talents>
+					<Trappings>Couriers,MailShirt,WritingKit</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="58" Upper="58">
+			<Career>
+				<Name>Pedlar</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Vagabond</Title>
+					<AdvanceScheme>T,Dex,WP</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Charm,Endurance,Entertain(Storytelling),Gossip,Haggle,Intuition,OutdoorSurvival,Stealth(Rural?Urban)</Skills>
+					<Talents>Fisherman,Flee!,Rover,Tinker</Talents>
+					<Trappings>Backpack,Bedroll,GoodsWorth2D10Brass,Tent</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Pedlar</Title>
+					<AdvanceScheme>T,Dex,WP,Fel</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>AnimalCare,CharmAnimal,ConsumeAlcohol,Evaluate,Ride(Horse),Trade(Tinker)</Skills>
+					<Talents>Dealmaker,Orientation,SeasonedTraveller,StrongBack</Talents>
+					<Trappings>MuleAndSaddleBags,GoodsWorth2D10Silver,SelectionOfPotsAndPans,TradeTools(Tinker)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Pedlar</Title>
+					<AdvanceScheme>T,Dex,WP,Fel,I</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Drive,Intimidate,Language(Any),Perception</Skills>
+					<Talents>Numismatics,Sturdy,Well-prepared,VeryResilient</Talents>
+					<Trappings>Cart,GoodsWorthAtLeast2D10Gold</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Wandering Trader</Title>
+					<AdvanceScheme>T,Dex,WP,Fel,I,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Lore(Local),Lore(Geography)</Skills>
+					<Talents>Cat-tongued,Strong-minded,Suave,Tenacious</Talents>
+					<Trappings>DraughtHorseAndWagon,GoodsWorthAtLeast5D10Gold,50SilverInCoin</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Dwarf">
 		<Odds Lower="1" Upper="1">
@@ -1358,7 +1548,7 @@
 					<Status>Gold 1</Status>
 					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
 					<Talents>Bookish,Cat-tongued,ImpassionedZeal,Savvy</Talents>
-					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
+					<Trappings>Office,Assistant(Student?Servant)</Trappings>
 				</Path3>
 				<Path4>
 					<Title>Judge</Title>
@@ -2282,6 +2472,158 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="61" Upper="61">
+			<Career>
+				<Name>Coachman</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Postilion</Title>
+					<AdvanceScheme>BS,T,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,CharmAnimal,Climb,Drive,Endurance,Perception,Ranged(Entangling),Ride(Horse)</Skills>
+					<Talents>AnimalAffinity,SeasonedTraveller,Trick-Riding,Tenacious</Talents>
+					<Trappings>WarmCoatAndGloves,Whip</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Coachman</Title>
+					<AdvanceScheme>BS,T,WP,Agi</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>ConsumeAlcohol,Gossip,Intuition,Lore(Local),Navigation,Ranged(Blackpowder)</Skills>
+					<Talents>Coolheaded,CrackTheWhip,Gunner,Strong-minded</Talents>
+					<Trappings>BlunderbussWith10Shots,CoachHorn,LeatherJack,Hat</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Coach Master</Title>
+					<AdvanceScheme>BS,T,WP,Agi,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalTraining(Horse),Intimidate,Language(Any),Lore(Routes)</Skills>
+					<Talents>AccurateShot,Dealmaker,Fearless(Outlaws),NoseForTrouble</Talents>
+					<Trappings>MailShirt,Pistol,QualityCloak</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Route Master</Title>
+					<AdvanceScheme>BS,T,WP,Agi,WS,I</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Leadership</Skills>
+					<Talents>Fearless(Beastmen),Marksman,Orientation,RapidReload</Talents>
+					<Trappings>FleetOfCoachesAndHorses,Maps</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="62" Upper="63">
+			<Career>
+				<Name>Entertainer</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Busker</Title>
+					<AdvanceScheme>Agi,Dex,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Charm,Entertain(Any),Gossip,Haggle,Perform(Any),Play(Any),SleightOfHand</Skills>
+					<Talents>Attractive,Mimic,PublicSpeaker,Suave</Talents>
+					<Trappings>Bowl,Instrument</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Entertainer</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Entertain(Any),Ride(Any),Melee(Basic),Perform(Any),Play(Any),Ranged(Throwing)</Skills>
+					<Talents>Contortionist,JumpUp,Sharpshooter,Trick-Riding</Talents>
+					<Trappings>Costume,Instrument,SelectionOfScripts,ThrowingWeapons</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Troubadour</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any),Art(Writing),Language(Any)</Skills>
+					<Talents>Blather,MasterOfDisguise,PerfectPitch,Read/Write</Talents>
+					<Trappings>TrainedAnimal,WritingKit</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Troupe Leader</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS,T</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Leadership</Skills>
+					<Talents>Dealmaker,Etiquette(Any),SeasonedTraveller,Sharp</Talents>
+					<Trappings>DraughtHorsesAndWagon(Stage),WardrobeOfCostumesAndProps,TroupeOfEntertainers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="64" Upper="65">
+			<Career>
+				<Name>Messenger</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Runner</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Climb,Dodge,Endurance,Gossip,Navigation,Perception,Melee(Brawling)</Skills>
+					<Talents>Flee!,FleetFooted,Sprinter,StepAside</Talents>
+					<Trappings>ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Messenger</Title>
+					<AdvanceScheme>T,I,Agi,WS</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Charm,Cool,Lore(Local),Melee(Basic),Ride(Horse)</Skills>
+					<Talents>CrackTheWhip,Criminal,Orientation,SeasonedTraveller</Talents>
+					<Trappings>HandWeapon,LeatherJack,RidingHorseWithSaddleAndTack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Courier</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>CharmAnimal,Bribery,ConsumeAlcohol,OutdoorSurvival</Skills>
+					<Talents>NoseForTrouble,Relentless,Tenacious,Trick-Riding</Talents>
+					<Trappings>Backpack,SaddleBags,Shield</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Courier-Captain</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Intimidate,Leadership</Skills>
+					<Talents>Dealmaker,Hatred(Outlaws),Kingpin,VeryResilient</Talents>
+					<Trappings>Couriers,MailShirt,WritingKit</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="66" Upper="67">
+			<Career>
+				<Name>Pedlar</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Vagabond</Title>
+					<AdvanceScheme>T,Dex,WP</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Charm,Endurance,Entertain(Storytelling),Gossip,Haggle,Intuition,OutdoorSurvival,Stealth(Rural?Urban)</Skills>
+					<Talents>Fisherman,Flee!,Rover,Tinker</Talents>
+					<Trappings>Backpack,Bedroll,GoodsWorth2D10Brass,Tent</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Pedlar</Title>
+					<AdvanceScheme>T,Dex,WP,Fel</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>AnimalCare,CharmAnimal,ConsumeAlcohol,Evaluate,Ride(Horse),Trade(Tinker)</Skills>
+					<Talents>Dealmaker,Orientation,SeasonedTraveller,StrongBack</Talents>
+					<Trappings>MuleAndSaddleBags,GoodsWorth2D10Silver,SelectionOfPotsAndPans,TradeTools(Tinker)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Pedlar</Title>
+					<AdvanceScheme>T,Dex,WP,Fel,I</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Drive,Intimidate,Language(Any),Perception</Skills>
+					<Talents>Numismatics,Sturdy,Well-prepared,VeryResilient</Talents>
+					<Trappings>Cart,GoodsWorthAtLeast2D10Gold</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Wandering Trader</Title>
+					<AdvanceScheme>T,Dex,WP,Fel,I,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Lore(Local),Lore(Geography)</Skills>
+					<Talents>Cat-tongued,Strong-minded,Suave,Tenacious</Talents>
+					<Trappings>DraughtHorseAndWagon,GoodsWorthAtLeast5D10Gold,50SilverInCoin</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="Halfling">
 		<Odds Lower="1" Upper="1">
@@ -2386,7 +2728,7 @@
 					<Status>Gold 1</Status>
 					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
 					<Talents>Bookish,Cat-tongued,ImpassionedZeal,Savvy</Talents>
-					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
+					<Trappings>Office,Assistant(Student?Servant)</Trappings>
 				</Path3>
 				<Path4>
 					<Title>Judge</Title>
@@ -3272,6 +3614,158 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="59" Upper="60">
+			<Career>
+				<Name>Coachman</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Postilion</Title>
+					<AdvanceScheme>BS,T,WP</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,CharmAnimal,Climb,Drive,Endurance,Perception,Ranged(Entangling),Ride(Horse)</Skills>
+					<Talents>AnimalAffinity,SeasonedTraveller,Trick-Riding,Tenacious</Talents>
+					<Trappings>WarmCoatAndGloves,Whip</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Coachman</Title>
+					<AdvanceScheme>BS,T,WP,Agi</AdvanceScheme>
+					<Status>Silver 2</Status>
+					<Skills>ConsumeAlcohol,Gossip,Intuition,Lore(Local),Navigation,Ranged(Blackpowder)</Skills>
+					<Talents>Coolheaded,CrackTheWhip,Gunner,Strong-minded</Talents>
+					<Trappings>BlunderbussWith10Shots,CoachHorn,LeatherJack,Hat</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Coach Master</Title>
+					<AdvanceScheme>BS,T,WP,Agi,WS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalTraining(Horse),Intimidate,Language(Any),Lore(Routes)</Skills>
+					<Talents>AccurateShot,Dealmaker,Fearless(Outlaws),NoseForTrouble</Talents>
+					<Trappings>MailShirt,Pistol,QualityCloak</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Route Master</Title>
+					<AdvanceScheme>BS,T,WP,Agi,WS,I</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Charm,Leadership</Skills>
+					<Talents>Fearless(Beastmen),Marksman,Orientation,RapidReload</Talents>
+					<Trappings>FleetOfCoachesAndHorses,Maps</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="61" Upper="63">
+			<Career>
+				<Name>Entertainer</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Busker</Title>
+					<AdvanceScheme>Agi,Dex,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Charm,Entertain(Any),Gossip,Haggle,Perform(Any),Play(Any),SleightOfHand</Skills>
+					<Talents>Attractive,Mimic,PublicSpeaker,Suave</Talents>
+					<Trappings>Bowl,Instrument</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Entertainer</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Entertain(Any),Ride(Any),Melee(Basic),Perform(Any),Play(Any),Ranged(Throwing)</Skills>
+					<Talents>Contortionist,JumpUp,Sharpshooter,Trick-Riding</Talents>
+					<Trappings>Costume,Instrument,SelectionOfScripts,ThrowingWeapons</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Troubadour</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any),Art(Writing),Language(Any)</Skills>
+					<Talents>Blather,MasterOfDisguise,PerfectPitch,Read/Write</Talents>
+					<Trappings>TrainedAnimal,WritingKit</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Troupe Leader</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS,T</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Leadership</Skills>
+					<Talents>Dealmaker,Etiquette(Any),SeasonedTraveller,Sharp</Talents>
+					<Trappings>DraughtHorsesAndWagon(Stage),WardrobeOfCostumesAndProps,TroupeOfEntertainers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="64" Upper="65">
+			<Career>
+				<Name>Messenger</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Runner</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Climb,Dodge,Endurance,Gossip,Navigation,Perception,Melee(Brawling)</Skills>
+					<Talents>Flee!,FleetFooted,Sprinter,StepAside</Talents>
+					<Trappings>ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Messenger</Title>
+					<AdvanceScheme>T,I,Agi,WS</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Charm,Cool,Lore(Local),Melee(Basic),Ride(Horse)</Skills>
+					<Talents>CrackTheWhip,Criminal,Orientation,SeasonedTraveller</Talents>
+					<Trappings>HandWeapon,LeatherJack,RidingHorseWithSaddleAndTack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Courier</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>CharmAnimal,Bribery,ConsumeAlcohol,OutdoorSurvival</Skills>
+					<Talents>NoseForTrouble,Relentless,Tenacious,Trick-Riding</Talents>
+					<Trappings>Backpack,SaddleBags,Shield</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Courier-Captain</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Intimidate,Leadership</Skills>
+					<Talents>Dealmaker,Hatred(Outlaws),Kingpin,VeryResilient</Talents>
+					<Trappings>Couriers,MailShirt,WritingKit</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="66" Upper="67">
+			<Career>
+				<Name>Pedlar</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Vagabond</Title>
+					<AdvanceScheme>T,Dex,WP</AdvanceScheme>
+					<Status>Brass 1</Status>
+					<Skills>Charm,Endurance,Entertain(Storytelling),Gossip,Haggle,Intuition,OutdoorSurvival,Stealth(Rural?Urban)</Skills>
+					<Talents>Fisherman,Flee!,Rover,Tinker</Talents>
+					<Trappings>Backpack,Bedroll,GoodsWorth2D10Brass,Tent</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Pedlar</Title>
+					<AdvanceScheme>T,Dex,WP,Fel</AdvanceScheme>
+					<Status>Brass 4</Status>
+					<Skills>AnimalCare,CharmAnimal,ConsumeAlcohol,Evaluate,Ride(Horse),Trade(Tinker)</Skills>
+					<Talents>Dealmaker,Orientation,SeasonedTraveller,StrongBack</Talents>
+					<Trappings>MuleAndSaddleBags,GoodsWorth2D10Silver,SelectionOfPotsAndPans,TradeTools(Tinker)</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Master Pedlar</Title>
+					<AdvanceScheme>T,Dex,WP,Fel,I</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>Drive,Intimidate,Language(Any),Perception</Skills>
+					<Talents>Numismatics,Sturdy,Well-prepared,VeryResilient</Talents>
+					<Trappings>Cart,GoodsWorthAtLeast2D10Gold</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Wandering Trader</Title>
+					<AdvanceScheme>T,Dex,WP,Fel,I,Int</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>Lore(Local),Lore(Geography)</Skills>
+					<Talents>Cat-tongued,Strong-minded,Suave,Tenacious</Talents>
+					<Trappings>DraughtHorseAndWagon,GoodsWorthAtLeast5D10Gold,50SilverInCoin</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="HighElf">
 		<Odds Lower="1" Upper="2">
@@ -3338,7 +3832,7 @@
 					<Status>Gold 1</Status>
 					<Skills>Art(Writing),Entertain(Speeches),Intimidate,Lore(Any)</Skills>
 					<Talents>Bookish,Cat-tongued,ImpassionedZeal,Savvy</Talents>
-					<Trappings>Office,Assistant(StudentOrServant)</Trappings>
+					<Trappings>Office,Assistant(Student?Servant)</Trappings>
 				</Path3>
 				<Path4>
 					<Title>Judge</Title>
@@ -4072,6 +4566,82 @@
 				</Path4>
 			</Career>
 		</Odds>
+		<Odds Lower="60" Upper="62">
+			<Career>
+				<Name>Entertainer</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Busker</Title>
+					<AdvanceScheme>Agi,Dex,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Charm,Entertain(Any),Gossip,Haggle,Perform(Any),Play(Any),SleightOfHand</Skills>
+					<Talents>Attractive,Mimic,PublicSpeaker,Suave</Talents>
+					<Trappings>Bowl,Instrument</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Entertainer</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Entertain(Any),Ride(Any),Melee(Basic),Perform(Any),Play(Any),Ranged(Throwing)</Skills>
+					<Talents>Contortionist,JumpUp,Sharpshooter,Trick-Riding</Talents>
+					<Trappings>Costume,Instrument,SelectionOfScripts,ThrowingWeapons</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Troubadour</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any),Art(Writing),Language(Any)</Skills>
+					<Talents>Blather,MasterOfDisguise,PerfectPitch,Read/Write</Talents>
+					<Trappings>TrainedAnimal,WritingKit</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Troupe Leader</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS,T</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Leadership</Skills>
+					<Talents>Dealmaker,Etiquette(Any),SeasonedTraveller,Sharp</Talents>
+					<Trappings>DraughtHorsesAndWagon(Stage),WardrobeOfCostumesAndProps,TroupeOfEntertainers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="63" Upper="63">
+			<Career>
+				<Name>Messenger</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Runner</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Climb,Dodge,Endurance,Gossip,Navigation,Perception,Melee(Brawling)</Skills>
+					<Talents>Flee!,FleetFooted,Sprinter,StepAside</Talents>
+					<Trappings>ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Messenger</Title>
+					<AdvanceScheme>T,I,Agi,WS</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Charm,Cool,Lore(Local),Melee(Basic),Ride(Horse)</Skills>
+					<Talents>CrackTheWhip,Criminal,Orientation,SeasonedTraveller</Talents>
+					<Trappings>HandWeapon,LeatherJack,RidingHorseWithSaddleAndTack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Courier</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>CharmAnimal,Bribery,ConsumeAlcohol,OutdoorSurvival</Skills>
+					<Talents>NoseForTrouble,Relentless,Tenacious,Trick-Riding</Talents>
+					<Trappings>Backpack,SaddleBags,Shield</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Courier-Captain</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Intimidate,Leadership</Skills>
+					<Talents>Dealmaker,Hatred(Outlaws),Kingpin,VeryResilient</Talents>
+					<Trappings>Couriers,MailShirt,WritingKit</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
 	</CareerSpecies>
 	<CareerSpecies Value="WoodElf">
 		<Odds Lower="1" Upper="1">
@@ -4565,6 +5135,82 @@
 					<Skills>Drive,Lore(Law)</Skills>
 					<Talents>DeadeyeShot,Fearless(Bounties),Hardy,SureShot</Talents>
 					<Trappings>DraughtHorseAndCart,MailShirt,4PairsOfManacles</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="71" Upper="75">
+			<Career>
+				<Name>Entertainer</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Busker</Title>
+					<AdvanceScheme>Agi,Dex,Fel</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Charm,Entertain(Any),Gossip,Haggle,Perform(Any),Play(Any),SleightOfHand</Skills>
+					<Talents>Attractive,Mimic,PublicSpeaker,Suave</Talents>
+					<Trappings>Bowl,Instrument</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Entertainer</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS</AdvanceScheme>
+					<Status>Brass 5</Status>
+					<Skills>Entertain(Any),Ride(Any),Melee(Basic),Perform(Any),Play(Any),Ranged(Throwing)</Skills>
+					<Talents>Contortionist,JumpUp,Sharpshooter,Trick-Riding</Talents>
+					<Trappings>Costume,Instrument,SelectionOfScripts,ThrowingWeapons</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Troubadour</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>AnimalCare,AnimalTraining(Any),Art(Writing),Language(Any)</Skills>
+					<Talents>Blather,MasterOfDisguise,PerfectPitch,Read/Write</Talents>
+					<Trappings>TrainedAnimal,WritingKit</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Troupe Leader</Title>
+					<AdvanceScheme>Agi,Dex,Fel,WS,BS,T</AdvanceScheme>
+					<Status>Gold 1</Status>
+					<Skills>Drive,Leadership</Skills>
+					<Talents>Dealmaker,Etiquette(Any),SeasonedTraveller,Sharp</Talents>
+					<Trappings>DraughtHorsesAndWagon(Stage),WardrobeOfCostumesAndProps,TroupeOfEntertainers</Trappings>
+				</Path4>
+			</Career>
+		</Odds>
+		<Odds Lower="76" Upper="78">
+			<Career>
+				<Name>Messenger</Name>
+				<Class>Ranger</Class>
+				<Path1>
+					<Title>Runner</Title>
+					<AdvanceScheme>T,I,Agi</AdvanceScheme>
+					<Status>Brass 3</Status>
+					<Skills>Athletics,Climb,Dodge,Endurance,Gossip,Navigation,Perception,Melee(Brawling)</Skills>
+					<Talents>Flee!,FleetFooted,Sprinter,StepAside</Talents>
+					<Trappings>ScrollCase</Trappings>
+				</Path1>
+				<Path2>
+					<Title>Messenger</Title>
+					<AdvanceScheme>T,I,Agi,WS</AdvanceScheme>
+					<Status>Silver 1</Status>
+					<Skills>AnimalCare,Charm,Cool,Lore(Local),Melee(Basic),Ride(Horse)</Skills>
+					<Talents>CrackTheWhip,Criminal,Orientation,SeasonedTraveller</Talents>
+					<Trappings>HandWeapon,LeatherJack,RidingHorseWithSaddleAndTack</Trappings>
+				</Path2>
+				<Path3>
+					<Title>Courier</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP</AdvanceScheme>
+					<Status>Silver 3</Status>
+					<Skills>CharmAnimal,Bribery,ConsumeAlcohol,OutdoorSurvival</Skills>
+					<Talents>NoseForTrouble,Relentless,Tenacious,Trick-Riding</Talents>
+					<Trappings>Backpack,SaddleBags,Shield</Trappings>
+				</Path3>
+				<Path4>
+					<Title>Courier-Captain</Title>
+					<AdvanceScheme>T,I,Agi,WS,WP,Fel</AdvanceScheme>
+					<Status>Silver 5</Status>
+					<Skills>Intimidate,Leadership</Skills>
+					<Talents>Dealmaker,Hatred(Outlaws),Kingpin,VeryResilient</Talents>
+					<Trappings>Couriers,MailShirt,WritingKit</Trappings>
 				</Path4>
 			</Career>
 		</Odds>
